@@ -97,26 +97,20 @@
 #include "Event\SelectedCards.h"  
 #include "Event\SelectedPlayers.h"  
 
-
 //Manager
 #include "Manager\CharacterManager.h" 
 #include "Manager\EventManagers.h" 
 #include "Manager\GameManager.h" 
 #include "Manager\KTK_Enum.h" 
 #include "Manager\KTK_Info.h" 
-#include "Manager\KTKHeader.h" 
 #include "Manager\PlayersManger.h"
 #include "Manager\RoundManager.h" 
 #include "Manager\TextManager.h" 
 
-
 //Player
 #include "Player\Player.h"
 
-
 //Rule
-
-
 #include "Rule\Character.h" 
 #include "Rule\Rule_CaoCao.h"
 #include "Rule\Rule_Character.h"
@@ -171,6 +165,5 @@
 #include "UI\UI_Position.h" 
 #include "UI\UI_SkillPanal.h" 
 #include "UI\UI_TheftAndSabotage.h" 
-
 
 #endif // KTKHeader_h__
