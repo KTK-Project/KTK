@@ -1,6 +1,8 @@
 #ifndef Controller_Base_h__
 #define Controller_Base_h__
 
+#include <memory>
+#include "Event\Event_Base.h"
 
 class Controller_Base {
 

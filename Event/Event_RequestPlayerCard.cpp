@@ -1,10 +1,10 @@
 #include "Event_RequestPlayerCard.h"
 
-Player* Event_RequestPlayerCard::getM_player() {
+std::shared_ptr<Player> Event_RequestPlayerCard::getM_player() {
 	return this->m_player;
 }
 
-void Event_RequestPlayerCard::setM_player(Player* m_player) {
+void Event_RequestPlayerCard::setM_player(std::shared_ptr<Player> m_player) {
 	this->m_player = m_player;
 }
 
@@ -72,11 +72,11 @@ void Event_RequestPlayerCard::setM_defensiveHorse(bool m_defensiveHorse) {
 	this->m_defensiveHorse = m_defensiveHorse;
 }
 
-Card* Event_RequestPlayerCard::getM_receiver() {
+std::shared_ptr<Card> Event_RequestPlayerCard::getM_receiver() {
 	return this->m_receiver;
 }
 
-void Event_RequestPlayerCard::setM_receiver(Card* m_receiver) {
+void Event_RequestPlayerCard::setM_receiver(std::shared_ptr<Card> m_receiver) {
 	this->m_receiver = m_receiver;
 }
 

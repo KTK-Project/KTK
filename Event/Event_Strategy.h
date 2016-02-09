@@ -1,14 +1,17 @@
 #ifndef Event_Strategy_h__
 #define Event_Strategy_h__
 
+#include "Event_Base.h"
+#include <memory>
+#include "Player\Player.h"
 
 class Event_Strategy : Event_Base {
 
 public:
-	Player* m_playCardPlayer;
+	std::shared_ptr<Player> m_playCardPlayer;
 
-	Player* getM_playCardPlayer();
+	std::shared_ptr<Player> getM_playCardPlayer();
 
-	void setM_playCardPlayer(Player* m_playCardPlayer);
+	void setM_playCardPlayer(std::shared_ptr<Player> m_playCardPlayer);
 };
 #endif // Event_Strategy_h__

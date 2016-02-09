@@ -1,42 +1,42 @@
 #include "Event_Slash.h"
 
-Player* Event_Slash::getM_firstPlayer() {
+std::shared_ptr<Player> Event_Slash::getM_firstPlayer() {
 	return this->m_firstPlayer;
 }
 
-void Event_Slash::setM_firstPlayer(Player* m_firstPlayer) {
+void Event_Slash::setM_firstPlayer(std::shared_ptr<Player> m_firstPlayer) {
 	this->m_firstPlayer = m_firstPlayer;
 }
 
-Card* Event_Slash::getM_weapon() {
+std::shared_ptr<Card> Event_Slash::getM_weapon() {
 	return this->m_weapon;
 }
 
-void Event_Slash::setM_weapon(Card* m_weapon) {
+void Event_Slash::setM_weapon(std::shared_ptr<Card> m_weapon) {
 	this->m_weapon = m_weapon;
 }
 
-Player* Event_Slash::getM_goalPlayers() {
+std::shared_ptr<Player> Event_Slash::getM_goalPlayers() {
 	return this->m_goalPlayers;
 }
 
-void Event_Slash::setM_goalPlayers(Player* m_goalPlayers) {
+void Event_Slash::setM_goalPlayers(std::shared_ptr<Player> m_goalPlayers) {
 	this->m_goalPlayers = m_goalPlayers;
 }
 
-Card * Event_Slash::getM_armor() {
+std::shared_ptr<Card> Event_Slash::getM_armor() {
 	return this->m_armor;
 }
 
-void Event_Slash::setM_armor(Card * m_armor) {
+void Event_Slash::setM_armor(std::shared_ptr<Card> m_armor) {
 	this->m_armor = m_armor;
 }
 
-vector<Card*> Event_Slash::getM_slash() {
+std::vector<std::shared_ptr<Card>> Event_Slash::getM_slash() {
 	return this->m_slash;
 }
 
-void Event_Slash::setM_slash(vector<Card*> m_slash) {
+void Event_Slash::setM_slash(std::vector<std::shared_ptr<Card>> m_slash) {
 	this->m_slash = m_slash;
 }
 

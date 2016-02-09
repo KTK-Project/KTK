@@ -1,10 +1,10 @@
 #include "Event_RequestGoalPlayer.h"
 
-vector<Player*> Event_RequestGoalPlayer::getM_candidate() {
+std::vector<std::shared_ptr<Player>> Event_RequestGoalPlayer::getM_candidate() {
 	return this->m_candidate;
 }
 
-void Event_RequestGoalPlayer::setM_candidate(vector<Player*>& m_candidate) {
+void Event_RequestGoalPlayer::setM_candidate(std::vector<std::shared_ptr<Player>>& m_candidate) {
 	// TODO - implement Event_RequestGoalPlayer::setM_candidate
 	throw "Not yet implemented";
 }

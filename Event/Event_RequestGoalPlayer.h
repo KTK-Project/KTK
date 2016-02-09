@@ -1,19 +1,22 @@
 #ifndef Event_RequestGoalPlayer_h__
 #define Event_RequestGoalPlayer_h__
 
+#include "Event_Interaction.h"
+#include "SelectedPlayers.h"
+#include <vector>
 
 class Event_RequestGoalPlayer : Event_Interaction {
 
 private:
-	vector<Player*> m_candidate;
+	std::vector<std::shared_ptr<Player>> m_candidate;
 	int m_goalPlayerMaxQulitity;
 	int m_goalPlayerMinQulitity;
 	SelectedPlayers m_receiver;
 
 public:
-	vector<Player*> getM_candidate();
+	std::vector<std::shared_ptr<Player>> getM_candidate();
 
-	void setM_candidate(vector<Player*>& m_candidate);
+	void setM_candidate(std::vector<std::shared_ptr<Player>>& m_candidate);
 
 	int getM_goalPlayerMaxQulitity();
 

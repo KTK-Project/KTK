@@ -1,15 +1,15 @@
 #include "SelectedPlayers.h"
 
-deque<Player*> SelectedPlayers::getM_players() {
+std::deque<std::shared_ptr<Player>> SelectedPlayers::getM_players() {
 	return this->m_players;
 }
 
-void SelectedPlayers::addPlayer(Player* player) {
+void SelectedPlayers::addPlayer(std::shared_ptr<Player> player) {
 	// TODO - implement SelectedPlayers::addPlayer
 	throw "Not yet implemented";
 }
 
-void SelectedPlayers::removePlayer(Player* player) {
+void SelectedPlayers::removePlayer(std::shared_ptr<Player> player) {
 	// TODO - implement SelectedPlayers::removePlayer
 	throw "Not yet implemented";
 }
@@ -24,7 +24,7 @@ void SelectedPlayers::popAll() {
 	throw "Not yet implemented";
 }
 
-bool SelectedPlayers::hasPlayer(Player* player) {
+bool SelectedPlayers::hasPlayer(std::shared_ptr<Player> player) {
 	// TODO - implement SelectedPlayers::hasPlayer
 	throw "Not yet implemented";
 }

@@ -1,17 +1,20 @@
 #ifndef SelectedCards_h__
 #define SelectedCards_h__
 
+#include <deque>
+#include "UI\UI_Card.h"
+#include <functional>
 
 class SelectedCards {
 
 private:
-	deque<UI_Card*> m_cards;
+	std::deque<UI_Card*> m_cards;
 	int m_maxSelects;
 	std::function<void ()> m_maxCallBack;
 	std::function<void ()> m_unmaxCallBack;
 
 public:
-	deque<UI_Card*>& getCards();
+	std::deque<UI_Card*>& getCards();
 
 	void addCard(UI_Card* card);
 
@@ -21,7 +24,7 @@ public:
 
 	void popAll();
 
-	bool hasCard(Card* card);
+	bool hasCard(std::shared_ptr<Card> card);
 
 	bool hasCard(UI_Card* card);
 

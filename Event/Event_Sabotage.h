@@ -1,11 +1,12 @@
 #ifndef Event_Sabotage_h__
 #define Event_Sabotage_h__
 
+#include "Event_Strategy.h"
 
-class Event_Sabotage : Event_Strategy {
+class Event_Sabotage : public Event_Strategy {
 
 public:
-	Player* m_goalPlayer;
+	std::shared_ptr<Player> m_goalPlayer;
 
 	void eventResolve();
 };

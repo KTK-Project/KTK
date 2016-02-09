@@ -1,38 +1,44 @@
 #ifndef Event_Slash_h__
 #define Event_Slash_h__
 
+#include "Event_Base.h"
+#include <memory>
+#include <vector>
+#include "Manager\KTK_Enum.h"
+#include "Card\Card.h"
+#include "Player\Player.h"
 
 class Event_Slash : Event_Base {
 
 private:
-	Player* m_firstPlayer;
-	Card* m_weapon;
-	Player* m_goalPlayers;
-	Card * m_armor;
-	vector<Card*> m_slash;
+	std::shared_ptr<Player> m_firstPlayer;
+	std::shared_ptr<Card> m_weapon;
+	std::shared_ptr<Player> m_goalPlayers;
+	std::shared_ptr<Card> m_armor;
+	std::vector<std::shared_ptr<Card>> m_slash;
 	Slash_State m_slashState;
 	bool m_needToAskPlayer;
 
 public:
-	Player* getM_firstPlayer();
+	std::shared_ptr<Player> getM_firstPlayer();
 
-	void setM_firstPlayer(Player* m_firstPlayer);
+	void setM_firstPlayer(std::shared_ptr<Player> m_firstPlayer);
 
-	Card* getM_weapon();
+	std::shared_ptr<Card> getM_weapon();
 
-	void setM_weapon(Card* m_weapon);
+	void setM_weapon(std::shared_ptr<Card> m_weapon);
 
-	Player* getM_goalPlayers();
+	std::shared_ptr<Player> getM_goalPlayers();
 
-	void setM_goalPlayers(Player* m_goalPlayers);
+	void setM_goalPlayers(std::shared_ptr<Player> m_goalPlayers);
 
-	Card * getM_armor();
+	std::shared_ptr<Card> getM_armor();
 
-	void setM_armor(Card * m_armor);
+	void setM_armor(std::shared_ptr<Card> m_armor);
 
-	vector<Card*> getM_slash();
+	std::vector<std::shared_ptr<Card>> getM_slash();
 
-	void setM_slash(vector<Card*> m_slash);
+	void setM_slash(std::vector<std::shared_ptr<Card>> m_slash);
 
 	bool getM_needToAskPlayer();
 

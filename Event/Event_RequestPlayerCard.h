@@ -1,11 +1,15 @@
 #ifndef Event_RequestPlayerCard_h__
 #define Event_RequestPlayerCard_h__
 
+#include "Event_Interaction.h"
+#include <memory>
+#include "Player\Player.h"
+#include "Card\Card.h"
 
 class Event_RequestPlayerCard : Event_Interaction {
 
 private:
-	Player* m_player;
+	std::shared_ptr<Player> m_player;
 	bool m_handCard;
 	bool m_lightning;
 	bool m_drownInHappiness;
@@ -14,12 +18,12 @@ private:
 	bool m_armor;
 	bool m_offensiveHorse;
 	bool m_defensiveHorse;
-	Card* m_receiver;
+	std::shared_ptr<Card> m_receiver;
 
 public:
-	Player* getM_player();
+	std::shared_ptr<Player> getM_player();
 
-	void setM_player(Player* m_player);
+	void setM_player(std::shared_ptr<Player> m_player);
 
 	bool getM_handCard();
 
@@ -53,9 +57,9 @@ public:
 
 	void setM_defensiveHorse(bool m_defensiveHorse);
 
-	Card* getM_receiver();
+	std::shared_ptr<Card> getM_receiver();
 
-	void setM_receiver(Card* m_receiver);
+	void setM_receiver(std::shared_ptr<Card> m_receiver);
 
 	void eventResolve();
 };

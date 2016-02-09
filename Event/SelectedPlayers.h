@@ -1,27 +1,31 @@
 #ifndef SelectedPlayers_h__
 #define SelectedPlayers_h__
 
+#include <deque>
+#include <memory>
+#include "Player\Player.h"
+#include <functional>
 
 class SelectedPlayers {
 
 private:
-	deque<Player*> m_players;
+	std::deque<std::shared_ptr<Player>> m_players;
 	int m_maxSelects;
 	std::function<void ()> m_maxCallBack;
 	std::function<void ()> m_unmaxCallBack;
 
 public:
-	deque<Player*> getM_players();
+	std::deque<std::shared_ptr<Player>> getM_players();
 
-	void addPlayer(Player* player);
+	void addPlayer(std::shared_ptr<Player> player);
 
-	void removePlayer(Player* player);
+	void removePlayer(std::shared_ptr<Player> player);
 
 	void popFront();
 
 	void popAll();
 
-	bool hasPlayer(Player* player);
+	bool hasPlayer(std::shared_ptr<Player> player);
 
 	std::function<void ()> getM_maxCallBack();
 

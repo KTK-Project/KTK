@@ -1,6 +1,6 @@
 #include "SelectedCards.h"
 
-deque<UI_Card*>& SelectedCards::getCards() {
+std::deque<UI_Card*>& SelectedCards::getCards() {
 	// TODO - implement SelectedCards::getCards
 	throw "Not yet implemented";
 }
@@ -25,7 +25,7 @@ void SelectedCards::popAll() {
 	throw "Not yet implemented";
 }
 
-bool SelectedCards::hasCard(Card* card) {
+bool SelectedCards::hasCard(std::shared_ptr<Card> card) {
 	// TODO - implement SelectedCards::hasCard
 	throw "Not yet implemented";
 }

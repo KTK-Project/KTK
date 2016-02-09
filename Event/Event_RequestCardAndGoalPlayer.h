@@ -1,6 +1,10 @@
 #ifndef Event_RequestCardAndGoalPlayer_h__
 #define Event_RequestCardAndGoalPlayer_h__
 
+#include "Event_Interaction.h"
+#include <memory>
+#include "Event_RequestCard.h"
+#include "Event_RequestGoalPlayer.h"
 
 class Event_RequestCardAndGoalPlayer : Event_Interaction {
 
