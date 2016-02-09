@@ -1,4 +1,7 @@
 #include "Event_Judge.h"
+#include <memory>
+
+using std::shared_ptr;
 
 Card* Event_Judge::getM_judgeCard() {
 	return this->m_judgeCard;

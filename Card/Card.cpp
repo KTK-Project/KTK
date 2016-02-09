@@ -20,9 +20,9 @@ Card_Type Card::getType() {
 	throw "Not yet implemented";
 }
 
-int Card::getM_goalPlayerQuantity(Player* requester) {
-	// TODO - implement Card::getM_goalPlayerQuantity
-	throw "Not yet implemented";
+int Card::getM_goalPlayerQuantity(std::shared_ptr<Player> requester)
+{
+	throw "123123";
 }
 
 vector<Player*> Card::getCandidate(Player* playCardPlayer) {

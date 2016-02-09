@@ -16,7 +16,7 @@ public:
 
 	std::function<bool (Card*)> getM_judgeCheck();
 
-	void setM_judgeCheck(std::function<bool (Card*)> m_judgeCheck);
+	void setM_judgeCheck(std::function<bool (std::shared_ptr<Card>)> m_judgeCheck);
 
 	bool getM_judgeResult();
 
