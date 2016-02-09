@@ -25,7 +25,7 @@ int Card::getM_goalPlayerQuantity(std::shared_ptr<Player> requester)
 	throw "123123";
 }
 
-vector<Player*> Card::getCandidate(Player* playCardPlayer) {
+std::vector<std::shared_ptr<Player>> Card::getCandidate(std::shared_ptr<Player> playCardPlayer) {
 	// TODO - implement Card::getCandidate
 	throw "Not yet implemented";
 }
@@ -35,7 +35,7 @@ void Card::onUpping() {
 	throw "Not yet implemented";
 }
 
-void Card::useCard(Player* playCardPlayer, vector<Player*>& goalPlayer) {
+void Card::useCard(std::shared_ptr<Player> playCardPlayer, std::vector<std::shared_ptr<Player>>& goalPlayer) {
 	// TODO - implement Card::useCard
 	throw "Not yet implemented";
 }

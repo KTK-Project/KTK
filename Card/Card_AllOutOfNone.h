@@ -1,6 +1,8 @@
 #ifndef Card_AllOutOfNone_h__
 #define Card_AllOutOfNone_h__
 
+#include "Card_Strategy.h"
+
 
 class Card_AllOutOfNone : public Card_Strategy {
 
