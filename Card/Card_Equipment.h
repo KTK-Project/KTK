@@ -1,8 +1,9 @@
 #ifndef Card_Equipment_h__
 #define Card_Equipment_h__
 
+#include "Card.h"
 
-class Card_Equipment : Card {
+class Card_Equipment : public Card {
 
 private:
 	EquipmentCard_Type m_equipType;

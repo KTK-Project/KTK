@@ -1,6 +1,6 @@
 #include "Card_Horse.h"
 
-int Card_Horse::getM_goalPlayerQuantity(Player* requester) {
+int Card_Horse::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
 	// TODO - implement Card_Horse::getM_goalPlayerQuantity
 	throw "Not yet implemented";
 }
