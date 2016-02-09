@@ -1,11 +1,13 @@
 #ifndef Event_Harvest_h__
 #define Event_Harvest_h__
 
+#include "Event_Strategy.h"
+#include "Player\Player.h"
 
-class Event_Harvest : Event_Strategy {
+class Event_Harvest : public Event_Strategy {
 
 public:
-	Player* m_currentPlayer;
+	std::shared_ptr<Player> m_currentPlayer;
 
 	void eventResolve();
 };

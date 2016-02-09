@@ -1,8 +1,11 @@
 #ifndef Event_RequestCard_h__
 #define Event_RequestCard_h__
 
+#include "Event_Interaction.h"
+#include "Manager\KTK_Enum.h"
+#include "SelectedCards.h"
 
-class Event_RequestCard : Event_Interaction {
+class Event_RequestCard : public Event_Interaction {
 
 private:
 	bool m_handCard;

@@ -1,6 +1,7 @@
 #ifndef Rule_LvBu_h__
 #define Rule_LvBu_h__
 
+#include "Rule_Character.h"
 
 class Rule_LvBu : public Rule_Character {
 

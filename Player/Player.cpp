@@ -5,12 +5,12 @@ void Player::init() {
 	throw "Not yet implemented";
 }
 
-Character* Player::getCharacter() {
+std::shared_ptr<Character> Player::getCharacter() {
 	// TODO - implement Player::getCharacter
 	throw "Not yet implemented";
 }
 
-void Player::setCharacter(Character* character) {
+void Player::setCharacter(std::shared_ptr<Character> character) {
 	// TODO - implement Player::setCharacter
 	throw "Not yet implemented";
 }
@@ -70,62 +70,62 @@ CardPile& Player::getHandCardPile() {
 	throw "Not yet implemented";
 }
 
-Card* Player::getWeapon() {
+std::shared_ptr<Card> Player::getWeapon() {
 	// TODO - implement Player::getWeapon
 	throw "Not yet implemented";
 }
 
-void Player::setWeapon(Card* weapon) {
+void Player::setWeapon(std::shared_ptr<Card> weapon) {
 	// TODO - implement Player::setWeapon
 	throw "Not yet implemented";
 }
 
-Card* Player::getArmor() {
+std::shared_ptr<Card> Player::getArmor() {
 	// TODO - implement Player::getArmor
 	throw "Not yet implemented";
 }
 
-void Player::setArmor(Card* armor) {
+void Player::setArmor(std::shared_ptr<Card> armor) {
 	// TODO - implement Player::setArmor
 	throw "Not yet implemented";
 }
 
-Card* Player::getDefensiveHorse() {
+std::shared_ptr<Card> Player::getDefensiveHorse() {
 	// TODO - implement Player::getDefensiveHorse
 	throw "Not yet implemented";
 }
 
-void Player::setDefensiveHorse(Card* defensiveHorse) {
+void Player::setDefensiveHorse(std::shared_ptr<Card> defensiveHorse) {
 	// TODO - implement Player::setDefensiveHorse
 	throw "Not yet implemented";
 }
 
-Card* Player::getOffensiveHorse() {
+std::shared_ptr<Card> Player::getOffensiveHorse() {
 	// TODO - implement Player::getOffensiveHorse
 	throw "Not yet implemented";
 }
 
-void Player::setOffensiveHorse(Card* offensiveHorse) {
+void Player::setOffensiveHorse(std::shared_ptr<Card> offensiveHorse) {
 	// TODO - implement Player::setOffensiveHorse
 	throw "Not yet implemented";
 }
 
-vector<Card*>& Player::getJudgeCards() {
+std::vector<std::shared_ptr<Card>>& Player::getJudgeCards() {
 	// TODO - implement Player::getJudgeCards
 	throw "Not yet implemented";
 }
 
-void Player::addJudgeCard(Card* card) {
+void Player::addJudgeCard(std::shared_ptr<Card> card) {
 	// TODO - implement Player::addJudgeCard
 	throw "Not yet implemented";
 }
 
-Char_ID Player::getIDMarks(Player* player) {
+Char_ID Player::getIDMarks(std::shared_ptr<Player> player) {
 	// TODO - implement Player::getIDMarks
 	throw "Not yet implemented";
 }
 
-void Player::setIDMarks(Player* player, Char_ID id) {
+void Player::setIDMarks(std::shared_ptr<Player> player, Char_ID id) {
 	// TODO - implement Player::setIDMarks
 	throw "Not yet implemented";
 }

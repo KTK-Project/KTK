@@ -1,23 +1,31 @@
 #ifndef Player_h__
 #define Player_h__
 
+#include <vector>
+#include "Rule\Character.h"
+#include "Card\CardPile.h"
+#include "Card\Card.h"
+#include "Controller\Controller_Base.h"
+
+class Rule_Character;
+class UI_PlayerPanal;
 
 class Player {
 
 private:
-	Character* m_character;
+	std::shared_ptr<Character> m_character;
 	Char_ID m_ID;
 	int m_HP;
 	int m_maxHP;
 	bool m_alive;
 	int m_position;
 	CardPile m_handCardPile;
-	Card* m_weapon;
-	Card* m_armor;
-	Card* m_defensiveHorse;
-	Card* m_offensiveHorse;
-	vector<Card*> m_judgeCards;
-	vector<Char_ID> m_IDMarks;
+	std::shared_ptr<Card> m_weapon;
+	std::shared_ptr<Card> m_armor;
+	std::shared_ptr<Card> m_defensiveHorse;
+	std::shared_ptr<Card> m_offensiveHorse;
+	std::vector<std::shared_ptr<Card>> m_judgeCards;
+	std::vector<Char_ID> m_IDMarks;
 	Controller_Base* m_controller;
 	Rule_Character* m_rule;
 	UI_PlayerPanal* m_playerPanal;
@@ -25,9 +33,9 @@ private:
 public:
 	void init();
 
-	Character* getCharacter();
+	std::shared_ptr<Character> getCharacter();
 
-	void setCharacter(Character* character);
+	void setCharacter(std::shared_ptr<Character> character);
 
 	Char_ID getID();
 
@@ -51,29 +59,29 @@ public:
 
 	CardPile& getHandCardPile();
 
-	Card* getWeapon();
+	std::shared_ptr<Card> getWeapon();
 
-	void setWeapon(Card* weapon);
+	void setWeapon(std::shared_ptr<Card> weapon);
 
-	Card* getArmor();
+	std::shared_ptr<Card> getArmor();
 
-	void setArmor(Card* armor);
+	void setArmor(std::shared_ptr<Card> armor);
 
-	Card* getDefensiveHorse();
+	std::shared_ptr<Card> getDefensiveHorse();
 
-	void setDefensiveHorse(Card* defensiveHorse);
+	void setDefensiveHorse(std::shared_ptr<Card> defensiveHorse);
 
-	Card* getOffensiveHorse();
+	std::shared_ptr<Card> getOffensiveHorse();
 
-	void setOffensiveHorse(Card* offensiveHorse);
+	void setOffensiveHorse(std::shared_ptr<Card> offensiveHorse);
 
-	vector<Card*>& getJudgeCards();
+	std::vector<std::shared_ptr<Card>>& getJudgeCards();
 
-	void addJudgeCard(Card* card);
+	void addJudgeCard(std::shared_ptr<Card> card);
 
-	Char_ID getIDMarks(Player* player);
+	Char_ID getIDMarks(std::shared_ptr<Player> player);
 
-	void setIDMarks(Player* player, Char_ID id);
+	void setIDMarks(std::shared_ptr<Player> player, Char_ID id);
 
 	Controller_Base* getController();
 

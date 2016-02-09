@@ -5,7 +5,7 @@ void Rule_ZhuGeLiang::readyStage() {
 	throw "Not yet implemented";
 }
 
-bool Rule_ZhuGeLiang::canAsCandidate(Card* card) {
+bool Rule_ZhuGeLiang::canAsCandidate(std::shared_ptr<Card> card) {
 	// TODO - implement Rule_ZhuGeLiang::canAsCandidate
 	throw "Not yet implemented";
 }

@@ -1,6 +1,9 @@
 #ifndef RoundManager_h__
 #define RoundManager_h__
 
+#include <vector>
+#include <functional>
+#include "KTK_Enum.h"
 
 class RoundManager {
 
@@ -9,12 +12,12 @@ private:
 	bool m_stageFinish;
 	int m_roundsCount;
 	bool m_roundFinish;
-	vector<std::function<void ()>> m_functionsInReadyStage;
-	vector<std::function<void ()>> m_functionsInJudgeStage;
-	vector<std::function<void ()>> m_functionsInDrawCardStage;
-	vector<std::function<void ()>> m_functionsInPlayCardStage;
-	vector<std::function<void ()>> m_functionsInDiscardStage;
-	vector<std::function<void ()>> m_functionsInRoundEndStage;
+	std::vector<std::function<void ()>> m_functionsInReadyStage;
+	std::vector<std::function<void ()>> m_functionsInJudgeStage;
+	std::vector<std::function<void ()>> m_functionsInDrawCardStage;
+	std::vector<std::function<void ()>> m_functionsInPlayCardStage;
+	std::vector<std::function<void ()>> m_functionsInDiscardStage;
+	std::vector<std::function<void ()>> m_functionsInRoundEndStage;
 
 public:
 	int getRoundsCount();
@@ -31,17 +34,17 @@ public:
 
 	void setRoundFinish(bool roundFinish);
 
-	vector<std::function<void ()>>& getM_functionsInReadyStage();
+	std::vector<std::function<void ()>>& getM_functionsInReadyStage();
 
-	vector<std::function<void ()>>& getM_functionsInJudgeStage();
+	std::vector<std::function<void ()>>& getM_functionsInJudgeStage();
 
-	vector<std::function<void ()>>& getM_functionsInDrawCardStage();
+	std::vector<std::function<void ()>>& getM_functionsInDrawCardStage();
 
-	vector<std::function<void ()>>& getM_functionsInPlayCardStage();
+	std::vector<std::function<void ()>>& getM_functionsInPlayCardStage();
 
-	vector<std::function<void ()>>& getM_functionsInDiscardStage();
+	std::vector<std::function<void ()>>& getM_functionsInDiscardStage();
 
-	vector<std::function<void ()>>& getM_functionsInRoundEndStage();
+	std::vector<std::function<void ()>>& getM_functionsInRoundEndStage();
 
 private:
 	void readyStage();

@@ -1,5 +1,8 @@
 #include "UI_Desktop.h"
 
+using cocos2d::Vec2;
+using std::string;
+
 void UI_Desktop::init() {
 	// TODO - implement UI_Desktop::init
 	throw "Not yet implemented";
@@ -15,7 +18,7 @@ Vec2 UI_Desktop::getPositionForCard(int index) {
 	throw "Not yet implemented";
 }
 
-void UI_Desktop::addCards(UI_Card* card, std::string& description) {
+void UI_Desktop::addCards(UI_Card* card, string& description) {
 	// TODO - implement UI_Desktop::addCards
 	throw "Not yet implemented";
 }

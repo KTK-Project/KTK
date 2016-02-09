@@ -1,20 +1,24 @@
 #ifndef UI_Desktop_h__
 #define UI_Desktop_h__
 
+#include <string>
+#include <vector>
+#include "cocos2d.h"
+#include "UI_Card.h"
 
 class UI_Desktop {
 
 private:
-	vector<UI_Card*> m_cards;
+	std::vector<UI_Card*> m_cards;
 	bool m_needToClean;
-	vector<UI_Card*> m_cleanCards;
+	std::vector<UI_Card*> m_cleanCards;
 
 public:
 	void init();
 
 	int pushBack(UI_Card* card);
 
-	Vec2 getPositionForCard(int index);
+	cocos2d::Vec2 getPositionForCard(int index);
 
 	void addCards(UI_Card* card, std::string& description);
 

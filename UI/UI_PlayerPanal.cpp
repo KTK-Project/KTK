@@ -1,16 +1,16 @@
 #include "UI_PlayerPanal.h"
 
-void UI_PlayerPanal::initWithPlayer(Player* player) {
+void UI_PlayerPanal::initWithPlayer(std::shared_ptr<Player> player) {
 	// TODO - implement UI_PlayerPanal::initWithPlayer
 	throw "Not yet implemented";
 }
 
-Player* UI_PlayerPanal::getPlayer() {
+std::shared_ptr<Player> UI_PlayerPanal::getPlayer() {
 	// TODO - implement UI_PlayerPanal::getPlayer
 	throw "Not yet implemented";
 }
 
-void UI_PlayerPanal::setPlayer(Player* player) {
+void UI_PlayerPanal::setPlayer(std::shared_ptr<Player> player) {
 	// TODO - implement UI_PlayerPanal::setPlayer
 	throw "Not yet implemented";
 }

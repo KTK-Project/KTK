@@ -1,6 +1,9 @@
 #ifndef Rule_DaQiao_h__
 #define Rule_DaQiao_h__
 
+#include <memory>
+#include "Rule_Character.h"
+#include "Event\Event_Base.h"
 
 class Rule_DaQiao : public Rule_Character {
 

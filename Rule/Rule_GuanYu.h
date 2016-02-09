@@ -1,6 +1,7 @@
 #ifndef Rule_GuanYu_h__
 #define Rule_GuanYu_h__
 
+#include "Rule_Character.h"
 
 class Rule_GuanYu : public Rule_Character {
 

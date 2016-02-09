@@ -1,6 +1,7 @@
 #ifndef Rule_LiuBei_h__
 #define Rule_LiuBei_h__
 
+#include "Rule_Character.h"
 
 class Rule_LiuBei : public Rule_Character {
 

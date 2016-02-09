@@ -1,11 +1,13 @@
 #ifndef UI_JudgeIcon_h__
 #define UI_JudgeIcon_h__
 
+#include <vector>
+#include "cocos2d.h"
 
 class UI_JudgeIcon {
 
 private:
-	vector<Sprite*> m_icon;
+	std::vector<cocos2d::Sprite*> m_icon;
 
 public:
 	void init();

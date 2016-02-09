@@ -1,6 +1,6 @@
 #include "Rule_MaChao.h"
 
-int Rule_MaChao::getDistance(Player* player) {
+int Rule_MaChao::getDistance(std::shared_ptr<Player> player) {
 	// TODO - implement Rule_MaChao::getDistance
 	throw "Not yet implemented";
 }

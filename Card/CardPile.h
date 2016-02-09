@@ -22,7 +22,7 @@ public:
 
 	void pushFront(Card* card);
 
-	int countCard(std::function<bool (Card::Card*)> filter);
+	int countCard(std::function<bool (Card*)> filter);
 
 	void shuffle();
 

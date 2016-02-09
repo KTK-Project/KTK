@@ -7,7 +7,7 @@
 class Event_ArrowRain : public Event_Strategy {
 
 public:
-	Player* m_currentPlayer;
+	std::shared_ptr<Player> m_currentPlayer;
 
 	void eventResolve();
 };

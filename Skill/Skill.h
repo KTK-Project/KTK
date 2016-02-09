@@ -1,6 +1,7 @@
 #ifndef Skill_h__
 #define Skill_h__
 
+#include "Manager\KTK_Enum.h"
 
 class Skill {
 

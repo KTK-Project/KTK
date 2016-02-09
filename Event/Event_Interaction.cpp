@@ -1,10 +1,10 @@
 #include "Event_Interaction.h"
 
-Player* Event_Interaction::getM_interactPlayer() {
+std::shared_ptr<Player> Event_Interaction::getM_interactPlayer() {
 	return this->m_interactPlayer;
 }
 
-void Event_Interaction::setM_interactPlayer(Player* m_interactPlayer) {
+void Event_Interaction::setM_interactPlayer(std::shared_ptr<Player> m_interactPlayer) {
 	this->m_interactPlayer = m_interactPlayer;
 }
 

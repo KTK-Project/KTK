@@ -1,6 +1,7 @@
 #ifndef Rule_ZhangLiao_h__
 #define Rule_ZhangLiao_h__
 
+#include "Rule_Character.h"
 
 class Rule_ZhangLiao : public Rule_Character {
 

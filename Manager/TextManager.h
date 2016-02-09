@@ -1,6 +1,7 @@
 #ifndef TextManager_h__
 #define TextManager_h__
 
+#include "KTK_Enum.h"
 
 class TextManager {
 

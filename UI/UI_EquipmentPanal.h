@@ -1,27 +1,30 @@
 #ifndef UI_EquipmentPanal_h__
 #define UI_EquipmentPanal_h__
 
+#include "cocos2d.h"
+#include "Card\Card.h"
+#include "Manager\KTK_Enum.h"
 
 class UI_EquipmentPanal {
 
 private:
-	Sprite* m_weapon;
-	Sprite* m_armor;
-	Sprite* m_defensiveHorse;
-	Sprite* m_offensiveHorse;
+	cocos2d::Sprite* m_weapon;
+	cocos2d::Sprite* m_armor;
+	cocos2d::Sprite* m_defensiveHorse;
+	cocos2d::Sprite* m_offensiveHorse;
 
 public:
 	void init();
 
-	void setM_weapon(Card* m_weapon);
+	void setM_weapon(std::shared_ptr<Card> m_weapon);
 
-	void setM_armor(Card* m_armor);
+	void setM_armor(std::shared_ptr<Card> m_armor);
 
-	void setM_defensiveHorse(Card* m_defensiveHorse);
+	void setM_defensiveHorse(std::shared_ptr<Card> m_defensiveHorse);
 
-	void setM_offensiveHorse(Card* m_offensiveHorse);
+	void setM_offensiveHorse(std::shared_ptr<Card> m_offensiveHorse);
 
-	void setEquipmentPanalState(Card* card, EquipmentPanalState state);
+	void setEquipmentPanalState(std::shared_ptr<Card> card, EquipmentPanalState state);
 
 	void refresh();
 };

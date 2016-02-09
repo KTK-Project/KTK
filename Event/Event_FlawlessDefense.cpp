@@ -1,10 +1,10 @@
 #include "Event_FlawlessDefense.h"
 
-Player* Event_FlawlessDefense::getM_firstPlayer() {
+std::shared_ptr<Player> Event_FlawlessDefense::getM_firstPlayer() {
 	return this->m_firstPlayer;
 }
 
-void Event_FlawlessDefense::setM_firstPlayer(Player* m_firstPlayer) {
+void Event_FlawlessDefense::setM_firstPlayer(std::shared_ptr<Player> m_firstPlayer) {
 	this->m_firstPlayer = m_firstPlayer;
 }
 

@@ -1,11 +1,11 @@
 #include "EventManagers.h"
 
-Player* EventManagers::getResponser() {
+std::shared_ptr<Player> EventManagers::getResponser() {
 	// TODO - implement EventManagers::getResponser
 	throw "Not yet implemented";
 }
 
-void EventManagers::setResponser(Player* responser) {
+void EventManagers::setResponser(std::shared_ptr<Player> responser) {
 	// TODO - implement EventManagers::setResponser
 	throw "Not yet implemented";
 }

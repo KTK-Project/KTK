@@ -1,16 +1,16 @@
 #include "Rule_Character.h"
 
-Rule_Character::Rule_Character(Player* player) {
+Rule_Character::Rule_Character(std::shared_ptr<Player> player) {
 	// TODO - implement Rule_Character::Rule_Character
 	throw "Not yet implemented";
 }
 
-Player* Rule_Character::getPlayer() {
+std::shared_ptr<Player> Rule_Character::getPlayer() {
 	// TODO - implement Rule_Character::getPlayer
 	throw "Not yet implemented";
 }
 
-void Rule_Character::setPlayer(Player* player) {
+void Rule_Character::setPlayer(std::shared_ptr<Player> player) {
 	// TODO - implement Rule_Character::setPlayer
 	throw "Not yet implemented";
 }
@@ -55,37 +55,37 @@ void Rule_Character::asCardGoal(Card_Name cardName) {
 	throw "Not yet implemented";
 }
 
-void Rule_Character::equip(Card* card) {
+void Rule_Character::equip(std::shared_ptr<Card> card) {
 	// TODO - implement Rule_Character::equip
 	throw "Not yet implemented";
 }
 
-void Rule_Character::unequip(Card* card) {
+void Rule_Character::unequip(std::shared_ptr<Card> card) {
 	// TODO - implement Rule_Character::unequip
 	throw "Not yet implemented";
 }
 
-void Rule_Character::playCard(Card* card) {
+void Rule_Character::playCard(std::shared_ptr<Card> card) {
 	// TODO - implement Rule_Character::playCard
 	throw "Not yet implemented";
 }
 
-void Rule_Character::drawCard(Card* card) {
+void Rule_Character::drawCard(std::shared_ptr<Card> card) {
 	// TODO - implement Rule_Character::drawCard
 	throw "Not yet implemented";
 }
 
-Card* Rule_Character::removeHandCard(Card* card) {
+std::shared_ptr<Card> Rule_Character::removeHandCard(std::shared_ptr<Card> card) {
 	// TODO - implement Rule_Character::removeHandCard
 	throw "Not yet implemented";
 }
 
-int Rule_Character::getDistanceForCard(Card* card) {
+int Rule_Character::getDistanceForCard(std::shared_ptr<Card> card) {
 	// TODO - implement Rule_Character::getDistanceForCard
 	throw "Not yet implemented";
 }
 
-int Rule_Character::getDistance(Player* player) {
+int Rule_Character::getDistance(std::shared_ptr<Player> player) {
 	// TODO - implement Rule_Character::getDistance
 	throw "Not yet implemented";
 }

@@ -10,7 +10,7 @@ UI_LogBox* UI_GameSence::getLogBox() {
 	throw "Not yet implemented";
 }
 
-UI_PlayerPanal* UI_GameSence::getPlayerPanal(Player* player) {
+UI_PlayerPanal* UI_GameSence::getPlayerPanal(std::shared_ptr<Player> player) {
 	// TODO - implement UI_GameSence::getPlayerPanal
 	throw "Not yet implemented";
 }

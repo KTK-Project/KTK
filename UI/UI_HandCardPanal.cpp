@@ -25,7 +25,7 @@ void UI_HandCardPanal::pageDown() {
 	throw "Not yet implemented";
 }
 
-void UI_HandCardPanal::addCard(Card* card) {
+void UI_HandCardPanal::addCard(std::shared_ptr<Card> card) {
 	// TODO - implement UI_HandCardPanal::addCard
 	throw "Not yet implemented";
 }
@@ -35,7 +35,7 @@ void UI_HandCardPanal::addCard(UI_Card* card) {
 	throw "Not yet implemented";
 }
 
-UI_Card* UI_HandCardPanal::removeCard(Card* card) {
+UI_Card* UI_HandCardPanal::removeCard(std::shared_ptr<Card> card) {
 	// TODO - implement UI_HandCardPanal::removeCard
 	throw "Not yet implemented";
 }

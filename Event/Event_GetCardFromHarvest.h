@@ -1,26 +1,30 @@
 #ifndef Event_GetCardFromHarvest_h__
 #define Event_GetCardFromHarvest_h__
 
+#include <vector>
+#include "Event_Interaction.h"
+#include "Card\Card.h"
+#include "Player\Player.h"
 
-class Event_GetCardFromHarvest : Event_Interaction {
+class Event_GetCardFromHarvest : public Event_Interaction {
 
 private:
-	vector<Card*> m_cards;
-	vector<Player*> m_players;
-	Card* m_receiver;
+	std::vector<std::shared_ptr<Card>> m_cards;
+	std::vector<std::shared_ptr<Player>> m_players;
+	std::shared_ptr<Card> m_receiver;
 
 public:
-	vector<Card*> getM_cards();
+	std::vector<std::shared_ptr<Card>> getM_cards();
 
-	void setM_cards(vector<Card*> m_cards);
+	void setM_cards(std::vector<std::shared_ptr<Card>> m_cards);
 
-	vector<Player*> getM_players();
+	std::vector<std::shared_ptr<Player>> getM_players();
 
-	void setM_players(vector<Player*> m_players);
+	void setM_players(std::vector<std::shared_ptr<Player>> m_players);
 
-	Card* getM_receiver();
+	std::shared_ptr<Card> getM_receiver();
 
-	void setM_receiver(Card* m_receiver);
+	void setM_receiver(std::shared_ptr<Card> m_receiver);
 
 	void eventResolve();
 };

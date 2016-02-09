@@ -1,17 +1,19 @@
 #ifndef Event_FlawlessDefense_h__
 #define Event_FlawlessDefense_h__
 
+#include "Event_Strategy.h"
+#include "Player\Player.h"
 
-class Event_FlawlessDefense : Event_Strategy {
+class Event_FlawlessDefense : public Event_Strategy {
 
 private:
-	Player* m_firstPlayer;
+	std::shared_ptr<Player> m_firstPlayer;
 	bool m_success;
 
 public:
-	Player* getM_firstPlayer();
+	std::shared_ptr<Player> getM_firstPlayer();
 
-	void setM_firstPlayer(Player* m_firstPlayer);
+	void setM_firstPlayer(std::shared_ptr<Player> m_firstPlayer);
 
 	bool getM_success();
 

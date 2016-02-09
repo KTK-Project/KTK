@@ -1,6 +1,6 @@
 #include "Rule_GanNing.h"
 
-void Rule_GanNing::playCard(Card* card) {
+void Rule_GanNing::playCard(std::shared_ptr<Card> card) {
 	// TODO - implement Rule_GanNing::playCard
 	throw "Not yet implemented";
 }

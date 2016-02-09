@@ -5,7 +5,7 @@ void Rule_SunShangXiang::playCardStage() {
 	throw "Not yet implemented";
 }
 
-void Rule_SunShangXiang::unequip(Card* card) {
+void Rule_SunShangXiang::unequip(std::shared_ptr<Card> card) {
 	// TODO - implement Rule_SunShangXiang::unequip
 	throw "Not yet implemented";
 }

@@ -1,13 +1,16 @@
 #ifndef UI_Message_h__
 #define UI_Message_h__
 
+#include "cocos2d.h"
+#include "ui\CocosGUI.h"
+#include "Event\Event_Base.h"
 
 class UI_Message {
 
 private:
-	Label* m_message;
-	Button* m_button1;
-	Button* m_button2;
+	cocos2d::Label* m_message;
+	cocos2d::ui::Button* m_button1;
+	cocos2d::ui::Button* m_button2;
 	std::function<bool ()> m_button1ValidCheck;
 	std::function<bool ()> m_button2ValidCheck;
 

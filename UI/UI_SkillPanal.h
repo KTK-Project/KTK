@@ -1,11 +1,15 @@
 #ifndef UI_SkillPanal_h__
 #define UI_SkillPanal_h__
 
+#include <vector>
+#include "cocos2d.h"
+#include "Skill\Skill.h"
+#include "Manager\KTK_Enum.h"
 
 class UI_SkillPanal {
 
 private:
-	vector<Sprite*> m_skillIcons;
+	std::vector<cocos2d::Sprite*> m_skillIcons;
 
 public:
 	void init();

@@ -1,18 +1,20 @@
 #ifndef UI_GuanXing_h__
 #define UI_GuanXing_h__
 
+#include <vector>
+#include "UI_Card.h"
 
 class UI_GuanXing {
 
 private:
-	vector<UI_Card*> m_topCards;
-	vector<UI_Card*> m_bottonCards;
+	std::vector<UI_Card*> m_topCards;
+	std::vector<UI_Card*> m_bottonCards;
 
 public:
-	bool initWithCards(vector<Card*>& topCards);
+	bool initWithCards(std::vector<std::shared_ptr<Card>>& topCards);
 
-	vector<UI_Card*>& getM_topCards();
+	std::vector<UI_Card*>& getM_topCards();
 
-	vector<UI_Card*>& getM_bottonCards();
+	std::vector<UI_Card*>& getM_bottonCards();
 };
 #endif // UI_GuanXing_h__

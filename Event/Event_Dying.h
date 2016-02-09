@@ -1,22 +1,24 @@
 #ifndef Event_Dying_h__
 #define Event_Dying_h__
 
+#include "Event_Base.h"
+#include "Player\Player.h"
 
-class Event_Dying : Event_Base {
+class Event_Dying : public Event_Base {
 
 private:
-	Player* m_firstPlayer;
-	Player* m_DyingPlayer;
-	Player* m_peachPlayer;
+	std::shared_ptr<Player> m_firstPlayer;
+	std::shared_ptr<Player> m_DyingPlayer;
+	std::shared_ptr<Player> m_peachPlayer;
 
 public:
-	Player* getM_firstPlayer();
+	std::shared_ptr<Player> getM_firstPlayer();
 
-	void setM_firstPlayer(Player* m_firstPlayer);
+	void setM_firstPlayer(std::shared_ptr<Player> m_firstPlayer);
 
-	Player* getM_DyingPlayer();
+	std::shared_ptr<Player> getM_DyingPlayer();
 
-	void setM_DyingPlayer(Player* m_DyingPlayer);
+	void setM_DyingPlayer(std::shared_ptr<Player> m_DyingPlayer);
 
 	void eventResolve();
 };

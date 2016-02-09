@@ -1,11 +1,14 @@
 #ifndef SkillList_h__
 #define SkillList_h__
 
+#include <vector>
+#include "Skill.h"
+#include "Manager\KTK_Enum.h"
 
 class SkillList {
 
 private:
-	vector<Skill> m_skillList;
+	std::vector<Skill> m_skillList;
 
 public:
 	int getSize();

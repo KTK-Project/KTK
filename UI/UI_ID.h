@@ -1,12 +1,14 @@
 #ifndef UI_ID_h__
 #define UI_ID_h__
 
+#include "cocos2d.h"
+#include "Manager\KTK_Enum.h"
 
 class UI_ID {
 
 private:
-	Sprite* m_markID;
-	Node* m_IDList;
+	cocos2d::Sprite* m_markID;
+	cocos2d::Node* m_IDList;
 
 public:
 	void init();

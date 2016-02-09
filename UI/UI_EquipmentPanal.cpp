@@ -5,27 +5,27 @@ void UI_EquipmentPanal::init() {
 	throw "Not yet implemented";
 }
 
-void UI_EquipmentPanal::setM_weapon(Card* m_weapon) {
+void UI_EquipmentPanal::setM_weapon(std::shared_ptr<Card> m_weapon) {
 	// TODO - implement UI_EquipmentPanal::setM_weapon
 	throw "Not yet implemented";
 }
 
-void UI_EquipmentPanal::setM_armor(Card* m_armor) {
+void UI_EquipmentPanal::setM_armor(std::shared_ptr<Card> m_armor) {
 	// TODO - implement UI_EquipmentPanal::setM_armor
 	throw "Not yet implemented";
 }
 
-void UI_EquipmentPanal::setM_defensiveHorse(Card* m_defensiveHorse) {
+void UI_EquipmentPanal::setM_defensiveHorse(std::shared_ptr<Card> m_defensiveHorse) {
 	// TODO - implement UI_EquipmentPanal::setM_defensiveHorse
 	throw "Not yet implemented";
 }
 
-void UI_EquipmentPanal::setM_offensiveHorse(Card* m_offensiveHorse) {
+void UI_EquipmentPanal::setM_offensiveHorse(std::shared_ptr<Card> m_offensiveHorse) {
 	// TODO - implement UI_EquipmentPanal::setM_offensiveHorse
 	throw "Not yet implemented";
 }
 
-void UI_EquipmentPanal::setEquipmentPanalState(Card* card, EquipmentPanalState state) {
+void UI_EquipmentPanal::setEquipmentPanalState(std::shared_ptr<Card> card, EquipmentPanalState state) {
 	// TODO - implement UI_EquipmentPanal::setEquipmentPanalState
 	throw "Not yet implemented";
 }

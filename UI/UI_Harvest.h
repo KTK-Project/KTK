@@ -1,18 +1,22 @@
 #ifndef UI_Harvest_h__
 #define UI_Harvest_h__
 
+#include <vector>
+#include <memory>
+#include "UI_Card.h"
+#include "Player/Player.h"
 
 class UI_Harvest {
 
 private:
-	vector<UI_Card*> m_cards;
-	vector<Player*> m_players;
+	std::vector<UI_Card*> m_cards;
+	std::vector<std::shared_ptr<Player>> m_players;
 
 public:
-	bool initWithCards(vector<Card*> cards);
+	bool initWithCards(std::vector<std::shared_ptr<Card>> cards);
 
-	void chosedCard(Player* player, Card* card);
+	void chosedCard(std::shared_ptr<Player> player, std::shared_ptr<Card> card);
 
-	void chosedCard(Player* player, UI_Card* card);
+	void chosedCard(std::shared_ptr<Player> player, UI_Card* card);
 };
 #endif // UI_Harvest_h__

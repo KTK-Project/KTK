@@ -1,6 +1,6 @@
 #include "UI_ForwardPlayerPanal.h"
 
-void UI_ForwardPlayerPanal::initWithPlayer(Player* player) {
+void UI_ForwardPlayerPanal::initWithPlayer(std::shared_ptr<Player> player) {
 	// TODO - implement UI_ForwardPlayerPanal::initWithPlayer
 	throw "Not yet implemented";
 }
@@ -20,7 +20,7 @@ UI_Message* UI_ForwardPlayerPanal::getMessage() {
 	throw "Not yet implemented";
 }
 
-void UI_ForwardPlayerPanal::drawCards(vector<Card*>& cards) {
+void UI_ForwardPlayerPanal::drawCards(std::vector<std::shared_ptr<Card>>& cards) {
 	// TODO - implement UI_ForwardPlayerPanal::drawCards
 	throw "Not yet implemented";
 }

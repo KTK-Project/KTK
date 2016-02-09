@@ -1,14 +1,12 @@
 #include "CharacterManager.h"
 #include <vector>
 
-using std::vector;
-
-vector<Character*>& CharacterManager::getCharacters() {
+std::vector<std::shared_ptr<Character>>& CharacterManager::getCharacters() {
 	// TODO - implement CharacterManager::getCharacters
 	throw "Not yet implemented";
 }
 
-vector<Character*> CharacterManager::getCharacters(std::function<bool (Character*)> filter) {
+std::vector<std::shared_ptr<Character>> CharacterManager::getCharacters(std::function<bool (std::shared_ptr<Character>)> filter) {
 	// TODO - implement CharacterManager::getCharacters
 	throw "Not yet implemented";
 }

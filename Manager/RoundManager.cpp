@@ -35,32 +35,32 @@ void RoundManager::setRoundFinish(bool roundFinish) {
 	throw "Not yet implemented";
 }
 
-vector<std::function<void ()>>& RoundManager::getM_functionsInReadyStage() {
+std::vector<std::function<void ()>>& RoundManager::getM_functionsInReadyStage() {
 	// TODO - implement RoundManager::getM_functionsInReadyStage
 	throw "Not yet implemented";
 }
 
-vector<std::function<void ()>>& RoundManager::getM_functionsInJudgeStage() {
+std::vector<std::function<void ()>>& RoundManager::getM_functionsInJudgeStage() {
 	// TODO - implement RoundManager::getM_functionsInJudgeStage
 	throw "Not yet implemented";
 }
 
-vector<std::function<void ()>>& RoundManager::getM_functionsInDrawCardStage() {
+std::vector<std::function<void ()>>& RoundManager::getM_functionsInDrawCardStage() {
 	// TODO - implement RoundManager::getM_functionsInDrawCardStage
 	throw "Not yet implemented";
 }
 
-vector<std::function<void ()>>& RoundManager::getM_functionsInPlayCardStage() {
+std::vector<std::function<void ()>>& RoundManager::getM_functionsInPlayCardStage() {
 	// TODO - implement RoundManager::getM_functionsInPlayCardStage
 	throw "Not yet implemented";
 }
 
-vector<std::function<void ()>>& RoundManager::getM_functionsInDiscardStage() {
+std::vector<std::function<void ()>>& RoundManager::getM_functionsInDiscardStage() {
 	// TODO - implement RoundManager::getM_functionsInDiscardStage
 	throw "Not yet implemented";
 }
 
-vector<std::function<void ()>>& RoundManager::getM_functionsInRoundEndStage() {
+std::vector<std::function<void ()>>& RoundManager::getM_functionsInRoundEndStage() {
 	// TODO - implement RoundManager::getM_functionsInRoundEndStage
 	throw "Not yet implemented";
 }

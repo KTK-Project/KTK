@@ -1,18 +1,22 @@
 #ifndef Rule_Character_h__
 #define Rule_Character_h__
 
+#include "Player/Player.h"
+#include "Manager/KTK_Enum.h"
+#include "Card/Card.h"
+#include "Event/Event_Base.h"
 
 class Rule_Character {
 
 private:
-	Player* m_player;
+	std::shared_ptr<Player> m_player;
 
 public:
-	Rule_Character(Player* player);
+	Rule_Character(std::shared_ptr<Player> player);
 
-	Player* getPlayer();
+	std::shared_ptr<Player> getPlayer();
 
-	void setPlayer(Player* player);
+	void setPlayer(std::shared_ptr<Player> player);
 
 	void readyStage();
 
@@ -30,19 +34,19 @@ public:
 
 	void asCardGoal(Card_Name cardName);
 
-	void equip(Card* card);
+	void equip(std::shared_ptr<Card> card);
 
-	void unequip(Card* card);
+	void unequip(std::shared_ptr<Card> card);
 
-	void playCard(Card* card);
+	void playCard(std::shared_ptr<Card> card);
 
-	void drawCard(Card* card);
+	void drawCard(std::shared_ptr<Card> card);
 
-	Card* removeHandCard(Card* card);
+	std::shared_ptr<Card> removeHandCard(std::shared_ptr<Card> card);
 
-	int getDistanceForCard(Card* card);
+	int getDistanceForCard(std::shared_ptr<Card> card);
 
-	int getDistance(Player* player);
+	int getDistance(std::shared_ptr<Player> player);
 
 	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
 

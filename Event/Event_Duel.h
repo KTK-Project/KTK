@@ -1,12 +1,14 @@
 #ifndef Event_Duel_h__
 #define Event_Duel_h__
 
+#include "Event_Strategy.h"
+#include "Player\Player.h"
 
-class Event_Duel : Event_Strategy {
+class Event_Duel : public Event_Strategy {
 
 private:
-	Player* m_goalPlayer;
-	Player* m_currentPlayer;
+	std::shared_ptr<Player> m_goalPlayer;
+	std::shared_ptr<Player> m_currentPlayer;
 
 public:
 	void eventResolve();

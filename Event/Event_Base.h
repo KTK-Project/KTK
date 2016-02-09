@@ -1,6 +1,8 @@
 #ifndef Event_Base_h__
 #define Event_Base_h__
 
+#include <functional>
+#include "Manager\KTK_Enum.h"
 
 class Event_Base {
 

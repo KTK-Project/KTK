@@ -1,6 +1,8 @@
 #ifndef Character_h__
 #define Character_h__
 
+#include "Manager\KTK_Enum.h"
+#include "Skill\SkillList.h"
 
 class Character {
 

@@ -1,6 +1,6 @@
 #include "Rule_LuXun.h"
 
-Card* Rule_LuXun::removeHandCard(Card* card) {
+std::shared_ptr<Card> Rule_LuXun::removeHandCard(std::shared_ptr<Card> card) {
 	// TODO - implement Rule_LuXun::removeHandCard
 	throw "Not yet implemented";
 }

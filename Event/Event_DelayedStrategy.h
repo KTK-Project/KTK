@@ -1,16 +1,18 @@
 #ifndef Event_DelayedStrategy_h__
 #define Event_DelayedStrategy_h__
 
+#include "Event_Base.h"
+#include "Player\Player.h"
 
-class Event_DelayedStrategy : Event_Base {
+class Event_DelayedStrategy : public Event_Base {
 
 public:
-	Player* m_ownerPlayer;
+	std::shared_ptr<Player> m_ownerPlayer;
 
 	Event_DelayedStrategy();
 
-	Player* getM_ownerPlayer();
+	std::shared_ptr<Player> getM_ownerPlayer();
 
-	void setM_ownerPlayer(Player* m_ownerPlayer);
+	void setM_ownerPlayer(std::shared_ptr<Player> m_ownerPlayer);
 };
 #endif // Event_DelayedStrategy_h__
