@@ -1,11 +1,18 @@
+#include "cocos2d.h"
 #include "UI_Card.h"
+#include <memory>
 
-UI_Card* UI_Card::create(Card* card) {
+using std::shared_ptr;
+using cocos2d::Label;
+using cocos2d::Action;
+using cocos2d::EventListenerTouchOneByOne;
+
+UI_Card* UI_Card::create(shared_ptr<Card> card) {
 	// TODO - implement UI_Card::create
 	throw "Not yet implemented";
 }
 
-bool UI_Card::initWithCard(Card* card) {
+bool UI_Card::initWithCard(shared_ptr<Card> card) {
 	// TODO - implement UI_Card::initWithCard
 	throw "Not yet implemented";
 }
@@ -15,12 +22,12 @@ void UI_Card::initListenToUpDown() {
 	throw "Not yet implemented";
 }
 
-Card* UI_Card::getCard() {
+shared_ptr<Card> UI_Card::getCard() {
 	// TODO - implement UI_Card::getCard
 	throw "Not yet implemented";
 }
 
-void UI_Card::setCard(Card* card) {
+void UI_Card::setCard(shared_ptr<Card> card) {
 	// TODO - implement UI_Card::setCard
 	throw "Not yet implemented";
 }
