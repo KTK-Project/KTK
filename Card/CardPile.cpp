@@ -55,7 +55,7 @@ std::shared_ptr<Card> CardPile::getCard(std::shared_ptr<Card> card) {
 	throw "Not yet implemented";
 }
 
-std::vector<std::shared_ptr<Card>> CardPile::getCards(std::function<bool (Card*)>& filter) {
+std::vector<std::shared_ptr<Card>> CardPile::getCards(std::function<bool (std::shared_ptr<Card>)>& filter) {
 	// TODO - implement CardPile::getCards
 	throw "Not yet implemented";
 }

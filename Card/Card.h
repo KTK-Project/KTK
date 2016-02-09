@@ -1,10 +1,11 @@
 #ifndef Card_h__
 #define Card_h__
 
-#include "Manager\KTK_Enum.h"
 #include <memory>
-#include "Player\Player.h"
 #include <vector>
+#include "Manager\KTK_Enum.h"
+
+class Player;
 
 class Card {
 

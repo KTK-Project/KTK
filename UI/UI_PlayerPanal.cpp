@@ -55,7 +55,7 @@ UI_LogBox* UI_PlayerPanal::getLogBox() {
 	throw "Not yet implemented";
 }
 
-void UI_PlayerPanal::drawCards(vector<Card*>& cards) {
+void UI_PlayerPanal::drawCards(std::vector<std::shared_ptr<Card>>& cards) {
 	// TODO - implement UI_PlayerPanal::drawCards
 	throw "Not yet implemented";
 }

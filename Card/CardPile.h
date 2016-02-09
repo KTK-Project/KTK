@@ -3,8 +3,8 @@
 
 #include <memory>
 #include <deque>
-#include "Card.h"
 #include <functional>
+#include "Card.h"
 
 class CardPile {
 
@@ -26,11 +26,7 @@ public:
 
 	void pushFront(std::shared_ptr<Card> card);
 
-<<<<<<< HEAD
-	int countCard(std::function<bool (Card*)> filter);
-=======
 	int countCard(std::function<bool (std::shared_ptr<Card>)> filter);
->>>>>>> origin/master
 
 	void shuffle();
 
