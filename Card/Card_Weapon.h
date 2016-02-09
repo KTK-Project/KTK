@@ -1,16 +1,19 @@
 #ifndef Card_Weapon_h__
 #define Card_Weapon_h__
 
+#include <memory>
+#include "Player\Player.h"
+#include "Card_Equipment.h"
 
 class Card_Weapon : public Card_Equipment {
 
 public:
 	int m_attackRange;
 
-	int getM_goalPlayerQuantity(Player* requester);
+	int getM_goalPlayerQuantity(std::shared_ptr<Player> requester);
 
 	int getAttackRange();
 
-	void useCard(Player* playCardPlayer, vector<Player*>& goalPlayer);
+	void useCard(std::shared_ptr<Player> playCardPlayer, std::vector<std::shared_ptr<Player>>& goalPlayer);
 };
 #endif // Card_Weapon_h__

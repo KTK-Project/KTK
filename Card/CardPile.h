@@ -1,11 +1,15 @@
 #ifndef CardPile_h__
 #define CardPile_h__
 
+#include <memory>
+#include <deque>
+#include "Card.h"
+#include <functional>
 
 class CardPile {
 
 private:
-	deque<Card*> m_cards;
+	std::deque<std::shared_ptr<Card>> m_cards;
 
 public:
 	CardPile();
@@ -14,32 +18,36 @@ public:
 
 	bool isEmpty();
 
-	Card* popBack();
+	std::shared_ptr<Card> popBack();
 
-	Card* popFront();
+	std::shared_ptr<Card> popFront();
 
-	void pushBack(Card* card);
+	void pushBack(std::shared_ptr<Card> card);
 
-	void pushFront(Card* card);
+	void pushFront(std::shared_ptr<Card> card);
 
+<<<<<<< HEAD
 	int countCard(std::function<bool (Card*)> filter);
+=======
+	int countCard(std::function<bool (std::shared_ptr<Card>)> filter);
+>>>>>>> origin/master
 
 	void shuffle();
 
 	void sort();
 
-	Card* getCard(Card* card);
+	std::shared_ptr<Card> getCard(std::shared_ptr<Card> card);
 
-	vector<Card*> getCards(std::function<bool (Card*)>& filter);
+	std::vector<std::shared_ptr<Card>> getCards(std::function<bool (std::shared_ptr<Card>)>& filter);
 
-	void addCard(Card* card);
+	void addCard(std::shared_ptr<Card> card);
 
-	void addCards(vector<Card*>& cards);
+	void addCards(std::vector<std::shared_ptr<Card>>& cards);
 
-	void removeCard(Card* card);
+	void removeCard(std::shared_ptr<Card> card);
 
-	void removeCards(vector<Card*>& cards);
+	void removeCards(std::vector<std::shared_ptr<Card>>& cards);
 
-	vector<Card*> removeCards(std::function<bool (Card*)>& filter);
+	std::vector<std::shared_ptr<Card>> removeCards(std::function<bool (std::shared_ptr<Card>)>& filter);
 };
 #endif // CardPile_h__
