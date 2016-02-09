@@ -1,13 +1,17 @@
 #ifndef Card_Lightning_h__
 #define Card_Lightning_h__
 
+#include "Card_DelayedStrategy.h"
+#include <memory>
+#include "Player\Player.h"
+#include <vector>
 
 class Card_Lightning : public Card_DelayedStrategy {
 
 
 public:
-	int getM_goalPlayerQuantity(Player* requester);
+	int getM_goalPlayerQuantity(std::shared_ptr<Player> requester);
 
-	void useCard(Player* playCardPlayer, vector<Player*>& goalPlayer);
+	void useCard(std::shared_ptr<Player> playCardPlayer, std::vector<std::shared_ptr<Player>>& goalPlayer);
 };
 #endif // Card_Lightning_h__

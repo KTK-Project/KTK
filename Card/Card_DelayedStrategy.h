@@ -1,6 +1,7 @@
 #ifndef Card_DelayedStrategy_h__
 #define Card_DelayedStrategy_h__
 
+#include "Card.h"
 
 class Card_DelayedStrategy : Card {
 
