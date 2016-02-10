@@ -35,7 +35,7 @@ public:
 
 	void drawCards(std::vector<std::shared_ptr<Card>>& cards);
 
-	void setM_playerPanalState(PlayerPanalState m_playerPanalState);
+	void setPlayerPanalState(PlayerPanalState m_playerPanalState);
 
 	void clean();
 };

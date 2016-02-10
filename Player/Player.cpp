@@ -130,12 +130,12 @@ void Player::setIDMarks(std::shared_ptr<Player> player, Char_ID id) {
 	throw "Not yet implemented";
 }
 
-Controller_Base* Player::getController() {
+std::shared_ptr<Controller_Base> Player::getController() {
 	// TODO - implement Player::getController
 	throw "Not yet implemented";
 }
 
-void Player::setController(Controller_Base* controller) {
+void Player::setController(std::shared_ptr<Controller_Base> controller) {
 	// TODO - implement Player::setController
 	throw "Not yet implemented";
 }

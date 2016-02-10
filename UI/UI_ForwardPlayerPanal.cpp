@@ -25,8 +25,8 @@ void UI_ForwardPlayerPanal::drawCards(std::vector<std::shared_ptr<Card>>& cards)
 	throw "Not yet implemented";
 }
 
-void UI_ForwardPlayerPanal::setM_playerPanalState(PlayerPanalState m_playerPanalState) {
-	// TODO - implement UI_ForwardPlayerPanal::setM_playerPanalState
+void UI_ForwardPlayerPanal::setPlayerPanalState(PlayerPanalState m_playerPanalState) {
+	// TODO - implement UI_ForwardPlayerPanal::setPlayerPanalState
 	throw "Not yet implemented";
 }
 

@@ -24,9 +24,9 @@ public:
 
 	void settleUp();
 
-	bool getM_needToClean();
+	bool getNeedToClean();
 
-	void setM_needToClean(bool m_needToClean);
+	void setNeedToClean(bool m_needToClean);
 
 	void clean();
 

@@ -13,8 +13,8 @@ private:
 public:
 	bool initWithCards(std::vector<std::shared_ptr<Card>>& topCards);
 
-	std::vector<UI_Card*>& getM_topCards();
+	std::vector<UI_Card*>& getTopCards();
 
-	std::vector<UI_Card*>& getM_bottonCards();
+	std::vector<UI_Card*>& getBottonCards();
 };
 #endif // UI_GuanXing_h__

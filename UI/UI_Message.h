@@ -21,12 +21,12 @@ public:
 
 	void update(float delta);
 
-	void setM_button1ValidCheck(std::function<bool ()> m_button1ValidCheck);
+	void setButton1ValidCheck(std::function<bool ()> m_button1ValidCheck);
 
-	void setM_button2ValidCheck(std::function<bool ()> m_button2ValidCheck);
+	void setButton2ValidCheck(std::function<bool ()> m_button2ValidCheck);
 
-	void setM_button1CallBack(std::function<void (std::shared_ptr<Event_Base>&)> m_button1CallBack);
+	void setButton1CallBack(std::function<void (std::shared_ptr<Event_Base>&)> m_button1CallBack);
 
-	void setM_button2CallBack(std::function<void (std::shared_ptr<Event_Base>&)> m_button2CallBack);
+	void setButton2CallBack(std::function<void (std::shared_ptr<Event_Base>&)> m_button2CallBack);
 };
 #endif // UI_Message_h__

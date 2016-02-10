@@ -56,13 +56,13 @@ public:
 
 	void drawCards(std::vector<std::shared_ptr<Card>>& cards);
 
-	Player_Color getM_playerColor();
+	Player_Color getPlayerColor();
 
-	void setM_playerColor(Player_Color m_playerColor);
+	void setPlayerColor(Player_Color m_playerColor);
 
-	PlayerPanalState getM_playerPanalState();
+	PlayerPanalState getPlayerPanalState();
 
-	void setM_playerPanalState(PlayerPanalState m_playerPanalState);
+	void setPlayerPanalState(PlayerPanalState m_playerPanalState);
 
 	void clean();
 };

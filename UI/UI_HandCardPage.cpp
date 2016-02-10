@@ -65,7 +65,7 @@ std::vector<UI_Card*> UI_HandCardPage::removeAll() {
 	throw "Not yet implemented";
 }
 
-void UI_HandCardPage::setM_addCardFinishCallBack(std::function<void ()>& m_addCardFinishCallBack) {
-	// TODO - implement UI_HandCardPage::setM_addCardFinishCallBack
+void UI_HandCardPage::setAddCardFinishCallBack(std::function<void ()>& m_addCardFinishCallBack) {
+	// TODO - implement UI_HandCardPage::setAddCardFinishCallBack
 	throw "Not yet implemented";
 }

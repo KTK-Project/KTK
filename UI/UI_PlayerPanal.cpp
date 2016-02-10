@@ -60,19 +60,19 @@ void UI_PlayerPanal::drawCards(std::vector<std::shared_ptr<Card>>& cards) {
 	throw "Not yet implemented";
 }
 
-Player_Color UI_PlayerPanal::getM_playerColor() {
+Player_Color UI_PlayerPanal::getPlayerColor() {
 	return this->m_playerColor;
 }
 
-void UI_PlayerPanal::setM_playerColor(Player_Color m_playerColor) {
+void UI_PlayerPanal::setPlayerColor(Player_Color m_playerColor) {
 	this->m_playerColor = m_playerColor;
 }
 
-PlayerPanalState UI_PlayerPanal::getM_playerPanalState() {
+PlayerPanalState UI_PlayerPanal::getPlayerPanalState() {
 	return this->m_playerPanalState;
 }
 
-void UI_PlayerPanal::setM_playerPanalState(PlayerPanalState m_playerPanalState) {
+void UI_PlayerPanal::setPlayerPanalState(PlayerPanalState m_playerPanalState) {
 	this->m_playerPanalState = m_playerPanalState;
 }
 

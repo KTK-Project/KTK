@@ -20,7 +20,7 @@ public:
 
 	void resolveEvent();
 
-	std::stack<std::shared_ptr<Event_Base>>& getM_eventsStack();
+	std::stack<std::shared_ptr<Event_Base>>& getEventsStack();
 
 	bool hasActions();
 

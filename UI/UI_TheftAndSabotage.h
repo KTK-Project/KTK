@@ -18,8 +18,8 @@ private:
 public:
 	bool initWithPlayer(std::shared_ptr<Player> player, Card_Name cardName);
 
-	std::shared_ptr<Card> getM_selectedCard();
+	std::shared_ptr<Card> getSelectedCard();
 
-	void setM_selectedCard(std::shared_ptr<Card> m_selectedCard);
+	void setSelectedCard(std::shared_ptr<Card> m_selectedCard);
 };
 #endif // UI_TheftAndSabotage_h__

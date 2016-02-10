@@ -15,8 +15,8 @@ void EventManagers::resolveEvent() {
 	throw "Not yet implemented";
 }
 
-std::stack<std::shared_ptr<Event_Base>>& EventManagers::getM_eventsStack() {
-	// TODO - implement EventManagers::getM_eventsStack
+std::stack<std::shared_ptr<Event_Base>>& EventManagers::getEventsStack() {
+	// TODO - implement EventManagers::getEventsStack
 	throw "Not yet implemented";
 }
 

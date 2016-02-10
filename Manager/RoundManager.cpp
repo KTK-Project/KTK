@@ -35,33 +35,33 @@ void RoundManager::setRoundFinish(bool roundFinish) {
 	throw "Not yet implemented";
 }
 
-std::vector<std::function<void ()>>& RoundManager::getM_functionsInReadyStage() {
-	// TODO - implement RoundManager::getM_functionsInReadyStage
+std::vector<std::function<void ()>>& RoundManager::getFunctionsInReadyStage() {
+	// TODO - implement RoundManager::getFunctionsInReadyStage
 	throw "Not yet implemented";
 }
 
-std::vector<std::function<void ()>>& RoundManager::getM_functionsInJudgeStage() {
-	// TODO - implement RoundManager::getM_functionsInJudgeStage
+std::vector<std::function<void ()>>& RoundManager::getFunctionsInJudgeStage() {
+	// TODO - implement RoundManager::getFunctionsInJudgeStage
 	throw "Not yet implemented";
 }
 
-std::vector<std::function<void ()>>& RoundManager::getM_functionsInDrawCardStage() {
-	// TODO - implement RoundManager::getM_functionsInDrawCardStage
+std::vector<std::function<void ()>>& RoundManager::getFunctionsInDrawCardStage() {
+	// TODO - implement RoundManager::getFunctionsInDrawCardStage
 	throw "Not yet implemented";
 }
 
-std::vector<std::function<void ()>>& RoundManager::getM_functionsInPlayCardStage() {
-	// TODO - implement RoundManager::getM_functionsInPlayCardStage
+std::vector<std::function<void ()>>& RoundManager::getFunctionsInPlayCardStage() {
+	// TODO - implement RoundManager::getFunctionsInPlayCardStage
 	throw "Not yet implemented";
 }
 
-std::vector<std::function<void ()>>& RoundManager::getM_functionsInDiscardStage() {
-	// TODO - implement RoundManager::getM_functionsInDiscardStage
+std::vector<std::function<void ()>>& RoundManager::getFunctionsInDiscardStage() {
+	// TODO - implement RoundManager::getFunctionsInDiscardStage
 	throw "Not yet implemented";
 }
 
-std::vector<std::function<void ()>>& RoundManager::getM_functionsInRoundEndStage() {
-	// TODO - implement RoundManager::getM_functionsInRoundEndStage
+std::vector<std::function<void ()>>& RoundManager::getFunctionsInRoundEndStage() {
+	// TODO - implement RoundManager::getFunctionsInRoundEndStage
 	throw "Not yet implemented";
 }
 

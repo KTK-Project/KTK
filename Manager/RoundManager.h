@@ -34,17 +34,17 @@ public:
 
 	void setRoundFinish(bool roundFinish);
 
-	std::vector<std::function<void ()>>& getM_functionsInReadyStage();
+	std::vector<std::function<void ()>>& getFunctionsInReadyStage();
 
-	std::vector<std::function<void ()>>& getM_functionsInJudgeStage();
+	std::vector<std::function<void ()>>& getFunctionsInJudgeStage();
 
-	std::vector<std::function<void ()>>& getM_functionsInDrawCardStage();
+	std::vector<std::function<void ()>>& getFunctionsInDrawCardStage();
 
-	std::vector<std::function<void ()>>& getM_functionsInPlayCardStage();
+	std::vector<std::function<void ()>>& getFunctionsInPlayCardStage();
 
-	std::vector<std::function<void ()>>& getM_functionsInDiscardStage();
+	std::vector<std::function<void ()>>& getFunctionsInDiscardStage();
 
-	std::vector<std::function<void ()>>& getM_functionsInRoundEndStage();
+	std::vector<std::function<void ()>>& getFunctionsInRoundEndStage();
 
 private:
 	void readyStage();

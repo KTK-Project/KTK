@@ -28,11 +28,11 @@ void UI_Desktop::settleUp() {
 	throw "Not yet implemented";
 }
 
-bool UI_Desktop::getM_needToClean() {
+bool UI_Desktop::getNeedToClean() {
 	return this->m_needToClean;
 }
 
-void UI_Desktop::setM_needToClean(bool m_needToClean) {
+void UI_Desktop::setNeedToClean(bool m_needToClean) {
 	this->m_needToClean = m_needToClean;
 }
 

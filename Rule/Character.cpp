@@ -20,10 +20,10 @@ int Character::getHP() {
 	throw "Not yet implemented";
 }
 
-SkillList Character::getM_skillList() {
+SkillList Character::getSkillList() {
 	return this->m_skillList;
 }
 
-void Character::setM_skillList(SkillList m_skillList) {
+void Character::setSkillList(SkillList m_skillList) {
 	this->m_skillList = m_skillList;
 }

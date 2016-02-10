@@ -32,39 +32,39 @@ void UI_Card::setCard(shared_ptr<Card> card) {
 	throw "Not yet implemented";
 }
 
-void UI_Card::setM_description(Label* m_description) {
+void UI_Card::setDescription(Label* m_description) {
 	this->m_description = m_description;
 }
 
-bool UI_Card::getM_dark() {
+bool UI_Card::getDark() {
 	return this->m_dark;
 }
 
-void UI_Card::setM_dark(bool m_dark) {
+void UI_Card::setDark(bool m_dark) {
 	this->m_dark = m_dark;
 }
 
-bool UI_Card::getM_canUp() {
+bool UI_Card::getCanUp() {
 	return this->m_canUp;
 }
 
-void UI_Card::setM_canUp(bool m_canUp) {
+void UI_Card::setCanUp(bool m_canUp) {
 	this->m_canUp = m_canUp;
 }
 
-bool UI_Card::getM_upping() {
+bool UI_Card::getUpping() {
 	return this->m_upping;
 }
 
-void UI_Card::setM_upping(bool m_upping) {
+void UI_Card::setUpping(bool m_upping) {
 	this->m_upping = m_upping;
 }
 
-void UI_Card::setM_upCallBack(std::function<void (UI_Card*)> m_upCallBack) {
+void UI_Card::setUpCallBack(std::function<void (UI_Card*)> m_upCallBack) {
 	this->m_upCallBack = m_upCallBack;
 }
 
-void UI_Card::setM_downCallBack(std::function<void (UI_Card*)> m_downCallBack) {
+void UI_Card::setDownCallBack(std::function<void (UI_Card*)> m_downCallBack) {
 	this->m_downCallBack = m_downCallBack;
 }
 
@@ -73,6 +73,6 @@ Action* UI_Card::runAction(Action* action) {
 	throw "Not yet implemented";
 }
 
-EventListenerTouchOneByOne* UI_Card::getM_listener() {
+EventListenerTouchOneByOne* UI_Card::getListener() {
 	return this->m_listener;
 }

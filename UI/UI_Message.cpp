@@ -15,20 +15,20 @@ void UI_Message::update(float delta) {
 	throw "Not yet implemented";
 }
 
-void UI_Message::setM_button1ValidCheck(std::function<bool ()> m_button1ValidCheck) {
+void UI_Message::setButton1ValidCheck(std::function<bool ()> m_button1ValidCheck) {
 	this->m_button1ValidCheck = m_button1ValidCheck;
 }
 
-void UI_Message::setM_button2ValidCheck(std::function<bool ()> m_button2ValidCheck) {
+void UI_Message::setButton2ValidCheck(std::function<bool ()> m_button2ValidCheck) {
 	this->m_button2ValidCheck = m_button2ValidCheck;
 }
 
-void UI_Message::setM_button1CallBack(std::function<void (std::shared_ptr<Event_Base>&)> m_button1CallBack) {
-	// TODO - implement UI_Message::setM_button1CallBack
+void UI_Message::setButton1CallBack(std::function<void (std::shared_ptr<Event_Base>&)> m_button1CallBack) {
+	// TODO - implement UI_Message::setButton1CallBack
 	throw "Not yet implemented";
 }
 
-void UI_Message::setM_button2CallBack(std::function<void (std::shared_ptr<Event_Base>&)> m_button2CallBack) {
-	// TODO - implement UI_Message::setM_button2CallBack
+void UI_Message::setButton2CallBack(std::function<void (std::shared_ptr<Event_Base>&)> m_button2CallBack) {
+	// TODO - implement UI_Message::setButton2CallBack
 	throw "Not yet implemented";
 }

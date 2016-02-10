@@ -31,26 +31,26 @@ public:
 
 	void setCard(std::shared_ptr<Card> card);
 
-	void setM_description(cocos2d::Label* m_description);
+	void setDescription(cocos2d::Label* m_description);
 
-	bool getM_dark();
+	bool getDark();
 
-	void setM_dark(bool m_dark);
+	void setDark(bool m_dark);
 
-	bool getM_canUp();
+	bool getCanUp();
 
-	void setM_canUp(bool m_canUp);
+	void setCanUp(bool m_canUp);
 
-	bool getM_upping();
+	bool getUpping();
 
-	void setM_upping(bool m_upping);
+	void setUpping(bool m_upping);
 
-	void setM_upCallBack(std::function<void (UI_Card*)> m_upCallBack);
+	void setUpCallBack(std::function<void (UI_Card*)> m_upCallBack);
 
-	void setM_downCallBack(std::function<void (UI_Card*)> m_downCallBack);
+	void setDownCallBack(std::function<void (UI_Card*)> m_downCallBack);
 
 	cocos2d::Action* runAction(cocos2d::Action* action);
 
-	cocos2d::EventListenerTouchOneByOne* getM_listener();
+	cocos2d::EventListenerTouchOneByOne* getListener();
 };
 #endif // UI_Card_h__

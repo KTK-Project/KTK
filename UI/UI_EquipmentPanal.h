@@ -16,13 +16,13 @@ private:
 public:
 	void init();
 
-	void setM_weapon(std::shared_ptr<Card> m_weapon);
+	void setWeapon(std::shared_ptr<Card> m_weapon);
 
-	void setM_armor(std::shared_ptr<Card> m_armor);
+	void setArmor(std::shared_ptr<Card> m_armor);
 
-	void setM_defensiveHorse(std::shared_ptr<Card> m_defensiveHorse);
+	void setDefensiveHorse(std::shared_ptr<Card> m_defensiveHorse);
 
-	void setM_offensiveHorse(std::shared_ptr<Card> m_offensiveHorse);
+	void setOffensiveHorse(std::shared_ptr<Card> m_offensiveHorse);
 
 	void setEquipmentPanalState(std::shared_ptr<Card> card, EquipmentPanalState state);
 

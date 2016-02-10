@@ -22,8 +22,8 @@ public:
 
 	int getHP();
 
-	SkillList getM_skillList();
+	SkillList getSkillList();
 
-	void setM_skillList(SkillList m_skillList);
+	void setSkillList(SkillList m_skillList);
 };
 #endif // Character_h__

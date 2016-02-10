@@ -39,6 +39,6 @@ public:
 
 	std::vector<UI_Card*> removeAll();
 
-	void setM_addCardFinishCallBack(std::function<void ()>& m_addCardFinishCallBack);
+	void setAddCardFinishCallBack(std::function<void ()>& m_addCardFinishCallBack);
 };
 #endif // UI_HandCardPage_h__

@@ -16,10 +16,10 @@ public:
 
 	bool isLordSkill();
 
-	void setM_lordSkill(bool m_lordSkill);
+	void setLordSkill(bool m_lordSkill);
 
-	Skill_State getM_skillState();
+	Skill_State getSkillState();
 
-	void setM_skillState(Skill_State m_skillState);
+	void setSkillState(Skill_State m_skillState);
 };
 #endif // Skill_h__

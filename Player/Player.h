@@ -26,8 +26,8 @@ private:
 	std::shared_ptr<Card> m_offensiveHorse;
 	std::vector<std::shared_ptr<Card>> m_judgeCards;
 	std::vector<Char_ID> m_IDMarks;
-	Controller_Base* m_controller;
-	Rule_Character* m_rule;
+	std::shared_ptr<Controller_Base> m_controller;
+	std::shared_ptr<Rule_Character> m_rule;
 	UI_PlayerPanal* m_playerPanal;
 
 public:
@@ -83,9 +83,13 @@ public:
 
 	void setIDMarks(std::shared_ptr<Player> player, Char_ID id);
 
-	Controller_Base* getController();
+	std::shared_ptr<Controller_Base> getController();
 
-	void setController(Controller_Base* controller);
+	void setController(std::shared_ptr<Controller_Base> controller);
+
+	const std::shared_ptr<Rule_Character> getRule() const { return m_rule; }
+
+	void setRule(const std::shared_ptr<Rule_Character> val) { m_rule = val; }
 
 	UI_PlayerPanal* getPlayerPanal();
 

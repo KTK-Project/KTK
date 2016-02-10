@@ -5,10 +5,10 @@ bool UI_TheftAndSabotage::initWithPlayer(std::shared_ptr<Player> player, Card_Na
 	throw "Not yet implemented";
 }
 
-std::shared_ptr<Card> UI_TheftAndSabotage::getM_selectedCard() {
+std::shared_ptr<Card> UI_TheftAndSabotage::getSelectedCard() {
 	return this->m_selectedCard;
 }
 
-void UI_TheftAndSabotage::setM_selectedCard(std::shared_ptr<Card> m_selectedCard) {
+void UI_TheftAndSabotage::setSelectedCard(std::shared_ptr<Card> m_selectedCard) {
 	this->m_selectedCard = m_selectedCard;
 }
