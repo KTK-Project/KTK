@@ -12,7 +12,7 @@ class Card_Slash : Card_Basic {
 public:
 	bool s_usedOnce;
 
-	int getM_goalPlayerQuantity(std::shared_ptr<Player> requester);
+	int getGoalPlayerQuantity(std::shared_ptr<Player> requester);
 
 	std::vector<std::shared_ptr<Player>> getCandidate(std::shared_ptr<Player> playCardPlayer);
 

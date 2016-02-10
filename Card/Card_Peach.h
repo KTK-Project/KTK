@@ -9,7 +9,7 @@ class Card_Peach : public Card_Basic {
 
 
 public:
-	int getM_goalPlayerQuantity(std::shared_ptr<Player> requester);
+	int getGoalPlayerQuantity(std::shared_ptr<Player> requester);
 
 	void useCard(std::shared_ptr<Player> playCardPlayer, std::vector<std::shared_ptr<Player>>& goalPlayer);
 };

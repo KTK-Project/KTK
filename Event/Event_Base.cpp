@@ -10,19 +10,19 @@ void Event_Base::setEventType(Event_Type eventType) {
 	throw "Not yet implemented";
 }
 
-Event_State Event_Base::getM_eventState() {
+Event_State Event_Base::getEventState() {
 	return this->m_eventState;
 }
 
-void Event_Base::setM_eventState(Event_State m_eventState) {
+void Event_Base::setEventState(Event_State m_eventState) {
 	this->m_eventState = m_eventState;
 }
 
-std::function<void (Event_Base&)> Event_Base::getM_finishCallBack() {
+std::function<void (Event_Base&)> Event_Base::getFinishCallBack() {
 	return this->m_finishCallBack;
 }
 
-void Event_Base::setM_finishCallBack(std::function<void (Event_Base&)> m_finishCallBack) {
+void Event_Base::setFinishCallBack(std::function<void (Event_Base&)> m_finishCallBack) {
 	this->m_finishCallBack = m_finishCallBack;
 }
 

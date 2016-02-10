@@ -20,7 +20,7 @@ Card_Type Card::getType() {
 	throw "Not yet implemented";
 }
 
-int Card::getM_goalPlayerQuantity(std::shared_ptr<Player> requester)
+int Card::getGoalPlayerQuantity(std::shared_ptr<Player> requester)
 {
 	throw "123123";
 }

@@ -1,6 +1,6 @@
 #include "SelectedPlayers.h"
 
-std::deque<std::shared_ptr<Player>> SelectedPlayers::getM_players() {
+std::deque<std::shared_ptr<Player>> SelectedPlayers::getPlayers() {
 	return this->m_players;
 }
 
@@ -29,18 +29,18 @@ bool SelectedPlayers::hasPlayer(std::shared_ptr<Player> player) {
 	throw "Not yet implemented";
 }
 
-std::function<void ()> SelectedPlayers::getM_maxCallBack() {
+std::function<void ()> SelectedPlayers::getMaxCallBack() {
 	return this->m_maxCallBack;
 }
 
-void SelectedPlayers::setM_maxCallBack(std::function<void ()> m_maxCallBack) {
+void SelectedPlayers::setMaxCallBack(std::function<void ()> m_maxCallBack) {
 	this->m_maxCallBack = m_maxCallBack;
 }
 
-std::function<void ()> SelectedPlayers::getM_unmaxCallBack() {
+std::function<void ()> SelectedPlayers::getUnmaxCallBack() {
 	return this->m_unmaxCallBack;
 }
 
-void SelectedPlayers::setM_unmaxCallBack(std::function<void ()> m_unmaxCallBack) {
+void SelectedPlayers::setUnmaxCallBack(std::function<void ()> m_unmaxCallBack) {
 	this->m_unmaxCallBack = m_unmaxCallBack;
 }

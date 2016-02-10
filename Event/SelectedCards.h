@@ -28,12 +28,12 @@ public:
 
 	bool hasCard(UI_Card* card);
 
-	int getM_maxSelects();
+	int getMaxSelects();
 
-	void setM_maxSelects(int m_maxSelects);
+	void setMaxSelects(int m_maxSelects);
 
-	void setM_maxCallBack(std::function<void ()> m_maxCallBack);
+	void setMaxCallBack(std::function<void ()> m_maxCallBack);
 
-	void setM_unmaxCallBack(std::function<void ()> m_unmaxCallBack);
+	void setUnmaxCallBack(std::function<void ()> m_unmaxCallBack);
 };
 #endif // SelectedCards_h__

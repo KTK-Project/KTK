@@ -14,21 +14,21 @@ private:
 	SelectedPlayers m_receiver;
 
 public:
-	std::vector<std::shared_ptr<Player>> getM_candidate();
+	std::vector<std::shared_ptr<Player>> getCandidate();
 
-	void setM_candidate(std::vector<std::shared_ptr<Player>>& m_candidate);
+	void setCandidate(std::vector<std::shared_ptr<Player>>& m_candidate);
 
-	int getM_goalPlayerMaxQulitity();
+	int getGoalPlayerMaxQulitity();
 
-	void setM_goalPlayerMaxQulitity(int m_goalPlayerMaxQulitity);
+	void setGoalPlayerMaxQulitity(int m_goalPlayerMaxQulitity);
 
-	int getM_goalPlayerMinQulitity();
+	int getGoalPlayerMinQulitity();
 
-	void setM_goalPlayerMinQulitity(int m_goalPlayerMinQulitity);
+	void setGoalPlayerMinQulitity(int m_goalPlayerMinQulitity);
 
-	SelectedPlayers getM_receiver();
+	SelectedPlayers getReceiver();
 
-	void setM_receiver(SelectedPlayers m_receiver);
+	void setReceiver(SelectedPlayers m_receiver);
 
 	void eventResolve();
 };

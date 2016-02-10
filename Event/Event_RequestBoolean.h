@@ -8,9 +8,9 @@ class Event_RequestBoolean : public Event_Interaction {
 public:
 	bool m_receiver;
 
-	bool getM_receiver();
+	bool getReceiver();
 
-	void setM_receiver(bool m_receiver);
+	void setReceiver(bool m_receiver);
 
 	void eventResolve();
 };

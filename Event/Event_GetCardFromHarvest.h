@@ -14,17 +14,17 @@ private:
 	std::shared_ptr<Card> m_receiver;
 
 public:
-	std::vector<std::shared_ptr<Card>> getM_cards();
+	std::vector<std::shared_ptr<Card>> getCards();
 
-	void setM_cards(std::vector<std::shared_ptr<Card>> m_cards);
+	void setCards(std::vector<std::shared_ptr<Card>> m_cards);
 
-	std::vector<std::shared_ptr<Player>> getM_players();
+	std::vector<std::shared_ptr<Player>> getPlayers();
 
-	void setM_players(std::vector<std::shared_ptr<Player>> m_players);
+	void setPlayers(std::vector<std::shared_ptr<Player>> m_players);
 
-	std::shared_ptr<Card> getM_receiver();
+	std::shared_ptr<Card> getReceiver();
 
-	void setM_receiver(std::shared_ptr<Card> m_receiver);
+	void setReceiver(std::shared_ptr<Card> m_receiver);
 
 	void eventResolve();
 };

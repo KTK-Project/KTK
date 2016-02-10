@@ -1,7 +1,7 @@
 #include "Card_MurderWithBorrowedWeapon.h"
 
-int Card_MurderWithBorrowedWeapon::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
-	// TODO - implement Card_MurderWithBorrowedWeapon::getM_goalPlayerQuantity
+int Card_MurderWithBorrowedWeapon::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
+	// TODO - implement Card_MurderWithBorrowedWeapon::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 

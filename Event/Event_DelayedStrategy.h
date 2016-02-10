@@ -11,8 +11,8 @@ public:
 
 	Event_DelayedStrategy();
 
-	std::shared_ptr<Player> getM_ownerPlayer();
+	std::shared_ptr<Player> getOwnerPlayer();
 
-	void setM_ownerPlayer(std::shared_ptr<Player> m_ownerPlayer);
+	void setOwnerPlayer(std::shared_ptr<Player> m_ownerPlayer);
 };
 #endif // Event_DelayedStrategy_h__

@@ -10,8 +10,8 @@ private:
 	std::shared_ptr<Event_Base> m_event;
 
 public:
-	std::shared_ptr<Event_Base> getM_event();
+	std::shared_ptr<Event_Base> getEvent();
 
-	void setM_event(std::shared_ptr<Event_Base> m_event);
+	void setEvent(std::shared_ptr<Event_Base> m_event);
 };
 #endif // Controller_Base_h__

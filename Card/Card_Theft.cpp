@@ -1,7 +1,7 @@
 #include "Card_Theft.h"
 
-int Card_Theft::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
-	// TODO - implement Card_Theft::getM_goalPlayerQuantity
+int Card_Theft::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
+	// TODO - implement Card_Theft::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 

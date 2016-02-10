@@ -1,7 +1,7 @@
 #include "Card_ArrowRain.h"
 
-int Card_ArrowRain::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
-	// TODO - implement Card_ArrowRain::getM_goalPlayerQuantity
+int Card_ArrowRain::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
+	// TODO - implement Card_ArrowRain::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 

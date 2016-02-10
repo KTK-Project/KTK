@@ -16,13 +16,13 @@ public:
 
 	void setEventType(Event_Type eventType);
 
-	Event_State getM_eventState();
+	Event_State getEventState();
 
-	void setM_eventState(Event_State m_eventState);
+	void setEventState(Event_State m_eventState);
 
-	std::function<void (Event_Base&)> getM_finishCallBack();
+	std::function<void (Event_Base&)> getFinishCallBack();
 
-	void setM_finishCallBack(std::function<void (Event_Base&)> m_finishCallBack);
+	void setFinishCallBack(std::function<void (Event_Base&)> m_finishCallBack);
 
 	void finish();
 

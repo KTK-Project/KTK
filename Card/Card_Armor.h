@@ -8,10 +8,10 @@ class Card_Armor : public Card_Equipment {
 public:
 	bool m_valid;
 
-	int getM_goalPlayerQuantity(std::shared_ptr<Player> requester);
+	int getGoalPlayerQuantity(std::shared_ptr<Player> requester);
 
-	bool getM_valid();
+	bool getValid();
 
-	void setM_valid(bool m_valid);
+	void setValid(bool m_valid);
 };
 #endif // Card_Armor_h__

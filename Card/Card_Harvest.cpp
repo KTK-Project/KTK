@@ -1,7 +1,7 @@
 #include "Card_Harvest.h"
 
-int Card_Harvest::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
-	// TODO - implement Card_Harvest::getM_goalPlayerQuantity
+int Card_Harvest::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
+	// TODO - implement Card_Harvest::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 

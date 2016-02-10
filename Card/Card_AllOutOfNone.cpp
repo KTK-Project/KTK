@@ -1,7 +1,7 @@
 #include "Card_AllOutOfNone.h"
 
-int Card_AllOutOfNone::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
-	// TODO - implement Card_AllOutOfNone::getM_goalPlayerQuantity
+int Card_AllOutOfNone::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
+	// TODO - implement Card_AllOutOfNone::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 

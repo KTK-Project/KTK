@@ -1,7 +1,7 @@
 #include "Card_Sabotage.h"
 
-int Card_Sabotage::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
-	// TODO - implement Card_Sabotage::getM_goalPlayerQuantity
+int Card_Sabotage::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
+	// TODO - implement Card_Sabotage::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 

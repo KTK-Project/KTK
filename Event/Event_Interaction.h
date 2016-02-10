@@ -16,25 +16,25 @@ private:
 	std::function<void (Event_Base&)> m_returnCallBack;
 
 public:
-	std::shared_ptr<Player> getM_interactPlayer();
+	std::shared_ptr<Player> getInteractPlayer();
 
-	void setM_interactPlayer(std::shared_ptr<Player> m_interactPlayer);
+	void setInteractPlayer(std::shared_ptr<Player> m_interactPlayer);
 
-	std::string getM_descrption();
+	std::string getDescrption();
 
-	void setM_descrption(std::string m_descrption);
+	void setDescrption(std::string m_descrption);
 
-	bool getM_received();
+	bool getReceived();
 
-	void setM_received(bool m_received);
+	void setReceived(bool m_received);
 
-	bool getM_returned();
+	bool getReturned();
 
-	void setM_returned(bool m_returned);
+	void setReturned(bool m_returned);
 
-	std::function<void (Event_Base&)> getM_returnCallBack();
+	std::function<void (Event_Base&)> getReturnCallBack();
 
-	void setM_returnCallBack(std::function<void (Event_Base&)> m_returnCallBack);
+	void setReturnCallBack(std::function<void (Event_Base&)> m_returnCallBack);
 
 	void eventResolve();
 };

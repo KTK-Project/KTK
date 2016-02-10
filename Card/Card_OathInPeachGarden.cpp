@@ -1,7 +1,7 @@
 #include "Card_OathInPeachGarden.h"
 
-int Card_OathInPeachGarden::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
-	// TODO - implement Card_OathInPeachGarden::getM_goalPlayerQuantity
+int Card_OathInPeachGarden::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
+	// TODO - implement Card_OathInPeachGarden::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 

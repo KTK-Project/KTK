@@ -1,7 +1,7 @@
 #include "Card_Slash.h"
 
-int Card_Slash::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
-	// TODO - implement Card_Slash::getM_goalPlayerQuantity
+int Card_Slash::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
+	// TODO - implement Card_Slash::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 

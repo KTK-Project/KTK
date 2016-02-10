@@ -15,7 +15,7 @@ private:
 	std::function<void ()> m_unmaxCallBack;
 
 public:
-	std::deque<std::shared_ptr<Player>> getM_players();
+	std::deque<std::shared_ptr<Player>> getPlayers();
 
 	void addPlayer(std::shared_ptr<Player> player);
 
@@ -27,12 +27,12 @@ public:
 
 	bool hasPlayer(std::shared_ptr<Player> player);
 
-	std::function<void ()> getM_maxCallBack();
+	std::function<void ()> getMaxCallBack();
 
-	void setM_maxCallBack(std::function<void ()> m_maxCallBack);
+	void setMaxCallBack(std::function<void ()> m_maxCallBack);
 
-	std::function<void ()> getM_unmaxCallBack();
+	std::function<void ()> getUnmaxCallBack();
 
-	void setM_unmaxCallBack(std::function<void ()> m_unmaxCallBack);
+	void setUnmaxCallBack(std::function<void ()> m_unmaxCallBack);
 };
 #endif // SelectedPlayers_h__

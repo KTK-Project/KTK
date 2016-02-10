@@ -12,13 +12,13 @@ private:
 	std::shared_ptr<Player> m_peachPlayer;
 
 public:
-	std::shared_ptr<Player> getM_firstPlayer();
+	std::shared_ptr<Player> getFirstPlayer();
 
-	void setM_firstPlayer(std::shared_ptr<Player> m_firstPlayer);
+	void setFirstPlayer(std::shared_ptr<Player> m_firstPlayer);
 
-	std::shared_ptr<Player> getM_DyingPlayer();
+	std::shared_ptr<Player> getDyingPlayer();
 
-	void setM_DyingPlayer(std::shared_ptr<Player> m_DyingPlayer);
+	void setDyingPlayer(std::shared_ptr<Player> m_DyingPlayer);
 
 	void eventResolve();
 };

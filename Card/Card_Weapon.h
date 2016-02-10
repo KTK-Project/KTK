@@ -10,7 +10,7 @@ class Card_Weapon : public Card_Equipment {
 public:
 	int m_attackRange;
 
-	int getM_goalPlayerQuantity(std::shared_ptr<Player> requester);
+	int getGoalPlayerQuantity(std::shared_ptr<Player> requester);
 
 	int getAttackRange();
 

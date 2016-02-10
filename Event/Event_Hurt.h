@@ -14,21 +14,21 @@ private:
 	std::vector<std::shared_ptr<Card>> m_cards;
 
 public:
-	std::shared_ptr<Player> getM_attacker();
+	std::shared_ptr<Player> getAttacker();
 
-	void setM_attacker(std::shared_ptr<Player> m_attacker);
+	void setAttacker(std::shared_ptr<Player> m_attacker);
 
-	std::shared_ptr<Player> getM_goal();
+	std::shared_ptr<Player> getGoal();
 
-	void setM_goal(std::shared_ptr<Player> m_goal);
+	void setGoal(std::shared_ptr<Player> m_goal);
 
-	int getM_demage();
+	int getDemage();
 
-	void setM_demage(int m_demage);
+	void setDemage(int m_demage);
 
-	std::vector<std::shared_ptr<Card>> getM_cards();
+	std::vector<std::shared_ptr<Card>> getCards();
 
-	void setM_cards(std::vector<std::shared_ptr<Card>> m_cards);
+	void setCards(std::vector<std::shared_ptr<Card>> m_cards);
 
 	void eventResolve();
 };

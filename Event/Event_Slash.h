@@ -20,33 +20,33 @@ private:
 	bool m_needToAskPlayer;
 
 public:
-	std::shared_ptr<Player> getM_firstPlayer();
+	std::shared_ptr<Player> getFirstPlayer();
 
-	void setM_firstPlayer(std::shared_ptr<Player> m_firstPlayer);
+	void setFirstPlayer(std::shared_ptr<Player> m_firstPlayer);
 
-	std::shared_ptr<Card> getM_weapon();
+	std::shared_ptr<Card> getWeapon();
 
-	void setM_weapon(std::shared_ptr<Card> m_weapon);
+	void setWeapon(std::shared_ptr<Card> m_weapon);
 
-	std::shared_ptr<Player> getM_goalPlayers();
+	std::shared_ptr<Player> getGoalPlayers();
 
-	void setM_goalPlayers(std::shared_ptr<Player> m_goalPlayers);
+	void setGoalPlayers(std::shared_ptr<Player> m_goalPlayers);
 
-	std::shared_ptr<Card> getM_armor();
+	std::shared_ptr<Card> getArmor();
 
-	void setM_armor(std::shared_ptr<Card> m_armor);
+	void setArmor(std::shared_ptr<Card> m_armor);
 
-	std::vector<std::shared_ptr<Card>> getM_slash();
+	std::vector<std::shared_ptr<Card>> getSlash();
 
-	void setM_slash(std::vector<std::shared_ptr<Card>> m_slash);
+	void setSlash(std::vector<std::shared_ptr<Card>> m_slash);
 
-	bool getM_needToAskPlayer();
+	bool getNeedToAskPlayer();
 
-	void setM_needToAskPlayer(bool m_needToAskPlayer);
+	void setNeedToAskPlayer(bool m_needToAskPlayer);
 
-	Slash_State getM_slashState();
+	Slash_State getSlashState();
 
-	void setM_slashState(Slash_State m_slashState);
+	void setSlashState(Slash_State m_slashState);
 
 	void eventResolve();
 

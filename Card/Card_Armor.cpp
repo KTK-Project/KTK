@@ -1,14 +1,14 @@
 #include "Card_Armor.h"
 
-int Card_Armor::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
-	// TODO - implement Card_Armor::getM_goalPlayerQuantity
+int Card_Armor::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
+	// TODO - implement Card_Armor::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 
-bool Card_Armor::getM_valid() {
+bool Card_Armor::getValid() {
 	return this->m_valid;
 }
 
-void Card_Armor::setM_valid(bool m_valid) {
+void Card_Armor::setValid(bool m_valid) {
 	this->m_valid = m_valid;
 }

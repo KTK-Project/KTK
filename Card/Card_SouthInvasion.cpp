@@ -1,7 +1,7 @@
 #include "Card_SouthInvasion.h"
 
-int Card_SouthInvasion::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
-	// TODO - implement Card_SouthInvasion::getM_goalPlayerQuantity
+int Card_SouthInvasion::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
+	// TODO - implement Card_SouthInvasion::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 

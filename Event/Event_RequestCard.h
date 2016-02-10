@@ -18,37 +18,37 @@ private:
 	SelectedCards m_receiver;
 
 public:
-	bool getM_handCard();
+	bool getHandCard();
 
-	void setM_handCard(bool m_handCard);
+	void setHandCard(bool m_handCard);
 
-	Card_Name getM_requestHandCardName();
+	Card_Name getRequestHandCardName();
 
-	void setM_requestHandCardName(Card_Name m_requestHandCardName);
+	void setRequestHandCardName(Card_Name m_requestHandCardName);
 
-	int getM_requestHandCardQuantity();
+	int getRequestHandCardQuantity();
 
-	void setM_requestHandCardQuantity(int m_requestHandCardQuantity);
+	void setRequestHandCardQuantity(int m_requestHandCardQuantity);
 
-	bool getM_weapon();
+	bool getWeapon();
 
-	void setM_weapon(bool m_weapon);
+	void setWeapon(bool m_weapon);
 
-	bool getM_armor();
+	bool getArmor();
 
-	void setM_armor(bool m_armor);
+	void setArmor(bool m_armor);
 
-	bool getM_offensiveHorse();
+	bool getOffensiveHorse();
 
-	void setM_offensiveHorse(bool m_offensiveHorse);
+	void setOffensiveHorse(bool m_offensiveHorse);
 
-	bool getM_defensiveHorse();
+	bool getDefensiveHorse();
 
-	void setM_defensiveHorse(bool m_defensiveHorse);
+	void setDefensiveHorse(bool m_defensiveHorse);
 
-	SelectedCards getM_receiver();
+	SelectedCards getReceiver();
 
-	void setM_receiver(SelectedCards m_receiver);
+	void setReceiver(SelectedCards m_receiver);
 
 	void eventResolve();
 };

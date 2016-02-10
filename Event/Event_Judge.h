@@ -13,17 +13,17 @@ private:
 	bool m_judgeResult;
 
 public:
-	std::shared_ptr<Card> getM_judgeCard();
+	std::shared_ptr<Card> getJudgeCard();
 
-	void setM_judgeCard(std::shared_ptr<Card> m_judgeCard);
+	void setJudgeCard(std::shared_ptr<Card> m_judgeCard);
 
-	std::function<bool (std::shared_ptr<Card>)> getM_judgeCheck();
+	std::function<bool (std::shared_ptr<Card>)> getJudgeCheck();
 
-	void setM_judgeCheck(std::function<bool (std::shared_ptr<Card>)> m_judgeCheck);
+	void setJudgeCheck(std::function<bool (std::shared_ptr<Card>)> m_judgeCheck);
 
-	bool getM_judgeResult();
+	bool getJudgeResult();
 
-	void setM_judgeResult(bool m_judgeResult);
+	void setJudgeResult(bool m_judgeResult);
 
 	void eventResolve();
 };

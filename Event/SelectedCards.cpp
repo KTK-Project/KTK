@@ -35,18 +35,18 @@ bool SelectedCards::hasCard(UI_Card* card) {
 	throw "Not yet implemented";
 }
 
-int SelectedCards::getM_maxSelects() {
+int SelectedCards::getMaxSelects() {
 	return this->m_maxSelects;
 }
 
-void SelectedCards::setM_maxSelects(int m_maxSelects) {
+void SelectedCards::setMaxSelects(int m_maxSelects) {
 	this->m_maxSelects = m_maxSelects;
 }
 
-void SelectedCards::setM_maxCallBack(std::function<void ()> m_maxCallBack) {
+void SelectedCards::setMaxCallBack(std::function<void ()> m_maxCallBack) {
 	this->m_maxCallBack = m_maxCallBack;
 }
 
-void SelectedCards::setM_unmaxCallBack(std::function<void ()> m_unmaxCallBack) {
+void SelectedCards::setUnmaxCallBack(std::function<void ()> m_unmaxCallBack) {
 	this->m_unmaxCallBack = m_unmaxCallBack;
 }

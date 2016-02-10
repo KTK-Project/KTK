@@ -1,7 +1,7 @@
 #include "Card_Lightning.h"
 
-int Card_Lightning::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
-	// TODO - implement Card_Lightning::getM_goalPlayerQuantity
+int Card_Lightning::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
+	// TODO - implement Card_Lightning::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 

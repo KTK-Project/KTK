@@ -21,45 +21,45 @@ private:
 	std::shared_ptr<Card> m_receiver;
 
 public:
-	std::shared_ptr<Player> getM_player();
+	std::shared_ptr<Player> getPlayer();
 
-	void setM_player(std::shared_ptr<Player> m_player);
+	void setPlayer(std::shared_ptr<Player> m_player);
 
-	bool getM_handCard();
+	bool getHandCard();
 
-	void setM_handCard(bool m_handCard);
+	void setHandCard(bool m_handCard);
 
-	bool getM_lightning();
+	bool getLightning();
 
-	void setM_lightning(bool m_lightning);
+	void setLightning(bool m_lightning);
 
-	bool getM_drownInHappiness();
+	bool getDrownInHappiness();
 
-	void setM_drownInHappiness(bool m_drownInHappiness);
+	void setDrownInHappiness(bool m_drownInHappiness);
 
-	bool getM_famish();
+	bool getFamish();
 
-	void setM_famish(bool m_famish);
+	void setFamish(bool m_famish);
 
-	bool getM_weapon();
+	bool getWeapon();
 
-	void setM_weapon(bool m_weapon);
+	void setWeapon(bool m_weapon);
 
-	bool getM_armor();
+	bool getArmor();
 
-	void setM_armor(bool m_armor);
+	void setArmor(bool m_armor);
 
-	bool getM_offensiveHorse();
+	bool getOffensiveHorse();
 
-	void setM_offensiveHorse(bool m_offensiveHorse);
+	void setOffensiveHorse(bool m_offensiveHorse);
 
-	bool getM_defensiveHorse();
+	bool getDefensiveHorse();
 
-	void setM_defensiveHorse(bool m_defensiveHorse);
+	void setDefensiveHorse(bool m_defensiveHorse);
 
-	std::shared_ptr<Card> getM_receiver();
+	std::shared_ptr<Card> getReceiver();
 
-	void setM_receiver(std::shared_ptr<Card> m_receiver);
+	void setReceiver(std::shared_ptr<Card> m_receiver);
 
 	void eventResolve();
 };

@@ -1,7 +1,7 @@
 #include "Card_Horse.h"
 
-int Card_Horse::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
-	// TODO - implement Card_Horse::getM_goalPlayerQuantity
+int Card_Horse::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
+	// TODO - implement Card_Horse::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 

@@ -1,7 +1,7 @@
 #include "Card_DrownInHappiness.h"
 
-int Card_DrownInHappiness::getM_goalPlayerQuantity(std::shared_ptr<Player> requester) {
-	// TODO - implement Card_DrownInHappiness::getM_goalPlayerQuantity
+int Card_DrownInHappiness::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
+	// TODO - implement Card_DrownInHappiness::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 

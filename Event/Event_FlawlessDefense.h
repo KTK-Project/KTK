@@ -11,13 +11,13 @@ private:
 	bool m_success;
 
 public:
-	std::shared_ptr<Player> getM_firstPlayer();
+	std::shared_ptr<Player> getFirstPlayer();
 
-	void setM_firstPlayer(std::shared_ptr<Player> m_firstPlayer);
+	void setFirstPlayer(std::shared_ptr<Player> m_firstPlayer);
 
-	bool getM_success();
+	bool getSuccess();
 
-	void setM_success(bool m_success);
+	void setSuccess(bool m_success);
 
 	void eventResolve();
 };

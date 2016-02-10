@@ -13,13 +13,13 @@ private:
 	std::shared_ptr<Event_RequestGoalPlayer> m_requestGoalPlayerEvent;
 
 public:
-	std::shared_ptr<Event_RequestCard> getM_requestCardEvent();
+	std::shared_ptr<Event_RequestCard> getRequestCardEvent();
 
-	void setM_requestCardEvent(std::shared_ptr<Event_RequestCard> m_requestCardEvent);
+	void setRequestCardEvent(std::shared_ptr<Event_RequestCard> m_requestCardEvent);
 
-	std::shared_ptr<Event_RequestGoalPlayer> getM_requestGoalPlayerEvent();
+	std::shared_ptr<Event_RequestGoalPlayer> getRequestGoalPlayerEvent();
 
-	void setM_requestGoalPlayerEvent(std::shared_ptr<Event_RequestGoalPlayer> m_requestGoalPlayerEvent);
+	void setRequestGoalPlayerEvent(std::shared_ptr<Event_RequestGoalPlayer> m_requestGoalPlayerEvent);
 
 	void eventResolve();
 };
