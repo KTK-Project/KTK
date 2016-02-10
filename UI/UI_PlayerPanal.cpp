@@ -3,6 +3,7 @@
 void UI_PlayerPanal::initWithPlayer(std::shared_ptr<Player> player) {
 	// TODO - implement UI_PlayerPanal::initWithPlayer
 	throw "Not yet implemented";
+	//创建所有组件，addchild以后调用各个组件的refresh
 }
 
 std::shared_ptr<Player> UI_PlayerPanal::getPlayer() {
@@ -13,11 +14,13 @@ std::shared_ptr<Player> UI_PlayerPanal::getPlayer() {
 void UI_PlayerPanal::setPlayer(std::shared_ptr<Player> player) {
 	// TODO - implement UI_PlayerPanal::setPlayer
 	throw "Not yet implemented";
+	//调用initwithplayer
 }
 
 UI_ID* UI_PlayerPanal::getID() {
 	// TODO - implement UI_PlayerPanal::getID
 	throw "Not yet implemented";
+	//所有的get以前都要检查是否为空指针，若为空，报错，提醒要先调用initwithplayer
 }
 
 UI_HP* UI_PlayerPanal::getHP() {
@@ -56,6 +59,8 @@ UI_LogBox* UI_PlayerPanal::getLogBox() {
 }
 
 void UI_PlayerPanal::drawCards(std::vector<std::shared_ptr<Card>>& cards) {
+	//直接获取cards.size()，
+//再为这几个卡牌封装为反面的卡牌并给予一个移动，隐去，removechild的动作
 	// TODO - implement UI_PlayerPanal::drawCards
 	throw "Not yet implemented";
 }
@@ -65,6 +70,7 @@ Player_Color UI_PlayerPanal::getPlayerColor() {
 }
 
 void UI_PlayerPanal::setPlayerColor(Player_Color m_playerColor) {
+	//设置面板颜色
 	this->m_playerColor = m_playerColor;
 }
 
@@ -73,6 +79,7 @@ PlayerPanalState UI_PlayerPanal::getPlayerPanalState() {
 }
 
 void UI_PlayerPanal::setPlayerPanalState(PlayerPanalState m_playerPanalState) {
+	//设置背景,如果为可选择的，设置事件：触发则塞入selectedPlayer中
 	this->m_playerPanalState = m_playerPanalState;
 }
 

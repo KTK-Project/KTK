@@ -51,6 +51,8 @@ bool Rule_Character::canAsCandidate(Card_Name cardName) {
 }
 
 void Rule_Character::asCardGoal(Card_Name cardName) {
+	//大乔流离应该重新实现这个函数
+//任何卡牌调用usecard都需要先调用这个通知玩家
 	// TODO - implement Rule_Character::asCardGoal
 	throw "Not yet implemented";
 }
@@ -76,6 +78,7 @@ void Rule_Character::drawCard(std::shared_ptr<Card> card) {
 }
 
 std::shared_ptr<Card> Rule_Character::removeHandCard(std::shared_ptr<Card> card) {
+	//所有失去手牌都得通过此函数。
 	// TODO - implement Rule_Character::removeHandCard
 	throw "Not yet implemented";
 }
@@ -86,11 +89,13 @@ int Rule_Character::getDistanceForCard(std::shared_ptr<Card> card) {
 }
 
 int Rule_Character::getDistance(std::shared_ptr<Player> player) {
+	//如果参数是马超，距离+1
 	// TODO - implement Rule_Character::getDistance
 	throw "Not yet implemented";
 }
 
 void Rule_Character::beforeProcessEvent(std::shared_ptr<Event_Base>& event) {
+	//if(请求闪事件&&八卦阵valid)	调用八卦阵的eventsolve()
 	// TODO - implement Rule_Character::beforeProcessEvent
 	throw "Not yet implemented";
 }

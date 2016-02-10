@@ -6,11 +6,14 @@ void UI_Message::setString(std::string& string) {
 }
 
 void UI_Message::setVisible(bool visible) {
+	//true调用scheduleUpdate
+//false调用unscheduleUpdate
 	// TODO - implement UI_Message::setVisible
 	throw "Not yet implemented";
 }
 
 void UI_Message::update(float delta) {
+	//调用validcheck来确定按钮是否生效
 	// TODO - implement UI_Message::update
 	throw "Not yet implemented";
 }

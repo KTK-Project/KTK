@@ -116,6 +116,7 @@ std::vector<std::shared_ptr<Card>>& Player::getJudgeCards() {
 }
 
 void Player::addJudgeCard(std::shared_ptr<Card> card) {
+	//处理UI_部分
 	// TODO - implement Player::addJudgeCard
 	throw "Not yet implemented";
 }

@@ -1,6 +1,8 @@
 #include "UI_ForwardPlayerPanal.h"
 
 void UI_ForwardPlayerPanal::initWithPlayer(std::shared_ptr<Player> player) {
+	//调用基类initwithPlayer
+//初始化其他对象
 	// TODO - implement UI_ForwardPlayerPanal::initWithPlayer
 	throw "Not yet implemented";
 }
@@ -21,11 +23,13 @@ UI_Message* UI_ForwardPlayerPanal::getMessage() {
 }
 
 void UI_ForwardPlayerPanal::drawCards(std::vector<std::shared_ptr<Card>>& cards) {
+	//调用handcardpanal的addcard函数
 	// TODO - implement UI_ForwardPlayerPanal::drawCards
 	throw "Not yet implemented";
 }
 
 void UI_ForwardPlayerPanal::setPlayerPanalState(PlayerPanalState m_playerPanalState) {
+	//设置背景
 	// TODO - implement UI_ForwardPlayerPanal::setPlayerPanalState
 	throw "Not yet implemented";
 }
