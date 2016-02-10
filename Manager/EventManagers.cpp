@@ -11,6 +11,7 @@ void EventManagers::setResponser(std::shared_ptr<Player> responser) {
 }
 
 void EventManagers::resolveEvent() {
+	//ÊÂ¼şµÄeventResolve
 	// TODO - implement EventManagers::resolveEvent
 	throw "Not yet implemented";
 }

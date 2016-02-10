@@ -25,6 +25,7 @@ void Event_Judge::setJudgeResult(bool m_judgeResult) {
 }
 
 void Event_Judge::eventResolve() {
+	//记得司马懿的鬼才技能
 	// TODO - implement Event_Judge::eventResolve
 	throw "Not yet implemented";
 }

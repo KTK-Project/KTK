@@ -18,4 +18,5 @@ void Card_Equipment::setState(int state) {
 Card_Equipment::Card_Equipment() {
 	// TODO - implement Card_Equipment::Card_Equipment
 	throw "Not yet implemented";
+	//ÉèÖÃm_type
 }

@@ -32,6 +32,7 @@ void Event_Base::finish() {
 }
 
 void Event_Base::eventResolve() {
+	//µ÷ÓÃfinishCallback
 	// TODO - implement Event_Base::eventResolve
 	throw "Not yet implemented";
 }

@@ -3,9 +3,12 @@
 int Card_ArrowRain::getGoalPlayerQuantity(std::shared_ptr<Player> requester) {
 	// TODO - implement Card_ArrowRain::getGoalPlayerQuantity
 	throw "Not yet implemented";
+	//return 0
 }
 
 void Card_ArrowRain::useCard(std::shared_ptr<Player> playCardPlayer, std::vector<std::shared_ptr<Player>>& goalPlayer) {
 	// TODO - implement Card_ArrowRain::useCard
 	throw "Not yet implemented";
+	//调用Card::useCard()
+//封装对应卡牌事件
 }
