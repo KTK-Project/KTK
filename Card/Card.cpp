@@ -20,8 +20,7 @@ ECardType Card::getType() const {
 	throw "Not yet implemented";
 }
 
-int Card::getGoalPlayerQuantity(const std::shared_ptr<Player> requester)
-{
+int Card::getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const {
 	throw "123123";
 }
 
