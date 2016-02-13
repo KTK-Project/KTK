@@ -28,7 +28,7 @@ void UI_ForwardPlayerPanal::drawCards(const std::vector<std::shared_ptr<Card>>& 
 	throw "Not yet implemented";
 }
 
-void UI_ForwardPlayerPanal::setPlayerPanalState(const PlayerPanalState m_playerPanalState) const {
+void UI_ForwardPlayerPanal::setPlayerPanalState(const EPlayerPanalState m_playerPanalState) const {
 	//…Ë÷√±≥æ∞
 	// TODO - implement UI_ForwardPlayerPanal::setPlayerPanalState
 	throw "Not yet implemented";

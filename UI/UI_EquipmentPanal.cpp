@@ -27,7 +27,7 @@ void UI_EquipmentPanal::setOffensiveHorse(const std::shared_ptr<Card> m_offensiv
 	throw "Not yet implemented";
 }
 
-void UI_EquipmentPanal::setEquipmentPanalState(const std::shared_ptr<Card> card, const EquipmentPanalState state) const {
+void UI_EquipmentPanal::setEquipmentPanalState(const std::shared_ptr<Card> card, const EEquipmentPanalState state) const {
 	//根据状态设置事件
 	// TODO - implement UI_EquipmentPanal::setEquipmentPanalState
 	throw "Not yet implemented";

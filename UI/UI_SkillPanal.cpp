@@ -5,7 +5,7 @@ void UI_SkillPanal::init() const {
 	throw "Not yet implemented";
 }
 
-void UI_SkillPanal::setSkillState(const Skill skill, const Skill_State state) const {
+void UI_SkillPanal::setSkillState(const Skill skill, const ESkillState state) const {
 	//根据状态设置事件
 	// TODO - implement UI_SkillPanal::setSkillState
 	throw "Not yet implemented";

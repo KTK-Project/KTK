@@ -5,12 +5,12 @@ int SkillList::getSize() const {
 	throw "Not yet implemented";
 }
 
-Skill& SkillList::getSkillByName(const Char_SkillName name) const {
+Skill& SkillList::getSkillByName(const ESkillName name) const {
 	// TODO - implement SkillList::getSkillByName
 	throw "Not yet implemented";
 }
 
-int SkillList::getIndexByName(const Char_SkillName name) const {
+int SkillList::getIndexByName(const ESkillName name) const {
 	// TODO - implement SkillList::getIndexByName
 	throw "Not yet implemented";
 }

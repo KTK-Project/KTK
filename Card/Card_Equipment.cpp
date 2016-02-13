@@ -1,6 +1,6 @@
 #include "Card_Equipment.h"
 
-EquipmentCard_Type Card_Equipment::getEquipmentType() const {
+EEquipmentCard_Type Card_Equipment::getEquipmentType() const {
 	// TODO - implement Card_Equipment::getEquipmentType
 	throw "Not yet implemented";
 }

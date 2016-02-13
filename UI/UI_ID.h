@@ -13,6 +13,6 @@ private:
 public:
 	void init() const;
 
-	void setMarkID(const Char_ID ID) const;
+	void setMarkID(const ECharID ID) const;
 };
 #endif // UI_ID_h__

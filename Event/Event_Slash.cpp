@@ -48,11 +48,11 @@ void Event_Slash::setNeedToAskPlayer(const bool m_needToAskPlayer) const {
 	this->m_needToAskPlayer = m_needToAskPlayer;
 }
 
-Slash_State Event_Slash::getSlashState() const {
+ESlashState Event_Slash::getSlashState() const {
 	return this->m_slashState;
 }
 
-void Event_Slash::setSlashState(const Slash_State m_slashState) const {
+void Event_Slash::setSlashState(const ESlashState m_slashState) const {
 	//¸üÐÂneedtoaskplayer
 	this->m_slashState = m_slashState;
 }

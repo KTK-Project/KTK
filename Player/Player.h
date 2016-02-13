@@ -14,7 +14,7 @@ class Player {
 
 private:
 	std::shared_ptr<Character> m_character;
-	Char_ID m_ID;
+	ECharID m_ID;
 	int m_HP;
 	int m_maxHP;
 	bool m_alive;
@@ -25,7 +25,7 @@ private:
 	std::shared_ptr<Card> m_defensiveHorse;
 	std::shared_ptr<Card> m_offensiveHorse;
 	std::vector<std::shared_ptr<Card>> m_judgeCards;
-	std::vector<Char_ID> m_IDMarks;
+	std::vector<ECharID> m_IDMarks;
 	std::shared_ptr<Controller_Base> m_controller;
 	std::shared_ptr<Rule_Character> m_rule;
 	UI_PlayerPanal* m_playerPanal;
@@ -37,9 +37,9 @@ public:
 
 	void setCharacter(const std::shared_ptr<Character> character) const;
 
-	Char_ID getID() const;
+	ECharID getID() const;
 
-	void setID(const Char_ID ID) const;
+	void setID(const ECharID ID) const;
 
 	int getHP() const;
 
@@ -79,9 +79,9 @@ public:
 
 	void addJudgeCard(const std::shared_ptr<Card> card) const;
 
-	Char_ID getIDMarks(const std::shared_ptr<Player> player) const;
+	ECharID getIDMarks(const std::shared_ptr<Player> player) const;
 
-	void setIDMarks(const std::shared_ptr<Player> player, const Char_ID id) const;
+	void setIDMarks(const std::shared_ptr<Player> player, const ECharID id) const;
 
 	std::shared_ptr<Controller_Base> getController() const;
 

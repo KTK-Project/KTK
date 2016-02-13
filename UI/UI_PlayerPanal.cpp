@@ -65,20 +65,20 @@ void UI_PlayerPanal::drawCards(const std::vector<std::shared_ptr<Card>>& cards) 
 	throw "Not yet implemented";
 }
 
-Player_Color UI_PlayerPanal::getPlayerColor() const {
+EPlayerColor UI_PlayerPanal::getPlayerColor() const {
 	return this->m_playerColor;
 }
 
-void UI_PlayerPanal::setPlayerColor(const Player_Color m_playerColor) const {
+void UI_PlayerPanal::setPlayerColor(const EPlayerColor m_playerColor) const {
 	//设置面板颜色
 	this->m_playerColor = m_playerColor;
 }
 
-PlayerPanalState UI_PlayerPanal::getPlayerPanalState() const {
+EPlayerPanalState UI_PlayerPanal::getPlayerPanalState() const {
 	return this->m_playerPanalState;
 }
 
-void UI_PlayerPanal::setPlayerPanalState(const PlayerPanalState m_playerPanalState) const {
+void UI_PlayerPanal::setPlayerPanalState(const EPlayerPanalState m_playerPanalState) const {
 	//设置背景,如果为可选择的，设置事件：触发则塞入selectedPlayer中
 	this->m_playerPanalState = m_playerPanalState;
 }

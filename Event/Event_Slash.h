@@ -16,7 +16,7 @@ private:
 	std::shared_ptr<Player> m_goalPlayers;
 	std::shared_ptr<Card> m_armor;
 	std::vector<std::shared_ptr<Card>> m_slash;
-	Slash_State m_slashState;
+	ESlashState m_slashState;
 	bool m_needToAskPlayer;
 
 public:
@@ -44,9 +44,9 @@ public:
 
 	void setNeedToAskPlayer(const bool m_needToAskPlayer) const;
 
-	Slash_State getSlashState() const;
+	ESlashState getSlashState() const;
 
-	void setSlashState(const Slash_State m_slashState) const;
+	void setSlashState(const ESlashState m_slashState) const;
 
 	void eventResolve() const;
 

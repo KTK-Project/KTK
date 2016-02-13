@@ -1,6 +1,6 @@
 #include "UI_TheftAndSabotage.h"
 
-bool UI_TheftAndSabotage::initWithPlayer(const std::shared_ptr<Player> player, const Card_Name cardName) const {
+bool UI_TheftAndSabotage::initWithPlayer(const std::shared_ptr<Player> player, const ECardName cardName) const {
 	// TODO - implement UI_TheftAndSabotage::initWithPlayer
 	throw "Not yet implemented";
 }

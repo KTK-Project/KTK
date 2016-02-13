@@ -8,7 +8,7 @@ void UI_ID::init() const {
 	throw "Not yet implemented";
 }
 
-void UI_ID::setMarkID(const Char_ID ID) const {
+void UI_ID::setMarkID(const ECharID ID) const {
 	// TODO - implement UI_ID::setMarkID
 	throw "Not yet implemented";
 }

@@ -1,20 +1,20 @@
 #include "Event_Base.h"
 
-Event_Type Event_Base::getEventType() const {
+EEventType Event_Base::getEventType() const {
 	// TODO - implement Event_Base::getEventType
 	throw "Not yet implemented";
 }
 
-void Event_Base::setEventType(const Event_Type eventType) const {
+void Event_Base::setEventType(const EEventType eventType) const {
 	// TODO - implement Event_Base::setEventType
 	throw "Not yet implemented";
 }
 
-Event_State Event_Base::getEventState() const {
+EEventState Event_Base::getEventState() const {
 	return this->m_eventState;
 }
 
-void Event_Base::setEventState(const Event_State m_eventState) const {
+void Event_Base::setEventState(const EEventState m_eventState) const {
 	this->m_eventState = m_eventState;
 }
 

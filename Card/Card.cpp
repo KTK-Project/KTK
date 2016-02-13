@@ -1,21 +1,21 @@
 #include "Card.h"
 
-Card_Color Card::getColor() const {
+ECardColor Card::getColor() const {
 	// TODO - implement Card::getColor
 	throw "Not yet implemented";
 }
 
-Card_Name Card::getName() const {
+ECardName Card::getName() const {
 	// TODO - implement Card::getName
 	throw "Not yet implemented";
 }
 
-Card_Suit Card::getSuit() const {
+ECardSuit Card::getSuit() const {
 	// TODO - implement Card::getSuit
 	throw "Not yet implemented";
 }
 
-Card_Type Card::getType() const {
+ECardType Card::getType() const {
 	// TODO - implement Card::getType
 	throw "Not yet implemented";
 }

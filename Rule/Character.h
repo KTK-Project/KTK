@@ -7,18 +7,18 @@
 class Character {
 
 private:
-	Char_Force m_force;
-	Char_Name m_name;
-	Char_Sex m_sex;
+	ECharForce m_force;
+	ECharName m_name;
+	ECharSex m_sex;
 	int m_HP;
 	SkillList m_skillList;
 
 public:
-	Char_Force getForce() const;
+	ECharForce getForce() const;
 
-	Char_Name getName() const;
+	ECharName getName() const;
 
-	Char_Sex getSex() const;
+	ECharSex getSex() const;
 
 	int getHP() const;
 

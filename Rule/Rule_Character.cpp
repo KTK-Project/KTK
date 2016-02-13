@@ -45,12 +45,12 @@ void Rule_Character::roundEndStage() const {
 	throw "Not yet implemented";
 }
 
-bool Rule_Character::canAsCandidate(const Card_Name cardName) const {
+bool Rule_Character::canAsCandidate(const ECardName cardName) const {
 	// TODO - implement Rule_Character::canAsCandidate
 	throw "Not yet implemented";
 }
 
-void Rule_Character::asCardGoal(const Card_Name cardName) const {
+void Rule_Character::asCardGoal(const ECardName cardName) const {
 	//大乔流离应该重新实现这个函数
 //任何卡牌调用usecard都需要先调用这个通知玩家
 	// TODO - implement Rule_Character::asCardGoal

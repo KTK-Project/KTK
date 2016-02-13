@@ -16,7 +16,7 @@ private:
 	std::shared_ptr<Card> m_selectedCard;
 
 public:
-	bool initWithPlayer(const std::shared_ptr<Player> player, const Card_Name cardName) const;
+	bool initWithPlayer(const std::shared_ptr<Player> player, const ECardName cardName) const;
 
 	std::shared_ptr<Card> getSelectedCard() const;
 

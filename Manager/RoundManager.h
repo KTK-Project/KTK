@@ -8,7 +8,7 @@
 class RoundManager {
 
 private:
-	Stage m_currentStage;
+	EStage m_currentStage;
 	bool m_stageFinish;
 	int m_roundsCount;
 	bool m_roundFinish;

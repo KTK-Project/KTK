@@ -14,7 +14,7 @@ private:
 public:
 	void init() const;
 
-	void setSkillState(const Skill skill, const Skill_State state) const;
+	void setSkillState(const Skill skill, const ESkillState state) const;
 
 	void refresh() const;
 };

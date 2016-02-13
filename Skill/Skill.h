@@ -6,20 +6,20 @@
 class Skill {
 
 public:
-	Char_SkillName m_name;
+	ESkillName m_name;
 	bool m_lordSkill;
 private:
-	Skill_State m_skillState;
+	ESkillState m_skillState;
 
 public:
-	Char_SkillName getName() const;
+	ESkillName getName() const;
 
 	bool isLordSkill() const;
 
 	void setLordSkill(const bool m_lordSkill) const;
 
-	Skill_State getSkillState() const;
+	ESkillState getSkillState() const;
 
-	void setSkillState(const Skill_State skillState) const;
+	void setSkillState(const ESkillState skillState) const;
 };
 #endif // Skill_h__

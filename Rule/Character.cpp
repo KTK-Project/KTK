@@ -1,16 +1,16 @@
 #include "Character.h"
 
-Char_Force Character::getForce() const {
+ECharForce Character::getForce() const {
 	// TODO - implement Character::getForce
 	throw "Not yet implemented";
 }
 
-Char_Name Character::getName() const {
+ECharName Character::getName() const {
 	// TODO - implement Character::getName
 	throw "Not yet implemented";
 }
 
-Char_Sex Character::getSex() const {
+ECharSex Character::getSex() const {
 	// TODO - implement Character::getSex
 	throw "Not yet implemented";
 }

@@ -6,7 +6,7 @@ std::shared_ptr<Card> Rule_LuXun::removeHandCard(const std::shared_ptr<Card> car
 	throw "Not yet implemented";
 }
 
-bool Rule_LuXun::canAsCandidate(const Card_Name cardName) const {
+bool Rule_LuXun::canAsCandidate(const ECardName cardName) const {
 	//no 顺手牵羊和乐不思蜀
 	// TODO - implement Rule_LuXun::canAsCandidate
 	throw "Not yet implemented";

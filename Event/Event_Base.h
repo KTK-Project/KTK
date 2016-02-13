@@ -7,18 +7,18 @@
 class Event_Base {
 
 private:
-	Event_Type m_eventType;
-	Event_State m_eventState;
+	EEventType m_eventType;
+	EEventState m_eventState;
 	std::function<void (const Event_Base&)> m_finishCallBack;
 
 public:
-	Event_Type getEventType() const;
+	EEventType getEventType() const;
 
-	void setEventType(const Event_Type eventType) const;
+	void setEventType(const EEventType eventType) const;
 
-	Event_State getEventState() const;
+	EEventState getEventState() const;
 
-	void setEventState(const Event_State m_eventState) const;
+	void setEventState(const EEventState m_eventState) const;
 
 	std::function<void (const Event_Base&)> getFinishCallBack() const;
 

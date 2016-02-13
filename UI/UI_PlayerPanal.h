@@ -28,8 +28,8 @@ private:
 	UI_InformationBox* m_informationBox;
 	UI_LogBox* m_logBox;
 	std::shared_ptr<Player> m_player;
-	Player_Color m_playerColor;
-	PlayerPanalState m_playerPanalState;
+	EPlayerColor m_playerColor;
+	EPlayerPanalState m_playerPanalState;
 
 public:
 	void initWithPlayer(const std::shared_ptr<Player> player) const;
@@ -56,13 +56,13 @@ public:
 
 	void drawCards(const std::vector<std::shared_ptr<Card>>& cards) const;
 
-	Player_Color getPlayerColor() const;
+	EPlayerColor getPlayerColor() const;
 
-	void setPlayerColor(const Player_Color m_playerColor) const;
+	void setPlayerColor(const EPlayerColor m_playerColor) const;
 
-	PlayerPanalState getPlayerPanalState() const;
+	EPlayerPanalState getPlayerPanalState() const;
 
-	void setPlayerPanalState(const PlayerPanalState m_playerPanalState) const;
+	void setPlayerPanalState(const EPlayerPanalState m_playerPanalState) const;
 
 	void clean() const;
 };

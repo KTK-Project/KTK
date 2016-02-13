@@ -7,7 +7,7 @@
 class Event_RequestCardSuit : Event_Interaction {
 
 public:
-	Card_Suit m_receiver;
+	ECardSuit m_receiver;
 
 	void eventResolve() const;
 };

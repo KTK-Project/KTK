@@ -30,9 +30,9 @@ public:
 
 	void roundEndStage() const;
 
-	bool canAsCandidate(const Card_Name cardName) const;
+	bool canAsCandidate(const ECardName cardName) const;
 
-	void asCardGoal(const Card_Name cardName) const;
+	void asCardGoal(const ECardName cardName) const;
 
 	void equip(const std::shared_ptr<Card> card) const;
 

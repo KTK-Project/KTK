@@ -9,7 +9,7 @@ class Event_RequestCard : public Event_Interaction {
 
 private:
 	bool m_handCard;
-	Card_Name m_requestHandCardName;
+	ECardName m_requestHandCardName;
 	int m_requestHandCardQuantity;
 	bool m_weapon;
 	bool m_armor;
@@ -22,9 +22,9 @@ public:
 
 	void setHandCard(const bool m_handCard) const;
 
-	Card_Name getRequestHandCardName() const;
+	ECardName getRequestHandCardName() const;
 
-	void setRequestHandCardName(const Card_Name m_requestHandCardName) const;
+	void setRequestHandCardName(const ECardName m_requestHandCardName) const;
 
 	int getRequestHandCardQuantity() const;
 

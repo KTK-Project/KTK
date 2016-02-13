@@ -15,12 +15,12 @@ void Player::setCharacter(const std::shared_ptr<Character> character) const {
 	throw "Not yet implemented";
 }
 
-Char_ID Player::getID() const {
+ECharID Player::getID() const {
 	// TODO - implement Player::getID
 	throw "Not yet implemented";
 }
 
-void Player::setID(const Char_ID ID) const {
+void Player::setID(const ECharID ID) const {
 	// TODO - implement Player::setID
 	throw "Not yet implemented";
 }
@@ -121,12 +121,12 @@ void Player::addJudgeCard(const std::shared_ptr<Card> card) const {
 	throw "Not yet implemented";
 }
 
-Char_ID Player::getIDMarks(const std::shared_ptr<Player> player) const {
+ECharID Player::getIDMarks(const std::shared_ptr<Player> player) const {
 	// TODO - implement Player::getIDMarks
 	throw "Not yet implemented";
 }
 
-void Player::setIDMarks(const std::shared_ptr<Player> player, const Char_ID id) const {
+void Player::setIDMarks(const std::shared_ptr<Player> player, const ECharID id) const {
 	// TODO - implement Player::setIDMarks
 	throw "Not yet implemented";
 }

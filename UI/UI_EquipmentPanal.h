@@ -24,7 +24,7 @@ public:
 
 	void setOffensiveHorse(const std::shared_ptr<Card> m_offensiveHorse) const;
 
-	void setEquipmentPanalState(const std::shared_ptr<Card> card, const EquipmentPanalState state) const;
+	void setEquipmentPanalState(const std::shared_ptr<Card> card, const EEquipmentPanalState state) const;
 
 	void refresh() const;
 };

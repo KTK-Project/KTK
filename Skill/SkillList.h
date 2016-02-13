@@ -13,9 +13,9 @@ private:
 public:
 	int getSize() const;
 
-	Skill& getSkillByName(const Char_SkillName name) const;
+	Skill& getSkillByName(const ESkillName name) const;
 
-	int getIndexByName(const Char_SkillName name) const;
+	int getIndexByName(const ESkillName name) const;
 
 	void addSkill(const Skill& skill) const;
 };

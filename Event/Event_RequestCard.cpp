@@ -8,11 +8,11 @@ void Event_RequestCard::setHandCard(const bool m_handCard) const {
 	this->m_handCard = m_handCard;
 }
 
-Card_Name Event_RequestCard::getRequestHandCardName() const {
+ECardName Event_RequestCard::getRequestHandCardName() const {
 	return this->m_requestHandCardName;
 }
 
-void Event_RequestCard::setRequestHandCardName(const Card_Name m_requestHandCardName) const {
+void Event_RequestCard::setRequestHandCardName(const ECardName m_requestHandCardName) const {
 	this->m_requestHandCardName = m_requestHandCardName;
 }
 

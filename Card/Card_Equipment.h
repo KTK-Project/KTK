@@ -6,12 +6,12 @@
 class Card_Equipment : public Card {
 
 private:
-	EquipmentCard_Type m_equipType;
+	EEquipmentCard_Type m_equipType;
 	bool m_canUse;
 	int m_state;
 
 public:
-	EquipmentCard_Type getEquipmentType() const;
+	EEquipmentCard_Type getEquipmentType() const;
 
 	int getState() const;
 
