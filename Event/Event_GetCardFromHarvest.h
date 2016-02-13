@@ -14,18 +14,18 @@ private:
 	std::shared_ptr<Card> m_receiver;
 
 public:
-	std::vector<std::shared_ptr<Card>> getCards();
+	std::vector<std::shared_ptr<Card>> getCards() const;
 
-	void setCards(std::vector<std::shared_ptr<Card>> m_cards);
+	void setCards(const std::vector<std::shared_ptr<Card>> m_cards) const;
 
-	std::vector<std::shared_ptr<Player>> getPlayers();
+	std::vector<std::shared_ptr<Player>> getPlayers() const;
 
-	void setPlayers(std::vector<std::shared_ptr<Player>> m_players);
+	void setPlayers(const std::vector<std::shared_ptr<Player>> m_players) const;
 
-	std::shared_ptr<Card> getReceiver();
+	std::shared_ptr<Card> getReceiver() const;
 
-	void setReceiver(std::shared_ptr<Card> m_receiver);
+	void setReceiver(const std::shared_ptr<Card> m_receiver) const;
 
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_GetCardFromHarvest_h__

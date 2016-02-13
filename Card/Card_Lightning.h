@@ -10,8 +10,8 @@ class Card_Lightning : public Card_DelayedStrategy {
 
 
 public:
-	int getGoalPlayerQuantity(std::shared_ptr<Player> requester);
+	int getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const;
 
-	void useCard(std::shared_ptr<Player> playCardPlayer, std::vector<std::shared_ptr<Player>>& goalPlayer);
+	void useCard(const std::shared_ptr<Player> playCardPlayer, const std::vector<std::shared_ptr<Player>>& goalPlayer) const;
 };
 #endif // Card_Lightning_h__

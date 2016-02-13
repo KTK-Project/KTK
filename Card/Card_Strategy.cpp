@@ -1,6 +1,6 @@
 #include "Card_Strategy.h"
 
-Card_Strategy::Card_Strategy() {
+Card_Strategy::Card_Strategy() const {
 	//ÉèÖÃm_type
 	// TODO - implement Card_Strategy::Card_Strategy
 	throw "Not yet implemented";

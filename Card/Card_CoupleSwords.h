@@ -10,6 +10,6 @@ class Card_CoupleSwords : public Card_Weapon {
 
 
 public:
-	void eventResolve(Event_Slash& slashEvent);
+	void eventResolve(const Event_Slash& slashEvent) const;
 };
 #endif // Card_CoupleSwords_h__

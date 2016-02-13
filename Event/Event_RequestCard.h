@@ -18,38 +18,38 @@ private:
 	SelectedCards m_receiver;
 
 public:
-	bool getHandCard();
+	bool getHandCard() const;
 
-	void setHandCard(bool m_handCard);
+	void setHandCard(const bool m_handCard) const;
 
-	Card_Name getRequestHandCardName();
+	Card_Name getRequestHandCardName() const;
 
-	void setRequestHandCardName(Card_Name m_requestHandCardName);
+	void setRequestHandCardName(const Card_Name m_requestHandCardName) const;
 
-	int getRequestHandCardQuantity();
+	int getRequestHandCardQuantity() const;
 
-	void setRequestHandCardQuantity(int m_requestHandCardQuantity);
+	void setRequestHandCardQuantity(const int m_requestHandCardQuantity) const;
 
-	bool getWeapon();
+	bool getWeapon() const;
 
-	void setWeapon(bool m_weapon);
+	void setWeapon(const bool m_weapon) const;
 
-	bool getArmor();
+	bool getArmor() const;
 
-	void setArmor(bool m_armor);
+	void setArmor(const bool m_armor) const;
 
-	bool getOffensiveHorse();
+	bool getOffensiveHorse() const;
 
-	void setOffensiveHorse(bool m_offensiveHorse);
+	void setOffensiveHorse(const bool m_offensiveHorse) const;
 
-	bool getDefensiveHorse();
+	bool getDefensiveHorse() const;
 
-	void setDefensiveHorse(bool m_defensiveHorse);
+	void setDefensiveHorse(const bool m_defensiveHorse) const;
 
-	SelectedCards getReceiver();
+	SelectedCards getReceiver() const;
 
-	void setReceiver(SelectedCards m_receiver);
+	void setReceiver(const SelectedCards m_receiver) const;
 
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_RequestCard_h__

@@ -11,12 +11,12 @@ private:
 	int m_state;
 
 public:
-	EquipmentCard_Type getEquipmentType();
+	EquipmentCard_Type getEquipmentType() const;
 
-	int getState();
+	int getState() const;
 
-	void setState(int state);
+	void setState(const int state) const;
 
-	Card_Equipment();
+	Card_Equipment() const;
 };
 #endif // Card_Equipment_h__

@@ -8,6 +8,6 @@ class Card_TsingGangSword : public Card_Weapon {
 
 
 public:
-	void eventResolve(Event_Slash& slashEvent);
+	void eventResolve(const Event_Slash& slashEvent) const;
 };
 #endif // Card_TsingGangSword_h__

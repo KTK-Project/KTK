@@ -11,6 +11,6 @@ private:
 	std::shared_ptr<Player> m_goalPlayer2;
 
 public:
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_MurderWithBorrowedWeapon_h__

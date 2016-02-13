@@ -8,6 +8,6 @@ class Card_JusticeShield : public Card_Armor {
 
 
 public:
-	void eventResolve(Event_Slash& slashEvent);
+	void eventResolve(const Event_Slash& slashEvent) const;
 };
 #endif // Card_JusticeShield_h__

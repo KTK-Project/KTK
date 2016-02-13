@@ -9,10 +9,10 @@ class Card_Sabotage : public Card_Strategy {
 
 
 public:
-	int getGoalPlayerQuantity(std::shared_ptr<Player> requester);
+	int getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const;
 
-	std::vector<std::shared_ptr<Player>> getCandidate(std::shared_ptr<Player> playCardPlayer);
+	std::vector<std::shared_ptr<Player>> getCandidate(const std::shared_ptr<Player> playCardPlayer) const;
 
-	void useCard(std::shared_ptr<Player> playCardPlayer, std::vector<std::shared_ptr<Player>>& goalPlayer);
+	void useCard(const std::shared_ptr<Player> playCardPlayer, const std::vector<std::shared_ptr<Player>>& goalPlayer) const;
 };
 #endif // Card_Sabotage_h__

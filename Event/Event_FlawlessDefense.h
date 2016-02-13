@@ -11,14 +11,14 @@ private:
 	bool m_success;
 
 public:
-	std::shared_ptr<Player> getFirstPlayer();
+	std::shared_ptr<Player> getFirstPlayer() const;
 
-	void setFirstPlayer(std::shared_ptr<Player> m_firstPlayer);
+	void setFirstPlayer(const std::shared_ptr<Player> m_firstPlayer) const;
 
-	bool getSuccess();
+	bool getSuccess() const;
 
-	void setSuccess(bool m_success);
+	void setSuccess(const bool m_success) const;
 
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_FlawlessDefense_h__

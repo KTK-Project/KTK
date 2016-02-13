@@ -8,10 +8,10 @@ class Event_RequestBoolean : public Event_Interaction {
 public:
 	bool m_receiver;
 
-	bool getReceiver();
+	bool getReceiver() const;
 
-	void setReceiver(bool m_receiver);
+	void setReceiver(const bool m_receiver) const;
 
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_RequestBoolean_h__

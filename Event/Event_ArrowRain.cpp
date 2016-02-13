@@ -1,6 +1,6 @@
 #include "Event_ArrowRain.h"
 
-void Event_ArrowRain::eventResolve() {
+void Event_ArrowRain::eventResolve() const {
 	//调用finishCallback
 	//static player * currentplayer = nullptr;
 //if(!currentplayer)             第一次执行：currentPlayer = playcardplayer的下一个玩家
@@ -9,7 +9,7 @@ void Event_ArrowRain::eventResolve() {
 //失败：伤害一点血
 //else
 //             ++currentplayer;
-//             if(currentplayer != playcardplayer) 
+//             if(const currentplayer != playcardplayer) 
 //                          继续封装请求闪事件，把inreactplayer设置为currentplayer
 //             else
 //                         各种善后处理：静态成员设置为空指针，设置事件状态为FINISH

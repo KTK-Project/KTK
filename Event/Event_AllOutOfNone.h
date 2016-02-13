@@ -7,6 +7,6 @@ class Event_AllOutOfNone : public Event_Strategy {
 
 
 public:
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_AllOutOfNone_h__

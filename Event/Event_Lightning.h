@@ -6,6 +6,6 @@
 class Event_Lightning : public Event_DelayedStrategy {
 
 public:
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_Lightning_h__

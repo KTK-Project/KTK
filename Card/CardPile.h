@@ -12,38 +12,38 @@ private:
 	std::deque<std::shared_ptr<Card>> m_cards;
 
 public:
-	CardPile();
+	CardPile() const;
 
-	int getSize();
+	int getSize() const;
 
-	bool isEmpty();
+	bool isEmpty() const;
 
-	std::shared_ptr<Card> popBack();
+	std::shared_ptr<Card> popBack() const;
 
-	std::shared_ptr<Card> popFront();
+	std::shared_ptr<Card> popFront() const;
 
-	void pushBack(std::shared_ptr<Card> card);
+	void pushBack(const std::shared_ptr<Card> card) const;
 
-	void pushFront(std::shared_ptr<Card> card);
+	void pushFront(const std::shared_ptr<Card> card) const;
 
-	int countCard(std::function<bool (std::shared_ptr<Card>)> filter);
+	int countCard(const std::function<bool (const std::shared_ptr<Card>)> filter) const;
 
-	void shuffle();
+	void shuffle() const;
 
-	void sort();
+	void sort() const;
 
-	std::shared_ptr<Card> getCard(std::shared_ptr<Card> card);
+	std::shared_ptr<Card> getCard(const std::shared_ptr<Card> card) const;
 
-	std::vector<std::shared_ptr<Card>> getCards(std::function<bool (std::shared_ptr<Card>)>& filter);
+	std::vector<std::shared_ptr<Card>> getCards(const std::function<bool (const std::shared_ptr<Card>)>& filter) const;
 
-	void addCard(std::shared_ptr<Card> card);
+	void addCard(const std::shared_ptr<Card> card) const;
 
-	void addCards(std::vector<std::shared_ptr<Card>>& cards);
+	void addCards(const std::vector<std::shared_ptr<Card>>& cards) const;
 
-	void removeCard(std::shared_ptr<Card> card);
+	void removeCard(const std::shared_ptr<Card> card) const;
 
-	void removeCards(std::vector<std::shared_ptr<Card>>& cards);
+	void removeCards(const std::vector<std::shared_ptr<Card>>& cards) const;
 
-	std::vector<std::shared_ptr<Card>> removeCards(std::function<bool (std::shared_ptr<Card>)>& filter);
+	std::vector<std::shared_ptr<Card>> removeCards(const std::function<bool (const std::shared_ptr<Card>)>& filter) const;
 };
 #endif // CardPile_h__

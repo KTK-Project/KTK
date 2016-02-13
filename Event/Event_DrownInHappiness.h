@@ -7,6 +7,6 @@ class Event_DrownInHappiness : public Event_DelayedStrategy {
 
 
 public:
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_DrownInHappiness_h__

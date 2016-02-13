@@ -10,6 +10,6 @@ class Event_OathInPeachGarden : public Event_Strategy {
 public:
 	std::shared_ptr<Player> m_currentPlayer;
 
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_OathInPeachGarden_h__

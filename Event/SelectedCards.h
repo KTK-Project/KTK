@@ -14,26 +14,26 @@ private:
 	std::function<void ()> m_unmaxCallBack;
 
 public:
-	std::deque<UI_Card*>& getCards();
+	std::deque<UI_Card*>& getCards() const;
 
-	void addCard(UI_Card* card);
+	void addCard(const UI_Card* card) const;
 
-	void removeCard(UI_Card* card);
+	void removeCard(const UI_Card* card) const;
 
-	void popFront();
+	void popFront() const;
 
-	void popAll();
+	void popAll() const;
 
-	bool hasCard(std::shared_ptr<Card> card);
+	bool hasCard(const std::shared_ptr<Card> card) const;
 
-	bool hasCard(UI_Card* card);
+	bool hasCard(const UI_Card* card) const;
 
-	int getMaxSelects();
+	int getMaxSelects() const;
 
-	void setMaxSelects(int m_maxSelects);
+	void setMaxSelects(const int m_maxSelects) const;
 
-	void setMaxCallBack(std::function<void ()> m_maxCallBack);
+	void setMaxCallBack(const std::function<void ()> m_maxCallBack) const;
 
-	void setUnmaxCallBack(std::function<void ()> m_unmaxCallBack);
+	void setUnmaxCallBack(const std::function<void ()> m_unmaxCallBack) const;
 };
 #endif // SelectedCards_h__

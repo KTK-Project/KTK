@@ -9,6 +9,6 @@ class Event_RequestCardSuit : Event_Interaction {
 public:
 	Card_Suit m_receiver;
 
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_RequestCardSuit_h__

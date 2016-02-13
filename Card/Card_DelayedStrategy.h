@@ -7,6 +7,6 @@ class Card_DelayedStrategy : Card {
 
 
 public:
-	Card_DelayedStrategy();
+	Card_DelayedStrategy() const;
 };
 #endif // Card_DelayedStrategy_h__

@@ -8,6 +8,6 @@ class Card_GuanShiAxe : public Card_Weapon {
 
 
 public:
-	void eventResolve(Event_Slash& slashEvent);
+	void eventResolve(const Event_Slash& slashEvent) const;
 };
 #endif // Card_GuanShiAxe_h__

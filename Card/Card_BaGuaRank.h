@@ -8,6 +8,6 @@ class Card_BaGuaRank : public Card_Armor {
 
 
 public:
-	void eventResolve(Event_RequestCard& event);
+	void eventResolve(const Event_RequestCard& event) const;
 };
 #endif // Card_BaGuaRank_h__

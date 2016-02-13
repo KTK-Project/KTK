@@ -11,6 +11,6 @@ private:
 	std::shared_ptr<Player> m_currentPlayer;
 
 public:
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_Duel_h__

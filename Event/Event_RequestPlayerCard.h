@@ -21,46 +21,46 @@ private:
 	std::shared_ptr<Card> m_receiver;
 
 public:
-	std::shared_ptr<Player> getPlayer();
+	std::shared_ptr<Player> getPlayer() const;
 
-	void setPlayer(std::shared_ptr<Player> m_player);
+	void setPlayer(const std::shared_ptr<Player> m_player) const;
 
-	bool getHandCard();
+	bool getHandCard() const;
 
-	void setHandCard(bool m_handCard);
+	void setHandCard(const bool m_handCard) const;
 
-	bool getLightning();
+	bool getLightning() const;
 
-	void setLightning(bool m_lightning);
+	void setLightning(const bool m_lightning) const;
 
-	bool getDrownInHappiness();
+	bool getDrownInHappiness() const;
 
-	void setDrownInHappiness(bool m_drownInHappiness);
+	void setDrownInHappiness(const bool m_drownInHappiness) const;
 
-	bool getFamish();
+	bool getFamish() const;
 
-	void setFamish(bool m_famish);
+	void setFamish(const bool m_famish) const;
 
-	bool getWeapon();
+	bool getWeapon() const;
 
-	void setWeapon(bool m_weapon);
+	void setWeapon(const bool m_weapon) const;
 
-	bool getArmor();
+	bool getArmor() const;
 
-	void setArmor(bool m_armor);
+	void setArmor(const bool m_armor) const;
 
-	bool getOffensiveHorse();
+	bool getOffensiveHorse() const;
 
-	void setOffensiveHorse(bool m_offensiveHorse);
+	void setOffensiveHorse(const bool m_offensiveHorse) const;
 
-	bool getDefensiveHorse();
+	bool getDefensiveHorse() const;
 
-	void setDefensiveHorse(bool m_defensiveHorse);
+	void setDefensiveHorse(const bool m_defensiveHorse) const;
 
-	std::shared_ptr<Card> getReceiver();
+	std::shared_ptr<Card> getReceiver() const;
 
-	void setReceiver(std::shared_ptr<Card> m_receiver);
+	void setReceiver(const std::shared_ptr<Card> m_receiver) const;
 
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_RequestPlayerCard_h__

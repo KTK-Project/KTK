@@ -11,8 +11,8 @@ class Card_Horse : public Card_Equipment {
 public:
 	Horse_Type m_horseType;
 
-	int getGoalPlayerQuantity(std::shared_ptr<Player> requester);
+	int getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const;
 
-	void getHorseType();
+	void getHorseType() const;
 };
 #endif // Card_Horse_h__

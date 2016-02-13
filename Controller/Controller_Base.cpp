@@ -1,9 +1,9 @@
 #include "Controller_Base.h"
 
-std::shared_ptr<Event_Base> Controller_Base::getEvent() {
+std::shared_ptr<Event_Base> Controller_Base::getEvent() const {
 	return this->m_event;
 }
 
-void Controller_Base::setEvent(std::shared_ptr<Event_Base> m_event) {
+void Controller_Base::setEvent(const std::shared_ptr<Event_Base> m_event) const {
 	this->m_event = m_event;
 }

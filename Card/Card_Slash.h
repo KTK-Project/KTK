@@ -12,12 +12,12 @@ class Card_Slash : Card_Basic {
 public:
 	bool s_usedOnce;
 
-	int getGoalPlayerQuantity(std::shared_ptr<Player> requester);
+	int getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const;
 
-	std::vector<std::shared_ptr<Player>> getCandidate(std::shared_ptr<Player> playCardPlayer);
+	std::vector<std::shared_ptr<Player>> getCandidate(const std::shared_ptr<Player> playCardPlayer) const;
 
-	void useCard(std::shared_ptr<Player> playCardPlayer, std::vector<std::shared_ptr<Player>>& goalPlayer);
+	void useCard(const std::shared_ptr<Player> playCardPlayer, const std::vector<std::shared_ptr<Player>>& goalPlayer) const;
 
-	void eventCallBack(std::shared_ptr<Event_Base>& event);
+	void eventCallBack(const std::shared_ptr<Event_Base>& event) const;
 };
 #endif // Card_Slash_h__

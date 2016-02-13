@@ -1,6 +1,6 @@
 #include "Event_Harvest.h"
 
-void Event_Harvest::eventResolve() {
+void Event_Harvest::eventResolve() const {
 	//static player * currentplayer = nullptr;
 //static Event_GetCardFromHarvest *  event = nullptr;
 //if(!event)	第一次执行：currentPlayer = playcardplayer
@@ -9,7 +9,7 @@ void Event_Harvest::eventResolve() {
 //失败：啥也不做
 //else
 //             ++currentplayer;
-//             if(currentplayer != playcardplayer) 
+//             if(const currentplayer != playcardplayer) 
 //                          把event的inreactplayer设置为currentplayer，重新压入Eventmanager
 //             else
 //                         各种善后处理：两个静态成员设置为空指针，注意析构，设置事件状态为FINISH

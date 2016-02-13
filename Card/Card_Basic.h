@@ -7,6 +7,6 @@ class Card_Basic : Card {
 
 
 public:
-	Card_Basic();
+	Card_Basic() const;
 };
 #endif // Card_Basic_h__

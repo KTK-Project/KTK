@@ -14,22 +14,22 @@ private:
 	std::vector<std::shared_ptr<Card>> m_cards;
 
 public:
-	std::shared_ptr<Player> getAttacker();
+	std::shared_ptr<Player> getAttacker() const;
 
-	void setAttacker(std::shared_ptr<Player> m_attacker);
+	void setAttacker(const std::shared_ptr<Player> m_attacker) const;
 
-	std::shared_ptr<Player> getGoal();
+	std::shared_ptr<Player> getGoal() const;
 
-	void setGoal(std::shared_ptr<Player> m_goal);
+	void setGoal(const std::shared_ptr<Player> m_goal) const;
 
-	int getDemage();
+	int getDemage() const;
 
-	void setDemage(int m_demage);
+	void setDemage(const int m_demage) const;
 
-	std::vector<std::shared_ptr<Card>> getCards();
+	std::vector<std::shared_ptr<Card>> getCards() const;
 
-	void setCards(std::vector<std::shared_ptr<Card>> m_cards);
+	void setCards(const std::vector<std::shared_ptr<Card>> m_cards) const;
 
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_Hurt_h__

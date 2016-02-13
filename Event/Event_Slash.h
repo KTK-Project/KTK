@@ -20,48 +20,48 @@ private:
 	bool m_needToAskPlayer;
 
 public:
-	std::shared_ptr<Player> getFirstPlayer();
+	std::shared_ptr<Player> getFirstPlayer() const;
 
-	void setFirstPlayer(std::shared_ptr<Player> m_firstPlayer);
+	void setFirstPlayer(const std::shared_ptr<Player> m_firstPlayer) const;
 
-	std::shared_ptr<Card> getWeapon();
+	std::shared_ptr<Card> getWeapon() const;
 
-	void setWeapon(std::shared_ptr<Card> m_weapon);
+	void setWeapon(const std::shared_ptr<Card> m_weapon) const;
 
-	std::shared_ptr<Player> getGoalPlayers();
+	std::shared_ptr<Player> getGoalPlayers() const;
 
-	void setGoalPlayers(std::shared_ptr<Player> m_goalPlayers);
+	void setGoalPlayers(const std::shared_ptr<Player> m_goalPlayers) const;
 
-	std::shared_ptr<Card> getArmor();
+	std::shared_ptr<Card> getArmor() const;
 
-	void setArmor(std::shared_ptr<Card> m_armor);
+	void setArmor(const std::shared_ptr<Card> m_armor) const;
 
-	std::vector<std::shared_ptr<Card>> getSlash();
+	std::vector<std::shared_ptr<Card>> getSlash() const;
 
-	void setSlash(std::vector<std::shared_ptr<Card>> m_slash);
+	void setSlash(const std::vector<std::shared_ptr<Card>> m_slash) const;
 
-	bool getNeedToAskPlayer();
+	bool getNeedToAskPlayer() const;
 
-	void setNeedToAskPlayer(bool m_needToAskPlayer);
+	void setNeedToAskPlayer(const bool m_needToAskPlayer) const;
 
-	Slash_State getSlashState();
+	Slash_State getSlashState() const;
 
-	void setSlashState(Slash_State m_slashState);
+	void setSlashState(const Slash_State m_slashState) const;
 
-	void eventResolve();
+	void eventResolve() const;
 
-	void weaponCheckBeforeSlash();
+	void weaponCheckBeforeSlash() const;
 
-	void armorCheckBeforeSlash();
+	void armorCheckBeforeSlash() const;
 
-	void slashing();
+	void slashing() const;
 
-	void slashSuccess();
+	void slashSuccess() const;
 
-	void slashFail();
+	void slashFail() const;
 
-	void hurting();
+	void hurting() const;
 
-	void slashFinish();
+	void slashFinish() const;
 };
 #endif // Event_Slash_h__

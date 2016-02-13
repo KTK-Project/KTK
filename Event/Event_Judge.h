@@ -9,22 +9,22 @@ class Event_Judge : public Event_Base {
 
 private:
 	std::shared_ptr<Card> m_judgeCard;
-	std::function<bool (std::shared_ptr<Card>)> m_judgeCheck;
+	std::function<bool (const std::shared_ptr<Card>)> m_judgeCheck;
 	bool m_judgeResult;
 
 public:
-	std::shared_ptr<Card> getJudgeCard();
+	std::shared_ptr<Card> getJudgeCard() const;
 
-	void setJudgeCard(std::shared_ptr<Card> m_judgeCard);
+	void setJudgeCard(const std::shared_ptr<Card> m_judgeCard) const;
 
-	std::function<bool (std::shared_ptr<Card>)> getJudgeCheck();
+	std::function<bool (const std::shared_ptr<Card>)> getJudgeCheck() const;
 
-	void setJudgeCheck(std::function<bool (std::shared_ptr<Card>)> m_judgeCheck);
+	void setJudgeCheck(const std::function<bool (const std::shared_ptr<Card>)> m_judgeCheck) const;
 
-	bool getJudgeResult();
+	bool getJudgeResult() const;
 
-	void setJudgeResult(bool m_judgeResult);
+	void setJudgeResult(const bool m_judgeResult) const;
 
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_Judge_h__

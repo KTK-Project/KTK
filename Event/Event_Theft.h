@@ -10,6 +10,6 @@ class Event_Theft : Event_Strategy {
 public:
 	std::shared_ptr<Player> m_goalPlayer;
 
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_Theft_h__

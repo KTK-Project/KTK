@@ -8,6 +8,6 @@ class Event_SouthInvasion : Event_Strategy {
 public:
 	std::shared_ptr<Player> m_currentPlayer;
 
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_SouthInvasion_h__

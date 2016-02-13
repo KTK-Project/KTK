@@ -7,6 +7,6 @@ class Card_Strategy : Card {
 
 
 public:
-	Card_Strategy();
+	Card_Strategy() const;
 };
 #endif // Card_Strategy_h__

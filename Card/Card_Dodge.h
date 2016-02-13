@@ -9,6 +9,6 @@ class Card_Dodge : Card_Basic {
 
 
 public:
-	int getGoalPlayerQuantity(std::shared_ptr<Player> requester);
+	int getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const;
 };
 #endif // Card_Dodge_h__

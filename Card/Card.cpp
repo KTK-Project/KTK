@@ -1,31 +1,31 @@
 #include "Card.h"
 
-Card_Color Card::getColor() {
+Card_Color Card::getColor() const {
 	// TODO - implement Card::getColor
 	throw "Not yet implemented";
 }
 
-Card_Name Card::getName() {
+Card_Name Card::getName() const {
 	// TODO - implement Card::getName
 	throw "Not yet implemented";
 }
 
-Card_Suit Card::getSuit() {
+Card_Suit Card::getSuit() const {
 	// TODO - implement Card::getSuit
 	throw "Not yet implemented";
 }
 
-Card_Type Card::getType() {
+Card_Type Card::getType() const {
 	// TODO - implement Card::getType
 	throw "Not yet implemented";
 }
 
-int Card::getGoalPlayerQuantity(std::shared_ptr<Player> requester)
+int Card::getGoalPlayerQuantity(const std::shared_ptr<Player> requester)
 {
 	throw "123123";
 }
 
-std::vector<std::shared_ptr<Player>> Card::getCandidate(std::shared_ptr<Player> playCardPlayer) {
+std::vector<std::shared_ptr<Player>> Card::getCandidate(const std::shared_ptr<Player> playCardPlayer) const {
 	// TODO - implement Card::getCandidate
 	throw "Not yet implemented";
 	//判断因素：
@@ -36,7 +36,7 @@ std::vector<std::shared_ptr<Player>> Card::getCandidate(std::shared_ptr<Player> 
 }
 
 
-void Card::onUpping() {
+void Card::onUpping() const {
 	// TODO - implement Card::onUpping
 	throw "Not yet implemented";
 	//forwardPlayer专用函数
@@ -46,7 +46,7 @@ void Card::onUpping() {
 //否则啥也不做
 }
 
-void Card::useCard(std::shared_ptr<Player> playCardPlayer, std::vector<std::shared_ptr<Player>>& goalPlayer) {
+void Card::useCard(const std::shared_ptr<Player> playCardPlayer, const std::vector<std::shared_ptr<Player>>& goalPlayer) const {
 	// TODO - implement Card::useCard
 	throw "Not yet implemented";
 	//forwardPlayer专用函数

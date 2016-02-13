@@ -15,24 +15,24 @@ private:
 	std::function<void ()> m_unmaxCallBack;
 
 public:
-	std::deque<std::shared_ptr<Player>> getPlayers();
+	std::deque<std::shared_ptr<Player>> getPlayers() const;
 
-	void addPlayer(std::shared_ptr<Player> player);
+	void addPlayer(const std::shared_ptr<Player> player) const;
 
-	void removePlayer(std::shared_ptr<Player> player);
+	void removePlayer(const std::shared_ptr<Player> player) const;
 
-	void popFront();
+	void popFront() const;
 
-	void popAll();
+	void popAll() const;
 
-	bool hasPlayer(std::shared_ptr<Player> player);
+	bool hasPlayer(const std::shared_ptr<Player> player) const;
 
-	std::function<void ()> getMaxCallBack();
+	std::function<void ()> getMaxCallBack() const;
 
-	void setMaxCallBack(std::function<void ()> m_maxCallBack);
+	void setMaxCallBack(const std::function<void ()> m_maxCallBack) const;
 
-	std::function<void ()> getUnmaxCallBack();
+	std::function<void ()> getUnmaxCallBack() const;
 
-	void setUnmaxCallBack(std::function<void ()> m_unmaxCallBack);
+	void setUnmaxCallBack(const std::function<void ()> m_unmaxCallBack) const;
 };
 #endif // SelectedPlayers_h__

@@ -8,6 +8,6 @@ class Event_Sabotage : public Event_Strategy {
 public:
 	std::shared_ptr<Player> m_goalPlayer;
 
-	void eventResolve();
+	void eventResolve() const;
 };
 #endif // Event_Sabotage_h__
