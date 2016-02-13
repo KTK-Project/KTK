@@ -7,8 +7,8 @@ class Rule_LvBu : public Rule_Character {
 
 
 public:
-	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
+	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void wuShuang(std::shared_ptr<Event_Base>& event);
+	void wuShuang(const std::shared_ptr<Event_Base>& event) const;
 };
 #endif // Rule_LvBu_h__

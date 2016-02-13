@@ -7,10 +7,10 @@ class Rule_ZhouYu : public Rule_Character {
 
 
 public:
-	void drawCardStage();
+	void drawCardStage() const;
 
-	void playCardStage();
+	void playCardStage() const;
 
-	void fanJian();
+	void fanJian() const;
 };
 #endif // Rule_ZhouYu_h__

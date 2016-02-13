@@ -19,22 +19,22 @@ private:
 	CardPile m_discardPile;
 
 public:
-	GameManager* getInstance();
+	GameManager* getInstance() const;
 
-	PlayersManger& getPlayerManager();
+	PlayersManger& getPlayerManager() const;
 
-	RoundManager& getRoundManager();
+	RoundManager& getRoundManager() const;
 
-	EventManagers& getEventManager();
+	EventManagers& getEventManager() const;
 
-	CharacterManager& getCharacterManager();
+	CharacterManager& getCharacterManager() const;
 
-	CardPile& getDarkcardPile();
+	CardPile& getDarkcardPile() const;
 
-	CardPile& getDiscardPile();
+	CardPile& getDiscardPile() const;
 
-	void gameBegin();
+	void gameBegin() const;
 
-	void gameEnd();
+	void gameEnd() const;
 };
 #endif // GameManager_h__

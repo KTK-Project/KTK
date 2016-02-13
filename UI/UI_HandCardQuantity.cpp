@@ -1,12 +1,12 @@
 #include "UI_HandCardQuantity.h"
 
-void UI_HandCardQuantity::init() {
+void UI_HandCardQuantity::init() const {
 	//创建好两个成员
 	// TODO - implement UI_HandCardQuantity::init
 	throw "Not yet implemented";
 }
 
-void UI_HandCardQuantity::refresh() {
+void UI_HandCardQuantity::refresh() const {
 	//处理Player为nullptr的情况
 //根据player设置label
 	// TODO - implement UI_HandCardQuantity::refresh

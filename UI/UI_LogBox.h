@@ -13,8 +13,8 @@ private:
 	cocos2d::Label* m_scrollLabel;
 
 public:
-	bool init();
+	bool init() const;
 
-	void addLog(std::string& log);
+	void addLog(const std::string& log) const;
 };
 #endif // UI_LogBox_h__

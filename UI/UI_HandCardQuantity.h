@@ -10,8 +10,8 @@ private:
 	cocos2d::Label* m_quantity;
 
 public:
-	void init();
+	void init() const;
 
-	void refresh();
+	void refresh() const;
 };
 #endif // UI_HandCardQuantity_h__

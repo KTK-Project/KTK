@@ -11,10 +11,10 @@ private:
 	std::vector<UI_Card*> m_bottonCards;
 
 public:
-	bool initWithCards(std::vector<std::shared_ptr<Card>>& topCards);
+	bool initWithCards(const std::vector<std::shared_ptr<Card>>& topCards) const;
 
-	std::vector<UI_Card*>& getTopCards();
+	std::vector<UI_Card*>& getTopCards() const;
 
-	std::vector<UI_Card*>& getBottonCards();
+	std::vector<UI_Card*>& getBottonCards() const;
 };
 #endif // UI_GuanXing_h__

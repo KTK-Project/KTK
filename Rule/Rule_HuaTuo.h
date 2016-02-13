@@ -7,12 +7,12 @@ class Rule_HuaTuo : public Rule_Character {
 
 
 public:
-	void playCardStage();
+	void playCardStage() const;
 
-	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
+	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void qingNang();
+	void qingNang() const;
 
-	void jiJiu(std::shared_ptr<Event_Base>& event);
+	void jiJiu(const std::shared_ptr<Event_Base>& event) const;
 };
 #endif // Rule_HuaTuo_h__

@@ -1,96 +1,96 @@
 #include "RoundManager.h"
 
-int RoundManager::getRoundsCount() {
+int RoundManager::getRoundsCount() const {
 	// TODO - implement RoundManager::getRoundsCount
 	throw "Not yet implemented";
 }
 
-void RoundManager::enterNextStage() {
+void RoundManager::enterNextStage() const {
 	// TODO - implement RoundManager::enterNextStage
 	throw "Not yet implemented";
 }
 
-void RoundManager::enterNextPlayerRounds() {
+void RoundManager::enterNextPlayerRounds() const {
 	// TODO - implement RoundManager::enterNextPlayerRounds
 	throw "Not yet implemented";
 }
 
-bool RoundManager::getStageFinish() {
+bool RoundManager::getStageFinish() const {
 	// TODO - implement RoundManager::getStageFinish
 	throw "Not yet implemented";
 }
 
-void RoundManager::setStageFinish(bool stageFinish) {
+void RoundManager::setStageFinish(const bool stageFinish) const {
 	// TODO - implement RoundManager::setStageFinish
 	throw "Not yet implemented";
 }
 
-bool RoundManager::getRoundFinish() {
+bool RoundManager::getRoundFinish() const {
 	// TODO - implement RoundManager::getRoundFinish
 	throw "Not yet implemented";
 }
 
-void RoundManager::setRoundFinish(bool roundFinish) {
+void RoundManager::setRoundFinish(const bool roundFinish) const {
 	// TODO - implement RoundManager::setRoundFinish
 	throw "Not yet implemented";
 }
 
-std::vector<std::function<void ()>>& RoundManager::getFunctionsInReadyStage() {
+std::vector<std::function<void ()>>& RoundManager::getFunctionsInReadyStage() const {
 	// TODO - implement RoundManager::getFunctionsInReadyStage
 	throw "Not yet implemented";
 }
 
-std::vector<std::function<void ()>>& RoundManager::getFunctionsInJudgeStage() {
+std::vector<std::function<void ()>>& RoundManager::getFunctionsInJudgeStage() const {
 	// TODO - implement RoundManager::getFunctionsInJudgeStage
 	throw "Not yet implemented";
 }
 
-std::vector<std::function<void ()>>& RoundManager::getFunctionsInDrawCardStage() {
+std::vector<std::function<void ()>>& RoundManager::getFunctionsInDrawCardStage() const {
 	// TODO - implement RoundManager::getFunctionsInDrawCardStage
 	throw "Not yet implemented";
 }
 
-std::vector<std::function<void ()>>& RoundManager::getFunctionsInPlayCardStage() {
+std::vector<std::function<void ()>>& RoundManager::getFunctionsInPlayCardStage() const {
 	// TODO - implement RoundManager::getFunctionsInPlayCardStage
 	throw "Not yet implemented";
 }
 
-std::vector<std::function<void ()>>& RoundManager::getFunctionsInDiscardStage() {
+std::vector<std::function<void ()>>& RoundManager::getFunctionsInDiscardStage() const {
 	// TODO - implement RoundManager::getFunctionsInDiscardStage
 	throw "Not yet implemented";
 }
 
-std::vector<std::function<void ()>>& RoundManager::getFunctionsInRoundEndStage() {
+std::vector<std::function<void ()>>& RoundManager::getFunctionsInRoundEndStage() const {
 	// TODO - implement RoundManager::getFunctionsInRoundEndStage
 	throw "Not yet implemented";
 }
 
-void RoundManager::readyStage() {
+void RoundManager::readyStage() const {
 	// TODO - implement RoundManager::readyStage
 	throw "Not yet implemented";
 }
 
-void RoundManager::judgeStage() {
+void RoundManager::judgeStage() const {
 	// TODO - implement RoundManager::judgeStage
 	throw "Not yet implemented";
 }
 
-void RoundManager::drawCardStage() {
+void RoundManager::drawCardStage() const {
 	// TODO - implement RoundManager::drawCardStage
 	throw "Not yet implemented";
 }
 
-void RoundManager::playCardStage() {
+void RoundManager::playCardStage() const {
 	// TODO - implement RoundManager::playCardStage
 	throw "Not yet implemented";
 }
 
-void RoundManager::discardStage() {
+void RoundManager::discardStage() const {
 	// TODO - implement RoundManager::discardStage
 	throw "Not yet implemented";
 }
 
-void RoundManager::roundEndStage() {
+void RoundManager::roundEndStage() const {
 	// TODO - implement RoundManager::roundEndStage
 	throw "Not yet implemented";
 }

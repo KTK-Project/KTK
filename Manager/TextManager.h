@@ -7,18 +7,18 @@ class TextManager {
 
 
 public:
-	char* getTextOfCharName(Char_Name name);
+	char* getTextOfCharName(const Char_Name name) const;
 
-	char* getTextOfCardName(Card_Name name);
+	char* getTextOfCardName(const Card_Name name) const;
 
-	char* getTextOfSkillName(Char_SkillName name);
+	char* getTextOfSkillName(const Char_SkillName name) const;
 
-	char* getTextOfCardDescribe(Card_Name name);
+	char* getTextOfCardDescribe(const Card_Name name) const;
 
-	char* getTextOfCharDescribe(Char_Name name);
+	char* getTextOfCharDescribe(const Char_Name name) const;
 
-	char* getTextOfSuit(Card_Suit suit);
+	char* getTextOfSuit(const Card_Suit suit) const;
 
-	char* getTextOfColorName(Card_Color color);
+	char* getTextOfColorName(const Card_Color color) const;
 };
 #endif // TextManager_h__

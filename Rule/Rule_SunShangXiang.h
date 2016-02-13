@@ -8,10 +8,10 @@ class Rule_SunShangXiang : public Rule_Character {
 
 
 public:
-	void playCardStage();
+	void playCardStage() const;
 
-	void unequip(std::shared_ptr<Card> card);
+	void unequip(const std::shared_ptr<Card> card) const;
 
-	void jieYin();
+	void jieYin() const;
 };
 #endif // Rule_SunShangXiang_h__

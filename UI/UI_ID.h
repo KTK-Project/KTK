@@ -11,8 +11,8 @@ private:
 	cocos2d::Node* m_IDList;
 
 public:
-	void init();
+	void init() const;
 
-	void setMarkID(Char_ID ID);
+	void setMarkID(const Char_ID ID) const;
 };
 #endif // UI_ID_h__

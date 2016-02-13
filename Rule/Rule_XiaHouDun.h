@@ -8,8 +8,8 @@ class Rule_XiaHouDun : public Rule_Character {
 
 
 public:
-	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
+	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void gangLie(std::shared_ptr<Event_Hurt>& event);
+	void gangLie(const std::shared_ptr<Event_Hurt>& event) const;
 };
 #endif // Rule_XiaHouDun_h__

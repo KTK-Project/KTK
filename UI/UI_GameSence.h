@@ -18,10 +18,10 @@ private:
 	cocos2d::Sprite* m_sitToRight;
 
 public:
-	UI_Desktop* getDesktop();
+	UI_Desktop* getDesktop() const;
 
-	UI_LogBox* getLogBox();
+	UI_LogBox* getLogBox() const;
 
-	UI_PlayerPanal* getPlayerPanal(std::shared_ptr<Player> player);
+	UI_PlayerPanal* getPlayerPanal(const std::shared_ptr<Player> player) const;
 };
 #endif // UI_GameSence_h__

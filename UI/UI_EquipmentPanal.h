@@ -14,18 +14,18 @@ private:
 	cocos2d::Sprite* m_offensiveHorse;
 
 public:
-	void init();
+	void init() const;
 
-	void setWeapon(std::shared_ptr<Card> m_weapon);
+	void setWeapon(const std::shared_ptr<Card> m_weapon) const;
 
-	void setArmor(std::shared_ptr<Card> m_armor);
+	void setArmor(const std::shared_ptr<Card> m_armor) const;
 
-	void setDefensiveHorse(std::shared_ptr<Card> m_defensiveHorse);
+	void setDefensiveHorse(const std::shared_ptr<Card> m_defensiveHorse) const;
 
-	void setOffensiveHorse(std::shared_ptr<Card> m_offensiveHorse);
+	void setOffensiveHorse(const std::shared_ptr<Card> m_offensiveHorse) const;
 
-	void setEquipmentPanalState(std::shared_ptr<Card> card, EquipmentPanalState state);
+	void setEquipmentPanalState(const std::shared_ptr<Card> card, const EquipmentPanalState state) const;
 
-	void refresh();
+	void refresh() const;
 };
 #endif // UI_EquipmentPanal_h__

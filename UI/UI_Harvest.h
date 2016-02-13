@@ -13,10 +13,10 @@ private:
 	std::vector<std::shared_ptr<Player>> m_players;
 
 public:
-	bool initWithCards(std::vector<std::shared_ptr<Card>> cards);
+	bool initWithCards(const std::vector<std::shared_ptr<Card>> cards) const;
 
-	void chosedCard(std::shared_ptr<Player> player, std::shared_ptr<Card> card);
+	void chosedCard(const std::shared_ptr<Player> player, const std::shared_ptr<Card> card) const;
 
-	void chosedCard(std::shared_ptr<Player> player, UI_Card* card);
+	void chosedCard(const std::shared_ptr<Player> player, const UI_Card* card) const;
 };
 #endif // UI_Harvest_h__

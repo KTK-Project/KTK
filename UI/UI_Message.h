@@ -15,18 +15,18 @@ private:
 	std::function<bool ()> m_button2ValidCheck;
 
 public:
-	void setString(std::string& string);
+	void setString(const std::string& string) const;
 
-	void setVisible(bool visible);
+	void setVisible(const bool visible) const;
 
-	void update(float delta);
+	void update(const float delta) const;
 
-	void setButton1ValidCheck(std::function<bool ()> m_button1ValidCheck);
+	void setButton1ValidCheck(const std::function<bool ()> m_button1ValidCheck) const;
 
-	void setButton2ValidCheck(std::function<bool ()> m_button2ValidCheck);
+	void setButton2ValidCheck(const std::function<bool ()> m_button2ValidCheck) const;
 
-	void setButton1CallBack(std::function<void (std::shared_ptr<Event_Base>&)> m_button1CallBack);
+	void setButton1CallBack(const std::function<void (const std::shared_ptr<Event_Base>&)> m_button1CallBack) const;
 
-	void setButton2CallBack(std::function<void (std::shared_ptr<Event_Base>&)> m_button2CallBack);
+	void setButton2CallBack(const std::function<void (const std::shared_ptr<Event_Base>&)> m_button2CallBack) const;
 };
 #endif // UI_Message_h__

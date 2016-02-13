@@ -1,89 +1,89 @@
 #include "UI_PlayerPanal.h"
 
-void UI_PlayerPanal::initWithPlayer(std::shared_ptr<Player> player) {
+void UI_PlayerPanal::initWithPlayer(const std::shared_ptr<Player> player) const {
 	// TODO - implement UI_PlayerPanal::initWithPlayer
 	throw "Not yet implemented";
 	//创建所有组件，addchild以后调用各个组件的refresh
 }
 
-std::shared_ptr<Player> UI_PlayerPanal::getPlayer() {
+std::shared_ptr<Player> UI_PlayerPanal::getPlayer() const {
 	// TODO - implement UI_PlayerPanal::getPlayer
 	throw "Not yet implemented";
 }
 
-void UI_PlayerPanal::setPlayer(std::shared_ptr<Player> player) {
+void UI_PlayerPanal::setPlayer(const std::shared_ptr<Player> player) const {
 	// TODO - implement UI_PlayerPanal::setPlayer
 	throw "Not yet implemented";
 	//调用initwithplayer
 }
 
-UI_ID* UI_PlayerPanal::getID() {
+UI_ID* UI_PlayerPanal::getID() const {
 	// TODO - implement UI_PlayerPanal::getID
 	throw "Not yet implemented";
 	//所有的get以前都要检查是否为空指针，若为空，报错，提醒要先调用initwithplayer
 }
 
-UI_HP* UI_PlayerPanal::getHP() {
+UI_HP* UI_PlayerPanal::getHP() const {
 	// TODO - implement UI_PlayerPanal::getHP
 	throw "Not yet implemented";
 }
 
-UI_Position* UI_PlayerPanal::getPosition() {
+UI_Position* UI_PlayerPanal::getPosition() const {
 	// TODO - implement UI_PlayerPanal::getPosition
 	throw "Not yet implemented";
 }
 
-UI_HandCardQuantity* UI_PlayerPanal::getHandCardQuantity() {
+UI_HandCardQuantity* UI_PlayerPanal::getHandCardQuantity() const {
 	// TODO - implement UI_PlayerPanal::getHandCardQuantity
 	throw "Not yet implemented";
 }
 
-UI_EquipmentPanal* UI_PlayerPanal::getEquipmentPanal() {
+UI_EquipmentPanal* UI_PlayerPanal::getEquipmentPanal() const {
 	// TODO - implement UI_PlayerPanal::getEquipmentPanal
 	throw "Not yet implemented";
 }
 
-UI_JudgeIcon* UI_PlayerPanal::getJudgeIcon() {
+UI_JudgeIcon* UI_PlayerPanal::getJudgeIcon() const {
 	// TODO - implement UI_PlayerPanal::getJudgeIcon
 	throw "Not yet implemented";
 }
 
-UI_InformationBox* UI_PlayerPanal::getInformationBox() {
+UI_InformationBox* UI_PlayerPanal::getInformationBox() const {
 	// TODO - implement UI_PlayerPanal::getInformationBox
 	throw "Not yet implemented";
 }
 
-UI_LogBox* UI_PlayerPanal::getLogBox() {
+UI_LogBox* UI_PlayerPanal::getLogBox() const {
 	// TODO - implement UI_PlayerPanal::getLogBox
 	throw "Not yet implemented";
 }
 
-void UI_PlayerPanal::drawCards(std::vector<std::shared_ptr<Card>>& cards) {
+void UI_PlayerPanal::drawCards(const std::vector<std::shared_ptr<Card>>& cards) const {
 	//直接获取cards.size()，
 //再为这几个卡牌封装为反面的卡牌并给予一个移动，隐去，removechild的动作
 	// TODO - implement UI_PlayerPanal::drawCards
 	throw "Not yet implemented";
 }
 
-Player_Color UI_PlayerPanal::getPlayerColor() {
+Player_Color UI_PlayerPanal::getPlayerColor() const {
 	return this->m_playerColor;
 }
 
-void UI_PlayerPanal::setPlayerColor(Player_Color m_playerColor) {
+void UI_PlayerPanal::setPlayerColor(const Player_Color m_playerColor) const {
 	//设置面板颜色
 	this->m_playerColor = m_playerColor;
 }
 
-PlayerPanalState UI_PlayerPanal::getPlayerPanalState() {
+PlayerPanalState UI_PlayerPanal::getPlayerPanalState() const {
 	return this->m_playerPanalState;
 }
 
-void UI_PlayerPanal::setPlayerPanalState(PlayerPanalState m_playerPanalState) {
+void UI_PlayerPanal::setPlayerPanalState(const PlayerPanalState m_playerPanalState) const {
 	//设置背景,如果为可选择的，设置事件：触发则塞入selectedPlayer中
 	this->m_playerPanalState = m_playerPanalState;
 }
 
-void UI_PlayerPanal::clean() {
+void UI_PlayerPanal::clean() const {
 	// TODO - implement UI_PlayerPanal::clean
 	throw "Not yet implemented";
 }

@@ -32,38 +32,38 @@ private:
 	PlayerPanalState m_playerPanalState;
 
 public:
-	void initWithPlayer(std::shared_ptr<Player> player);
+	void initWithPlayer(const std::shared_ptr<Player> player) const;
 
-	std::shared_ptr<Player> getPlayer();
+	std::shared_ptr<Player> getPlayer() const;
 
-	void setPlayer(std::shared_ptr<Player> player);
+	void setPlayer(const std::shared_ptr<Player> player) const;
 
-	UI_ID* getID();
+	UI_ID* getID() const;
 
-	UI_HP* getHP();
+	UI_HP* getHP() const;
 
-	UI_Position* getPosition();
+	UI_Position* getPosition() const;
 
-	UI_HandCardQuantity* getHandCardQuantity();
+	UI_HandCardQuantity* getHandCardQuantity() const;
 
-	UI_EquipmentPanal* getEquipmentPanal();
+	UI_EquipmentPanal* getEquipmentPanal() const;
 
-	UI_JudgeIcon* getJudgeIcon();
+	UI_JudgeIcon* getJudgeIcon() const;
 
-	UI_InformationBox* getInformationBox();
+	UI_InformationBox* getInformationBox() const;
 
-	UI_LogBox* getLogBox();
+	UI_LogBox* getLogBox() const;
 
-	void drawCards(std::vector<std::shared_ptr<Card>>& cards);
+	void drawCards(const std::vector<std::shared_ptr<Card>>& cards) const;
 
-	Player_Color getPlayerColor();
+	Player_Color getPlayerColor() const;
 
-	void setPlayerColor(Player_Color m_playerColor);
+	void setPlayerColor(const Player_Color m_playerColor) const;
 
-	PlayerPanalState getPlayerPanalState();
+	PlayerPanalState getPlayerPanalState() const;
 
-	void setPlayerPanalState(PlayerPanalState m_playerPanalState);
+	void setPlayerPanalState(const PlayerPanalState m_playerPanalState) const;
 
-	void clean();
+	void clean() const;
 };
 #endif // UI_PlayerPanal_h__

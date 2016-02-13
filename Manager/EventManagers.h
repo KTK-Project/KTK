@@ -14,18 +14,18 @@ private:
 	int m_actions;
 
 public:
-	std::shared_ptr<Player> getResponser();
+	std::shared_ptr<Player> getResponser() const;
 
-	void setResponser(std::shared_ptr<Player> responser);
+	void setResponser(const std::shared_ptr<Player> responser) const;
 
-	void resolveEvent();
+	void resolveEvent() const;
 
-	std::stack<std::shared_ptr<Event_Base>>& getEventsStack();
+	std::stack<std::shared_ptr<Event_Base>>& getEventsStack() const;
 
-	bool hasActions();
+	bool hasActions() const;
 
-	void increaseActions();
+	void increaseActions() const;
 
-	void decreaseActions();
+	void decreaseActions() const;
 };
 #endif // EventManagers_h__

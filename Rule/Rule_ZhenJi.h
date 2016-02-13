@@ -8,12 +8,12 @@ class Rule_ZhenJi : public Rule_Character {
 
 
 public:
-	void readyStage();
+	void readyStage() const;
 
-	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
+	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void qingGuo(std::shared_ptr<Event_RequestCard>& event);
+	void qingGuo(const std::shared_ptr<Event_RequestCard>& event) const;
 
-	void luoShen();
+	void luoShen() const;
 };
 #endif // Rule_ZhenJi_h__

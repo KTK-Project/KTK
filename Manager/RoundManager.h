@@ -20,43 +20,43 @@ private:
 	std::vector<std::function<void ()>> m_functionsInRoundEndStage;
 
 public:
-	int getRoundsCount();
+	int getRoundsCount() const;
 
-	void enterNextStage();
+	void enterNextStage() const;
 
-	void enterNextPlayerRounds();
+	void enterNextPlayerRounds() const;
 
-	bool getStageFinish();
+	bool getStageFinish() const;
 
-	void setStageFinish(bool stageFinish);
+	void setStageFinish(const bool stageFinish) const;
 
-	bool getRoundFinish();
+	bool getRoundFinish() const;
 
-	void setRoundFinish(bool roundFinish);
+	void setRoundFinish(const bool roundFinish) const;
 
-	std::vector<std::function<void ()>>& getFunctionsInReadyStage();
+	std::vector<std::function<void ()>>& getFunctionsInReadyStage() const;
 
-	std::vector<std::function<void ()>>& getFunctionsInJudgeStage();
+	std::vector<std::function<void ()>>& getFunctionsInJudgeStage() const;
 
-	std::vector<std::function<void ()>>& getFunctionsInDrawCardStage();
+	std::vector<std::function<void ()>>& getFunctionsInDrawCardStage() const;
 
-	std::vector<std::function<void ()>>& getFunctionsInPlayCardStage();
+	std::vector<std::function<void ()>>& getFunctionsInPlayCardStage() const;
 
-	std::vector<std::function<void ()>>& getFunctionsInDiscardStage();
+	std::vector<std::function<void ()>>& getFunctionsInDiscardStage() const;
 
-	std::vector<std::function<void ()>>& getFunctionsInRoundEndStage();
+	std::vector<std::function<void ()>>& getFunctionsInRoundEndStage() const;
 
 private:
-	void readyStage();
+	void readyStage() const;
 
-	void judgeStage();
+	void judgeStage() const;
 
-	void drawCardStage();
+	void drawCardStage() const;
 
-	void playCardStage();
+	void playCardStage() const;
 
-	void discardStage();
+	void discardStage() const;
 
-	void roundEndStage();
+	void roundEndStage() const;
 };
 #endif // RoundManager_h__

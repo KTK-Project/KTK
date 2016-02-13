@@ -10,8 +10,8 @@ private:
 	std::vector<cocos2d::Sprite*> m_icon;
 
 public:
-	void init();
+	void init() const;
 
-	void refresh();
+	void refresh() const;
 };
 #endif // UI_JudgeIcon_h__

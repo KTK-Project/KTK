@@ -31,68 +31,64 @@ private:
 	UI_PlayerPanal* m_playerPanal;
 
 public:
-	void init();
+	void init() const;
 
-	std::shared_ptr<Character> getCharacter();
+	std::shared_ptr<Character> getCharacter() const;
 
-	void setCharacter(std::shared_ptr<Character> character);
+	void setCharacter(const std::shared_ptr<Character> character) const;
 
-	Char_ID getID();
+	Char_ID getID() const;
 
-	void setID(Char_ID ID);
+	void setID(const Char_ID ID) const;
 
-	int getHP();
+	int getHP() const;
 
-	void setHP(int HP);
+	void setHP(const int HP) const;
 
-	int getMaxHP();
+	int getMaxHP() const;
 
-	void setMaxHP(int maxHP);
+	void setMaxHP(const int maxHP) const;
 
-	bool isAlive();
+	bool isAlive() const;
 
-	void setAlive(bool alive);
+	void setAlive(const bool alive) const;
 
-	int getPosition();
+	int getPosition() const;
 
-	void setPosition(int position);
+	void setPosition(const int position) const;
 
-	CardPile& getHandCardPile();
+	CardPile& getHandCardPile() const;
 
-	std::shared_ptr<Card> getWeapon();
+	std::shared_ptr<Card> getWeapon() const;
 
-	void setWeapon(std::shared_ptr<Card> weapon);
+	void setWeapon(const std::shared_ptr<Card> weapon) const;
 
-	std::shared_ptr<Card> getArmor();
+	std::shared_ptr<Card> getArmor() const;
 
-	void setArmor(std::shared_ptr<Card> armor);
+	void setArmor(const std::shared_ptr<Card> armor) const;
 
-	std::shared_ptr<Card> getDefensiveHorse();
+	std::shared_ptr<Card> getDefensiveHorse() const;
 
-	void setDefensiveHorse(std::shared_ptr<Card> defensiveHorse);
+	void setDefensiveHorse(const std::shared_ptr<Card> defensiveHorse) const;
 
-	std::shared_ptr<Card> getOffensiveHorse();
+	std::shared_ptr<Card> getOffensiveHorse() const;
 
-	void setOffensiveHorse(std::shared_ptr<Card> offensiveHorse);
+	void setOffensiveHorse(const std::shared_ptr<Card> offensiveHorse) const;
 
-	std::vector<std::shared_ptr<Card>>& getJudgeCards();
+	std::vector<std::shared_ptr<Card>>& getJudgeCards() const;
 
-	void addJudgeCard(std::shared_ptr<Card> card);
+	void addJudgeCard(const std::shared_ptr<Card> card) const;
 
-	Char_ID getIDMarks(std::shared_ptr<Player> player);
+	Char_ID getIDMarks(const std::shared_ptr<Player> player) const;
 
-	void setIDMarks(std::shared_ptr<Player> player, Char_ID id);
+	void setIDMarks(const std::shared_ptr<Player> player, const Char_ID id) const;
 
-	std::shared_ptr<Controller_Base> getController();
+	std::shared_ptr<Controller_Base> getController() const;
 
-	void setController(std::shared_ptr<Controller_Base> controller);
+	void setController(const std::shared_ptr<Controller_Base> controller) const;
 
-	const std::shared_ptr<Rule_Character> getRule() const { return m_rule; }
+	UI_PlayerPanal* getPlayerPanal() const;
 
-	void setRule(const std::shared_ptr<Rule_Character> val) { m_rule = val; }
-
-	UI_PlayerPanal* getPlayerPanal();
-
-	void setPlayerPanal(UI_PlayerPanal* playerPanal);
+	void setPlayerPanal(const UI_PlayerPanal* playerPanal) const;
 };
 #endif // Player_h__

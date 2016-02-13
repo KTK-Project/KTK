@@ -11,12 +11,12 @@ private:
 	std::vector<Skill> m_skillList;
 
 public:
-	int getSize();
+	int getSize() const;
 
-	Skill& getSkillByName(Char_SkillName name);
+	Skill& getSkillByName(const Char_SkillName name) const;
 
-	int getIndexByName(Char_SkillName name);
+	int getIndexByName(const Char_SkillName name) const;
 
-	void addSkill(Skill& skill);
+	void addSkill(const Skill& skill) const;
 };
 #endif // SkillList_h__

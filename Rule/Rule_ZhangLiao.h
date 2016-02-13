@@ -7,8 +7,8 @@ class Rule_ZhangLiao : public Rule_Character {
 
 
 public:
-	void drawCardStage();
+	void drawCardStage() const;
 
-	void tuXi();
+	void tuXi() const;
 };
 #endif // Rule_ZhangLiao_h__

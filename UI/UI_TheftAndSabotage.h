@@ -16,10 +16,10 @@ private:
 	std::shared_ptr<Card> m_selectedCard;
 
 public:
-	bool initWithPlayer(std::shared_ptr<Player> player, Card_Name cardName);
+	bool initWithPlayer(const std::shared_ptr<Player> player, const Card_Name cardName) const;
 
-	std::shared_ptr<Card> getSelectedCard();
+	std::shared_ptr<Card> getSelectedCard() const;
 
-	void setSelectedCard(std::shared_ptr<Card> m_selectedCard);
+	void setSelectedCard(const std::shared_ptr<Card> m_selectedCard) const;
 };
 #endif // UI_TheftAndSabotage_h__

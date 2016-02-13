@@ -8,8 +8,8 @@ class Rule_LuXun : public Rule_Character {
 
 
 public:
-	std::shared_ptr<Card> removeHandCard(std::shared_ptr<Card> card);
+	std::shared_ptr<Card> removeHandCard(const std::shared_ptr<Card> card) const;
 
-	bool canAsCandidate(Card_Name cardName);
+	bool canAsCandidate(const Card_Name cardName) const;
 };
 #endif // Rule_LuXun_h__

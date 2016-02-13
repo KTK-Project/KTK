@@ -7,8 +7,8 @@ class Rule_HuangGai : public Rule_Character {
 
 
 public:
-	void playCardStage();
+	void playCardStage() const;
 
-	void kuRou();
+	void kuRou() const;
 };
 #endif // Rule_HuangGai_h__

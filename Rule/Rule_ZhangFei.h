@@ -7,8 +7,8 @@ class Rule_ZhangFei : public Rule_Character {
 
 
 public:
-	void readyStage();
+	void readyStage() const;
 
-	void roundEndStage();
+	void roundEndStage() const;
 };
 #endif // Rule_ZhangFei_h__

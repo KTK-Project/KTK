@@ -7,12 +7,12 @@ class Rule_SunQuan : public Rule_Character {
 
 
 public:
-	void playCardStage();
+	void playCardStage() const;
 
-	void afterProcessEvent(std::shared_ptr<Event_Base>& event);
+	void afterProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void zhiHeng();
+	void zhiHeng() const;
 
-	void jiuYuan(std::shared_ptr<Event_Base>& event);
+	void jiuYuan(const std::shared_ptr<Event_Base>& event) const;
 };
 #endif // Rule_SunQuan_h__

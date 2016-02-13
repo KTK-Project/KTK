@@ -12,14 +12,14 @@ private:
 	Skill_State m_skillState;
 
 public:
-	Char_SkillName getName();
+	Char_SkillName getName() const;
 
-	bool isLordSkill();
+	bool isLordSkill() const;
 
-	void setLordSkill(bool m_lordSkill);
+	void setLordSkill(const bool m_lordSkill) const;
 
-	Skill_State getSkillState();
+	Skill_State getSkillState() const;
 
-	void setSkillState(Skill_State m_skillState);
+	void setSkillState(const Skill_State m_skillState) const;
 };
 #endif // Skill_h__

@@ -14,22 +14,22 @@ private:
 	std::vector<UI_Card*> m_cleanCards;
 
 public:
-	void init();
+	void init() const;
 
-	int pushBack(UI_Card* card);
+	int pushBack(const UI_Card* card) const;
 
-	cocos2d::Vec2 getPositionForCard(int index);
+	cocos2d::Vec2 getPositionForCard(const int index) const;
 
-	void addCards(UI_Card* card, std::string& description);
+	void addCards(const UI_Card* card, const std::string& description) const;
 
-	void settleUp();
+	void settleUp() const;
 
-	bool getNeedToClean();
+	bool getNeedToClean() const;
 
-	void setNeedToClean(bool m_needToClean);
+	void setNeedToClean(const bool m_needToClean) const;
 
-	void clean();
+	void clean() const;
 
-	void update(float delta);
+	void update(const float delta) const;
 };
 #endif // UI_Desktop_h__

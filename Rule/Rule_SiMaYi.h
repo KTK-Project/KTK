@@ -9,10 +9,10 @@ class Rule_SiMaYi : public Rule_Character {
 
 
 public:
-	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
+	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void fanKui(std::shared_ptr<Event_Hurt>& event);
+	void fanKui(const std::shared_ptr<Event_Hurt>& event) const;
 
-	void guiCai(std::shared_ptr<Event_Judge>& event);
+	void guiCai(const std::shared_ptr<Event_Judge>& event) const;
 };
 #endif // Rule_SiMaYi_h__

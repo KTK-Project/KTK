@@ -14,16 +14,16 @@ private:
 	SkillList m_skillList;
 
 public:
-	Char_Force getForce();
+	Char_Force getForce() const;
 
-	Char_Name getName();
+	Char_Name getName() const;
 
-	Char_Sex getSex();
+	Char_Sex getSex() const;
 
-	int getHP();
+	int getHP() const;
 
-	SkillList getSkillList();
+	SkillList getSkillList() const;
 
-	void setSkillList(SkillList m_skillList);
+	void setSkillList(const SkillList m_skillList) const;
 };
 #endif // Character_h__

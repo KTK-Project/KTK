@@ -10,8 +10,8 @@ private:
 	cocos2d::Label* m_label;
 
 public:
-	void init();
+	void init() const;
 
-	void refresh();
+	void refresh() const;
 };
 #endif // UI_Position_h__

@@ -9,12 +9,12 @@ class Rule_DaQiao : public Rule_Character {
 
 
 public:
-	void playCardStage();
+	void playCardStage() const;
 
-	void guoSe();
+	void guoSe() const;
 
-	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
+	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void liuLi(std::shared_ptr<Event_Base>& event);
+	void liuLi(const std::shared_ptr<Event_Base>& event) const;
 };
 #endif // Rule_DaQiao_h__

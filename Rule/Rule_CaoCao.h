@@ -10,10 +10,10 @@
 class Rule_CaoCao : public Rule_Character {
 
 public:
-	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
+	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void huJia(std::shared_ptr<Event_RequestCard>& event);
+	void huJia(const std::shared_ptr<Event_RequestCard>& event) const;
 
-	void jianXiong(std::shared_ptr<Event_Hurt>& event);
+	void jianXiong(const std::shared_ptr<Event_Hurt>& event) const;
 };
 #endif // Rule_CaoCao_h__

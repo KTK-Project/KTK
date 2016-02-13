@@ -7,12 +7,12 @@ class Rule_GuanYu : public Rule_Character {
 
 
 public:
-	void playCardStage();
+	void playCardStage() const;
 
-	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
+	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void afterProcessEvent(std::shared_ptr<Event_Base>& event);
+	void afterProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void wuSheng();
+	void wuSheng() const;
 };
 #endif // Rule_GuanYu_h__

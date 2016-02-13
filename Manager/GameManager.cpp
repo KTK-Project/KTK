@@ -1,46 +1,46 @@
 #include "GameManager.h"
 
-GameManager* GameManager::getInstance() {
+GameManager* GameManager::getInstance() const {
 	// TODO - implement GameManager::getInstance
 	throw "Not yet implemented";
 }
 
-PlayersManger& GameManager::getPlayerManager() {
+PlayersManger& GameManager::getPlayerManager() const {
 	// TODO - implement GameManager::getPlayerManager
 	throw "Not yet implemented";
 }
 
-RoundManager& GameManager::getRoundManager() {
+RoundManager& GameManager::getRoundManager() const {
 	// TODO - implement GameManager::getRoundManager
 	throw "Not yet implemented";
 }
 
-EventManagers& GameManager::getEventManager() {
+EventManagers& GameManager::getEventManager() const {
 	// TODO - implement GameManager::getEventManager
 	throw "Not yet implemented";
 }
 
-CharacterManager& GameManager::getCharacterManager() {
+CharacterManager& GameManager::getCharacterManager() const {
 	// TODO - implement GameManager::getCharacterManager
 	throw "Not yet implemented";
 }
 
-CardPile& GameManager::getDarkcardPile() {
+CardPile& GameManager::getDarkcardPile() const {
 	// TODO - implement GameManager::getDarkcardPile
 	throw "Not yet implemented";
 }
 
-CardPile& GameManager::getDiscardPile() {
+CardPile& GameManager::getDiscardPile() const {
 	// TODO - implement GameManager::getDiscardPile
 	throw "Not yet implemented";
 }
 
-void GameManager::gameBegin() {
+void GameManager::gameBegin() const {
 	// TODO - implement GameManager::gameBegin
 	throw "Not yet implemented";
 }
 
-void GameManager::gameEnd() {
+void GameManager::gameEnd() const {
 	// TODO - implement GameManager::gameEnd
 	throw "Not yet implemented";
 }

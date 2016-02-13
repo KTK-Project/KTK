@@ -8,10 +8,10 @@ class Rule_MaChao : public Rule_Character {
 
 
 public:
-	int getDistance(std::shared_ptr<Player> player);
+	int getDistance(const std::shared_ptr<Player> player) const;
 
-	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
+	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void tieQi(std::shared_ptr<Event_Base>& event);
+	void tieQi(const std::shared_ptr<Event_Base>& event) const;
 };
 #endif // Rule_MaChao_h__

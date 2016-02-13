@@ -13,10 +13,10 @@ private:
 	cocos2d::Sprite* m_background;
 
 public:
-	void init();
+	void init() const;
 
-	void addLabel(std::string& information);
+	void addLabel(const std::string& information) const;
 
-	void removeAll();
+	void removeAll() const;
 };
 #endif // UI_InformationBox_h__

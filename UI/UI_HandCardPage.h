@@ -13,32 +13,32 @@ private:
 	std::function<void ()> m_addCardFinishCallBack;
 
 public:
-	std::vector<UI_Card*>& getCards();
+	std::vector<UI_Card*>& getCards() const;
 
-	int getSize();
+	int getSize() const;
 
-	bool isEmpty();
+	bool isEmpty() const;
 
-	bool isFull();
+	bool isFull() const;
 
-	void settleUp(bool useAction);
+	void settleUp(const bool useAction) const;
 
-	cocos2d::Vec2 getPositionWithIndex(int index);
+	cocos2d::Vec2 getPositionWithIndex(const int index) const;
 
-	bool hasCard(std::shared_ptr<Card> card);
+	bool hasCard(const std::shared_ptr<Card> card) const;
 
-	bool hasCard(UI_Card* card);
+	bool hasCard(const UI_Card* card) const;
 
-	void addCard(std::shared_ptr<Card> card);
+	void addCard(const std::shared_ptr<Card> card) const;
 
-	void addCard(UI_Card* card);
+	void addCard(const UI_Card* card) const;
 
-	UI_Card* removeCard(std::shared_ptr<Card> card);
+	UI_Card* removeCard(const std::shared_ptr<Card> card) const;
 
-	UI_Card* removeCard(UI_Card* card);
+	UI_Card* removeCard(const UI_Card* card) const;
 
-	std::vector<UI_Card*> removeAll();
+	std::vector<UI_Card*> removeAll() const;
 
-	void setAddCardFinishCallBack(std::function<void ()>& m_addCardFinishCallBack);
+	void setAddCardFinishCallBack(const std::function<void ()>& m_addCardFinishCallBack) const;
 };
 #endif // UI_HandCardPage_h__

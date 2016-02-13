@@ -9,12 +9,12 @@ class Rule_XuChu : public Rule_Character {
 public:
 	bool m_usingLuoYi;
 
-	void drawCardStage();
+	void drawCardStage() const;
 
-	void roundEndStage();
+	void roundEndStage() const;
 
-	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
+	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void luoYi(std::shared_ptr<Event_Hurt>& event);
+	void luoYi(const std::shared_ptr<Event_Hurt>& event) const;
 };
 #endif // Rule_XuChu_h__

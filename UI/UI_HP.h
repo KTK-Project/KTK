@@ -11,8 +11,8 @@ private:
 	std::vector<cocos2d::Sprite*> m_emptyBloods;
 
 public:
-	void init();
+	void init() const;
 
-	void refresh();
+	void refresh() const;
 };
 #endif // UI_HP_h__

@@ -15,35 +15,35 @@ private:
 	std::deque<UI_Card*> m_addCardQueue;
 	int m_currentPageIndex;
 	cocos2d::Menu* m_pageUpDownMenu;
-	std::function<bool(std::shared_ptr<Card>)> m_cardsCanUpFilter;
+	std::function<bool(const std::shared_ptr<Card>)> m_cardsCanUpFilter;
 	bool m_needToReset;
 public:
-	UI_HandCardPage* getPageByIndex(int index);
+	UI_HandCardPage* getPageByIndex(const int index) const;
 
-	int getCurrentPageIndex();
+	int getCurrentPageIndex() const;
 
-	void setCurrentPageIndex(int currentPageIndex);
+	void setCurrentPageIndex(const int currentPageIndex) const;
 
-	void pageUp();
+	void pageUp() const;
 
-	void pageDown();
+	void pageDown() const;
 
-	void addCard(std::shared_ptr<Card> card);
+	void addCard(const std::shared_ptr<Card> card) const;
 
-	void addCard(UI_Card* card);
+	void addCard(const UI_Card* card) const;
 
-	UI_Card* removeCard(std::shared_ptr<Card> card);
+	UI_Card* removeCard(const std::shared_ptr<Card> card) const;
 
-	UI_Card* removeCard(UI_Card* card);
+	UI_Card* removeCard(const UI_Card* card) const;
 
-	void removeEmptyPage();
+	void removeEmptyPage() const;
 
-	void reset();
+	void reset() const;
 
-	void for_each_card(std::function<void (UI_Card*)>& fun);
+	void for_each_card(const std::function<void (const UI_Card*)>& fun) const;
 
-	void update(float delta);
+	void update(const float delta) const;
 
-	void finish();
+	void finish() const;
 };
 #endif // UI_HandCardPanal_h__

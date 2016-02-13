@@ -14,28 +14,28 @@ private:
 	std::shared_ptr<Player> m_forwardPlayer;
 
 public:
-	std::vector<std::shared_ptr<Player>>& getPlayers();
+	std::vector<std::shared_ptr<Player>>& getPlayers() const;
 
-	std::vector<std::shared_ptr<Player>> getPlayers(std::function<bool (std::shared_ptr<Player>)> filter);
+	std::vector<std::shared_ptr<Player>> getPlayers(const std::function<bool (const std::shared_ptr<Player>)> filter) const;
 
-	std::shared_ptr<Player> getNextPlayer(std::shared_ptr<Player> player);
+	std::shared_ptr<Player> getNextPlayer(const std::shared_ptr<Player> player) const;
 
-	std::shared_ptr<Player> getNextPlayerWithFilter(std::shared_ptr<Player> player, std::function<bool (std::shared_ptr<Player>)> filter);
+	std::shared_ptr<Player> getNextPlayerWithFilter(const std::shared_ptr<Player> player, const std::function<bool (const std::shared_ptr<Player>)> filter) const;
 
-	int getPlayerCount(std::function<bool (std::shared_ptr<Player>)> filter);
+	int getPlayerCount(const std::function<bool (const std::shared_ptr<Player>)> filter) const;
 
-	int getDistanceFromTwoPlayers(std::shared_ptr<Player> firstPlayer, std::shared_ptr<Player> secondPlayer);
+	int getDistanceFromTwoPlayers(const std::shared_ptr<Player> firstPlayer, const std::shared_ptr<Player> secondPlayer) const;
 
-	std::shared_ptr<Player> getLordPlayer();
+	std::shared_ptr<Player> getLordPlayer() const;
 
-	void setLordPlayer(std::shared_ptr<Player> lordPlayer);
+	void setLordPlayer(const std::shared_ptr<Player> lordPlayer) const;
 
-	std::shared_ptr<Player> getCurrentPlayer();
+	std::shared_ptr<Player> getCurrentPlayer() const;
 
-	void setCurrentPlayer(std::shared_ptr<Player> currentPlayer);
+	void setCurrentPlayer(const std::shared_ptr<Player> currentPlayer) const;
 
-	std::shared_ptr<Player> getForwardPlayer();
+	std::shared_ptr<Player> getForwardPlayer() const;
 
-	void setForwardPlayer(std::shared_ptr<Player> forwardPlayer);
+	void setForwardPlayer(const std::shared_ptr<Player> forwardPlayer) const;
 };
 #endif // PlayersManger_h__

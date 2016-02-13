@@ -12,44 +12,44 @@ private:
 	std::shared_ptr<Player> m_player;
 
 public:
-	Rule_Character(std::shared_ptr<Player> player);
+	Rule_Character(const std::shared_ptr<Player> player) const;
 
-	std::shared_ptr<Player> getPlayer();
+	std::shared_ptr<Player> getPlayer() const;
 
-	void setPlayer(std::shared_ptr<Player> player);
+	void setPlayer(const std::shared_ptr<Player> player) const;
 
-	void readyStage();
+	void readyStage() const;
 
-	void judgeStage();
+	void judgeStage() const;
 
-	void drawCardStage();
+	void drawCardStage() const;
 
-	void playCardStage();
+	void playCardStage() const;
 
-	void discardStage();
+	void discardStage() const;
 
-	void roundEndStage();
+	void roundEndStage() const;
 
-	bool canAsCandidate(Card_Name cardName);
+	bool canAsCandidate(const Card_Name cardName) const;
 
-	void asCardGoal(Card_Name cardName);
+	void asCardGoal(const Card_Name cardName) const;
 
-	void equip(std::shared_ptr<Card> card);
+	void equip(const std::shared_ptr<Card> card) const;
 
-	void unequip(std::shared_ptr<Card> card);
+	void unequip(const std::shared_ptr<Card> card) const;
 
-	void playCard(std::shared_ptr<Card> card);
+	void playCard(const std::shared_ptr<Card> card) const;
 
-	void drawCard(std::shared_ptr<Card> card);
+	void drawCard(const std::shared_ptr<Card> card) const;
 
-	std::shared_ptr<Card> removeHandCard(std::shared_ptr<Card> card);
+	std::shared_ptr<Card> removeHandCard(const std::shared_ptr<Card> card) const;
 
-	int getDistanceForCard(std::shared_ptr<Card> card);
+	int getDistanceForCard(const std::shared_ptr<Card> card) const;
 
-	int getDistance(std::shared_ptr<Player> player);
+	int getDistance(const std::shared_ptr<Player> player) const;
 
-	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
+	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void afterProcessEvent(std::shared_ptr<Event_Base>& event);
+	void afterProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 };
 #endif // Rule_Character_h__

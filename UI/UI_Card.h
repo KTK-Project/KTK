@@ -16,41 +16,41 @@ private:
 	bool m_dark;
 	bool m_canUp;
 	bool m_upping;
-	std::function<void (UI_Card*)> m_upCallBack;
-	std::function<void (UI_Card*)> m_downCallBack;
+	std::function<void (const UI_Card*)> m_upCallBack;
+	std::function<void (const UI_Card*)> m_downCallBack;
 	cocos2d::EventListenerTouchOneByOne* m_listener;
 
 public:
-	UI_Card* create(std::shared_ptr<Card> card);
+	UI_Card* create(const std::shared_ptr<Card> card) const;
 
-	bool initWithCard(std::shared_ptr<Card> card);
+	bool initWithCard(const std::shared_ptr<Card> card) const;
 
-	void initListenToUpDown();
+	void initListenToUpDown() const;
 
-	std::shared_ptr<Card> getCard();
+	std::shared_ptr<Card> getCard() const;
 
-	void setCard(std::shared_ptr<Card> card);
+	void setCard(const std::shared_ptr<Card> card) const;
 
-	void setDescription(cocos2d::Label* m_description);
+	void setDescription(const cocos2d::Label* m_description) const;
 
-	bool getDark();
+	bool getDark() const;
 
-	void setDark(bool m_dark);
+	void setDark(const bool m_dark) const;
 
-	bool getCanUp();
+	bool getCanUp() const;
 
-	void setCanUp(bool m_canUp);
+	void setCanUp(const bool m_canUp) const;
 
-	bool getUpping();
+	bool getUpping() const;
 
-	void setUpping(bool m_upping);
+	void setUpping(const bool m_upping) const;
 
-	void setUpCallBack(std::function<void (UI_Card*)> m_upCallBack);
+	void setUpCallBack(const std::function<void (const UI_Card*)> m_upCallBack) const;
 
-	void setDownCallBack(std::function<void (UI_Card*)> m_downCallBack);
+	void setDownCallBack(const std::function<void (const UI_Card*)> m_downCallBack) const;
 
-	cocos2d::Action* runAction(cocos2d::Action* action);
+	cocos2d::Action* runAction(const cocos2d::Action* action) const;
 
-	cocos2d::EventListenerTouchOneByOne* getListener();
+	cocos2d::EventListenerTouchOneByOne* getListener() const;
 };
 #endif // UI_Card_h__

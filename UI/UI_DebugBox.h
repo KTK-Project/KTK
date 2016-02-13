@@ -6,7 +6,7 @@
 
 class UI_DebugBox {
 public:
-	bool init();
+	bool init() const;
 private:
 	cocos2d::ui::ListView* m_listView;
 	cocos2d::Label* m_scrollLabel;

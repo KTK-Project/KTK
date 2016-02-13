@@ -7,6 +7,6 @@ class Rule_LvMeng : public Rule_Character {
 
 
 public:
-	void discardStage();
+	void discardStage() const;
 };
 #endif // Rule_LvMeng_h__

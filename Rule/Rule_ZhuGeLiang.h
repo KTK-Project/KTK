@@ -8,10 +8,10 @@ class Rule_ZhuGeLiang : public Rule_Character {
 
 
 public:
-	void readyStage();
+	void readyStage() const;
 
-	bool canAsCandidate(std::shared_ptr<Card> card);
+	bool canAsCandidate(const std::shared_ptr<Card> card) const;
 
-	void guanXing();
+	void guanXing() const;
 };
 #endif // Rule_ZhuGeLiang_h__

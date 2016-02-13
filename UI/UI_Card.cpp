@@ -7,72 +7,72 @@ using cocos2d::Label;
 using cocos2d::Action;
 using cocos2d::EventListenerTouchOneByOne;
 
-UI_Card* UI_Card::create(shared_ptr<Card> card) {
+UI_Card* UI_Card::create(const shared_ptr<Card> card) const {
 	// TODO - implement UI_Card::create
 	throw "Not yet implemented";
 }
 
-bool UI_Card::initWithCard(shared_ptr<Card> card) {
+bool UI_Card::initWithCard(const shared_ptr<Card> card) const {
 	// TODO - implement UI_Card::initWithCard
 	throw "Not yet implemented";
 }
 
-void UI_Card::initListenToUpDown() {
+void UI_Card::initListenToUpDown() const {
 	// TODO - implement UI_Card::initListenToUpDown
 	throw "Not yet implemented";
 }
 
-shared_ptr<Card> UI_Card::getCard() {
+shared_ptr<Card> UI_Card::getCard() const {
 	// TODO - implement UI_Card::getCard
 	throw "Not yet implemented";
 }
 
-void UI_Card::setCard(shared_ptr<Card> card) {
+void UI_Card::setCard(const shared_ptr<Card> card) const {
 	// TODO - implement UI_Card::setCard
 	throw "Not yet implemented";
 }
 
-void UI_Card::setDescription(Label* m_description) {
+void UI_Card::setDescription(const Label* m_description) const {
 	this->m_description = m_description;
 }
 
-bool UI_Card::getDark() {
+bool UI_Card::getDark() const {
 	return this->m_dark;
 }
 
-void UI_Card::setDark(bool m_dark) {
+void UI_Card::setDark(const bool m_dark) const {
 	this->m_dark = m_dark;
 }
 
-bool UI_Card::getCanUp() {
+bool UI_Card::getCanUp() const {
 	return this->m_canUp;
 }
 
-void UI_Card::setCanUp(bool m_canUp) {
+void UI_Card::setCanUp(const bool m_canUp) const {
 	this->m_canUp = m_canUp;
 }
 
-bool UI_Card::getUpping() {
+bool UI_Card::getUpping() const {
 	return this->m_upping;
 }
 
-void UI_Card::setUpping(bool m_upping) {
+void UI_Card::setUpping(const bool m_upping) const {
 	this->m_upping = m_upping;
 }
 
-void UI_Card::setUpCallBack(std::function<void (UI_Card*)> m_upCallBack) {
+void UI_Card::setUpCallBack(const std::function<void (const UI_Card*)> m_upCallBack) const {
 	this->m_upCallBack = m_upCallBack;
 }
 
-void UI_Card::setDownCallBack(std::function<void (UI_Card*)> m_downCallBack) {
+void UI_Card::setDownCallBack(const std::function<void (const UI_Card*)> m_downCallBack) const {
 	this->m_downCallBack = m_downCallBack;
 }
 
-Action* UI_Card::runAction(Action* action) {
+Action* UI_Card::runAction(const Action* action) const {
 	// TODO - implement UI_Card::runAction
 	throw "Not yet implemented";
 }
 
-EventListenerTouchOneByOne* UI_Card::getListener() {
+EventListenerTouchOneByOne* UI_Card::getListener() const {
 	return this->m_listener;
 }

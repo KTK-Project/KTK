@@ -12,10 +12,10 @@ private:
 	std::vector<cocos2d::Sprite*> m_skillIcons;
 
 public:
-	void init();
+	void init() const;
 
-	void setSkillState(Skill skill, Skill_State state);
+	void setSkillState(const Skill skill, const Skill_State state) const;
 
-	void refresh();
+	void refresh() const;
 };
 #endif // UI_SkillPanal_h__

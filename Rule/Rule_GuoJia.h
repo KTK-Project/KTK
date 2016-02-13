@@ -9,10 +9,10 @@ class Rule_GuoJia : public Rule_Character {
 
 
 public:
-	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
+	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void tianDu(std::shared_ptr<Event_Judge>& event);
+	void tianDu(const std::shared_ptr<Event_Judge>& event) const;
 
-	void yiJi(std::shared_ptr<Event_Hurt>& event);
+	void yiJi(const std::shared_ptr<Event_Hurt>& event) const;
 };
 #endif // Rule_GuoJia_h__

@@ -7,8 +7,8 @@
 class Rule_GanNing : public Rule_Character {
 
 public:
-	void playCard(std::shared_ptr<Card> card);
+	void playCard(const std::shared_ptr<Card> card) const;
 
-	void qiXi();
+	void qiXi() const;
 };
 #endif // Rule_GanNing_h__

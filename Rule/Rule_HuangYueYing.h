@@ -8,10 +8,10 @@ class Rule_HuangYueYing : public Rule_Character {
 
 
 public:
-	int getDistanceForCard(std::shared_ptr<Card> card);
+	int getDistanceForCard(const std::shared_ptr<Card> card) const;
 
-	void playCard(std::shared_ptr<Card> card);
+	void playCard(const std::shared_ptr<Card> card) const;
 
-	void jiZhi();
+	void jiZhi() const;
 };
 #endif // Rule_HuangYueYing_h__

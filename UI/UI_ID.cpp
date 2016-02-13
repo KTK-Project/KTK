@@ -1,6 +1,6 @@
 #include "UI_ID.h"
 
-void UI_ID::init() {
+void UI_ID::init() const {
 	//forwardplayer不可以点击markID。
 //otherplayer可以点击markID，点击后显示IDlist，再次点击隐藏IDlist。
 //或者在显示IDList的情况下，点击其中一个，触发setmarkID，然后隐藏IDlist。
@@ -8,7 +8,7 @@ void UI_ID::init() {
 	throw "Not yet implemented";
 }
 
-void UI_ID::setMarkID(Char_ID ID) {
+void UI_ID::setMarkID(const Char_ID ID) const {
 	// TODO - implement UI_ID::setMarkID
 	throw "Not yet implemented";
 }

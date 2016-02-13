@@ -7,12 +7,12 @@ class Rule_DiaoChan : public Rule_Character {
 
 
 public:
-	void playCardStage();
+	void playCardStage() const;
 
-	void roundEndStage();
+	void roundEndStage() const;
 
-	void biYue();
+	void biYue() const;
 
-	void liJian();
+	void liJian() const;
 };
 #endif // Rule_DiaoChan_h__

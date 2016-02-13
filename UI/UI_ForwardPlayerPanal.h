@@ -25,18 +25,18 @@ private:
 	SelectedPlayers m_selectedPlayers;
 
 public:
-	void initWithPlayer(std::shared_ptr<Player> player);
+	void initWithPlayer(const std::shared_ptr<Player> player) const;
 
-	UI_SkillPanal* getSkillPanal();
+	UI_SkillPanal* getSkillPanal() const;
 
-	UI_HandCardPanal* getHandCardPanal();
+	UI_HandCardPanal* getHandCardPanal() const;
 
-	UI_Message* getMessage();
+	UI_Message* getMessage() const;
 
-	void drawCards(std::vector<std::shared_ptr<Card>>& cards);
+	void drawCards(const std::vector<std::shared_ptr<Card>>& cards) const;
 
-	void setPlayerPanalState(PlayerPanalState m_playerPanalState);
+	void setPlayerPanalState(const PlayerPanalState m_playerPanalState) const;
 
-	void clean();
+	void clean() const;
 };
 #endif // UI_ForwardPlayerPanal_h__

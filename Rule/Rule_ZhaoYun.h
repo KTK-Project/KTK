@@ -7,12 +7,12 @@ class Rule_ZhaoYun : public Rule_Character {
 
 
 public:
-	void playCardStage();
+	void playCardStage() const;
 
-	void beforeProcessEvent(std::shared_ptr<Event_Base>& event);
+	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void afterProcessEvent(std::shared_ptr<Event_Base>& event);
+	void afterProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 
-	void longDan(std::shared_ptr<Event_Base>& event);
+	void longDan(const std::shared_ptr<Event_Base>& event) const;
 };
 #endif // Rule_ZhaoYun_h__

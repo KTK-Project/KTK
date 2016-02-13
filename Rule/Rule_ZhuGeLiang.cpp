@@ -1,6 +1,6 @@
 #include "Rule_ZhuGeLiang.h"
 
-void Rule_ZhuGeLiang::readyStage() {
+void Rule_ZhuGeLiang::readyStage() const {
 	//询问是否发动观星技能：
 //	是：发动调用guanxing()
 //	否：调用基类readyStage
@@ -8,13 +8,13 @@ void Rule_ZhuGeLiang::readyStage() {
 	throw "Not yet implemented";
 }
 
-bool Rule_ZhuGeLiang::canAsCandidate(std::shared_ptr<Card> card) {
+bool Rule_ZhuGeLiang::canAsCandidate(const std::shared_ptr<Card> card) const {
 	//空城技能，太简单，不解释
 	// TODO - implement Rule_ZhuGeLiang::canAsCandidate
 	throw "Not yet implemented";
 }
 
-void Rule_ZhuGeLiang::guanXing() {
+void Rule_ZhuGeLiang::guanXing() const {
 	//封装个观星UI界面blablabla，自己发挥吧...<(￣ˇ￣)/
 	// TODO - implement Rule_ZhuGeLiang::guanXing
 	throw "Not yet implemented";

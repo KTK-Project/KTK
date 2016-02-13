@@ -1,6 +1,6 @@
 #include "Rule_CaoCao.h"
 
-void Rule_CaoCao::beforeProcessEvent(std::shared_ptr<Event_Base>& event) {
+void Rule_CaoCao::beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const {
 	//如果事件为请求闪事件，发出请求布尔值事件，询问是否发动护驾：
 //	是：发动护驾
 //	否：调用基类preprocessingEvent
@@ -11,15 +11,15 @@ void Rule_CaoCao::beforeProcessEvent(std::shared_ptr<Event_Base>& event) {
 	throw "Not yet implemented";
 }
 
-void Rule_CaoCao::huJia(std::shared_ptr<Event_RequestCard>& event) {
+void Rule_CaoCao::huJia(const std::shared_ptr<Event_RequestCard>& event) const {
 	//static Player * currentPlayer = nullptr;
 //static std::shared_ptr<Event_RequestCard> event = nullptr;
 //static bool 八卦阵used = false;
 //if(!event)	
 //	event = 参数;
 //	currentPlayer = 曹操
-//currentplayer = getnextPlayer([](){});
-//if(currentPlayr != 曹操)
+//currentplayer = getnextPlayer([](){}) const;
+//if(const currentPlayr != 曹操)
 //	给currentplayer发出请求布尔值事件【是否为主公护驾】：
 //		是：if(有八卦阵且八卦阵used)，设置currentplayer八卦阵valid = false，
 //		        else if(有八卦阵且!八卦阵used) 八卦阵used = true;
@@ -38,7 +38,7 @@ void Rule_CaoCao::huJia(std::shared_ptr<Event_RequestCard>& event) {
 	throw "Not yet implemented";
 }
 
-void Rule_CaoCao::jianXiong(std::shared_ptr<Event_Hurt>& event) {
+void Rule_CaoCao::jianXiong(const std::shared_ptr<Event_Hurt>& event) const {
 	//获的得事件中的卡牌。
 	// TODO - implement Rule_CaoCao::jianXiong
 	throw "Not yet implemented";
