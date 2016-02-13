@@ -20,6 +20,6 @@ public:
 
 	Skill_State getSkillState() const;
 
-	void setSkillState(const Skill_State m_skillState) const;
+	void setSkillState(const Skill_State skillState) const;
 };
 #endif // Skill_h__

@@ -2,6 +2,10 @@
 
 char* TextManager::getTextOfCharName(const Char_Name name) const {
 	// TODO - implement TextManager::getTextOfCharName
+	if (name == Char_Name::CAOCAO)
+	{
+		return "²Ü²Ù";
+	}
 	throw "Not yet implemented";
 }
 

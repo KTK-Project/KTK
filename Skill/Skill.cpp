@@ -10,8 +10,8 @@ bool Skill::isLordSkill() const {
 	throw "Not yet implemented";
 }
 
-void Skill::setLordSkill(const bool m_lordSkill) const {
-	this->m_lordSkill = m_lordSkill;
+void Skill::setLordSkill(const bool lordSkill) const {
+	this->m_lordSkill = lordSkill;
 }
 
 Skill_State Skill::getSkillState() const {
