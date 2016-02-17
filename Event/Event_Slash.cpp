@@ -5,7 +5,7 @@ std::shared_ptr<Player> Event_Slash::getFirstPlayer() const {
 }
 
 void Event_Slash::setFirstPlayer(const std::shared_ptr<Player> m_firstPlayer) const {
-	this->m_firstPlayer = m_firstPlayer;
+	throw "Not yet implemented";
 }
 
 std::shared_ptr<Card> Event_Slash::getWeapon() const {
@@ -13,7 +13,7 @@ std::shared_ptr<Card> Event_Slash::getWeapon() const {
 }
 
 void Event_Slash::setWeapon(const std::shared_ptr<Card> m_weapon) const {
-	this->m_weapon = m_weapon;
+	throw "Not yet implemented";
 }
 
 std::shared_ptr<Player> Event_Slash::getGoalPlayers() const {
@@ -21,7 +21,7 @@ std::shared_ptr<Player> Event_Slash::getGoalPlayers() const {
 }
 
 void Event_Slash::setGoalPlayers(const std::shared_ptr<Player> m_goalPlayers) const {
-	this->m_goalPlayers = m_goalPlayers;
+	throw "Not yet implemented";
 }
 
 std::shared_ptr<Card> Event_Slash::getArmor() const {
@@ -29,7 +29,7 @@ std::shared_ptr<Card> Event_Slash::getArmor() const {
 }
 
 void Event_Slash::setArmor(const std::shared_ptr<Card> m_armor) const {
-	this->m_armor = m_armor;
+	throw "Not yet implemented";
 }
 
 std::vector<std::shared_ptr<Card>> Event_Slash::getSlash() const {
@@ -37,7 +37,7 @@ std::vector<std::shared_ptr<Card>> Event_Slash::getSlash() const {
 }
 
 void Event_Slash::setSlash(const std::vector<std::shared_ptr<Card>> m_slash) const {
-	this->m_slash = m_slash;
+	throw "Not yet implemented";
 }
 
 bool Event_Slash::getNeedToAskPlayer() const {
@@ -45,7 +45,7 @@ bool Event_Slash::getNeedToAskPlayer() const {
 }
 
 void Event_Slash::setNeedToAskPlayer(const bool m_needToAskPlayer) const {
-	this->m_needToAskPlayer = m_needToAskPlayer;
+	throw "Not yet implemented";
 }
 
 ESlashState Event_Slash::getSlashState() const {
@@ -54,7 +54,7 @@ ESlashState Event_Slash::getSlashState() const {
 
 void Event_Slash::setSlashState(const ESlashState m_slashState) const {
 	//¸üÐÂneedtoaskplayer
-	this->m_slashState = m_slashState;
+	throw "Not yet implemented";
 }
 
 void Event_Slash::eventResolve() const {

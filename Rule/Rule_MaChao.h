@@ -1,10 +1,10 @@
 #ifndef Rule_MaChao_h__
 #define Rule_MaChao_h__
 
-#include "Rule_Character.h"
+#include "Rule_Base.h"
 #include "Player/Player.h"
 
-class Rule_MaChao : public Rule_Character {
+class Rule_MaChao : public Rule_Base {
 
 
 public:

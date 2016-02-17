@@ -1,10 +1,10 @@
 #ifndef Rule_XuChu_h__
 #define Rule_XuChu_h__
 
-#include "Rule_Character.h"
+#include "Rule_Base.h"
 #include "Event\Event_Hurt.h"
 
-class Rule_XuChu : public Rule_Character {
+class Rule_XuChu : public Rule_Base {
 
 public:
 	bool m_usingLuoYi;

@@ -1,11 +1,11 @@
 #ifndef Rule_SiMaYi_h__
 #define Rule_SiMaYi_h__
 
-#include "Rule_Character.h"
+#include "Rule_Base.h"
 #include "Event\Event_Hurt.h"
 #include "Event\Event_Judge.h"
 
-class Rule_SiMaYi : public Rule_Character {
+class Rule_SiMaYi : public Rule_Base {
 
 
 public:

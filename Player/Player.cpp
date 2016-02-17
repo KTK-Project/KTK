@@ -1,152 +1,181 @@
 #include "Player.h"
+#include <memory>
+#include <vector>
+#include "Manager\GameManager.h"
 
-void Player::init() const {
-	// TODO - implement Player::init
-	throw "Not yet implemented";
+using std::shared_ptr;
+using std::vector;
+
+Player::Player() {
+	m_ID = ECharID::NONE;
+	m_HP = 0;
+	m_maxHP = 0;
+	m_alive = false;
+	m_position = 0;
+	m_playerPanal = nullptr;
 }
 
-std::shared_ptr<Character> Player::getCharacter() const {
-	// TODO - implement Player::getCharacter
-	throw "Not yet implemented";
+const Character & Player::getCharacter() const {
+	return m_character;
 }
 
-void Player::setCharacter(const std::shared_ptr<Character> character) const {
-	// TODO - implement Player::setCharacter
-	throw "Not yet implemented";
+void Player::setCharacter(const Character & character) {
+	m_character = character;
 }
 
 ECharID Player::getID() const {
-	// TODO - implement Player::getID
-	throw "Not yet implemented";
+	return m_ID;
 }
 
-void Player::setID(const ECharID ID) const {
-	// TODO - implement Player::setID
-	throw "Not yet implemented";
+void Player::setID(ECharID ID) {
+	m_ID = ID;
 }
 
 int Player::getHP() const {
-	// TODO - implement Player::getHP
-	throw "Not yet implemented";
+	return m_HP;
 }
 
-void Player::setHP(const int HP) const {
-	// TODO - implement Player::setHP
-	throw "Not yet implemented";
+void Player::setHP(int HP) {
+	m_HP = HP;
 }
 
 int Player::getMaxHP() const {
-	// TODO - implement Player::getMaxHP
-	throw "Not yet implemented";
+	return m_maxHP;
 }
 
-void Player::setMaxHP(const int maxHP) const {
-	// TODO - implement Player::setMaxHP
-	throw "Not yet implemented";
+void Player::setMaxHP(int maxHP) {
+	m_maxHP = maxHP;
 }
 
 bool Player::isAlive() const {
-	// TODO - implement Player::isAlive
-	throw "Not yet implemented";
+	return m_alive;
 }
 
-void Player::setAlive(const bool alive) const {
-	// TODO - implement Player::setAlive
-	throw "Not yet implemented";
+void Player::setAlive(bool alive) {
+	m_alive = alive;
 }
 
+//	Todo: stl
 int Player::getPosition() const {
 	// TODO - implement Player::getPosition
 	throw "Not yet implemented";
 }
 
-void Player::setPosition(const int position) const {
+//	Todo: stl
+void Player::setPosition(int position) {
 	// TODO - implement Player::setPosition
 	throw "Not yet implemented";
 }
 
-CardPile& Player::getHandCardPile() const {
+//	Todo: stl
+CardPile & Player::getHandCardPile() {
 	// TODO - implement Player::getHandCardPile
 	throw "Not yet implemented";
 }
 
-std::shared_ptr<Card> Player::getWeapon() const {
+bool Player::isForwardPlayer() const {
+	return GameManager::getInstance()->getPlayerManager().getForwardPlayer().get() == this;
+}
+
+bool Player::isLordPlayer() const {
+	return GameManager::getInstance()->getPlayerManager().getLordPlayer().get() == this;
+}
+
+bool Player::isCurrentPlayer() const {
+	return GameManager::getInstance()->getPlayerManager().getCurrentPlayer().get() == this;
+}
+
+//	Todo: stl
+const shared_ptr<Card> & Player::getWeapon() const {
 	// TODO - implement Player::getWeapon
 	throw "Not yet implemented";
 }
 
-void Player::setWeapon(const std::shared_ptr<Card> weapon) const {
+//	Todo: stl
+void Player::setWeapon(const shared_ptr<Card> & weapon) {
 	// TODO - implement Player::setWeapon
 	throw "Not yet implemented";
 }
 
-std::shared_ptr<Card> Player::getArmor() const {
+//	Todo: stl
+const shared_ptr<Card> & Player::getArmor() const {
 	// TODO - implement Player::getArmor
 	throw "Not yet implemented";
 }
 
-void Player::setArmor(const std::shared_ptr<Card> armor) const {
+//	Todo: stl
+void Player::setArmor(const shared_ptr<Card> & armor) {
 	// TODO - implement Player::setArmor
 	throw "Not yet implemented";
 }
 
-std::shared_ptr<Card> Player::getDefensiveHorse() const {
+//	Todo: stl
+const shared_ptr<Card> & Player::getDefensiveHorse() const {
 	// TODO - implement Player::getDefensiveHorse
 	throw "Not yet implemented";
 }
 
-void Player::setDefensiveHorse(const std::shared_ptr<Card> defensiveHorse) const {
+//	Todo: stl
+void Player::setDefensiveHorse(const shared_ptr<Card> & defensiveHorse) {
 	// TODO - implement Player::setDefensiveHorse
 	throw "Not yet implemented";
 }
 
-std::shared_ptr<Card> Player::getOffensiveHorse() const {
+//	Todo: stl
+const shared_ptr<Card> & Player::getOffensiveHorse() const {
 	// TODO - implement Player::getOffensiveHorse
 	throw "Not yet implemented";
 }
 
-void Player::setOffensiveHorse(const std::shared_ptr<Card> offensiveHorse) const {
+//	Todo: stl
+void Player::setOffensiveHorse(const shared_ptr<Card> & offensiveHorse) {
 	// TODO - implement Player::setOffensiveHorse
 	throw "Not yet implemented";
 }
 
-std::vector<std::shared_ptr<Card>>& Player::getJudgeCards() const {
-	// TODO - implement Player::getJudgeCards
+//	Todo: stl
+vector<shared_ptr<Card>> & Player::getJudgeCards() {
 	throw "Not yet implemented";
 }
 
-void Player::addJudgeCard(const std::shared_ptr<Card> card) const {
-	//处理UI_部分
-	// TODO - implement Player::addJudgeCard
+ECharID Player::getIDMarks(const shared_ptr<Player> & player) const {
+	return m_IDMarks[player->getPosition()];
+}
+
+void Player::setIDMarks(const shared_ptr<Player> & player, ECharID id) {
+	m_IDMarks[player->getPosition()] = id;
+}
+
+//	Todo: stl
+const shared_ptr<Rule_Base> & Player::getCharacterRule() const {
 	throw "Not yet implemented";
 }
 
-ECharID Player::getIDMarks(const std::shared_ptr<Player> player) const {
-	// TODO - implement Player::getIDMarks
+//	Todo: stl
+void Player::setCharacterRule(const shared_ptr<Rule_Base> & characterRule) {
 	throw "Not yet implemented";
 }
 
-void Player::setIDMarks(const std::shared_ptr<Player> player, const ECharID id) const {
-	// TODO - implement Player::setIDMarks
-	throw "Not yet implemented";
-}
-
-std::shared_ptr<Controller_Base> Player::getController() const {
+//	Todo: stl
+const shared_ptr<Controller_Base> & Player::getController() const {
 	// TODO - implement Player::getController
 	throw "Not yet implemented";
 }
 
-void Player::setController(const std::shared_ptr<Controller_Base> controller) const {
+//	Todo: stl
+void Player::setController(shared_ptr<Controller_Base> & controller) {
 	// TODO - implement Player::setController
 	throw "Not yet implemented";
 }
 
-UI_PlayerPanal* Player::getPlayerPanal() const {
+//	Todo: stl
+const UI_PlayerPanal * Player::getPlayerPanal() const {
 	// TODO - implement Player::getPlayerPanal
 	throw "Not yet implemented";
 }
 
-void Player::setPlayerPanal(const UI_PlayerPanal* playerPanal) const {
+//	Todo: stl
+void Player::setPlayerPanal(const UI_PlayerPanal * playerPanal) {
 	// TODO - implement Player::setPlayerPanal
 	throw "Not yet implemented";
 }

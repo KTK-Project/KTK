@@ -15,7 +15,7 @@ void Card_Equipment::setState(const int state) const {
 	throw "Not yet implemented";
 }
 
-Card_Equipment::Card_Equipment() const {
+Card_Equipment::Card_Equipment() {
 	// TODO - implement Card_Equipment::Card_Equipment
 	throw "Not yet implemented";
 	//ÉèÖÃm_type

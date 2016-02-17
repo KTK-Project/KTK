@@ -1,14 +1,7 @@
 #include "EventManagers.h"
 
-std::shared_ptr<Player> EventManagers::getResponser() const {
-	// TODO - implement EventManagers::getResponser
-	throw "Not yet implemented";
-}
-
-void EventManagers::setResponser(const std::shared_ptr<Player> responser) const {
-	// TODO - implement EventManagers::setResponser
-	throw "Not yet implemented";
-}
+using std::stack;
+using std::shared_ptr;
 
 void EventManagers::resolveEvent() const {
 	//ÊÂ¼þµÄeventResolve
@@ -16,22 +9,26 @@ void EventManagers::resolveEvent() const {
 	throw "Not yet implemented";
 }
 
-std::stack<std::shared_ptr<Event_Base>>& EventManagers::getEventsStack() const {
+//	Todo: stl
+stack<shared_ptr<Event_Base>> & EventManagers::getEventsStack() {
 	// TODO - implement EventManagers::getEventsStack
 	throw "Not yet implemented";
 }
 
+//	Todo: stl
 bool EventManagers::hasActions() const {
 	// TODO - implement EventManagers::hasActions
 	throw "Not yet implemented";
 }
 
-void EventManagers::increaseActions() const {
+//	Todo: stl
+void EventManagers::increaseActions() {
 	// TODO - implement EventManagers::increaseActions
 	throw "Not yet implemented";
 }
 
-void EventManagers::decreaseActions() const {
+//	Todo: stl
+void EventManagers::decreaseActions() {
 	// TODO - implement EventManagers::decreaseActions
 	throw "Not yet implemented";
 }

@@ -5,7 +5,7 @@ std::shared_ptr<Player> Event_Dying::getFirstPlayer() const {
 }
 
 void Event_Dying::setFirstPlayer(const std::shared_ptr<Player> m_firstPlayer) const {
-	this->m_firstPlayer = m_firstPlayer;
+	throw "Not yet implemented";
 }
 
 std::shared_ptr<Player> Event_Dying::getDyingPlayer() const {
@@ -13,7 +13,7 @@ std::shared_ptr<Player> Event_Dying::getDyingPlayer() const {
 }
 
 void Event_Dying::setDyingPlayer(const std::shared_ptr<Player> m_DyingPlayer) const {
-	this->m_DyingPlayer = m_DyingPlayer;
+	throw "Not yet implemented";
 }
 
 void Event_Dying::eventResolve() const {

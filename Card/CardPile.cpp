@@ -1,86 +1,86 @@
 #include "CardPile.h"
+#include <algorithm>
 
-CardPile::CardPile() const {
-	// TODO - implement CardPile::CardPile
-	throw "Not yet implemented";
-}
+using std::shared_ptr;
+using std::function;
+using std::vector;
 
 int CardPile::getSize() const {
-	// TODO - implement CardPile::getSize
-	throw "Not yet implemented";
+	return m_cards.size();
 }
 
 bool CardPile::isEmpty() const {
-	// TODO - implement CardPile::isEmpty
-	throw "Not yet implemented";
+	return m_cards.empty();
 }
 
-std::shared_ptr<Card> CardPile::popBack() const {
-	// TODO - implement CardPile::popBack
-	throw "Not yet implemented";
+shared_ptr<Card> CardPile::popBack() {
+	auto card = m_cards.back();
+	m_cards.pop_back();
+	return card;
 }
 
-std::shared_ptr<Card> CardPile::popFront() const {
-	// TODO - implement CardPile::popFront
-	throw "Not yet implemented";
+shared_ptr<Card> CardPile::popFront() {
+	auto card = m_cards.front();
+	m_cards.pop_front();
+	return card;
 }
 
-void CardPile::pushBack(const std::shared_ptr<Card> card) const {
-	// TODO - implement CardPile::pushBack
-	throw "Not yet implemented";
+void CardPile::pushBack(const shared_ptr<Card> & card) {
+	m_cards.push_back(card);
 }
 
-void CardPile::pushFront(const std::shared_ptr<Card> card) const {
-	// TODO - implement CardPile::pushFront
-	throw "Not yet implemented";
+void CardPile::pushFront(const shared_ptr<Card> & card) {
+	m_cards.push_front(card);
 }
 
-int CardPile::countCard(const std::function<bool (const std::shared_ptr<Card>)> filter) const {
-	// TODO - implement CardPile::countCard
-	throw "Not yet implemented";
+int CardPile::countCard(const function<bool(const shared_ptr<Card> &)> & filter) const {
+	int count = 0;
+	for (auto & card : m_cards)
+		if (filter(card))
+			count++;
+	return count;
 }
 
-void CardPile::shuffle() const {
+void CardPile::shuffle() {
+//	Todo: stm
 	// TODO - implement CardPile::shuffle
 	throw "Not yet implemented";
 }
 
-void CardPile::sort() const {
-	// TODO - implement CardPile::sort
-	throw "Not yet implemented";
+// !!!
+void CardPile::sort() {
+	std::sort(m_cards.begin(), m_cards.end(), [](const shared_ptr<Card> & c1, const shared_ptr<Card> & c2) {
+		return c1->getName() < c2->getName();
+	});
 }
 
-std::shared_ptr<Card> CardPile::getCard(const std::shared_ptr<Card> card) const {
-	// TODO - implement CardPile::getCard
-	throw "Not yet implemented";
+vector<shared_ptr<Card>> CardPile::getCards(const function<bool(const shared_ptr<Card> &)> & filter) const {
+	vector<shared_ptr<Card>> v;
+	for (auto & card : m_cards)
+		if (filter(card))
+			v.push_back(card);
+	return v;
 }
 
-std::vector<std::shared_ptr<Card>> CardPile::getCards(const std::function<bool (const std::shared_ptr<Card>)>& filter) const {
-	// TODO - implement CardPile::getCards
-	throw "Not yet implemented";
+void CardPile::removeCard(const shared_ptr<Card> & card) {
+	auto iterator = std::find(m_cards.cbegin(), m_cards.cend(), card);
+	if (iterator != m_cards.cend())
+		m_cards.erase(iterator);
+	else
+		throw "Can't find card!";
 }
 
-void CardPile::addCard(const std::shared_ptr<Card> card) const {
-	// TODO - implement CardPile::addCard
-	throw "Not yet implemented";
+void CardPile::removeCards(const vector<shared_ptr<Card>> & cards) {
+	for (auto & card : cards)
+		removeCard(card);
 }
 
-void CardPile::addCards(const std::vector<std::shared_ptr<Card>>& cards) const {
-	// TODO - implement CardPile::addCards
-	throw "Not yet implemented";
-}
-
-void CardPile::removeCard(const std::shared_ptr<Card> card) const {
-	// TODO - implement CardPile::removeCard
-	throw "Not yet implemented";
-}
-
-void CardPile::removeCards(const std::vector<std::shared_ptr<Card>>& cards) const {
-	// TODO - implement CardPile::removeCards
-	throw "Not yet implemented";
-}
-
-std::vector<std::shared_ptr<Card>> CardPile::removeCards(const std::function<bool (const std::shared_ptr<Card>)>& filter) const {
-	// TODO - implement CardPile::removeCards
-	throw "Not yet implemented";
+vector<shared_ptr<Card>> CardPile::removeCards(const function<bool(const shared_ptr<Card> &)> & filter) {
+	vector<shared_ptr<Card>> v;
+	for (auto & card : m_cards)
+		if (filter(card)) {
+			removeCard(card);
+			v.push_back(card);
+		}
+	return v;
 }

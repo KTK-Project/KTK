@@ -6,17 +6,13 @@
 #include "Manager\KTK_Enum.h"
 
 class SkillList {
-
-private:
-	std::vector<Skill> m_skillList;
-
 public:
 	int getSize() const;
+	Skill & getSkillByName(ESkillName name);
+	Skill & getSkillByIndex(int index);
+	void addSkill(const Skill & skill);
 
-	Skill& getSkillByName(const ESkillName name) const;
-
-	int getIndexByName(const ESkillName name) const;
-
-	void addSkill(const Skill& skill) const;
+private:
+	std::vector<Skill> m_skills;
 };
 #endif // SkillList_h__

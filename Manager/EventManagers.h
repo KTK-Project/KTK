@@ -7,25 +7,18 @@
 #include "Event\Event_Base.h"
 
 class EventManagers {
-
-private:
-	std::shared_ptr<Player> m_responser;
-	std::stack<std::shared_ptr<Event_Base>> m_eventsStack;
-	int m_actions;
-
 public:
-	std::shared_ptr<Player> getResponser() const;
-
-	void setResponser(const std::shared_ptr<Player> responser) const;
-
+	// 处理栈中的最后一个Event
 	void resolveEvent() const;
 
-	std::stack<std::shared_ptr<Event_Base>>& getEventsStack() const;
+	std::stack<std::shared_ptr<Event_Base>> & getEventsStack();
 
 	bool hasActions() const;
+	void increaseActions();
+	void decreaseActions();
 
-	void increaseActions() const;
-
-	void decreaseActions() const;
+private:
+	std::stack<std::shared_ptr<Event_Base>> m_eventsStack;
+	int m_actions;
 };
 #endif // EventManagers_h__

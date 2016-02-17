@@ -4,22 +4,16 @@
 #include "Manager\KTK_Enum.h"
 
 class Skill {
-
 public:
-	ESkillName m_name;
-	bool m_lordSkill;
-private:
-	ESkillState m_skillState;
-
-public:
-	ESkillName getName() const;
-
+	Skill(ESkillName skillName, bool lordSkill, ESkillState skillState = ESkillState::NONE);
+	ESkillName getSkillName() const;
 	bool isLordSkill() const;
-
-	void setLordSkill(const bool m_lordSkill) const;
-
 	ESkillState getSkillState() const;
+	void setSkillState(ESkillState skillState);
 
-	void setSkillState(const ESkillState skillState) const;
+private:
+	ESkillName m_skillName;
+	bool m_lordSkill;
+	ESkillState m_skillState;
 };
 #endif // Skill_h__

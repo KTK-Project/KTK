@@ -5,25 +5,21 @@
 #include "Skill\SkillList.h"
 
 class Character {
+public:
+	Character(ECharName name = ECharName::NONE);
+	void init(ECharName name);
+	ECharName getName() const;
+	ECharForce getForce() const;
+	ECharSex getSex() const;
+	int getHP() const;
+	const SkillList & getSkillList() const;
+	void setSkillList(const SkillList & skillList);
 
 private:
-	ECharForce m_force;
 	ECharName m_name;
+	ECharForce m_force;
 	ECharSex m_sex;
 	int m_HP;
 	SkillList m_skillList;
-
-public:
-	ECharForce getForce() const;
-
-	ECharName getName() const;
-
-	ECharSex getSex() const;
-
-	int getHP() const;
-
-	SkillList getSkillList() const;
-
-	void setSkillList(const SkillList m_skillList) const;
 };
 #endif // Character_h__

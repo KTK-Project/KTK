@@ -1,6 +1,6 @@
 #include "Card_Harvest.h"
 
-int Card_Harvest::getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const {
+int Card_Harvest::getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const {
 	//return 0
 	// TODO - implement Card_Harvest::getGoalPlayerQuantity
 	throw "Not yet implemented";

@@ -1,9 +1,9 @@
 #ifndef Rule_LvBu_h__
 #define Rule_LvBu_h__
 
-#include "Rule_Character.h"
+#include "Rule_Base.h"
 
-class Rule_LvBu : public Rule_Character {
+class Rule_LvBu : public Rule_Base {
 
 
 public:

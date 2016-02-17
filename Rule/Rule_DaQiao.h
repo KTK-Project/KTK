@@ -2,10 +2,10 @@
 #define Rule_DaQiao_h__
 
 #include <memory>
-#include "Rule_Character.h"
+#include "Rule_Base.h"
 #include "Event\Event_Base.h"
 
-class Rule_DaQiao : public Rule_Character {
+class Rule_DaQiao : public Rule_Base {
 
 
 public:

@@ -9,7 +9,7 @@ class Event_DelayedStrategy : public Event_Base {
 public:
 	std::shared_ptr<Player> m_ownerPlayer;
 
-	Event_DelayedStrategy() const;
+	Event_DelayedStrategy();
 
 	std::shared_ptr<Player> getOwnerPlayer() const;
 

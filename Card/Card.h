@@ -8,28 +8,24 @@
 class Player;
 
 class Card {
+public:
+	Card(ECardName name, ECardSuit Suit, int number);
+	ECardName getName() const;
+	ECardType getType() const;
+	ECardSuit getSuit() const;
+	ECardColor getColor() const;
+	int getNumber() const;
+
+	virtual int getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const;
+	virtual std::vector<std::shared_ptr<Player>> getCandidates(const std::shared_ptr<Player> playCardPlayer) const;
+	virtual void onUpping() const;
+	virtual void useCard(const std::shared_ptr<Player> playCardPlayer, const std::vector<std::shared_ptr<Player>>& goalPlayer) const;
 
 private:
 	ECardName m_name;
 	ECardColor m_color;
 	ECardSuit m_suit;
 	ECardType m_type;
-
-public:
-	ECardColor getColor() const;
-
-	ECardName getName() const;
-
-	ECardSuit getSuit() const;
-
-	ECardType getType() const;
-
-	int getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const;
-
-	std::vector<std::shared_ptr<Player>> getCandidate(const std::shared_ptr<Player> playCardPlayer) const;
-
-	void onUpping() const;
-
-	void useCard(const std::shared_ptr<Player> playCardPlayer, const std::vector<std::shared_ptr<Player>>& goalPlayer) const;
+	int m_number;
 };
 #endif // Card_h__

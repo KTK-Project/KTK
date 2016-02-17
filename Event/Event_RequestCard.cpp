@@ -1,43 +1,43 @@
 #include "Event_RequestCard.h"
 
 bool Event_RequestCard::getHandCard() const {
-	return this->m_handCard;
+	throw "Not yet implemented";
 }
 
 void Event_RequestCard::setHandCard(const bool m_handCard) const {
-	this->m_handCard = m_handCard;
+	throw "Not yet implemented";
 }
 
 ECardName Event_RequestCard::getRequestHandCardName() const {
-	return this->m_requestHandCardName;
+	throw "Not yet implemented";
 }
 
 void Event_RequestCard::setRequestHandCardName(const ECardName m_requestHandCardName) const {
-	this->m_requestHandCardName = m_requestHandCardName;
+	throw "Not yet implemented";
 }
 
 int Event_RequestCard::getRequestHandCardQuantity() const {
-	return this->m_requestHandCardQuantity;
+	throw "Not yet implemented";
 }
 
 void Event_RequestCard::setRequestHandCardQuantity(const int m_requestHandCardQuantity) const {
-	this->m_requestHandCardQuantity = m_requestHandCardQuantity;
+	throw "Not yet implemented";
 }
 
 bool Event_RequestCard::getWeapon() const {
-	return this->m_weapon;
+	throw "Not yet implemented";
 }
 
 void Event_RequestCard::setWeapon(const bool m_weapon) const {
-	this->m_weapon = m_weapon;
+	throw "Not yet implemented";
 }
 
 bool Event_RequestCard::getArmor() const {
-	return this->m_armor;
+	throw "Not yet implemented";
 }
 
 void Event_RequestCard::setArmor(const bool m_armor) const {
-	this->m_armor = m_armor;
+	throw "Not yet implemented";
 }
 
 bool Event_RequestCard::getOffensiveHorse() const {
@@ -45,7 +45,7 @@ bool Event_RequestCard::getOffensiveHorse() const {
 }
 
 void Event_RequestCard::setOffensiveHorse(const bool m_offensiveHorse) const {
-	this->m_offensiveHorse = m_offensiveHorse;
+	throw "Not yet implemented";
 }
 
 bool Event_RequestCard::getDefensiveHorse() const {
@@ -53,7 +53,7 @@ bool Event_RequestCard::getDefensiveHorse() const {
 }
 
 void Event_RequestCard::setDefensiveHorse(const bool m_defensiveHorse) const {
-	this->m_defensiveHorse = m_defensiveHorse;
+	throw "Not yet implemented";
 }
 
 SelectedCards Event_RequestCard::getReceiver() const {
@@ -61,7 +61,7 @@ SelectedCards Event_RequestCard::getReceiver() const {
 }
 
 void Event_RequestCard::setReceiver(const SelectedCards m_receiver) const {
-	this->m_receiver = m_receiver;
+	throw "Not yet implemented";
 }
 
 void Event_RequestCard::eventResolve() const {

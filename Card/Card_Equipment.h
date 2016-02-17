@@ -17,6 +17,6 @@ public:
 
 	void setState(const int state) const;
 
-	Card_Equipment() const;
+	Card_Equipment();
 };
 #endif // Card_Equipment_h__

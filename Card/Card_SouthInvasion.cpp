@@ -1,6 +1,6 @@
 #include "Card_SouthInvasion.h"
 
-int Card_SouthInvasion::getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const {
+int Card_SouthInvasion::getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const {
 	//return 0
 	// TODO - implement Card_SouthInvasion::getGoalPlayerQuantity
 	throw "Not yet implemented";

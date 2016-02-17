@@ -7,6 +7,6 @@ class Card_FlawlessDefense : public Card_Strategy {
 
 
 public:
-	int getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const;
+	int getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const;
 };
 #endif // Card_FlawlessDefense_h__

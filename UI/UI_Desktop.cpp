@@ -33,7 +33,7 @@ bool UI_Desktop::getNeedToClean() const {
 }
 
 void UI_Desktop::setNeedToClean(const bool m_needToClean) const {
-	this->m_needToClean = m_needToClean;
+	throw "Not yet implemented";
 }
 
 void UI_Desktop::clean() const {

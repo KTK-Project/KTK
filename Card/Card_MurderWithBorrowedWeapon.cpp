@@ -1,12 +1,12 @@
 #include "Card_MurderWithBorrowedWeapon.h"
 
-int Card_MurderWithBorrowedWeapon::getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const {
+int Card_MurderWithBorrowedWeapon::getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const {
 	//return 2
 	// TODO - implement Card_MurderWithBorrowedWeapon::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 
-std::vector<std::shared_ptr<Player>> Card_MurderWithBorrowedWeapon::getCandidate(const std::shared_ptr<Player> playCardPlayer) const {
+std::vector<std::shared_ptr<Player>> Card_MurderWithBorrowedWeapon::getCandidates(const std::shared_ptr<Player> playCardPlayer) const {
 	//调用Card::getCandidate()
 //第一玩家必须有武器
 //第二玩家在第一玩家的攻击范围内

@@ -5,7 +5,7 @@ std::vector<std::shared_ptr<Card>> Event_GetCardFromHarvest::getCards() const {
 }
 
 void Event_GetCardFromHarvest::setCards(const std::vector<std::shared_ptr<Card>> m_cards) const {
-	this->m_cards = m_cards;
+	throw "Not yet implemented";
 }
 
 std::vector<std::shared_ptr<Player>> Event_GetCardFromHarvest::getPlayers() const {
@@ -13,7 +13,7 @@ std::vector<std::shared_ptr<Player>> Event_GetCardFromHarvest::getPlayers() cons
 }
 
 void Event_GetCardFromHarvest::setPlayers(const std::vector<std::shared_ptr<Player>> m_players) const {
-	this->m_players = m_players;
+	throw "Not yet implemented";
 }
 
 std::shared_ptr<Card> Event_GetCardFromHarvest::getReceiver() const {
@@ -21,7 +21,7 @@ std::shared_ptr<Card> Event_GetCardFromHarvest::getReceiver() const {
 }
 
 void Event_GetCardFromHarvest::setReceiver(const std::shared_ptr<Card> m_receiver) const {
-	this->m_receiver = m_receiver;
+	throw "Not yet implemented";
 }
 
 void Event_GetCardFromHarvest::eventResolve() const {

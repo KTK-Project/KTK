@@ -5,5 +5,5 @@ std::shared_ptr<Event_Base> Controller_Base::getEvent() const {
 }
 
 void Controller_Base::setEvent(const std::shared_ptr<Event_Base> m_event) const {
-	this->m_event = m_event;
+	throw "Not yet implemented";
 }

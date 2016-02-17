@@ -1,30 +1,49 @@
 #include "Card.h"
 
-ECardColor Card::getColor() const {
-	// TODO - implement Card::getColor
+using std::shared_ptr;
+using std::vector;
+
+//	Todo: stl
+Card::Card(ECardName name, ECardSuit Suit, int number) {
 	throw "Not yet implemented";
 }
 
+//	Todo: stl
 ECardName Card::getName() const {
 	// TODO - implement Card::getName
 	throw "Not yet implemented";
 }
 
-ECardSuit Card::getSuit() const {
-	// TODO - implement Card::getSuit
-	throw "Not yet implemented";
-}
-
+//	Todo: stl
 ECardType Card::getType() const {
 	// TODO - implement Card::getType
 	throw "Not yet implemented";
 }
 
-int Card::getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const {
-	throw "123123";
+//	Todo: stl
+ECardSuit Card::getSuit() const {
+	// TODO - implement Card::getSuit
+	throw "Not yet implemented";
 }
 
-std::vector<std::shared_ptr<Player>> Card::getCandidate(const std::shared_ptr<Player> playCardPlayer) const {
+//	Todo: stl
+ECardColor Card::getColor() const {
+	// TODO - implement Card::getColor
+	throw "Not yet implemented";
+}
+
+//	Todo: stl
+int Card::getNumber() const {
+	throw "Not yet implemented";
+}
+
+int Card::getGoalPlayerQuantity(const shared_ptr<Player> & requester) const {
+//	Todo: stm
+	throw "Not yet implemented";
+}
+
+vector<shared_ptr<Player>> Card::getCandidates(const shared_ptr<Player> playCardPlayer) const {
+//	Todo: stm
 	// TODO - implement Card::getCandidate
 	throw "Not yet implemented";
 	//判断因素：
@@ -33,7 +52,6 @@ std::vector<std::shared_ptr<Player>> Card::getCandidate(const std::shared_ptr<Pl
 //3.对方有特殊技能（诸葛亮-空城，陆逊-谦逊）（X）
 //4.对方是否有卡牌（借刀杀人，顺手牵羊，过河拆桥）（X）
 }
-
 
 void Card::onUpping() const {
 	// TODO - implement Card::onUpping
@@ -45,7 +63,7 @@ void Card::onUpping() const {
 //否则啥也不做
 }
 
-void Card::useCard(const std::shared_ptr<Player> playCardPlayer, const std::vector<std::shared_ptr<Player>>& goalPlayer) const {
+void Card::useCard(const shared_ptr<Player> playCardPlayer, const vector<shared_ptr<Player>>& goalPlayer) const {
 	// TODO - implement Card::useCard
 	throw "Not yet implemented";
 	//forwardPlayer专用函数

@@ -5,7 +5,7 @@ std::shared_ptr<Player> Event_Interaction::getInteractPlayer() const {
 }
 
 void Event_Interaction::setInteractPlayer(const std::shared_ptr<Player> m_interactPlayer) const {
-	this->m_interactPlayer = m_interactPlayer;
+	throw "Not yet implemented";
 }
 
 std::string Event_Interaction::getDescrption() const {
@@ -13,7 +13,7 @@ std::string Event_Interaction::getDescrption() const {
 }
 
 void Event_Interaction::setDescrption(const std::string m_descrption) const {
-	this->m_descrption = m_descrption;
+	throw "Not yet implemented";
 }
 
 bool Event_Interaction::getReceived() const {
@@ -21,7 +21,7 @@ bool Event_Interaction::getReceived() const {
 }
 
 void Event_Interaction::setReceived(const bool m_received) const {
-	this->m_received = m_received;
+	throw "Not yet implemented";
 }
 
 bool Event_Interaction::getReturned() const {
@@ -29,7 +29,7 @@ bool Event_Interaction::getReturned() const {
 }
 
 void Event_Interaction::setReturned(const bool m_returned) const {
-	this->m_returned = m_returned;
+	throw "Not yet implemented";
 }
 
 std::function<void (const Event_Base&)> Event_Interaction::getReturnCallBack() const {
@@ -37,7 +37,7 @@ std::function<void (const Event_Base&)> Event_Interaction::getReturnCallBack() c
 }
 
 void Event_Interaction::setReturnCallBack(const std::function<void (const Event_Base&)> m_returnCallBack) const {
-	this->m_returnCallBack = m_returnCallBack;
+	throw "Not yet implemented";
 }
 
 void Event_Interaction::eventResolve() const {

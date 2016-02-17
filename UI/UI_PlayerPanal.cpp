@@ -71,7 +71,7 @@ EPlayerColor UI_PlayerPanal::getPlayerColor() const {
 
 void UI_PlayerPanal::setPlayerColor(const EPlayerColor m_playerColor) const {
 	//设置面板颜色
-	this->m_playerColor = m_playerColor;
+	throw "Not yet implemented";
 }
 
 EPlayerPanalState UI_PlayerPanal::getPlayerPanalState() const {
@@ -80,7 +80,7 @@ EPlayerPanalState UI_PlayerPanal::getPlayerPanalState() const {
 
 void UI_PlayerPanal::setPlayerPanalState(const EPlayerPanalState m_playerPanalState) const {
 	//设置背景,如果为可选择的，设置事件：触发则塞入selectedPlayer中
-	this->m_playerPanalState = m_playerPanalState;
+	throw "Not yet implemented";
 }
 
 void UI_PlayerPanal::clean() const {

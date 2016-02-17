@@ -10,5 +10,5 @@ std::shared_ptr<Card> UI_TheftAndSabotage::getSelectedCard() const {
 }
 
 void UI_TheftAndSabotage::setSelectedCard(const std::shared_ptr<Card> m_selectedCard) const {
-	this->m_selectedCard = m_selectedCard;
+	throw "Not yet implemented";
 }

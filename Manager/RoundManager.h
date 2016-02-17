@@ -3,60 +3,33 @@
 
 #include <vector>
 #include <functional>
-#include "KTK_Enum.h"
 
 class RoundManager {
-
-private:
-	EStage m_currentStage;
-	bool m_stageFinish;
-	int m_roundsCount;
-	bool m_roundFinish;
-	std::vector<std::function<void ()>> m_functionsInReadyStage;
-	std::vector<std::function<void ()>> m_functionsInJudgeStage;
-	std::vector<std::function<void ()>> m_functionsInDrawCardStage;
-	std::vector<std::function<void ()>> m_functionsInPlayCardStage;
-	std::vector<std::function<void ()>> m_functionsInDiscardStage;
-	std::vector<std::function<void ()>> m_functionsInRoundEndStage;
-
 public:
+	enum class EStage { NONE, READY, JUDGE, DRAWCARD, PLAYCARD, DISCARD, ROUNDEND };
+
+	RoundManager();
+
+	void readyStage() const;
+	void judgeStage() const;
+	void drawCardStage() const;
+	void playCardStage() const;
+	void discardStage() const;
+	void roundEndStage() const;
+
 	int getRoundsCount() const;
-
-	void enterNextStage() const;
-
-	void enterNextPlayerRounds() const;
-
 	bool getStageFinish() const;
-
-	void setStageFinish(const bool stageFinish) const;
-
+	void setStageFinish(bool stageFinish);
 	bool getRoundFinish() const;
+	void setRoundFinish(bool roundFinish);
 
-	void setRoundFinish(const bool roundFinish) const;
-
-	std::vector<std::function<void ()>>& getFunctionsInReadyStage() const;
-
-	std::vector<std::function<void ()>>& getFunctionsInJudgeStage() const;
-
-	std::vector<std::function<void ()>>& getFunctionsInDrawCardStage() const;
-
-	std::vector<std::function<void ()>>& getFunctionsInPlayCardStage() const;
-
-	std::vector<std::function<void ()>>& getFunctionsInDiscardStage() const;
-
-	std::vector<std::function<void ()>>& getFunctionsInRoundEndStage() const;
+	void enterNextStage();
+	void enterNextRound();
 
 private:
-	void readyStage() const;
-
-	void judgeStage() const;
-
-	void drawCardStage() const;
-
-	void playCardStage() const;
-
-	void discardStage() const;
-
-	void roundEndStage() const;
+	int m_roundsCount;
+	bool m_stageFinish;
+	bool m_roundFinish;
+	EStage m_currentStage;
 };
 #endif // RoundManager_h__

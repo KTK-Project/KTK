@@ -1,10 +1,10 @@
 #ifndef Rule_ZhenJi_h__
 #define Rule_ZhenJi_h__
 
-#include "Rule_Character.h"
+#include "Rule_Base.h"
 #include "Event\Event_RequestCard.h"
 
-class Rule_ZhenJi : public Rule_Character {
+class Rule_ZhenJi : public Rule_Base {
 
 
 public:

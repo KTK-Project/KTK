@@ -1,41 +1,50 @@
 #include "GameManager.h"
 
-GameManager* GameManager::getInstance() const {
-	// TODO - implement GameManager::getInstance
+GameManager * GameManager::getInstance() {
+	static GameManager * instance = nullptr;
+	if (instance == nullptr)
+		instance = new GameManager;
+	return instance;
+}
+
+GameManager::GameManager() {
+	// 构建playermanager
 	throw "Not yet implemented";
 }
 
-PlayersManger& GameManager::getPlayerManager() const {
+//	Todo: stl
+PlayersManager & GameManager::getPlayerManager() {
 	// TODO - implement GameManager::getPlayerManager
 	throw "Not yet implemented";
 }
 
-RoundManager& GameManager::getRoundManager() const {
+//	Todo: stl
+RoundManager & GameManager::getRoundManager() {
 	// TODO - implement GameManager::getRoundManager
 	throw "Not yet implemented";
 }
 
-EventManagers& GameManager::getEventManager() const {
+//	Todo: stl
+EventManagers & GameManager::getEventManager() {
 	// TODO - implement GameManager::getEventManager
 	throw "Not yet implemented";
 }
 
-CharacterManager& GameManager::getCharacterManager() const {
-	// TODO - implement GameManager::getCharacterManager
-	throw "Not yet implemented";
-}
-
-CardPile& GameManager::getDarkcardPile() const {
+//	Todo: stl
+CardPile & GameManager::getDarkcardPile() {
 	// TODO - implement GameManager::getDarkcardPile
 	throw "Not yet implemented";
 }
 
-CardPile& GameManager::getDiscardPile() const {
+//	Todo: stl
+CardPile & GameManager::getDiscardPile() {
 	// TODO - implement GameManager::getDiscardPile
 	throw "Not yet implemented";
 }
 
 void GameManager::gameBegin() const {
+	// 玩家选择角色。
+	// 初始化所有的管理器。
 	// TODO - implement GameManager::gameBegin
 	throw "Not yet implemented";
 }

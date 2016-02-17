@@ -5,7 +5,7 @@ std::shared_ptr<Player> Event_FlawlessDefense::getFirstPlayer() const {
 }
 
 void Event_FlawlessDefense::setFirstPlayer(const std::shared_ptr<Player> m_firstPlayer) const {
-	this->m_firstPlayer = m_firstPlayer;
+	throw "Not yet implemented";
 }
 
 bool Event_FlawlessDefense::getSuccess() const {
@@ -13,7 +13,7 @@ bool Event_FlawlessDefense::getSuccess() const {
 }
 
 void Event_FlawlessDefense::setSuccess(const bool m_success) const {
-	this->m_success = m_success;
+	throw "Not yet implemented";
 }
 
 void Event_FlawlessDefense::eventResolve() const {

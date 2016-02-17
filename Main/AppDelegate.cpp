@@ -5,6 +5,7 @@
 
 #include "HelloWorldScene.h"
 #include "AppMacros.h"
+#include "GameSence.h"
 
 USING_NS_CC;
 using namespace std;
@@ -29,7 +30,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLViewImpl::create("Cpp Empty Test");
+        glview = GLViewImpl::create("KTK");
         director->setOpenGLView(glview);
     }
 
@@ -79,7 +80,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::scene();
+    auto scene = GameSence::scene();
 
     // run
     director->runWithScene(scene);

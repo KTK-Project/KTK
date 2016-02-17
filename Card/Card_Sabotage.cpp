@@ -1,12 +1,12 @@
 #include "Card_Sabotage.h"
 
-int Card_Sabotage::getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const {
+int Card_Sabotage::getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const {
 	//return 1
 	// TODO - implement Card_Sabotage::getGoalPlayerQuantity
 	throw "Not yet implemented";
 }
 
-std::vector<std::shared_ptr<Player>> Card_Sabotage::getCandidate(const std::shared_ptr<Player> playCardPlayer) const {
+std::vector<std::shared_ptr<Player>> Card_Sabotage::getCandidates(const std::shared_ptr<Player> playCardPlayer) const {
 	//调用Card::getCandidate()
 //从中选择有卡牌的玩家。
 	// TODO - implement Card_Sabotage::getCandidate

@@ -1,7 +1,7 @@
 #include "Card_Weapon.h"
 #include <vector>
 
-int Card_Weapon::getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const {
+int Card_Weapon::getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const {
 	//return 0
 	// TODO - implement Card_Weapon::getGoalPlayerQuantity
 	throw "Not yet implemented";

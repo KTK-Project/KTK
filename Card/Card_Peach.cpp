@@ -1,6 +1,6 @@
 #include "Card_Peach.h"
 
-int Card_Peach::getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const {
+int Card_Peach::getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const {
 	//return 0
 	// TODO - implement Card_Peach::getGoalPlayerQuantity
 	throw "Not yet implemented";

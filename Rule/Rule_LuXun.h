@@ -1,10 +1,10 @@
 #ifndef Rule_LuXun_h__
 #define Rule_LuXun_h__
 
-#include "Rule_Character.h"
+#include "Rule_Base.h"
 #include "Card\Card.h"
 
-class Rule_LuXun : public Rule_Character {
+class Rule_LuXun : public Rule_Base {
 
 
 public:

@@ -45,13 +45,13 @@ int SelectedCards::getMaxSelects() const {
 }
 
 void SelectedCards::setMaxSelects(const int m_maxSelects) const {
-	this->m_maxSelects = m_maxSelects;
+	throw "Not yet implemented";
 }
 
 void SelectedCards::setMaxCallBack(const std::function<void ()> m_maxCallBack) const {
-	this->m_maxCallBack = m_maxCallBack;
+	throw "Not yet implemented";
 }
 
 void SelectedCards::setUnmaxCallBack(const std::function<void ()> m_unmaxCallBack) const {
-	this->m_unmaxCallBack = m_unmaxCallBack;
+	throw "Not yet implemented";
 }

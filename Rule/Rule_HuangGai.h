@@ -1,9 +1,9 @@
 #ifndef Rule_HuangGai_h__
 #define Rule_HuangGai_h__
 
-#include "Rule_Character.h"
+#include "Rule_Base.h"
 
-class Rule_HuangGai : public Rule_Character {
+class Rule_HuangGai : public Rule_Base {
 
 
 public:

@@ -14,7 +14,7 @@ int Event_RequestGoalPlayer::getGoalPlayerMaxQulitity() const {
 }
 
 void Event_RequestGoalPlayer::setGoalPlayerMaxQulitity(const int m_goalPlayerMaxQulitity) const {
-	this->m_goalPlayerMaxQulitity = m_goalPlayerMaxQulitity;
+	throw "Not yet implemented";
 }
 
 int Event_RequestGoalPlayer::getGoalPlayerMinQulitity() const {
@@ -22,7 +22,7 @@ int Event_RequestGoalPlayer::getGoalPlayerMinQulitity() const {
 }
 
 void Event_RequestGoalPlayer::setGoalPlayerMinQulitity(const int m_goalPlayerMinQulitity) const {
-	this->m_goalPlayerMinQulitity = m_goalPlayerMinQulitity;
+	throw "Not yet implemented";
 }
 
 SelectedPlayers Event_RequestGoalPlayer::getReceiver() const {
@@ -30,7 +30,7 @@ SelectedPlayers Event_RequestGoalPlayer::getReceiver() const {
 }
 
 void Event_RequestGoalPlayer::setReceiver(const SelectedPlayers m_receiver) const {
-	this->m_receiver = m_receiver;
+	throw "Not yet implemented";
 }
 
 void Event_RequestGoalPlayer::eventResolve() const {

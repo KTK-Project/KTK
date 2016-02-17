@@ -1,9 +1,9 @@
 #ifndef Rule_LiuBei_h__
 #define Rule_LiuBei_h__
 
-#include "Rule_Character.h"
+#include "Rule_Base.h"
 
-class Rule_LiuBei : public Rule_Character {
+class Rule_LiuBei : public Rule_Base {
 
 
 public:

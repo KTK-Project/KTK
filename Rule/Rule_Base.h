@@ -1,18 +1,18 @@
-#ifndef Rule_Character_h__
-#define Rule_Character_h__
+#ifndef Rule_Base_h__
+#define Rule_Base_h__
 
 #include "Player/Player.h"
 #include "Manager/KTK_Enum.h"
 #include "Card/Card.h"
 #include "Event/Event_Base.h"
 
-class Rule_Character {
+class Rule_Base {
 
 private:
 	std::shared_ptr<Player> m_player;
 
 public:
-	Rule_Character(const std::shared_ptr<Player> player) const;
+	Rule_Base(const std::shared_ptr<Player> player);
 
 	std::shared_ptr<Player> getPlayer() const;
 
@@ -52,4 +52,5 @@ public:
 
 	void afterProcessEvent(const std::shared_ptr<Event_Base>& event) const;
 };
-#endif // Rule_Character_h__
+
+#endif // Rule_Base_h__

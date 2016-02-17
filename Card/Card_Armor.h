@@ -8,7 +8,7 @@ class Card_Armor : public Card_Equipment {
 public:
 	bool m_valid;
 
-	int getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const;
+	int getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const;
 
 	bool getValid() const;
 

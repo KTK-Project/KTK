@@ -1,25 +1,53 @@
 #include "TextManager.h"
 #include <codecvt>
+#include <fstream>
+#include <string>
+#include <unordered_map>
+#include <utility>
+
+using std::string;
+using std::ifstream;
+using std::unordered_map;
+using std::hash;
+using std::make_pair;
+using std::getline;
 
 TextManager::TextManager() {
-	//打开文件，把文件内容输入容器中。
+	//card.dat和skill.dat文件已经为UTF-8编码
+	ifstream cardInput("card.dat");
+	if (!cardInput) throw "Can't find card.dat!";
+	while (cardInput) {
+		string str1, str2;
+		cardInput >> str1;
+		getline(cardInput, str2);
+		cardDescription.insert(make_pair(str1, str2));
+	}
+
+	ifstream skillInput("skill.dat");
+	if (!skillInput) throw "Can't find skill.dat!";
+	while (skillInput) {
+		string str1, str2;
+		skillInput >> str1;
+		getline(skillInput, str2);
+		skillDescription.insert(make_pair(str1, str2));
+	}
 }
 
-const std::string TextManager::gbkToUtf8(const std::string & gbkStr) {
+const string TextManager::gbkToUtf8(const string & gbkStr) {
 	using Codecvt = std::codecvt_byname<wchar_t, char, std::mbstate_t>;
 	const char * GBK_LOCAL_NAME = ".936";	//win下GBK编码对应的代码页。
 	std::wstring_convert<Codecvt> conv1(new Codecvt(GBK_LOCAL_NAME));
 	std::wstring temp_wstr = conv1.from_bytes(gbkStr);
 	std::wstring_convert<std::codecvt_utf8<wchar_t>> conv2;
-	std::string utf8Str = conv2.to_bytes(temp_wstr);
+	string utf8Str = conv2.to_bytes(temp_wstr);
 	return utf8Str;
 }
 
-const char * TextManager::gbkToUtf8(const char * gbkStr) {
-	return gbkToUtf8(std::string(gbkStr)).c_str();
+const string TextManager::gbkToUtf8(const char * gbkStr) {
+	return gbkToUtf8(string(gbkStr));
 }
 
-const char* TextManager::getTextOfCharName(const ECharName name) const {
+const string TextManager::getTextOfCharName(ECharName name) const {
 	switch (name) {
 		case ECharName::CAOCAO: return gbkToUtf8("曹操"); break;
 		case ECharName::DAQIAO: return gbkToUtf8("大乔"); break;
@@ -46,11 +74,11 @@ const char* TextManager::getTextOfCharName(const ECharName name) const {
 		case ECharName::ZHENJI: return gbkToUtf8("甄姬"); break;
 		case ECharName::ZHOUYU: return gbkToUtf8("周瑜"); break;
 		case ECharName::ZHUGELIANG: return gbkToUtf8("诸葛亮"); break;
-		default: throw "Can not found match!"; break;
+		default: throw "Can't find match!"; break;
 	}
 }
 
-const char* TextManager::getTextOfCardName(const ECardName name) const {
+const string TextManager::getTextOfCardName(ECardName name) const {
 	switch (name) {	
 		case ECardName::ALLOUTOFNONE: return gbkToUtf8("无中生有"); break;
 		case ECardName::ARROWRAIN: return gbkToUtf8("万箭齐发"); break;
@@ -84,11 +112,11 @@ const char* TextManager::getTextOfCardName(const ECardName name) const {
 		case ECardName::ZHUAHUANGFEIDIAN: return gbkToUtf8("爪黄飞电"); break;
 		case ECardName::ZHUGECROSSBOW: return gbkToUtf8("诸葛连弩"); break;
 		case ECardName::ZIXING: return gbkToUtf8("紫騂"); break;
-		default: throw "Can not found match!"; break;
+		default: throw "Can't find match!"; break;
 	}
 }
 
-const char* TextManager::getTextOfSkillName(const ESkillName name) const {
+const string TextManager::getTextOfSkillName(ESkillName name) const {
 	switch (name) {
 		case ESkillName::BIYUE: return gbkToUtf8("闭月"); break;
 		case ESkillName::FANJIAN: return gbkToUtf8("反间"); break;
@@ -130,34 +158,32 @@ const char* TextManager::getTextOfSkillName(const ESkillName name) const {
 		case ESkillName::YIJI: return gbkToUtf8("遗计"); break;
 		case ESkillName::YINGZI: return gbkToUtf8("英姿"); break;
 		case ESkillName::ZHIHENG: return gbkToUtf8("制衡"); break;
-		default: throw "Can not found match!"; break;
+		default: throw "Can't find match!"; break;
 	}
 }
 
-const char* TextManager::getTextOfCardDescribe(const ECardName name) const {
-	// TODO - implement TextManager::getTextOfCardDescribe
-	throw "Not yet implemented";
+const string TextManager::getTextOfCardDescription(ECardName name) const {
+	return cardDescription.at(getTextOfCardName(name)).c_str();
 }
 
-const char* TextManager::getTextOfCharDescribe(const ECharName name) const {
-	// TODO - implement TextManager::getTextOfCharDescribe
-	throw "Not yet implemented";
+const string TextManager::getTextOfSkillDescription(ESkillName name) const {
+	return skillDescription.at(getTextOfSkillName(name)).c_str();
 }
 
-const char* TextManager::getTextOfSuit(const ECardSuit suit) const {
+const string TextManager::getTextOfSuit(ECardSuit suit) const {
 	switch (suit) {
 		case ECardSuit::HEART: return gbkToUtf8("红桃"); break; 
 		case ECardSuit::CLUB: return gbkToUtf8("梅花"); break;
 		case ECardSuit::DIAMOND: return gbkToUtf8("方块"); break;
 		case ECardSuit::SPADE: return gbkToUtf8("黑桃"); break;
-		default: throw "Can not found match!"; break;
+		default: throw "Can't find match!"; break;
 	}
 }
 
-const char* TextManager::getTextOfColorName(const ECardColor color) const {
+const string TextManager::getTextOfColorName(ECardColor color) const {
 	switch (color) {
 		case ECardColor::RED: return gbkToUtf8("红色"); break;
 		case ECardColor::BLACK: return gbkToUtf8("黑色"); break;
-		default: throw "Can not found match!"; break;
+		default: throw "Can't find match!"; break;
 	}
 } 

@@ -1,9 +1,9 @@
 #ifndef Rule_HuaTuo_h__
 #define Rule_HuaTuo_h__
 
-#include "Rule_Character.h"
+#include "Rule_Base.h"
 
-class Rule_HuaTuo : public Rule_Character {
+class Rule_HuaTuo : public Rule_Base {
 
 
 public:

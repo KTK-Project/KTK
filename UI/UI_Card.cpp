@@ -33,7 +33,7 @@ void UI_Card::setCard(const shared_ptr<Card> card) const {
 }
 
 void UI_Card::setDescription(const Label* m_description) const {
-	this->m_description = m_description;
+	throw "Not yet implemented";
 }
 
 bool UI_Card::getDark() const {
@@ -41,7 +41,7 @@ bool UI_Card::getDark() const {
 }
 
 void UI_Card::setDark(const bool m_dark) const {
-	this->m_dark = m_dark;
+	throw "Not yet implemented";
 }
 
 bool UI_Card::getCanUp() const {
@@ -49,7 +49,7 @@ bool UI_Card::getCanUp() const {
 }
 
 void UI_Card::setCanUp(const bool m_canUp) const {
-	this->m_canUp = m_canUp;
+	throw "Not yet implemented";
 }
 
 bool UI_Card::getUpping() const {
@@ -57,15 +57,15 @@ bool UI_Card::getUpping() const {
 }
 
 void UI_Card::setUpping(const bool m_upping) const {
-	this->m_upping = m_upping;
+	throw "Not yet implemented";
 }
 
 void UI_Card::setUpCallBack(const std::function<void (const UI_Card*)> m_upCallBack) const {
-	this->m_upCallBack = m_upCallBack;
+	throw "Not yet implemented";
 }
 
 void UI_Card::setDownCallBack(const std::function<void (const UI_Card*)> m_downCallBack) const {
-	this->m_downCallBack = m_downCallBack;
+	throw "Not yet implemented";
 }
 
 Action* UI_Card::runAction(const Action* action) const {

@@ -5,7 +5,7 @@ bool Event_RequestBoolean::getReceiver() const {
 }
 
 void Event_RequestBoolean::setReceiver(const bool m_receiver) const {
-	this->m_receiver = m_receiver;
+	throw "Not yet implemented";
 }
 
 void Event_RequestBoolean::eventResolve() const {

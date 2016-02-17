@@ -15,7 +15,7 @@ EEventState Event_Base::getEventState() const {
 }
 
 void Event_Base::setEventState(const EEventState m_eventState) const {
-	this->m_eventState = m_eventState;
+	throw "Not yet implemented";
 }
 
 std::function<void (const Event_Base&)> Event_Base::getFinishCallBack() const {
@@ -23,7 +23,7 @@ std::function<void (const Event_Base&)> Event_Base::getFinishCallBack() const {
 }
 
 void Event_Base::setFinishCallBack(const std::function<void (const Event_Base&)> m_finishCallBack) const {
-	this->m_finishCallBack = m_finishCallBack;
+	throw "Not yet implemented";
 }
 
 void Event_Base::finish() const {

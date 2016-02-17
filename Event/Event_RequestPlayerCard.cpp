@@ -5,7 +5,7 @@ std::shared_ptr<Player> Event_RequestPlayerCard::getPlayer() const {
 }
 
 void Event_RequestPlayerCard::setPlayer(const std::shared_ptr<Player> m_player) const {
-	this->m_player = m_player;
+	throw "Not yet implemented";
 }
 
 bool Event_RequestPlayerCard::getHandCard() const {
@@ -13,7 +13,7 @@ bool Event_RequestPlayerCard::getHandCard() const {
 }
 
 void Event_RequestPlayerCard::setHandCard(const bool m_handCard) const {
-	this->m_handCard = m_handCard;
+	throw "Not yet implemented";
 }
 
 bool Event_RequestPlayerCard::getLightning() const {
@@ -21,7 +21,7 @@ bool Event_RequestPlayerCard::getLightning() const {
 }
 
 void Event_RequestPlayerCard::setLightning(const bool m_lightning) const {
-	this->m_lightning = m_lightning;
+	throw "Not yet implemented";
 }
 
 bool Event_RequestPlayerCard::getDrownInHappiness() const {
@@ -29,7 +29,7 @@ bool Event_RequestPlayerCard::getDrownInHappiness() const {
 }
 
 void Event_RequestPlayerCard::setDrownInHappiness(const bool m_drownInHappiness) const {
-	this->m_drownInHappiness = m_drownInHappiness;
+	throw "Not yet implemented";
 }
 
 bool Event_RequestPlayerCard::getFamish() const {
@@ -37,7 +37,7 @@ bool Event_RequestPlayerCard::getFamish() const {
 }
 
 void Event_RequestPlayerCard::setFamish(const bool m_famish) const {
-	this->m_famish = m_famish;
+	throw "Not yet implemented";
 }
 
 bool Event_RequestPlayerCard::getWeapon() const {
@@ -45,7 +45,7 @@ bool Event_RequestPlayerCard::getWeapon() const {
 }
 
 void Event_RequestPlayerCard::setWeapon(const bool m_weapon) const {
-	this->m_weapon = m_weapon;
+	throw "Not yet implemented";
 }
 
 bool Event_RequestPlayerCard::getArmor() const {
@@ -53,7 +53,7 @@ bool Event_RequestPlayerCard::getArmor() const {
 }
 
 void Event_RequestPlayerCard::setArmor(const bool m_armor) const {
-	this->m_armor = m_armor;
+	throw "Not yet implemented";
 }
 
 bool Event_RequestPlayerCard::getOffensiveHorse() const {
@@ -61,7 +61,7 @@ bool Event_RequestPlayerCard::getOffensiveHorse() const {
 }
 
 void Event_RequestPlayerCard::setOffensiveHorse(const bool m_offensiveHorse) const {
-	this->m_offensiveHorse = m_offensiveHorse;
+	throw "Not yet implemented";
 }
 
 bool Event_RequestPlayerCard::getDefensiveHorse() const {
@@ -69,7 +69,7 @@ bool Event_RequestPlayerCard::getDefensiveHorse() const {
 }
 
 void Event_RequestPlayerCard::setDefensiveHorse(const bool m_defensiveHorse) const {
-	this->m_defensiveHorse = m_defensiveHorse;
+	throw "Not yet implemented";
 }
 
 std::shared_ptr<Card> Event_RequestPlayerCard::getReceiver() const {
@@ -77,7 +77,7 @@ std::shared_ptr<Card> Event_RequestPlayerCard::getReceiver() const {
 }
 
 void Event_RequestPlayerCard::setReceiver(const std::shared_ptr<Card> m_receiver) const {
-	this->m_receiver = m_receiver;
+	throw "Not yet implemented";
 }
 
 void Event_RequestPlayerCard::eventResolve() const {

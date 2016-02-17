@@ -1,16 +1,12 @@
 #ifndef KTK_Enum_h__
 #define KTK_Enum_h__
 
-enum class EStage {
-	NONE, READY, JUDGE, DRAWCARD, PLAYCARD, DISCARD, ROUNDEND
-};
-
 enum class ESlashState {
 	WEAPONCHECKBEFORESLASH, ARMORCHECKBEFORESLASH, SLASHING, SLASHSUCCESS, SLASHFAIL, HURTING, SLASHFINISH
 };
 
 enum class ESkillState {
-	CANTUSE, CANUSE, USING
+	NONE, CANTUSE, CANUSE, USING
 };
 
 enum class EPlayerPanalState {

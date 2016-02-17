@@ -1,6 +1,6 @@
 #include "Card_Duel.h"
 
-int Card_Duel::getGoalPlayerQuantity(const std::shared_ptr<Player> requester) const {
+int Card_Duel::getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const {
 	// TODO - implement Card_Duel::getGoalPlayerQuantity
 	throw "Not yet implemented";
 	//return 1

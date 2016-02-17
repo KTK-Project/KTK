@@ -19,11 +19,11 @@ void UI_Message::update(const float delta) const {
 }
 
 void UI_Message::setButton1ValidCheck(const std::function<bool ()> m_button1ValidCheck) const {
-	this->m_button1ValidCheck = m_button1ValidCheck;
+	throw "Not yet implemented";
 }
 
 void UI_Message::setButton2ValidCheck(const std::function<bool ()> m_button2ValidCheck) const {
-	this->m_button2ValidCheck = m_button2ValidCheck;
+	throw "Not yet implemented";
 }
 
 void UI_Message::setButton1CallBack(const std::function<void (const std::shared_ptr<Event_Base>&)> m_button1CallBack) const {

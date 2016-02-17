@@ -1,21 +1,20 @@
 #include "SkillList.h"
 
 int SkillList::getSize() const {
-	// TODO - implement SkillList::getSize
-	throw "Not yet implemented";
+	return m_skills.size();
 }
 
-Skill& SkillList::getSkillByName(const ESkillName name) const {
-	// TODO - implement SkillList::getSkillByName
-	throw "Not yet implemented";
+Skill & SkillList::getSkillByName(ESkillName name) {
+	for (auto & skill : m_skills)
+		if (skill.getSkillName() == name)
+			return skill;
+	throw "Can't find skill!";
 }
 
-int SkillList::getIndexByName(const ESkillName name) const {
-	// TODO - implement SkillList::getIndexByName
-	throw "Not yet implemented";
+Skill & SkillList::getSkillByIndex(int index) {
+	return m_skills[index];
 }
 
-void SkillList::addSkill(const Skill& skill) const {
-	// TODO - implement SkillList::addSkill
-	throw "Not yet implemented";
+void SkillList::addSkill(const Skill & skill) {
+	m_skills.push_back(skill);
 }

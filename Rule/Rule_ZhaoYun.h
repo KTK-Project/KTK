@@ -1,9 +1,9 @@
 #ifndef Rule_ZhaoYun_h__
 #define Rule_ZhaoYun_h__
 
-#include "Rule_Character.h"
+#include "Rule_Base.h"
 
-class Rule_ZhaoYun : public Rule_Character {
+class Rule_ZhaoYun : public Rule_Base {
 
 
 public:

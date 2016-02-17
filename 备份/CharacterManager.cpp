@@ -1,7 +1,7 @@
 #include "CharacterManager.h"
 #include <vector>
 
-std::vector<std::shared_ptr<Character>>& CharacterManager::getCharacters() const {
+std::vector<std::shared_ptr<Character>> & CharacterManager::getCharacters() {
 	// TODO - implement CharacterManager::getCharacters
 	throw "Not yet implemented";
 }

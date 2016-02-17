@@ -34,7 +34,7 @@ std::function<void ()> SelectedPlayers::getMaxCallBack() const {
 }
 
 void SelectedPlayers::setMaxCallBack(const std::function<void ()> m_maxCallBack) const {
-	this->m_maxCallBack = m_maxCallBack;
+	throw "Not yet implemented";
 }
 
 std::function<void ()> SelectedPlayers::getUnmaxCallBack() const {
@@ -42,5 +42,5 @@ std::function<void ()> SelectedPlayers::getUnmaxCallBack() const {
 }
 
 void SelectedPlayers::setUnmaxCallBack(const std::function<void ()> m_unmaxCallBack) const {
-	this->m_unmaxCallBack = m_unmaxCallBack;
+	throw "Not yet implemented";
 }

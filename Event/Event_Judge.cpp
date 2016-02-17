@@ -5,7 +5,7 @@ std::shared_ptr<Card> Event_Judge::getJudgeCard() const {
 }
 
 void Event_Judge::setJudgeCard(const std::shared_ptr<Card> m_judgeCard) const {
-	this->m_judgeCard = m_judgeCard;
+	throw "Not yet implemented";
 }
 
 std::function<bool (const std::shared_ptr<Card>)> Event_Judge::getJudgeCheck() const {
@@ -13,7 +13,7 @@ std::function<bool (const std::shared_ptr<Card>)> Event_Judge::getJudgeCheck() c
 }
 
 void Event_Judge::setJudgeCheck(const std::function<bool (const std::shared_ptr<Card>)> m_judgeCheck) const {
-	this->m_judgeCheck = m_judgeCheck;
+	throw "Not yet implemented";
 }
 
 bool Event_Judge::getJudgeResult() const {
@@ -21,7 +21,7 @@ bool Event_Judge::getJudgeResult() const {
 }
 
 void Event_Judge::setJudgeResult(const bool m_judgeResult) const {
-	this->m_judgeResult = m_judgeResult;
+	throw "Not yet implemented";
 }
 
 void Event_Judge::eventResolve() const {

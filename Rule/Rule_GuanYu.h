@@ -1,9 +1,9 @@
 #ifndef Rule_GuanYu_h__
 #define Rule_GuanYu_h__
 
-#include "Rule_Character.h"
+#include "Rule_Base.h"
 
-class Rule_GuanYu : public Rule_Character {
+class Rule_GuanYu : public Rule_Base {
 
 
 public:
