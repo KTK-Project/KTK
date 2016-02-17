@@ -28,10 +28,14 @@ public:
 	int getPlayerCount(const std::function<bool(const std::shared_ptr<Player> &)> & filter) const;
 
 private:
-	std::shared_ptr<Player> m_lordPlayer;			// 主公player
-	std::shared_ptr<Player> m_currentPlayer;		// 当前player
-	std::shared_ptr<Player> m_forwardPlayer;		// 前置player
-	std::vector<std::shared_ptr<Player>> m_players;	// player容器
+	// 主公player
+	std::shared_ptr<Player> m_lordPlayer;
+	// 当前player
+	std::shared_ptr<Player> m_currentPlayer;
+	// 前置player
+	std::shared_ptr<Player> m_forwardPlayer;
+	// player容器
+	std::vector<std::shared_ptr<Player>> m_players;
 };
 
 #endif // PlayersManager_h__
