@@ -9,7 +9,7 @@ class Player;
 
 class Card {
 public:
-	Card(ECardName name, ECardSuit Suit, int number);
+	Card(ECardName name, ECardSuit Suit, ECardColor Color,ECardType _Type, int number);
 	ECardName getName() const;
 	ECardType getType() const;
 	ECardSuit getSuit() const;
