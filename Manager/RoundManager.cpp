@@ -38,56 +38,40 @@ void RoundManager::roundEndStage() const {
 	throw "Not yet implemented";
 }
 
-//	Todo: stl
 int RoundManager::getRoundsCount() const {
-	// TODO - implement RoundManager::getRoundsCount
-	throw "Not yet implemented";
+	return m_roundsCount;
 }
 
-//	Todo: stl
 bool RoundManager::getStageFinish() const {
-	// TODO - implement RoundManager::getStageFinish
-	throw "Not yet implemented";
+	return m_stageFinish;
 }
 
-//	Todo: stl
 void RoundManager::setStageFinish(bool stageFinish) {
-	// TODO - implement RoundManager::setStageFinish
-	throw "Not yet implemented";
+	m_stageFinish = stageFinish;
 }
 
-//	Todo: stl
 bool RoundManager::getRoundFinish() const {
-	// TODO - implement RoundManager::getRoundFinish
-	throw "Not yet implemented";
+	return m_roundFinish;
 }
 
-//	Todo: stl
 void RoundManager::setRoundFinish(bool roundFinish) {
-	// TODO - implement RoundManager::setRoundFinish
-	throw "Not yet implemented";
+	m_roundFinish = roundFinish;
 }
 
-//	Todo: stl
-EStage RoundManager::getCurrentStage() const {
-	throw "Not yet implemented";
-}
-
-//	Todo: stl
 void RoundManager::enterNextStage() {
 	switch (m_currentStage)
 	{
-		case EStage::READY:
+		case EStage::READY: m_currentStage = EStage::JUDGE;
 			break;
-		case EStage::JUDGE:
+		case EStage::JUDGE: m_currentStage = EStage::DRAWCARD;
 			break;
-		case EStage::DRAWCARD:
+		case EStage::DRAWCARD: m_currentStage = EStage::PLAYCARD;
 			break;
-		case EStage::PLAYCARD:
+		case EStage::PLAYCARD: m_currentStage = EStage::DISCARD;
 			break;
-		case EStage::DISCARD:
+		case EStage::DISCARD: m_currentStage = EStage::ROUNDEND;
 			break;
-		case EStage::ROUNDEND:
+		case EStage::ROUNDEND: m_currentStage = EStage::READY;
 			break;
 		default: throw "Can't find match!"; break;
 	}

@@ -9,26 +9,18 @@ void EventManagers::resolveEvent() const {
 	throw "Not yet implemented";
 }
 
-//	Todo: stl
 stack<shared_ptr<Event_Base>> & EventManagers::getEventsStack() {
-	// TODO - implement EventManagers::getEventsStack
-	throw "Not yet implemented";
+	return m_eventsStack;
 }
 
-//	Todo: stl
 bool EventManagers::hasActions() const {
-	// TODO - implement EventManagers::hasActions
-	throw "Not yet implemented";
+	return m_actions;
 }
 
-//	Todo: stl
 void EventManagers::increaseActions() {
-	// TODO - implement EventManagers::increaseActions
-	throw "Not yet implemented";
+	m_actions++;
 }
 
-//	Todo: stl
 void EventManagers::decreaseActions() {
-	// TODO - implement EventManagers::decreaseActions
-	throw "Not yet implemented";
+	m_actions--;
 }

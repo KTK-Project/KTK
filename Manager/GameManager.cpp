@@ -12,34 +12,24 @@ GameManager::GameManager() {
 	throw "Not yet implemented";
 }
 
-//	Todo: stl
 PlayersManager & GameManager::getPlayerManager() {
-	// TODO - implement GameManager::getPlayerManager
-	throw "Not yet implemented";
+	return m_playerManager;
 }
 
-//	Todo: stl
 RoundManager & GameManager::getRoundManager() {
-	// TODO - implement GameManager::getRoundManager
-	throw "Not yet implemented";
+	return m_roundManager;
 }
 
-//	Todo: stl
 EventManagers & GameManager::getEventManager() {
-	// TODO - implement GameManager::getEventManager
-	throw "Not yet implemented";
+	return m_eventManager;
 }
 
-//	Todo: stl
 CardPile & GameManager::getDarkcardPile() {
-	// TODO - implement GameManager::getDarkcardPile
-	throw "Not yet implemented";
+	return m_darkcardPile;
 }
 
-//	Todo: stl
 CardPile & GameManager::getDiscardPile() {
-	// TODO - implement GameManager::getDiscardPile
-	throw "Not yet implemented";
+	return m_discardPile;
 }
 
 void GameManager::gameBegin() const {

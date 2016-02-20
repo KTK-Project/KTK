@@ -9,33 +9,24 @@ Card::Card(ECardName name, ECardSuit suit, int number) {
 	throw "Not yet implemented";
 }
 
-//	Todo: stl
 ECardName Card::getName() const {
-	// TODO - implement Card::getName
-	throw "Not yet implemented";
+	return m_name;
 }
 
-//	Todo: stl
 ECardType Card::getType() const {
-	// TODO - implement Card::getType
-	throw "Not yet implemented";
+	return m_type;
 }
 
-//	Todo: stl
 ECardSuit Card::getSuit() const {
-	// TODO - implement Card::getSuit
-	throw "Not yet implemented";
+	return m_suit;
 }
 
-//	Todo: stl
 ECardColor Card::getColor() const {
-	// TODO - implement Card::getColor
-	throw "Not yet implemented";
+	return m_color;
 }
 
-//	Todo: stl
 int Card::getNumber() const {
-	throw "Not yet implemented";
+	return m_number;
 }
 
 int Card::getGoalPlayerQuantity(const shared_ptr<Player> & requester) const {

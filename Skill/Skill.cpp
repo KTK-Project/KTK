@@ -1,28 +1,20 @@
 #include "Skill.h"
 
-//	Todo: stl
-Skill::Skill(ESkillName skillName, bool lordSkill, ESkillState skillState /*= ESkillState::NONE*/) {
-	throw "Not yet implemented";
-}
+Skill::Skill(ESkillName skillName, bool lordSkill, ESkillState skillState /*= ESkillState::NONE*/)
+	:m_skillName(skillName),m_lordSkill(lordSkill),m_skillState(skillState){}
 
-//	Todo: stl
 ESkillName Skill::getSkillName() const {
-	// TODO - implement Skill::getName
-	throw "Not yet implemented";
+	return m_skillName;
 }
 
-//	Todo: stl
 bool Skill::isLordSkill() const {
-	// TODO - implement Skill::isLordSkill
-	throw "Not yet implemented";
+	return m_lordSkill;
 }
 
-//	Todo: stl
 ESkillState Skill::getSkillState() const {
-	return this->m_skillState;
+	return m_skillState;
 }
 
-//	Todo: stl
 void Skill::setSkillState(ESkillState skillState) {
-	throw "Not yet implemented";
+	 m_skillState = skillState;
 }
