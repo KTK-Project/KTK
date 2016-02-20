@@ -69,6 +69,11 @@ void RoundManager::setRoundFinish(bool roundFinish) {
 }
 
 //	Todo: stl
+EStage RoundManager::getCurrentStage() const {
+	throw "Not yet implemented";
+}
+
+//	Todo: stl
 void RoundManager::enterNextStage() {
 	switch (m_currentStage)
 	{

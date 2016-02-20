@@ -1,7 +1,5 @@
 #include "Card_Basic.h"
 
-Card_Basic::Card_Basic() {
-	// TODO - implement Card_Basic::Card_Basic
-	throw "Not yet implemented";
-	//…Ë÷√m_type
+Card_Basic::Card_Basic(ECardName name, ECardSuit suit, int number) : Card(name, suit, number) {
+	Card::setType(ECardType::BASIC);
 }

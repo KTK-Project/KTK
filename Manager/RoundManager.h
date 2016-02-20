@@ -3,11 +3,10 @@
 
 #include <vector>
 #include <functional>
+#include "KTK_Enum.h"
 
 class RoundManager {
 public:
-	enum class EStage { NONE, READY, JUDGE, DRAWCARD, PLAYCARD, DISCARD, ROUNDEND };
-
 	RoundManager();
 
 	void readyStage() const;
@@ -22,6 +21,7 @@ public:
 	void setStageFinish(bool stageFinish);
 	bool getRoundFinish() const;
 	void setRoundFinish(bool roundFinish);
+	EStage getCurrentStage() const;
 
 	void enterNextStage();
 	void enterNextRound();
