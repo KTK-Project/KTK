@@ -4,8 +4,7 @@ using std::shared_ptr;
 using std::vector;
 
 //	Todo: stl
-Card::Card(ECardName name, ECardSuit suit, int number) {
-	//设置名字，花色，颜色，数字，但不用设置卡牌类型
+Card::Card(ECardName name, ECardSuit Suit, int number) {
 	throw "Not yet implemented";
 }
 
@@ -63,29 +62,4 @@ void Card::useCard(const shared_ptr<Player> playCardPlayer, const vector<shared_
 //否则获取候选目标，封装requesetgoal事件，设置finishcallback是：
 //如果事件成功usecard
 //否则啥也不做
-}
-
-//	Todo: stl
-void Card::setName(ECardName name) {
-	throw "Not yet implemented";
-}
-
-//	Todo: stl
-void Card::setType(ECardType type) {
-	throw "Not yet implemented";
-}
-
-//	Todo: stl
-void Card::setSuit(ECardSuit suit) {
-	throw "Not yet implemented";
-}
-
-//	Todo: stl
-void Card::setColor(ECardColor color) {
-	throw "Not yet implemented";
-}
-
-//	Todo: stl
-void Card::setNumber(int number) {
-	throw "Not yet implemented";
 }
