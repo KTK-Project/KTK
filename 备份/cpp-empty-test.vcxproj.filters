@@ -1,0 +1,868 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{93b97080-c6ff-48bd-b740-4ff3a7018aba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KTK">
+      <UniqueIdentifier>{dc49164b-2b20-4b97-8e2f-1ba64af391d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KTK\Card">
+      <UniqueIdentifier>{d0dcab10-2ebd-4d9c-9d06-11adff88a86e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KTK\Player">
+      <UniqueIdentifier>{7c0c0257-5b8c-407b-8614-cc77a5b26a62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KTK\Event">
+      <UniqueIdentifier>{e35b69c2-cb12-4e89-af1c-d458bf28d15d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KTK\Rule">
+      <UniqueIdentifier>{e0093407-c8df-4a02-af45-6bccd942c62c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KTK\Controller">
+      <UniqueIdentifier>{e28a1dc2-bbbe-4585-8d83-0564e3e5d926}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KTK\Manager">
+      <UniqueIdentifier>{9c06efc9-a157-426a-84c7-b859b9ec526d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KTK\UI">
+      <UniqueIdentifier>{d2a44009-17b6-4f15-bd98-4812023c2726}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KTK\Skill">
+      <UniqueIdentifier>{efddf170-c76d-4602-af2b-9a1946da54c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KTK\Main">
+      <UniqueIdentifier>{2d481523-97cb-41df-a333-5ac9a85b381e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Test\HelloWorldScene.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_AllOutOfNone.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Armor.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_ArrowRain.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_BaGuaRank.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Basic.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_CoupleSwords.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_DelayedStrategy.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Dodge.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_DragonBroadSword.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_DrownInHappiness.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Duel.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Equipment.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_FlawlessDefense.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_GuanShiAxe.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Harvest.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Horse.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_IceSword.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_JusticeShield.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_KylinBow.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Lightning.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_MurderWithBorrowedWeapon.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_OathInPeachGarden.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Peach.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Sabotage.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Slash.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_SouthInvasion.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Strategy.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Theft.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_TsingGangSword.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\Card_Weapon.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Card\CardPile.cpp">
+      <Filter>KTK\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_AllOutOfNone.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_ArrowRain.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_Base.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_DelayedStrategy.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_DrownInHappiness.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_Duel.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_Dying.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_FlawlessDefense.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_GetCardFromHarvest.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_Harvest.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_Hurt.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_Interaction.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_Judge.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_Lightning.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_MurderWithBorrowedWeapon.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_OathInPeachGarden.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_RequestBoolean.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_RequestCard.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_RequestCardAndGoalPlayer.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_RequestCardSuit.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_RequestGoalPlayer.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_RequestPlayerCard.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_Sabotage.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_Slash.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_SouthInvasion.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_Strategy.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\Event_Theft.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\SelectedCards.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Event\SelectedPlayers.cpp">
+      <Filter>KTK\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Controller\Controller_Base.cpp">
+      <Filter>KTK\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Manager\EventManagers.cpp">
+      <Filter>KTK\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Manager\GameManager.cpp">
+      <Filter>KTK\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Manager\RoundManager.cpp">
+      <Filter>KTK\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Manager\TextManager.cpp">
+      <Filter>KTK\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Skill\Skill.cpp">
+      <Filter>KTK\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Skill\SkillList.cpp">
+      <Filter>KTK\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_Card.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_DebugBox.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_Desktop.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_EquipmentPanal.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_ForwardPlayerPanal.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_GuanXing.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_HandCardPage.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_HandCardPanal.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_HandCardQuantity.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_Harvest.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_HP.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_ID.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_InformationBox.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_JudgeIcon.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_LogBox.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_Message.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_PlayerPanal.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_Position.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_SkillPanal.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\UI\UI_TheftAndSabotage.cpp">
+      <Filter>KTK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Character.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_CaoCao.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_DaQiao.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_DiaoChan.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_GanNing.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_GuanYu.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_GuoJia.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_HuangGai.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_HuangYueYing.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_HuaTuo.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_LiuBei.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_LuXun.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_LvBu.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_LvMeng.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_MaChao.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_SiMaYi.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_SunQuan.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_SunShangXiang.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_XiaHouDun.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_XuChu.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_ZhangFei.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_ZhangLiao.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_ZhaoYun.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_ZhenJi.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_ZhouYu.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_ZhuGeLiang.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Player\Player.cpp">
+      <Filter>KTK\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Main\AppDelegate.cpp">
+      <Filter>KTK\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Main\GameSence.cpp">
+      <Filter>KTK\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Manager\PlayersManager.cpp">
+      <Filter>KTK\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KTK\Rule\Rule_Base.cpp">
+      <Filter>KTK\Rule</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Test\HelloWorldScene.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_AllOutOfNone.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Armor.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_ArrowRain.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_BaGuaRank.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Basic.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_CoupleSwords.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_DelayedStrategy.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Dodge.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_DragonBroadSword.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_DrownInHappiness.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Duel.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Equipment.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_FlawlessDefense.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_GuanShiAxe.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Harvest.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Horse.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_IceSword.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_JusticeShield.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_KylinBow.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Lightning.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_MurderWithBorrowedWeapon.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_OathInPeachGarden.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Peach.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Sabotage.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Slash.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_SnakeSpear.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_SouthInvasion.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Strategy.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Theft.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_TripleHalberd.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_TsingGangSword.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_Weapon.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\Card_ZhuGeCrossBow.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Card\CardPile.h">
+      <Filter>KTK\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_AllOutOfNone.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_ArrowRain.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_Base.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_DelayedStrategy.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_DrownInHappiness.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_Duel.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_Dying.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_FlawlessDefense.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_GetCardFromHarvest.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_Harvest.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_Hurt.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_Interaction.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_Judge.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_Lightning.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_MurderWithBorrowedWeapon.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_OathInPeachGarden.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_RequestBoolean.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_RequestCard.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_RequestCardAndGoalPlayer.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_RequestCardSuit.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_RequestGoalPlayer.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_RequestPlayerCard.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_Sabotage.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_Slash.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_SouthInvasion.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_Strategy.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\Event_Theft.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\SelectedCards.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Event\SelectedPlayers.h">
+      <Filter>KTK\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_Base.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_CaoCao.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_DaQiao.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_DiaoChan.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_GanNing.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_GuanYu.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_GuoJia.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_HuangGai.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_HuangYueYing.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_HuaTuo.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_LiuBei.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_LuXun.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_LvBu.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_LvMeng.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_MaChao.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_SiMaYi.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_SunQuan.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_SunShangXiang.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_XiaHouDun.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_XuChu.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_ZhangFei.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_ZhangLiao.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_ZhaoYun.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_ZhenJi.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_ZhouYu.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Controller\Controller_ZhuGeLiang.h">
+      <Filter>KTK\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Manager\EventManagers.h">
+      <Filter>KTK\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Manager\GameManager.h">
+      <Filter>KTK\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Manager\KTK_Info.h">
+      <Filter>KTK\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Manager\RoundManager.h">
+      <Filter>KTK\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Manager\TextManager.h">
+      <Filter>KTK\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Skill\Skill.h">
+      <Filter>KTK\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Skill\SkillList.h">
+      <Filter>KTK\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_Card.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_DebugBox.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_Desktop.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_EquipmentPanal.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_ForwardPlayerPanal.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_GuanXing.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_HandCardPage.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_HandCardPanal.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_HandCardQuantity.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_Harvest.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_HP.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_ID.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_InformationBox.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_JudgeIcon.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_LogBox.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_Message.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_PlayerPanal.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_Position.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_SkillPanal.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\UI\UI_TheftAndSabotage.h">
+      <Filter>KTK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Character.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_CaoCao.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_DaQiao.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_DiaoChan.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_GanNing.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_GuanYu.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_GuoJia.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_HuangGai.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_HuangYueYing.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_HuaTuo.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_LiuBei.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_LuXun.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_LvBu.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_LvMeng.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_MaChao.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_SiMaYi.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_SunQuan.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_SunShangXiang.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_XiaHouDun.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_XuChu.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_ZhangFei.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_ZhangLiao.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_ZhaoYun.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_ZhenJi.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_ZhouYu.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_ZhuGeLiang.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Player\Player.h">
+      <Filter>KTK\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Main\AppDelegate.h">
+      <Filter>KTK\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Main\AppMacros.h">
+      <Filter>KTK\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Main\GameSence.h">
+      <Filter>KTK\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Manager\PlayersManager.h">
+      <Filter>KTK\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Rule\Rule_Base.h">
+      <Filter>KTK\Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Manager\KTK_Enum.h">
+      <Filter>KTK\Manager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>
