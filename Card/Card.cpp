@@ -3,8 +3,7 @@
 using std::shared_ptr;
 using std::vector;
 
-//	Todo: stl
-Card::Card(ECardName name, ECardSuit Suit, int number) {
+Card::Card(ECardName name, ECardSuit suit, int number) {
 	throw "Not yet implemented";
 }
 
