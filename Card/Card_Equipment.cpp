@@ -5,22 +5,16 @@ Card_Equipment::Card_Equipment(ECardName name, ECardSuit suit, int number, EEqui
 	m_equipType = equipType;
 }
 
-//	Todo: stl
 EEquipmentCard_Type Card_Equipment::getEquipmentType() const {
-	// TODO - implement Card_Equipment::getEquipmentType
-	throw "Not yet implemented";
+	return m_equipType;
 }
 
-//	Todo: stl
 int Card_Equipment::getState() const {
-	// TODO - implement Card_Equipment::getState
-	throw "Not yet implemented";
+	return m_state;
 }
 
-//	Todo: stl
 void Card_Equipment::setState(int state) {
-	// TODO - implement Card_Equipment::setState
-	throw "Not yet implemented";
+	m_state = state;
 }
 
 bool Card_Equipment::getCanUse() const {

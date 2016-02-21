@@ -10,11 +10,10 @@ PlayersManager::PlayersManager() {
 	m_players.resize(8);
 }
 
-//	Todo: stl
 const shared_ptr<Player> & PlayersManager::getLordPlayer() const {
-	// TODO - implement PlayersManger::getLordPlayer
-	throw "Not yet implemented";
+	return m_lordPlayer;
 }
+
 
 void PlayersManager::setLordPlayer(const shared_ptr<Player> & lordPlayer) {
 	auto currentIndex = std::find(m_players.cbegin(), m_players.cend(), lordPlayer) - m_players.cbegin();
@@ -25,28 +24,20 @@ void PlayersManager::setLordPlayer(const shared_ptr<Player> & lordPlayer) {
 		m_players[(currentIndex + i) % KTK_Info::PLAYER_QUANTITY]->setPosition(i);
 }
 
-//	Todo: stl
 const shared_ptr<Player> & PlayersManager::getCurrentPlayer() const {
-	// TODO - implement PlayersManger::getCurrentPlayer
-	throw "Not yet implemented";
+	return m_currentPlayer;
 }
 
-//	Todo: stl
 void PlayersManager::setCurrentPlayer(const shared_ptr<Player> & currentPlayer) {
-	// TODO - implement PlayersManger::setCurrentPlayer
-	throw "Not yet implemented";
+	m_currentPlayer = currentPlayer;
 }
 
-//	Todo: stl
 const shared_ptr<Player> & PlayersManager::getForwardPlayer() const {
-	// TODO - implement PlayersManger::getForwardPlayer
-	throw "Not yet implemented";
+	return m_forwardPlayer;
 }
 
-//	Todo: stl
 void PlayersManager::setForwardPlayer(const shared_ptr<Player> & forwardPlayer) {
-	// TODO - implement PlayersManger::setForwardPlayer
-	throw "Not yet implemented";
+	m_forwardPlayer = forwardPlayer;
 }
 
 vector<shared_ptr<Player>> & PlayersManager::getPlayers() {
