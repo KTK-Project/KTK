@@ -1,6 +1,6 @@
 #include "Rule_GuoJia.h"
 
-void Rule_GuoJia::beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_GuoJia::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果为判定事件，且事件状态为finish，询问是否发动天妒：
 //	是：调用tianDu()
 //	否：什么也不做

@@ -32,9 +32,16 @@ CardPile & GameManager::getDiscardPile() {
 	return m_discardPile;
 }
 
-void GameManager::gameBegin() const {
+void GameManager::gameBegin() {
+//	Todo:stm
+	m_darkcardPile.clear();
+	m_discardPile.clear();
 	// 玩家选择角色。
 	// 初始化所有的管理器。
+
+//	Todo:stl!!!!!!	构建所有的卡牌
+
+
 	// TODO - implement GameManager::gameBegin
 	throw "Not yet implemented";
 }

@@ -10,7 +10,7 @@ class Rule_ZhuGeLiang : public Rule_Base {
 public:
 	void readyStage() const;
 
-	bool canAsCandidate(const std::shared_ptr<Card> card) const;
+	bool canAsCandidate(ECardName cardName) const;
 
 	void guanXing() const;
 };

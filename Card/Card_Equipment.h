@@ -6,16 +6,9 @@
 class Card_Equipment : public Card {
 public:
 	Card_Equipment(ECardName name, ECardSuit suit, int number, EEquipmentCard_Type equipType);
-
 	EEquipmentCard_Type getEquipmentType() const;
-	int getState() const;
-	void setState(int state);
-	bool getCanUse() const;
-	void setCanUse(bool canUse);
-
+	virtual ~Card_Equipment() = 0 { }
 private:
 	EEquipmentCard_Type m_equipType;
-	int m_state;
-	bool m_canUse;
 };
 #endif // Card_Equipment_h__

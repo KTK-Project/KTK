@@ -6,7 +6,7 @@ void Rule_HuaTuo::playCardStage() const {
 	throw "Not yet implemented";
 }
 
-void Rule_HuaTuo::beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_HuaTuo::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果是请求桃事件，设置当前回合不是华佗，设置急救技能为可用，设置触摸事件为jijiu()
 	// TODO - implement Rule_HuaTuo::beforeProcessEvent
 	throw "Not yet implemented";

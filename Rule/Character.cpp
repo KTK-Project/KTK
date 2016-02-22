@@ -1,6 +1,6 @@
 #include "Character.h"
 
-Character::Character(ECharName name /*= ECharName::NONE*/) { 
+Character::Character(ECharName name /*= ECharName::NONE*/) {
 	m_name = name;
 	switch (name)
 	{
@@ -48,7 +48,7 @@ Character::Character(ECharName name /*= ECharName::NONE*/) {
 			m_force = ECharForce::WU;
 			m_sex = ECharSex::MALE;
 			m_HP = 4;
-			m_skillList.addSkill(Skill(ESkillName::KUROU,false));
+			m_skillList.addSkill(Skill(ESkillName::KUROU, false));
 			break;
 		case ECharName::HUANGYUEYING:
 			m_force = ECharForce::SHU;
@@ -82,13 +82,13 @@ Character::Character(ECharName name /*= ECharName::NONE*/) {
 			m_force = ECharForce::QUN;
 			m_sex = ECharSex::MALE;
 			m_HP = 4;
-			m_skillList.addSkill(Skill(ESkillName::WUSHUANG));
+			m_skillList.addSkill(Skill(ESkillName::WUSHUANG, false));
 			break;
 		case ECharName::LVMENG:
 			m_force = ECharForce::WU;
 			m_sex = ECharSex::MALE;
 			m_HP = 4;
-			m_skillList.addSkill(Skill(ESkillName::KEJI,false));
+			m_skillList.addSkill(Skill(ESkillName::KEJI, false));
 			break;
 		case ECharName::MACHAO:
 			m_force = ECharForce::SHU;
@@ -128,7 +128,7 @@ Character::Character(ECharName name /*= ECharName::NONE*/) {
 			m_force = ECharForce::WEI;
 			m_sex = ECharSex::MALE;
 			m_HP = 4;
-			m_skillList.addSkill(Skill(ESkillName::LUOYI,false));
+			m_skillList.addSkill(Skill(ESkillName::LUOYI, false));
 			break;
 		case ECharName::ZHANGFEI:
 			m_force = ECharForce::SHU;
@@ -169,13 +169,14 @@ Character::Character(ECharName name /*= ECharName::NONE*/) {
 			m_skillList.addSkill(Skill(ESkillName::GUANXING, false));
 			m_skillList.addSkill(Skill(ESkillName::KONGCHENG, false));
 			break;
-		default:	throw "Can't find CharacterName(class character)";
+		default:
+			throw "Can't find match";
 			break;
 	}
 }
 
 void Character::init(ECharName name) {
-//	Todo: stm
+	//	Todo: stm
 }
 
 ECharName Character::getName() const {

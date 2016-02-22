@@ -6,7 +6,7 @@ int Card_ArrowRain::getGoalPlayerQuantity(const std::shared_ptr<Player> & reques
 	//return 0
 }
 
-void Card_ArrowRain::useCard(const std::shared_ptr<Player> playCardPlayer, const std::vector<std::shared_ptr<Player>>& goalPlayer) const {
+void Card_ArrowRain::useCard(const std::shared_ptr<Player> & playCardPlayer, const std::vector<std::shared_ptr<Player>> & goalPlayer) const {
 	// TODO - implement Card_ArrowRain::useCard
 	throw "Not yet implemented";
 	//µ÷ÓÃCard::useCard()

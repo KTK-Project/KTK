@@ -1,6 +1,6 @@
 #include "Rule_CaoCao.h"
 
-void Rule_CaoCao::beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_CaoCao::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果事件为请求闪事件，发出请求布尔值事件，询问是否发动护驾：
 //	是：发动护驾
 //	否：调用基类preprocessingEvent

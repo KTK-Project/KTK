@@ -6,6 +6,34 @@
 #include <memory>
 
 class UI_Card : public cocos2d::Node {
+public:
+	static UI_Card * create(const std::shared_ptr<Card> & card) {
+		UI_Card  * pRet = new(std::nothrow) UI_Card ();
+		if (pRet && pRet->initWithCard(card)) {
+			pRet->autorelease();
+			return pRet;
+		}
+		else {
+			delete pRet;
+			pRet = NULL;
+			return NULL;
+		}
+	}
+	bool initWithCard(const std::shared_ptr<Card> card) const;
+	void initListenToUpDown() const;
+	const std::shared_ptr<Card> & getCard() const;
+	void setCard(const std::shared_ptr<Card> & card);
+	void setDescription(const cocos2d::Label * description);
+	bool getDark() const;
+	void setDark(bool dark);
+	bool getCanUp() const;
+	void setCanUp(bool canUp);
+	bool getUpping() const;
+	void setUpping(bool upping);
+	void setUpCallBack(const std::function<void (const UI_Card *)> & upCallBack);
+	void setDownCallBack(const std::function<void (const UI_Card *)> & downCallBack);
+	cocos2d::Action * runAction(const cocos2d::Action * action) const;
+	cocos2d::EventListenerTouchOneByOne* getListener() const;
 
 private:
 	std::shared_ptr<Card> m_card;
@@ -19,38 +47,5 @@ private:
 	std::function<void (const UI_Card*)> m_upCallBack;
 	std::function<void (const UI_Card*)> m_downCallBack;
 	cocos2d::EventListenerTouchOneByOne* m_listener;
-
-public:
-	UI_Card* create(const std::shared_ptr<Card> card) const;
-
-	bool initWithCard(const std::shared_ptr<Card> card) const;
-
-	void initListenToUpDown() const;
-
-	std::shared_ptr<Card> getCard() const;
-
-	void setCard(const std::shared_ptr<Card> card) const;
-
-	void setDescription(const cocos2d::Label* m_description) const;
-
-	bool getDark() const;
-
-	void setDark(const bool m_dark) const;
-
-	bool getCanUp() const;
-
-	void setCanUp(const bool m_canUp) const;
-
-	bool getUpping() const;
-
-	void setUpping(const bool m_upping) const;
-
-	void setUpCallBack(const std::function<void (const UI_Card*)> m_upCallBack) const;
-
-	void setDownCallBack(const std::function<void (const UI_Card*)> m_downCallBack) const;
-
-	cocos2d::Action* runAction(const cocos2d::Action* action) const;
-
-	cocos2d::EventListenerTouchOneByOne* getListener() const;
 };
 #endif // UI_Card_h__

@@ -6,7 +6,7 @@ void Rule_SunQuan::playCardStage() const {
 	throw "Not yet implemented";
 }
 
-void Rule_SunQuan::afterProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_SunQuan::afterProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果是濒死事件，调用jiuyuan()
 	// TODO - implement Rule_SunQuan::afterProcessEvent
 	throw "Not yet implemented";

@@ -4,8 +4,6 @@
 #include "Event_Strategy.h"
 
 class Event_AllOutOfNone : public Event_Strategy {
-
-
 public:
 	void eventResolve() const;
 };

@@ -12,7 +12,7 @@ void Rule_DaQiao::guoSe() const {
 	throw "Not yet implemented";
 }
 
-void Rule_DaQiao::beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_DaQiao::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//检查是否为杀事件&&第一阶段，若是，调用liuLi()
 	// TODO - implement Rule_DaQiao::beforeProcessEvent
 	throw "Not yet implemented";

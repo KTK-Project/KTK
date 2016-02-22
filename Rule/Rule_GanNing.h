@@ -7,7 +7,7 @@
 class Rule_GanNing : public Rule_Base {
 
 public:
-	void playCard(const std::shared_ptr<Card> card) const;
+	void playCard(const std::shared_ptr<Card> & card) const;
 
 	void qiXi() const;
 };

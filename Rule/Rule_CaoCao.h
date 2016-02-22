@@ -10,7 +10,7 @@
 class Rule_CaoCao : public Rule_Base {
 
 public:
-	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
+	void beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const;
 
 	void huJia(const std::shared_ptr<Event_RequestCard>& event) const;
 

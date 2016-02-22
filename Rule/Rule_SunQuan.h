@@ -9,7 +9,7 @@ class Rule_SunQuan : public Rule_Base {
 public:
 	void playCardStage() const;
 
-	void afterProcessEvent(const std::shared_ptr<Event_Base>& event) const;
+	void afterProcessEvent(const std::shared_ptr<Event_Base> & event) const;
 
 	void zhiHeng() const;
 

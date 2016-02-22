@@ -6,7 +6,7 @@ void Rule_ZhenJi::readyStage() const {
 	throw "Not yet implemented";
 }
 
-void Rule_ZhenJi::beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_ZhenJi::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果事件为请求闪事件，设置倾国为可用，如果是forwardplayer，对应按钮的回调函数，调用基类同名函数
 	// TODO - implement Rule_ZhenJi::beforeProcessEvent
 	throw "Not yet implemented";

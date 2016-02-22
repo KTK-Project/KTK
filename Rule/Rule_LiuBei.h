@@ -9,7 +9,7 @@ class Rule_LiuBei : public Rule_Base {
 public:
 	void drawCardStage() const;
 
-	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
+	void beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const;
 
 	void jiJiang(const std::shared_ptr<Event_Base>& event) const;
 };

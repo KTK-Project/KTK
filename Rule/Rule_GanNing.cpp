@@ -1,6 +1,6 @@
 #include "Rule_GanNing.h"
 
-void Rule_GanNing::playCard(const std::shared_ptr<Card> card) const {
+void Rule_GanNing::playCard(const std::shared_ptr<Card> & card) const {
 	//设置奇袭为可用，绑定事件到qiXi()
 	// TODO - implement Rule_GanNing::playCard
 	throw "Not yet implemented";

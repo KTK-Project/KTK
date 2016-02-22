@@ -6,7 +6,7 @@ void Rule_LiuBei::drawCardStage() const {
 	throw "Not yet implemented";
 }
 
-void Rule_LiuBei::beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_LiuBei::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果是请求杀事件，调用设置激将技能为可用
 	// TODO - implement Rule_LiuBei::beforeProcessEvent
 	throw "Not yet implemented";

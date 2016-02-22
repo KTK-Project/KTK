@@ -4,14 +4,13 @@
 #include "Card_Equipment.h"
 
 class Card_Armor : public Card_Equipment {
-
 public:
-	bool m_valid;
-
-	int getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const;
-
+	Card_Armor(ECardName name, ECardSuit suit, int number) : Card_Equipment(name, suit, number, EEquipmentCard_Type::ARMOR) { }
+	int getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const override;
 	bool getValid() const;
-
-	void setValid(const bool m_valid) const;
+	void setValid(bool valid) const;
+	virtual ~Card_Armor() = 0 { }
+private:
+	bool m_valid;
 };
 #endif // Card_Armor_h__

@@ -1,6 +1,6 @@
 #include "Rule_LvBu.h"
 
-void Rule_LvBu::beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_LvBu::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果是杀事件或者是决斗事件，调用wushaung()
 	// TODO - implement Rule_LvBu::beforeProcessEvent
 	throw "Not yet implemented";

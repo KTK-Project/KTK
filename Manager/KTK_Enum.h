@@ -18,7 +18,7 @@ enum class EPlayerColor {
 };
 
 enum class EHorseType {
-	NONE, DEFENSIVE, OFFENSIVE
+	DEFENSIVE, OFFENSIVE
 };
 
 enum class EEventType {

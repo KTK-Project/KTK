@@ -6,7 +6,7 @@ int Card_AllOutOfNone::getGoalPlayerQuantity(const std::shared_ptr<Player> & req
 	//return 0
 }
 
-void Card_AllOutOfNone::useCard(const std::shared_ptr<Player> playCardPlayer, const std::vector<std::shared_ptr<Player>>& goalPlayer) const {
+void Card_AllOutOfNone::useCard(const std::shared_ptr<Player> & playCardPlayer, const std::vector<std::shared_ptr<Player>> & goalPlayer) const {
 	// TODO - implement Card_AllOutOfNone::useCard
 	throw "Not yet implemented";
 	//µ÷ÓÃCard::useCard()

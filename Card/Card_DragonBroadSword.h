@@ -8,6 +8,6 @@ class Card_DragonBroadSword : public Card_Weapon {
 
 
 public:
-	void eventResolve(const Event_Slash& slashEvent) const;
+	void eventResolve(const Event_Slash & slashEvent) const;
 };
 #endif // Card_DragonBroadSword_h__

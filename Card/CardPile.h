@@ -21,6 +21,7 @@ public:
 	void removeCard(const std::shared_ptr<Card> & card);
 	void removeCards(const std::vector<std::shared_ptr<Card>> & cards);
 	std::vector<std::shared_ptr<Card>> removeCards(const std::function<bool (const std::shared_ptr<Card> &)> & filter);
+	std::vector<std::shared_ptr<Card>> clear();
 
 private:
 	std::deque<std::shared_ptr<Card>> m_cards;

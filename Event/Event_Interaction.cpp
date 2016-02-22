@@ -1,42 +1,52 @@
 #include "Event_Interaction.h"
 
-std::shared_ptr<Player> Event_Interaction::getInteractPlayer() const {
+//	Todo:stl
+const std::shared_ptr<Player> & Event_Interaction::getInteractPlayer() const {
 	return this->m_interactPlayer;
 }
 
-void Event_Interaction::setInteractPlayer(const std::shared_ptr<Player> m_interactPlayer) const {
+//	Todo:stl
+void Event_Interaction::setInteractPlayer(const std::shared_ptr<Player> & interactPlayer) {
 	throw "Not yet implemented";
 }
 
-std::string Event_Interaction::getDescrption() const {
+//	Todo:stl
+const std::string & Event_Interaction::getDescrption() const {
 	return this->m_descrption;
 }
 
-void Event_Interaction::setDescrption(const std::string m_descrption) const {
+//	Todo:stl
+void Event_Interaction::setDescrption(const std::string & descrption) {
 	throw "Not yet implemented";
 }
 
+//	Todo:stl
 bool Event_Interaction::getReceived() const {
 	return this->m_received;
 }
 
-void Event_Interaction::setReceived(const bool m_received) const {
+//	Todo:stl
+void Event_Interaction::setReceived(bool received) {
 	throw "Not yet implemented";
 }
 
+//	Todo:stl
 bool Event_Interaction::getReturned() const {
 	return this->m_returned;
 }
 
-void Event_Interaction::setReturned(const bool m_returned) const {
+//	Todo:stl
+void Event_Interaction::setReturned(bool returned) {
 	throw "Not yet implemented";
 }
 
-std::function<void (const Event_Base&)> Event_Interaction::getReturnCallBack() const {
+//	Todo:stl
+const std::function<void (const Event_Base &)> & Event_Interaction::getReturnCallBack() const {
 	return this->m_returnCallBack;
 }
 
-void Event_Interaction::setReturnCallBack(const std::function<void (const Event_Base&)> m_returnCallBack) const {
+//	Todo:stl
+void Event_Interaction::setReturnCallBack(const std::function<void (const Event_Base &)> & returnCallBack) {
 	throw "Not yet implemented";
 }
 

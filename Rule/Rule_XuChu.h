@@ -13,7 +13,7 @@ public:
 
 	void roundEndStage() const;
 
-	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
+	void beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const;
 
 	void luoYi(const std::shared_ptr<Event_Hurt>& event) const;
 };

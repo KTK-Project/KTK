@@ -6,13 +6,13 @@ void Rule_GuanYu::playCardStage() const {
 	throw "Not yet implemented";
 }
 
-void Rule_GuanYu::beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_GuanYu::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果是请求卡牌事件，设置武圣技能为可用，触摸事件为调用wuSheng()
 	// TODO - implement Rule_GuanYu::beforeProcessEvent
 	throw "Not yet implemented";
 }
 
-void Rule_GuanYu::afterProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_GuanYu::afterProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果是请求卡牌事件，关闭技能按钮
 	// TODO - implement Rule_GuanYu::afterProcessEvent
 	throw "Not yet implemented";

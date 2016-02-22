@@ -1,28 +1,36 @@
 #include "Event_Base.h"
 
+using std::function;
+
+//	Todo:stl
 EEventType Event_Base::getEventType() const {
 	// TODO - implement Event_Base::getEventType
 	throw "Not yet implemented";
 }
 
-void Event_Base::setEventType(const EEventType eventType) const {
+//	Todo:stl
+void Event_Base::setEventType(EEventType eventType) {
 	// TODO - implement Event_Base::setEventType
 	throw "Not yet implemented";
 }
 
+//	Todo:stl
 EEventState Event_Base::getEventState() const {
 	return this->m_eventState;
 }
 
-void Event_Base::setEventState(const EEventState m_eventState) const {
+//	Todo:stl
+void Event_Base::setEventState(EEventState eventState) {
 	throw "Not yet implemented";
 }
 
-std::function<void (const Event_Base&)> Event_Base::getFinishCallBack() const {
+//	Todo:stl
+const function<void (const Event_Base &)> & Event_Base::getFinishCallBack() const {
 	return this->m_finishCallBack;
 }
 
-void Event_Base::setFinishCallBack(const std::function<void (const Event_Base&)> m_finishCallBack) const {
+//	Todo:stl
+void Event_Base::setFinishCallBack(const function<void (const Event_Base &)> & finishCallBack) {
 	throw "Not yet implemented";
 }
 

@@ -1,6 +1,6 @@
 #include "Rule_XiaHouDun.h"
 
-void Rule_XiaHouDun::beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_XiaHouDun::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果为伤害事件，且事件状态为finish，夏侯惇未死，询问是否发动刚烈：
 //	是：调用gangLie()
 //	否：什么也不做

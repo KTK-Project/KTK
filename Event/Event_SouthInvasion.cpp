@@ -1,5 +1,13 @@
 #include "Event_SouthInvasion.h"
 
+const std::shared_ptr<Player> & Event_SouthInvasion::getCurrentPlayer() const {
+	return m_currentPlayer;
+}
+
+void Event_SouthInvasion::setCurrentPlayer(const std::shared_ptr<Player> & currentPlayer) {
+	m_currentPlayer = currentPlayer;
+}
+
 void Event_SouthInvasion::eventResolve() const {
 	//static player * currentplayer = nullptr;
 //if(!currentplayer)             第一次执行：currentPlayer = playcardplayer的下一个玩家

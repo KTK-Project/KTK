@@ -4,12 +4,12 @@ std::deque<std::shared_ptr<Player>> SelectedPlayers::getPlayers() const {
 	return this->m_players;
 }
 
-void SelectedPlayers::addPlayer(const std::shared_ptr<Player> player) const {
+void SelectedPlayers::addPlayer(const std::shared_ptr<Player> & player) const {
 	// TODO - implement SelectedPlayers::addPlayer
 	throw "Not yet implemented";
 }
 
-void SelectedPlayers::removePlayer(const std::shared_ptr<Player> player) const {
+void SelectedPlayers::removePlayer(const std::shared_ptr<Player> & player) const {
 	// TODO - implement SelectedPlayers::removePlayer
 	throw "Not yet implemented";
 }
@@ -24,23 +24,37 @@ void SelectedPlayers::popAll() const {
 	throw "Not yet implemented";
 }
 
-bool SelectedPlayers::hasPlayer(const std::shared_ptr<Player> player) const {
+bool SelectedPlayers::hasPlayer(const std::shared_ptr<Player> & player) const {
 	// TODO - implement SelectedPlayers::hasPlayer
 	throw "Not yet implemented";
 }
 
-std::function<void ()> SelectedPlayers::getMaxCallBack() const {
+//	Todo:stl
+int SelectedPlayers::getMaxSelects() const {
+	return m_maxSelects;
+}
+
+//	Todo:stl
+void SelectedPlayers::setMaxSelects(int maxSelects) {
+	m_maxSelects = maxSelects;
+}
+
+//	Todo:stl
+const std::function<void()> & SelectedPlayers::getMaxCallBack() const {
 	return this->m_maxCallBack;
 }
 
-void SelectedPlayers::setMaxCallBack(const std::function<void ()> m_maxCallBack) const {
+//	Todo:stl
+void SelectedPlayers::setMaxCallBack(const std::function<void ()> & m_maxCallBack) {
 	throw "Not yet implemented";
 }
 
-std::function<void ()> SelectedPlayers::getUnmaxCallBack() const {
+//	Todo:stl
+const std::function<void ()> & SelectedPlayers::getUnmaxCallBack() const {
 	return this->m_unmaxCallBack;
 }
 
-void SelectedPlayers::setUnmaxCallBack(const std::function<void ()> m_unmaxCallBack) const {
+//	Todo:stl
+void SelectedPlayers::setUnmaxCallBack(const std::function<void ()> & unmaxCallBack) {
 	throw "Not yet implemented";
 }

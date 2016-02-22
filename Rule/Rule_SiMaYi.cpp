@@ -1,6 +1,6 @@
 #include "Rule_SiMaYi.h"
 
-void Rule_SiMaYi::beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_SiMaYi::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果为伤害事件，且事件状态为finish，司马懿未死，询问是否发动反馈：
 //	是：调用fanKui()
 //	否：什么也不做

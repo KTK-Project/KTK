@@ -5,10 +5,12 @@ Event_DelayedStrategy::Event_DelayedStrategy() {
 	throw "Not yet implemented";
 }
 
-std::shared_ptr<Player> Event_DelayedStrategy::getOwnerPlayer() const {
+//	Todo:stl
+const std::shared_ptr<Player> & Event_DelayedStrategy::getOwnerPlayer() const {
 	return this->m_ownerPlayer;
 }
 
-void Event_DelayedStrategy::setOwnerPlayer(const std::shared_ptr<Player> m_ownerPlayer) const {
+//	Todo:stl
+void Event_DelayedStrategy::setOwnerPlayer(const std::shared_ptr<Player> & ownerPlayer) {
 	throw "Not yet implemented";
 }

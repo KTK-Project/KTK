@@ -10,7 +10,7 @@ class Rule_ZhenJi : public Rule_Base {
 public:
 	void readyStage() const;
 
-	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
+	void beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const;
 
 	void qingGuo(const std::shared_ptr<Event_RequestCard>& event) const;
 

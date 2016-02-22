@@ -5,21 +5,19 @@
 #include "Player\Player.h"
 
 class Event_Dying : public Event_Base {
+public:
+	const std::shared_ptr<Player> & getFirstPlayer() const;
+	void setFirstPlayer(const std::shared_ptr<Player> & firstPlayer);
+	const std::shared_ptr<Player> & getDyingPlayer() const;
+	void setDyingPlayer(const std::shared_ptr<Player> & dyingPlayer);
+	const std::shared_ptr<Player> & getPeachPlayer() const;
+	void setPeachPlayer(const std::shared_ptr<Player> & peachPlayer);
+
+	void eventResolve() const;
 
 private:
 	std::shared_ptr<Player> m_firstPlayer;
-	std::shared_ptr<Player> m_DyingPlayer;
+	std::shared_ptr<Player> m_dyingPlayer;
 	std::shared_ptr<Player> m_peachPlayer;
-
-public:
-	std::shared_ptr<Player> getFirstPlayer() const;
-
-	void setFirstPlayer(const std::shared_ptr<Player> m_firstPlayer) const;
-
-	std::shared_ptr<Player> getDyingPlayer() const;
-
-	void setDyingPlayer(const std::shared_ptr<Player> m_DyingPlayer) const;
-
-	void eventResolve() const;
 };
 #endif // Event_Dying_h__

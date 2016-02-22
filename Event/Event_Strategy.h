@@ -5,13 +5,11 @@
 #include <memory>
 #include "Player\Player.h"
 
-class Event_Strategy : Event_Base {
-
+class Event_Strategy : public Event_Base {
 public:
-	std::shared_ptr<Player> m_playCardPlayer;
-
 	std::shared_ptr<Player> getPlayCardPlayer() const;
-
 	void setPlayCardPlayer(const std::shared_ptr<Player> m_playCardPlayer) const;
+private:
+	std::shared_ptr<Player> m_playCardPlayer;
 };
 #endif // Event_Strategy_h__

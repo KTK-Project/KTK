@@ -18,7 +18,7 @@ public:
 	CardPile & getDarkcardPile();
 	CardPile & getDiscardPile();
 
-	void gameBegin() const;
+	void gameBegin();
 	void gameEnd() const;
 
 private:

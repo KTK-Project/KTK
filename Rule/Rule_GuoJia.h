@@ -9,7 +9,7 @@ class Rule_GuoJia : public Rule_Base {
 
 
 public:
-	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
+	void beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const;
 
 	void tianDu(const std::shared_ptr<Event_Judge>& event) const;
 

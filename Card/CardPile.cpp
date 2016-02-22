@@ -84,3 +84,7 @@ vector<shared_ptr<Card>> CardPile::removeCards(const function<bool(const shared_
 		}
 	return v;
 }
+
+vector<shared_ptr<Card>> CardPile::clear() {
+	removeCards([](const shared_ptr<Card> & card) { return true; });
+}

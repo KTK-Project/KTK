@@ -17,18 +17,14 @@ public:
 	int getNumber() const;
 
 	virtual int getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const;
-	virtual std::vector<std::shared_ptr<Player>> getCandidates(const std::shared_ptr<Player> playCardPlayer) const;
+	virtual std::vector<std::shared_ptr<Player>> getCandidates(const std::shared_ptr<Player> & playCardPlayer) const;
 	virtual void onUpping() const;
-	virtual void useCard(const std::shared_ptr<Player> playCardPlayer, const std::vector<std::shared_ptr<Player>>& goalPlayer) const;
+	virtual void useCard(const std::shared_ptr<Player> & playCardPlayer, const std::vector<std::shared_ptr<Player>> & goalPlayer) const;
 
 	virtual ~Card() = 0 { };
 
 protected:
-	void setName(ECardName name);
 	void setType(ECardType type);
-	void setSuit(ECardSuit suit);
-	void setColor(ECardColor color);
-	void setNumber(int number);
 
 private:
 	ECardName m_name;

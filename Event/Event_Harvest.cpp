@@ -1,5 +1,13 @@
 #include "Event_Harvest.h"
 
+const std::shared_ptr<Player> & Event_Harvest::getCurrentPlayer() const {
+	return m_currentPlayer;
+}
+
+void Event_Harvest::setCurrentPlayer(const std::shared_ptr<Player> & currentPlayer) {
+	m_currentPlayer = currentPlayer;
+}
+
 void Event_Harvest::eventResolve() const {
 	//static player * currentplayer = nullptr;
 //static Event_GetCardFromHarvest *  event = nullptr;

@@ -9,7 +9,7 @@ class Rule_HuaTuo : public Rule_Base {
 public:
 	void playCardStage() const;
 
-	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
+	void beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const;
 
 	void qingNang() const;
 

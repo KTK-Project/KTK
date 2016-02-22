@@ -6,7 +6,7 @@ void Rule_SunShangXiang::playCardStage() const {
 	throw "Not yet implemented";
 }
 
-void Rule_SunShangXiang::unequip(const std::shared_ptr<Card> card) const {
+void Rule_SunShangXiang::unequip(const std::shared_ptr<Card> & card) const {
 	//√˛¡Ω’≈≈∆
 	// TODO - implement Rule_SunShangXiang::unequip
 	throw "Not yet implemented";

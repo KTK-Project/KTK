@@ -8,7 +8,7 @@ void Rule_ZhuGeLiang::readyStage() const {
 	throw "Not yet implemented";
 }
 
-bool Rule_ZhuGeLiang::canAsCandidate(const std::shared_ptr<Card> card) const {
+bool Rule_ZhuGeLiang::canAsCandidate(ECardName cardName) const {
 	//空城技能，太简单，不解释
 	// TODO - implement Rule_ZhuGeLiang::canAsCandidate
 	throw "Not yet implemented";

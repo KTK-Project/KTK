@@ -12,7 +12,7 @@ void Rule_XuChu::roundEndStage() const {
 	throw "Not yet implemented";
 }
 
-void Rule_XuChu::beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_XuChu::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果为伤害事件，扔给luoYi()
 	// TODO - implement Rule_XuChu::beforeProcessEvent
 	throw "Not yet implemented";

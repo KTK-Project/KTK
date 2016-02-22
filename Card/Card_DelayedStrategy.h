@@ -3,10 +3,9 @@
 
 #include "Card.h"
 
-class Card_DelayedStrategy : Card {
-
-
+class Card_DelayedStrategy : public Card {
 public:
-	Card_DelayedStrategy();
+	Card_DelayedStrategy(ECardName name, ECardSuit suit, int number);
+	virtual ~Card_DelayedStrategy() = 0 { }
 };
 #endif // Card_DelayedStrategy_h__

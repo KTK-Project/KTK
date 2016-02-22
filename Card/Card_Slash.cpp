@@ -7,14 +7,14 @@ int Card_Slash::getGoalPlayerQuantity(const std::shared_ptr<Player> & requester)
 	throw "Not yet implemented";
 }
 
-std::vector<std::shared_ptr<Player>> Card_Slash::getCandidates(const std::shared_ptr<Player> playCardPlayer) const {
+std::vector<std::shared_ptr<Player>> Card_Slash::getCandidates(const std::shared_ptr<Player> & playCardPlayer) const {
 	//调用Card::getCandidate()
 //排除空城发动中的诸葛亮。
 	// TODO - implement Card_Slash::getCandidate
 	throw "Not yet implemented";
 }
 
-void Card_Slash::useCard(const std::shared_ptr<Player> playCardPlayer, const std::vector<std::shared_ptr<Player>>& goalPlayer) const {
+void Card_Slash::useCard(const std::shared_ptr<Player> & playCardPlayer, const std::vector<std::shared_ptr<Player>> & goalPlayer) const {
 	//调用Card::useCard()
 //封装Event_Slash事件，发送给eventmanager
 //设置usedOnce为ture

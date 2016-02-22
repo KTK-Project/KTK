@@ -10,7 +10,7 @@ class Rule_SunShangXiang : public Rule_Base {
 public:
 	void playCardStage() const;
 
-	void unequip(const std::shared_ptr<Card> card) const;
+	void unequip(const std::shared_ptr<Card> & card) const;
 
 	void jieYin() const;
 };

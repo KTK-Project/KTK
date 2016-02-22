@@ -1,5 +1,13 @@
 #include "Event_ArrowRain.h"
 
+const std::shared_ptr<Player> & Event_ArrowRain::getCurrentPlayer() const {
+	return m_currentPlayer;
+}
+
+void Event_ArrowRain::setCurrentPlayer(const std::shared_ptr<Player> & currentPlayer) {
+	m_currentPlayer = currentPlayer;
+}
+
 void Event_ArrowRain::eventResolve() const {
 	//µ÷ÓÃfinishCallback
 	//static player * currentplayer = nullptr;

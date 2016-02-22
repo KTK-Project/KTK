@@ -6,13 +6,13 @@ void Rule_ZhaoYun::playCardStage() const {
 	throw "Not yet implemented";
 }
 
-void Rule_ZhaoYun::beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_ZhaoYun::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果是请求杀或闪事件，设置龙胆为可用，如果是forwardplayer，对应技能按钮的事件，调用基类同名函数
 	// TODO - implement Rule_ZhaoYun::beforeProcessEvent
 	throw "Not yet implemented";
 }
 
-void Rule_ZhaoYun::afterProcessEvent(const std::shared_ptr<Event_Base>& event) const {
+void Rule_ZhaoYun::afterProcessEvent(const std::shared_ptr<Event_Base> & event) const {
 	//如果是请求闪事件，关闭技能按钮
 	// TODO - implement Rule_ZhaoYun::afterProcessEvent
 	throw "Not yet implemented";

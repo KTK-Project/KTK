@@ -4,6 +4,24 @@ using std::shared_ptr;
 using std::vector;
 
 Card::Card(ECardName name, ECardSuit suit, int number) {
+	m_name = name;
+	m_suit = suit;
+	m_number = number;
+//	Todo:stl
+	//更新m_color
+	switch (suit) {
+		case ECardSuit::CLUB:
+			break;
+		case ECardSuit::DIAMOND:
+			break;
+		case ECardSuit::HEART:
+			break;
+		case ECardSuit::SPADE:
+			break;
+		default:
+			break;
+	}
+
 	throw "Not yet implemented";
 }
 
@@ -28,37 +46,41 @@ int Card::getNumber() const {
 }
 
 int Card::getGoalPlayerQuantity(const shared_ptr<Player> & requester) const {
-//	Todo: stm
-	throw "Not yet implemented";
+	return 0;
 }
 
-vector<shared_ptr<Player>> Card::getCandidates(const shared_ptr<Player> playCardPlayer) const {
+std::vector<std::shared_ptr<Player>> Card::getCandidates(const std::shared_ptr<Player> & playCardPlayer) const {
 //	Todo: stm
 	// TODO - implement Card::getCandidate
 	throw "Not yet implemented";
 	//判断因素：
-//1.距离因素（X）调用getdistanceforCard()
-//2.是否死亡
-//3.对方有特殊技能（诸葛亮-空城，陆逊-谦逊）（X）
-//4.对方是否有卡牌（借刀杀人，顺手牵羊，过河拆桥）（X）
+	//1.距离因素（X）调用getdistanceforCard()
+	//2.是否死亡
+	//3.对方有特殊技能（诸葛亮-空城，陆逊-谦逊）（X）
+	//4.对方是否有卡牌（借刀杀人，顺手牵羊，过河拆桥）（X）
 }
 
 void Card::onUpping() const {
 	// TODO - implement Card::onUpping
 	throw "Not yet implemented";
 	//forwardPlayer专用函数
-//调用getgoalPlayerquantity，如果为0，则直接使确定按钮生效。
-//否则获取候选目标，封装requesetgoal事件，设置finishcallback是：
-//如果事件成功usecard
-//否则啥也不做
+	//调用getgoalPlayerquantity，如果为0，则直接使确定按钮生效。
+	//否则获取候选目标，封装requesetgoal事件，设置finishcallback是：
+	//如果事件成功usecard
+	//否则啥也不做
 }
 
-void Card::useCard(const shared_ptr<Player> playCardPlayer, const vector<shared_ptr<Player>>& goalPlayer) const {
+void Card::useCard(const std::shared_ptr<Player> & playCardPlayer, const std::vector<std::shared_ptr<Player>> & goalPlayer) const {
 	// TODO - implement Card::useCard
 	throw "Not yet implemented";
 	//forwardPlayer专用函数
-//调用getgoalPlayerquantity，如果为0，则直接使确定按钮生效。
-//否则获取候选目标，封装requesetgoal事件，设置finishcallback是：
-//如果事件成功usecard
-//否则啥也不做
+	//调用getgoalPlayerquantity，如果为0，则直接使确定按钮生效。
+	//否则获取候选目标，封装requesetgoal事件，设置finishcallback是：
+	//如果事件成功usecard
+	//否则啥也不做
+}
+
+//	Todo:stl
+void Card::setType(ECardType type) {
+	throw "Not yet implemented";
 }

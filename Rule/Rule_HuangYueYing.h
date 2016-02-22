@@ -8,9 +8,9 @@ class Rule_HuangYueYing : public Rule_Base {
 
 
 public:
-	int getDistanceForCard(const std::shared_ptr<Card> card) const;
+	int getDistanceForCard(const std::shared_ptr<Card> & card) const;
 
-	void playCard(const std::shared_ptr<Card> card) const;
+	void playCard(const std::shared_ptr<Card> & card) const;
 
 	void jiZhi() const;
 };

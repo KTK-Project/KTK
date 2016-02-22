@@ -9,7 +9,7 @@ class Rule_SiMaYi : public Rule_Base {
 
 
 public:
-	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
+	void beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const;
 
 	void fanKui(const std::shared_ptr<Event_Hurt>& event) const;
 

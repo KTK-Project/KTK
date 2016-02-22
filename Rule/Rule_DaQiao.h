@@ -13,7 +13,7 @@ public:
 
 	void guoSe() const;
 
-	void beforeProcessEvent(const std::shared_ptr<Event_Base>& event) const;
+	void beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const;
 
 	void liuLi(const std::shared_ptr<Event_Base>& event) const;
 };
