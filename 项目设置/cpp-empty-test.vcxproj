@@ -422,7 +422,8 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <None Include="..\KTK\ClassDiagram\Card.cd" />
+    <None Include="..\KTK\ClassDiagram\Event.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

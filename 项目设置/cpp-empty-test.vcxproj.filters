@@ -38,6 +38,9 @@
     <Filter Include="KTK\Main">
       <UniqueIdentifier>{2d481523-97cb-41df-a333-5ac9a85b381e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="KTK\ClassDiagram">
+      <UniqueIdentifier>{fd660355-8ce5-4423-94c2-7ee84555224a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -863,6 +866,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <None Include="..\KTK\ClassDiagram\Card.cd">
+      <Filter>KTK\ClassDiagram</Filter>
+    </None>
+    <None Include="..\KTK\ClassDiagram\Event.cd">
+      <Filter>KTK\ClassDiagram</Filter>
+    </None>
   </ItemGroup>
 </Project>

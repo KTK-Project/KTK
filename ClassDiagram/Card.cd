@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Card" Collapsed="true">
+    <Position X="33.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GARAIAAgAAAAAAAABEAAEACAARABAAAAACAEgAgAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CardPile" Collapsed="true">
+    <Position X="65" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAQACQAAICAIAAAAAAAACAAEAAAAAwAAAAAAAAEQAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\CardPile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_AllOutOfNone" Collapsed="true">
+    <Position X="49" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAACAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_AllOutOfNone.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Armor" Collapsed="true">
+    <Position X="12" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAgAAAEABCBAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Armor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_ArrowRain" Collapsed="true">
+    <Position X="53.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_ArrowRain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_BaGuaRank" Collapsed="true">
+    <Position X="13" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_BaGuaRank.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Basic" Collapsed="true">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Basic.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_CoupleSwords" Collapsed="true">
+    <Position X="17.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_CoupleSwords.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_DelayedStrategy" Collapsed="true">
+    <Position X="39" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_DelayedStrategy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Dodge" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Dodge.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_DragonBroadSword" Collapsed="true">
+    <Position X="31" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_DragonBroadSword.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_DrownInHappiness" Collapsed="true">
+    <Position X="40" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_DrownInHappiness.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Duel" Collapsed="true">
+    <Position X="42.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Duel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Equipment" Collapsed="true">
+    <Position X="23.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAABAAAAAAIAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Equipment.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_FlawlessDefense" Collapsed="true">
+    <Position X="51.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_FlawlessDefense.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_GuanShiAxe" Collapsed="true">
+    <Position X="26.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_GuanShiAxe.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Harvest" Collapsed="true">
+    <Position X="55.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Harvest.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Horse" Collapsed="true">
+    <Position X="35.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAQAAAAAAAACAAAAAAAAAAAAACAAAAQAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Horse.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_IceSword" Collapsed="true">
+    <Position X="15.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_IceSword.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_JusticeShield" Collapsed="true">
+    <Position X="10.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_JusticeShield.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_KylinBow" Collapsed="true">
+    <Position X="22" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_KylinBow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Lightning" Collapsed="true">
+    <Position X="37.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Lightning.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_MurderWithBorrowedWeapon" Collapsed="true">
+    <Position X="58" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_MurderWithBorrowedWeapon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_OathInPeachGarden" Collapsed="true">
+    <Position X="62.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_OathInPeachGarden.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Peach" Collapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Peach.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Sabotage" Collapsed="true">
+    <Position X="46.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Sabotage.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Slash" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAABAAAAAAAAAAAAAAAAABAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Slash.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_SnakeSpear" Collapsed="true">
+    <Position X="28.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_SnakeSpear.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_SouthInvasion" Collapsed="true">
+    <Position X="60.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_SouthInvasion.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Strategy" Collapsed="true">
+    <Position X="52.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAgAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Strategy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Theft" Collapsed="true">
+    <Position X="44.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Theft.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_TripleHalberd" Collapsed="true">
+    <Position X="19.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_TripleHalberd.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_TsingGangSword" Collapsed="true">
+    <Position X="24.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_TsingGangSword.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_Weapon" Collapsed="true">
+    <Position X="24.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAABAAAAAAAAAAQAAABAQAACAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_Weapon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card_ZhuGeCrossBow" Collapsed="true">
+    <Position X="33.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Card\Card_ZhuGeCrossBow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
