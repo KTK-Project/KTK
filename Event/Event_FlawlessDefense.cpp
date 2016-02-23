@@ -1,23 +1,19 @@
 #include "Event_FlawlessDefense.h"
 
-//	Todo:stl
 const std::shared_ptr<Player> & Event_FlawlessDefense::getFirstPlayer() const {
-	return this->m_firstPlayer;
+	return m_firstPlayer;
 }
 
-//	Todo:stl
 void Event_FlawlessDefense::setFirstPlayer(const std::shared_ptr<Player> & firstPlayer) {
-	throw "Not yet implemented";
+	m_firstPlayer = firstPlayer;
 }
 
-//	Todo:stl
 bool Event_FlawlessDefense::getSuccess() const {
-	return this->m_success;
+	return m_success;
 }
 
-//	Todo:stl
 void Event_FlawlessDefense::setSuccess(bool success) {
-	throw "Not yet implemented";
+	m_success = success;
 }
 
 void Event_FlawlessDefense::eventResolve() const {

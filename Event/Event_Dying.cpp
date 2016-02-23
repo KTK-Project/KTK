@@ -1,31 +1,25 @@
 #include "Event_Dying.h"
 
-//	Todo:stl
 const std::shared_ptr<Player> & Event_Dying::getFirstPlayer() const {
-	return this->m_firstPlayer;
+	return m_firstPlayer;
 }
 
-//	Todo:stl
 void Event_Dying::setFirstPlayer(const std::shared_ptr<Player> & firstPlayer) {
-	throw "Not yet implemented";
+	m_firstPlayer = firstPlayer;
 }
 
-//	Todo:stl
 const std::shared_ptr<Player> & Event_Dying::getDyingPlayer() const {
-	return this->m_dyingPlayer;
+	return m_dyingPlayer;
 }
 
-//	Todo:stl
 void Event_Dying::setDyingPlayer(const std::shared_ptr<Player> & dyingPlayer) {
-	throw "Not yet implemented";
+	m_dyingPlayer = dyingPlayer;
 }
 
-//	Todo:stl
 const std::shared_ptr<Player> & Event_Dying::getPeachPlayer() const {
 	return m_peachPlayer;
 }
 
-//	Todo:stl
 void Event_Dying::setPeachPlayer(const std::shared_ptr<Player> & peachPlayer) {
 	m_peachPlayer = peachPlayer;
 }

@@ -40,32 +40,26 @@ bool SelectedCards::hasCard(const UI_Card* card) const {
 	throw "Not yet implemented";
 }
 
-//	Todo:stl
 int SelectedCards::getMaxSelects() const {
-	return this->m_maxSelects;
+	return m_maxSelects;
 }
 
-//	Todo:stl
 void SelectedCards::setMaxSelects(int maxSelects) {
-	throw "Not yet implemented";
+	m_maxSelects = maxSelects;
 }
 
-//	Todo:stl
 const std::function<void()> & SelectedCards::getMaxCallBack() const {
-	throw "Not yet implemented";
+	return m_maxCallBack;
 }
 
-//	Todo:stl
 void SelectedCards::setMaxCallBack(const std::function<void ()> & maxCallBack) {
-	throw "Not yet implemented";
+	m_maxCallBack = maxCallBack;
 }
 
-//	Todo:stl
 const std::function<void()> & SelectedCards::getUnmaxCallBack() const {
-	throw "Not yet implemented";
+	return m_unmaxCallBack;
 }
 
-//	Todo:stl
 void SelectedCards::setUnmaxCallBack(const std::function<void ()> & unmaxCallBack) {
-	throw "Not yet implemented";
+	m_unmaxCallBack = unmaxCallBack;
 }

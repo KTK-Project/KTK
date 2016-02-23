@@ -7,22 +7,23 @@ Card::Card(ECardName name, ECardSuit suit, int number) {
 	m_name = name;
 	m_suit = suit;
 	m_number = number;
-//	Todo:stl
-	//更新m_color
 	switch (suit) {
 		case ECardSuit::CLUB:
+			m_color = ECardColor::BLACK;
 			break;
 		case ECardSuit::DIAMOND:
+			m_color = ECardColor::RED;
 			break;
 		case ECardSuit::HEART:
+			m_color = ECardColor::RED;
 			break;
 		case ECardSuit::SPADE:
+			m_color = ECardColor::BLACK;
 			break;
 		default:
+			throw "Can't find this kind of suit";
 			break;
 	}
-
-	throw "Not yet implemented";
 }
 
 ECardName Card::getName() const {
@@ -80,7 +81,6 @@ void Card::useCard(const std::shared_ptr<Player> & playCardPlayer, const std::ve
 	//否则啥也不做
 }
 
-//	Todo:stl
 void Card::setType(ECardType type) {
-	throw "Not yet implemented";
+	m_Type = type;
 }

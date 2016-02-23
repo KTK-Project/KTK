@@ -6,12 +6,10 @@ int Card_Armor::getGoalPlayerQuantity(const shared_ptr<Player> & requester) cons
 	return 0;
 }
 
-//	Todo:stl
 bool Card_Armor::getValid() const {
-	return this->m_valid;
+	return m_valid;
 }
 
-//	Todo:stl
-void Card_Armor::setValid(bool valid) const {
-	throw "Not yet implemented";
+void Card_Armor::setValid(bool valid)  {
+	m_valid = valid;
 }

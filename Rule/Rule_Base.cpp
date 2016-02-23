@@ -5,16 +5,12 @@ Rule_Base::Rule_Base(const std::shared_ptr<Player> & player) {
 	throw "Not yet implemented";
 }
 
-//	Todo:stl
 const std::shared_ptr<Player> & Rule_Base::getPlayer() const {
-	// TODO - implement Rule_Character::getPlayer
-	throw "Not yet implemented";
+	return m_player;
 }
 
-//	Todo:stl
 void Rule_Base::setPlayer(const std::shared_ptr<Player> & player) {
-	// TODO - implement Rule_Character::setPlayer
-	throw "Not yet implemented";
+	m_player = player;
 }
 
 void Rule_Base::readyStage() const {

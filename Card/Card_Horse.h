@@ -10,7 +10,7 @@ class Card_Horse : public Card_Equipment {
 public:
 	Card_Horse(ECardName name, ECardSuit suit, int number);
 	int getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const override;
-	void getHorseType() const;
+	EHorseType getHorseType() const;
 	virtual ~Card_Horse() = 0 { }
 private:
 	EHorseType m_horseType;

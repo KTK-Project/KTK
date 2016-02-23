@@ -1,10 +1,26 @@
 #include "Card_Horse.h"
 
 
-//	Todo:stl
-Card_Horse::Card_Horse(ECardName name, ECardSuit suit, int number) : Card_Equipment(name, suit, number, EEquipmentCard_Type::HORSE) {
-	switch (name) {
+Card_Horse::Card_Horse(ECardName name, ECardSuit suit, int number) 
+	 :Card_Equipment(name, suit, number, EEquipmentCard_Type::HORSE) {
+	switch (name)
+	{
+		case ECardName::JUEYING:
+			m_horseType = EHorseType::DEFENSIVE;
+			break;
+		case ECardName::ZHUAHUANGFEIDIAN:
+			m_horseType = EHorseType::DEFENSIVE;
+			break;
+		case ECardName::DILU:
+			m_horseType = EHorseType::DEFENSIVE;
+			break;
+		case ECardName::ZIXING:
+			m_horseType = EHorseType::OFFENSIVE;
+			break;
 		case ECardName::CHITU:
+			m_horseType = EHorseType::OFFENSIVE;
+			break;
+		case ECardName::DAWAN:
 			m_horseType = EHorseType::OFFENSIVE;
 			break;
 		default:
@@ -17,8 +33,6 @@ int Card_Horse::getGoalPlayerQuantity(const std::shared_ptr<Player> & requester)
 	return 0;
 }
 
-//	Todo:stl
-void Card_Horse::getHorseType() const {
-	// TODO - implement Card_Horse::getHorseType
-	throw "Not yet implemented";
+EHorseType Card_Horse::getHorseType() const {
+	return m_horseType;
 }

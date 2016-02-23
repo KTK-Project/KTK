@@ -1,63 +1,51 @@
 #include "Event_Slash.h"
 
-//	Todo:stl
 const std::shared_ptr<Player> & Event_Slash::getFirstPlayer() const {
-	return this->m_firstPlayer;
+	return m_firstPlayer;
 }
 
-//	Todo:stl
 void Event_Slash::setFirstPlayer(const std::shared_ptr<Player> & firstPlayer) {
-	throw "Not yet implemented";
+	m_firstPlayer = firstPlayer;
 }
 
-//	Todo:stl
 const std::shared_ptr<Card> & Event_Slash::getWeapon() const {
-	return this->m_weapon;
+	return m_weapon;
 }
 
-//	Todo:stl
 void Event_Slash::setWeapon(const std::shared_ptr<Card> & weapon) {
-	throw "Not yet implemented";
+	m_weapon = weapon;
 }
 
-//	Todo:stl
 const std::shared_ptr<Player> & Event_Slash::getGoalPlayers() const {
-	return this->m_goalPlayers;
+	return m_goalPlayers;
 }
 
-//	Todo:stl
 void Event_Slash::setGoalPlayers(const std::shared_ptr<Player> & goalPlayers) {
-	throw "Not yet implemented";
+	m_goalPlayers = goalPlayers;
 }
 
-//	Todo:stl
 const std::shared_ptr<Card> & Event_Slash::getArmor() const {
-	return this->m_armor;
+	return m_armor;
 }
 
-//	Todo:stl
 void Event_Slash::setArmor(const std::shared_ptr<Card> & armor) {
-	throw "Not yet implemented";
+	m_armor = armor;
 }
 
-//	Todo:stl
 std::vector<std::shared_ptr<Card>> & Event_Slash::getSlashs() {
-	return this->m_slashs;
+	return m_slashs;
 }
 
-//	Todo:stl
 bool Event_Slash::getNeedToAskPlayer() const {
-	return this->m_needToAskPlayer;
+	return m_needToAskPlayer;
 }
 
-//	Todo:stl
 void Event_Slash::setNeedToAskPlayer(bool needToAskPlayer) {
-	throw "Not yet implemented";
+	m_needToAskPlayer = needToAskPlayer;
 }
 
-//	Todo:stl
 ESlashState Event_Slash::getSlashState() const {
-	return this->m_slashState;
+	return m_slashState;
 }
 
 void Event_Slash::setSlashState(ESlashState slashState) {

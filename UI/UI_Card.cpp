@@ -19,26 +19,20 @@ void UI_Card::initListenToUpDown() const {
 	throw "Not yet implemented";
 }
 
-//	Todo:stl
 const std::shared_ptr<Card> & UI_Card::getCard() const {
-	// TODO - implement UI_Card::getCard
-	throw "Not yet implemented";
+	return m_card;
 }
 
-//	Todo:stl
 void UI_Card::setCard(const std::shared_ptr<Card> & card) {
-	// TODO - implement UI_Card::setCard
-	throw "Not yet implemented";
+	m_card = card;
 }
 
-//	Todo:stl
 void UI_Card::setDescription(const cocos2d::Label * description) {
-	throw "Not yet implemented";
+	m_description = description;
 }
 
-//	Todo:stl
 bool UI_Card::getDark() const {
-	return this->m_dark;
+	return m_dark;
 }
 
 void UI_Card::setDark(bool dark) {
@@ -48,9 +42,8 @@ void UI_Card::setDark(bool dark) {
 	throw "Not yet implemented";
 }
 
-//	Todo:stl
 bool UI_Card::getCanUp() const {
-	return this->m_canUp;
+	return m_canUp;
 }
 
 void UI_Card::setCanUp(bool canUp) {
@@ -61,9 +54,8 @@ void UI_Card::setCanUp(bool canUp) {
 	throw "Not yet implemented";
 }
 
-//	Todo:stl
 bool UI_Card::getUpping() const {
-	return this->m_upping;
+	return m_upping;
 }
 
 void UI_Card::setUpping(bool upping) {
@@ -75,14 +67,12 @@ void UI_Card::setUpping(bool upping) {
 	throw "Not yet implemented";
 }
 
-//	Todo:stl
 void UI_Card::setUpCallBack(const std::function<void (const UI_Card *)> & upCallBack) {
-	throw "Not yet implemented";
+	m_upCallBack = upCallBack;
 }
 
-//	Todo:stl
 void UI_Card::setDownCallBack(const std::function<void (const UI_Card *)> & downCallBack) {
-	throw "Not yet implemented";
+	m_downCallBack = downCallBack;
 }
 
 cocos2d::Action * UI_Card::runAction(const cocos2d::Action * action) const {
@@ -91,7 +81,6 @@ cocos2d::Action * UI_Card::runAction(const cocos2d::Action * action) const {
 	throw "Not yet implemented";
 }
 
-//	Todo:stl
 EventListenerTouchOneByOne* UI_Card::getListener() const {
-	return this->m_listener;
+	return m_listener;
 }

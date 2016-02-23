@@ -18,7 +18,7 @@ public:
 	int getMaxSelects() const;
 	void setMaxSelects(int maxSelects);
 	const std::function<void ()> & getMaxCallBack() const;
-	void setMaxCallBack(const std::function<void ()> & m_maxCallBack);
+	void setMaxCallBack(const std::function<void ()> & maxCallBack);
 	const std::function<void ()> & getUnmaxCallBack() const;
 	void setUnmaxCallBack(const std::function<void ()> & unmaxCallBack);
 

@@ -1,4 +1,6 @@
 #include "GameManager.h"
+#include "Card\Card_AllOutOfNone.h"
+#include <utility>
 
 GameManager * GameManager::getInstance() {
 	static GameManager * instance = nullptr;
@@ -40,8 +42,7 @@ void GameManager::gameBegin() {
 	// 初始化所有的管理器。
 
 //	Todo:stl!!!!!!	构建所有的卡牌
-
-
+	m_darkcardPile.pushBack(std::make_shared<Card_AllOutOfNone>(ECardSuit::CLUB, 1));
 	// TODO - implement GameManager::gameBegin
 	throw "Not yet implemented";
 }

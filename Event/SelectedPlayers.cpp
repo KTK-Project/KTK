@@ -29,32 +29,26 @@ bool SelectedPlayers::hasPlayer(const std::shared_ptr<Player> & player) const {
 	throw "Not yet implemented";
 }
 
-//	Todo:stl
 int SelectedPlayers::getMaxSelects() const {
 	return m_maxSelects;
 }
 
-//	Todo:stl
 void SelectedPlayers::setMaxSelects(int maxSelects) {
 	m_maxSelects = maxSelects;
 }
 
-//	Todo:stl
 const std::function<void()> & SelectedPlayers::getMaxCallBack() const {
-	return this->m_maxCallBack;
+	return m_maxCallBack;
 }
 
-//	Todo:stl
-void SelectedPlayers::setMaxCallBack(const std::function<void ()> & m_maxCallBack) {
-	throw "Not yet implemented";
+void SelectedPlayers::setMaxCallBack(const std::function<void ()> & maxCallBack) {
+	m_maxCallBack = maxCallBack;
 }
 
-//	Todo:stl
 const std::function<void ()> & SelectedPlayers::getUnmaxCallBack() const {
-	return this->m_unmaxCallBack;
+	return m_unmaxCallBack;
 }
 
-//	Todo:stl
 void SelectedPlayers::setUnmaxCallBack(const std::function<void ()> & unmaxCallBack) {
-	throw "Not yet implemented";
+	m_unmaxCallBack = unmaxCallBack;
 }

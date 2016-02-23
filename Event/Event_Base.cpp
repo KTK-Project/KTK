@@ -2,36 +2,28 @@
 
 using std::function;
 
-//	Todo:stl
 EEventType Event_Base::getEventType() const {
-	// TODO - implement Event_Base::getEventType
-	throw "Not yet implemented";
+	return m_eventType;
 }
 
-//	Todo:stl
 void Event_Base::setEventType(EEventType eventType) {
-	// TODO - implement Event_Base::setEventType
-	throw "Not yet implemented";
+	m_eventType = eventType;
 }
 
-//	Todo:stl
 EEventState Event_Base::getEventState() const {
-	return this->m_eventState;
+	return m_eventState;
 }
 
-//	Todo:stl
 void Event_Base::setEventState(EEventState eventState) {
-	throw "Not yet implemented";
+	m_eventState = eventState;
 }
 
-//	Todo:stl
 const function<void (const Event_Base &)> & Event_Base::getFinishCallBack() const {
-	return this->m_finishCallBack;
+	return m_finishCallBack;
 }
 
-//	Todo:stl
 void Event_Base::setFinishCallBack(const function<void (const Event_Base &)> & finishCallBack) {
-	throw "Not yet implemented";
+	m_finishCallBack = finishCallBack;
 }
 
 void Event_Base::finish() const {
