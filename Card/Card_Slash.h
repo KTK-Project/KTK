@@ -7,7 +7,7 @@
 #include "Event\Event_Base.h"
 #include "Player\Player.h"
 
-class Card_Slash : Card_Basic {
+class Card_Slash :private Card_Basic {
 
 public:
 	bool s_usedOnce;
