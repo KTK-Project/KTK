@@ -6,7 +6,7 @@
 #include "Event_RequestCard.h"
 #include "Event_RequestGoalPlayer.h"
 
-class Event_RequestCardAndGoalPlayer : private Event_Interaction {
+class Event_RequestCardAndGoalPlayer : public Event_Interaction {
 
 private:
 	std::shared_ptr<Event_RequestCard> m_requestCardEvent;

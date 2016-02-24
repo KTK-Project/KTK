@@ -5,7 +5,7 @@
 #include <memory>
 #include "Player\Player.h"
 
-class Card_Dodge :private Card_Basic {
+class Card_Dodge : public Card_Basic {
 
 
 public:
