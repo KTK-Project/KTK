@@ -8,6 +8,7 @@ class Card_JusticeShield : public Card_Armor {
 
 
 public:
+	Card_JusticeShield(ECardSuit Suit, int number) : Card_Armor(ECardName::JUSTICESHIELD, Suit, number) { }
 	void eventResolve(const Event_Slash& slashEvent) const;
 };
 #endif // Card_JusticeShield_h__

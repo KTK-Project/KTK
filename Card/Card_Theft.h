@@ -12,6 +12,7 @@ class Card_Theft : public Card_Strategy {
 
 
 public:
+	Card_Theft(ECardSuit Suit, int number) : Card_Strategy(ECardName::THEFT, Suit, number) {}
 	int getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const;
 
 	std::vector<std::shared_ptr<Player>> getCandidates(const std::shared_ptr<Player> & playCardPlayer) const;

@@ -4,6 +4,7 @@
 #include "Card_Weapon.h"
 
 class Card_ZhuGeCrossBow : public Card_Weapon {
-
+public:
+	Card_ZhuGeCrossBow(ECardSuit Suit, int number) :Card_Weapon(ECardName::ZHUGECROSSBOW, Suit, number) {}
 };
 #endif // Card_ZhuGeCrossBow_h__
