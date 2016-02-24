@@ -5,7 +5,7 @@
 #include "SelectedPlayers.h"
 #include <vector>
 
-class Event_RequestGoalPlayer : Event_Interaction {
+class Event_RequestGoalPlayer : private  Event_Interaction {
 
 private:
 	std::vector<std::shared_ptr<Player>> m_candidate;

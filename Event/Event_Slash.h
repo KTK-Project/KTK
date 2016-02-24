@@ -8,7 +8,7 @@
 #include "Card\Card.h"
 #include "Player\Player.h"
 
-class Event_Slash : Event_Base {
+class Event_Slash :private  Event_Base {
 public:
 	const std::shared_ptr<Player> & getFirstPlayer() const;
 	void setFirstPlayer(const std::shared_ptr<Player> & firstPlayer);

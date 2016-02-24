@@ -6,7 +6,7 @@
 #include "Player\Player.h"
 #include "Card\Card.h"
 
-class Event_RequestPlayerCard : Event_Interaction {
+class Event_RequestPlayerCard : private   Event_Interaction {
 
 private:
 	std::shared_ptr<Player> m_player;

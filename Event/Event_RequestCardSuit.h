@@ -4,7 +4,7 @@
 #include "Event_Interaction.h"
 #include "Manager\KTK_Enum.h"
 
-class Event_RequestCardSuit : Event_Interaction {
+class Event_RequestCardSuit : private Event_Interaction {
 
 public:
 	ECardSuit m_receiver;
