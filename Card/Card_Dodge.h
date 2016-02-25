@@ -6,8 +6,6 @@
 #include "Player\Player.h"
 
 class Card_Dodge : public Card_Basic {
-
-
 public:
 	Card_Dodge(ECardSuit Suit, int number) : Card_Basic(ECardName::DODGE, Suit, number) { }
 	int getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const;

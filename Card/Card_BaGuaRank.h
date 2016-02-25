@@ -5,8 +5,6 @@
 #include "Event\Event_RequestCard.h"
 
 class Card_BaGuaRank : public Card_Armor {
-
-
 public:
 	Card_BaGuaRank(ECardSuit Suit, int number) : Card_Armor(ECardName::BAGUARANK, Suit, number) { }
 	void eventResolve(const Event_RequestCard& event) const;

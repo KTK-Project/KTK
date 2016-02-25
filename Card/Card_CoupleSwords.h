@@ -7,8 +7,6 @@
 
 
 class Card_CoupleSwords : public Card_Weapon {
-
-
 public:
 	Card_CoupleSwords(ECardSuit Suit, int number) : Card_Weapon(ECardName::COUPLESWORDS, Suit, number) { }
 	void eventResolve(const Event_Slash& slashEvent) const;

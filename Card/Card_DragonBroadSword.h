@@ -5,8 +5,6 @@
 #include "Event\Event_Slash.h"
 
 class Card_DragonBroadSword : public Card_Weapon {
-
-
 public:
 	Card_DragonBroadSword(ECardSuit Suit, int number) : Card_Weapon(ECardName::DRAGONBROADSWORD, Suit, number) { }
 	void eventResolve(const Event_Slash & slashEvent) const;

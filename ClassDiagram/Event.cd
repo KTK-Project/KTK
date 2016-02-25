@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Event_AllOutOfNone" Collapsed="true">
+  <Class Name="Event_AllOutOfNone">
     <Position X="5.75" Y="3.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_AllOutOfNone.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_ArrowRain" Collapsed="true">
+  <Class Name="Event_ArrowRain">
     <Position X="10.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
@@ -42,7 +42,7 @@
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Duel.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_Dying" Collapsed="true">
+  <Class Name="Event_Dying">
     <Position X="1.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAgAAFQBQAQAAAAAAAAAAAAAAAIwA=</HashCode>
@@ -87,7 +87,7 @@
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Interaction.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_Judge" Collapsed="true">
+  <Class Name="Event_Judge">
     <Position X="3.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIAAKgAAAAAABAAAAACAAAgAAEAAAAhA=</HashCode>
@@ -143,7 +143,7 @@
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_RequestCardSuit.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_RequestGoalPlayer" Collapsed="true">
+  <Class Name="Event_RequestGoalPlayer">
     <Position X="48.5" Y="3.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAQAgAAABAAAAAAAABAAABQAAAAAAEAgAAABAQQgA=</HashCode>
@@ -171,10 +171,10 @@
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Slash.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_SouthInvasion">
+  <Class Name="Event_SouthInvasion" Collapsed="true">
     <Position X="8.25" Y="3.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAACEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_SouthInvasion.h</FileName>
     </TypeIdentifier>
   </Class>

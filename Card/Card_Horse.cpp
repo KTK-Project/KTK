@@ -3,8 +3,7 @@
 
 Card_Horse::Card_Horse(ECardName name, ECardSuit suit, int number) 
 	 :Card_Equipment(name, suit, number, EEquipmentCard_Type::HORSE) {
-	switch (name)
-	{
+	switch (name) {
 		case ECardName::JUEYING:
 			m_horseType = EHorseType::DEFENSIVE;
 			break;
