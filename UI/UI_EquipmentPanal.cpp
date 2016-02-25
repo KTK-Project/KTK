@@ -1,6 +1,7 @@
 #include "UI_EquipmentPanal.h"
 
-void UI_EquipmentPanal::init() const {
+bool UI_EquipmentPanal::init() const
+{
 	//考虑player为nullptr的情况。
 //根据是否为forwardPlayer创建4个Sprite，设置为隐藏
 	// TODO - implement UI_EquipmentPanal::init

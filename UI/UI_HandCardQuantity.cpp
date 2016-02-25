@@ -1,6 +1,6 @@
 #include "UI_HandCardQuantity.h"
 
-void UI_HandCardQuantity::init() const {
+bool UI_HandCardQuantity::init() {
 	//创建好两个成员
 	// TODO - implement UI_HandCardQuantity::init
 	throw "Not yet implemented";

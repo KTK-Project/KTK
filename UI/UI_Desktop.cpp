@@ -3,7 +3,7 @@
 using cocos2d::Vec2;
 using std::string;
 
-void UI_Desktop::init() const {
+bool UI_Desktop::init() const {
 	// TODO - implement UI_Desktop::init
 	throw "Not yet implemented";
 }

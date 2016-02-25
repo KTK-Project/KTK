@@ -12,7 +12,38 @@
 #include "UI_InformationBox.h"
 #include "UI_LogBox.h"
 
-class UI_PlayerPanal {
+class UI_PlayerPanal : public cocos2d::Node {
+public:
+	static UI_PlayerPanal* create(const std::shared_ptr<Player> player) {
+		UI_PlayerPanal * pRet = new(std::nothrow) UI_PlayerPanal();
+		if (pRet && pRet->initWithPlayer(player)) {
+			pRet->autorelease();
+			return pRet;
+		}
+		else {
+			delete pRet;
+			pRet = NULL;
+			return NULL;
+		}
+	}
+	bool initWithPlayer(const std::shared_ptr<Player> player) const;
+
+	std::shared_ptr<Player> getPlayer() const;
+	void setPlayer(const std::shared_ptr<Player> player) const;
+	UI_ID* getID() const;
+	UI_HP* getHP() const;
+	UI_Position* getPositionUI() const;
+	UI_HandCardQuantity* getHandCardQuantity() const;
+	UI_EquipmentPanal* getEquipmentPanal() const;
+	UI_JudgeIcon* getJudgeIcon() const;
+	UI_InformationBox* getInformationBox() const;
+	UI_LogBox* getLogBox() const;
+	void drawCards(const std::vector<std::shared_ptr<Card>>& cards) const;
+	EPlayerColor getPlayerColor() const;
+	void setPlayerColor(const EPlayerColor m_playerColor) const;
+	EPlayerPanalState getPlayerPanalState() const;
+	void setPlayerPanalState(const EPlayerPanalState m_playerPanalState) const;
+	void clean() const;
 
 private:
 	cocos2d::Sprite* m_background;
@@ -30,40 +61,5 @@ private:
 	std::shared_ptr<Player> m_player;
 	EPlayerColor m_playerColor;
 	EPlayerPanalState m_playerPanalState;
-
-public:
-	void initWithPlayer(const std::shared_ptr<Player> player) const;
-
-	std::shared_ptr<Player> getPlayer() const;
-
-	void setPlayer(const std::shared_ptr<Player> player) const;
-
-	UI_ID* getID() const;
-
-	UI_HP* getHP() const;
-
-	UI_Position* getPosition() const;
-
-	UI_HandCardQuantity* getHandCardQuantity() const;
-
-	UI_EquipmentPanal* getEquipmentPanal() const;
-
-	UI_JudgeIcon* getJudgeIcon() const;
-
-	UI_InformationBox* getInformationBox() const;
-
-	UI_LogBox* getLogBox() const;
-
-	void drawCards(const std::vector<std::shared_ptr<Card>>& cards) const;
-
-	EPlayerColor getPlayerColor() const;
-
-	void setPlayerColor(const EPlayerColor m_playerColor) const;
-
-	EPlayerPanalState getPlayerPanalState() const;
-
-	void setPlayerPanalState(const EPlayerPanalState m_playerPanalState) const;
-
-	void clean() const;
 };
 #endif // UI_PlayerPanal_h__

@@ -3,6 +3,7 @@
 #include "GameSence.h"
 #include "Manager/TextManager.h"
 #include <fstream>
+#include "UI/UI_Card.h"
 
 using namespace cocos2d;
 

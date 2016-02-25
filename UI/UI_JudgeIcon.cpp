@@ -1,6 +1,6 @@
 #include "UI_JudgeIcon.h"
 
-void UI_JudgeIcon::init() const {
+bool UI_JudgeIcon::init() {
 	//创建两个sprite，并设置为隐藏
 	// TODO - implement UI_JudgeIcon::init
 	throw "Not yet implemented";

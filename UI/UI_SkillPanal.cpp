@@ -1,6 +1,6 @@
 #include "UI_SkillPanal.h"
 
-void UI_SkillPanal::init() const {
+bool UI_SkillPanal::init() {
 	// TODO - implement UI_SkillPanal::init
 	throw "Not yet implemented";
 }

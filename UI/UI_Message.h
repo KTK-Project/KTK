@@ -5,7 +5,29 @@
 #include "ui\CocosGUI.h"
 #include "Event\Event_Base.h"
 
-class UI_Message {
+class UI_Message : public cocos2d::Node {
+public:
+	static UI_Message* create() {
+		UI_Message * pRet = new(std::nothrow) UI_Message();
+		if (pRet && pRet->init()) {
+			pRet->autorelease();
+			return pRet;
+		}
+		else {
+			delete pRet;
+			pRet = NULL;
+			return NULL;
+		}
+	}
+	bool init();
+
+	void setString(const std::string& string) const;
+	void setVisible(const bool visible) const;
+	void update(const float delta) const;
+	void setButton1ValidCheck(const std::function<bool ()> m_button1ValidCheck) const;
+	void setButton2ValidCheck(const std::function<bool ()> m_button2ValidCheck) const;
+	void setButton1CallBack(const std::function<void (const std::shared_ptr<Event_Base>&)> m_button1CallBack) const;
+	void setButton2CallBack(const std::function<void (const std::shared_ptr<Event_Base>&)> m_button2CallBack) const;
 
 private:
 	cocos2d::Label* m_message;
@@ -13,20 +35,5 @@ private:
 	cocos2d::ui::Button* m_button2;
 	std::function<bool ()> m_button1ValidCheck;
 	std::function<bool ()> m_button2ValidCheck;
-
-public:
-	void setString(const std::string& string) const;
-
-	void setVisible(const bool visible) const;
-
-	void update(const float delta) const;
-
-	void setButton1ValidCheck(const std::function<bool ()> m_button1ValidCheck) const;
-
-	void setButton2ValidCheck(const std::function<bool ()> m_button2ValidCheck) const;
-
-	void setButton1CallBack(const std::function<void (const std::shared_ptr<Event_Base>&)> m_button1CallBack) const;
-
-	void setButton2CallBack(const std::function<void (const std::shared_ptr<Event_Base>&)> m_button2CallBack) const;
 };
 #endif // UI_Message_h__

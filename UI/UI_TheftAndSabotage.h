@@ -8,18 +8,28 @@
 #include "Manager/KTK_Enum.h"
 #include "UI_Card.h"
 
-class UI_TheftAndSabotage {
+class UI_TheftAndSabotage : public cocos2d::Node {
+public:
+	static UI_TheftAndSabotage* create(const std::shared_ptr<Player> player, const ECardName cardName) {
+		UI_TheftAndSabotage * pRet = new(std::nothrow) UI_TheftAndSabotage();
+		if (pRet && pRet->initWithPlayer(player, cardName)) {
+			pRet->autorelease();
+			return pRet;
+		}
+		else {
+			delete pRet;
+			pRet = NULL;
+			return NULL;
+		}
+	}
+	bool initWithPlayer(const std::shared_ptr<Player> player, const ECardName cardName) const;
+
+	std::shared_ptr<Card> getSelectedCard() const;
+	void setSelectedCard(const std::shared_ptr<Card> m_selectedCard) const;
 
 private:
 	std::shared_ptr<Player> m_player;
 	std::vector<UI_Card*> m_cards;
 	std::shared_ptr<Card> m_selectedCard;
-
-public:
-	bool initWithPlayer(const std::shared_ptr<Player> player, const ECardName cardName) const;
-
-	std::shared_ptr<Card> getSelectedCard() const;
-
-	void setSelectedCard(const std::shared_ptr<Card> m_selectedCard) const;
 };
 #endif // UI_TheftAndSabotage_h__

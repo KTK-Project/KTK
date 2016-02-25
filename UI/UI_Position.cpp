@@ -1,6 +1,6 @@
 #include "UI_Position.h"
 
-void UI_Position::init() const {
+bool UI_Position::init() {
 	//创建好两个成员
 	// TODO - implement UI_Position::init
 	throw "Not yet implemented";

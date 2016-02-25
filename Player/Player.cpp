@@ -143,6 +143,6 @@ const UI_PlayerPanal * Player::getPlayerPanal() const {
 	return m_playerPanal;
 }
 
-void Player::setPlayerPanal(const UI_PlayerPanal * playerPanal) {
+void Player::setPlayerPanal(UI_PlayerPanal * playerPanal) {
 	m_playerPanal = playerPanal;
 }

@@ -1,6 +1,6 @@
 #include "UI_PlayerPanal.h"
 
-void UI_PlayerPanal::initWithPlayer(const std::shared_ptr<Player> player) const {
+bool UI_PlayerPanal::initWithPlayer(const std::shared_ptr<Player> player) const {
 	// TODO - implement UI_PlayerPanal::initWithPlayer
 	throw "Not yet implemented";
 	//创建所有组件，addchild以后调用各个组件的refresh
@@ -28,7 +28,7 @@ UI_HP* UI_PlayerPanal::getHP() const {
 	throw "Not yet implemented";
 }
 
-UI_Position* UI_PlayerPanal::getPosition() const {
+UI_Position* UI_PlayerPanal::getPositionUI() const {
 	// TODO - implement UI_PlayerPanal::getPosition
 	throw "Not yet implemented";
 }

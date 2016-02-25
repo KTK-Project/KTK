@@ -4,8 +4,20 @@
 #include "cocos2d.h"
 #include "ui\CocosGUI.h"
 
-class UI_DebugBox {
+class UI_DebugBox : public cocos2d::Node {
 public:
+	static UI_DebugBox* create() {
+		UI_DebugBox * pRet = new(std::nothrow) UI_DebugBox();
+		if (pRet && pRet->init()) {
+			pRet->autorelease();
+			return pRet;
+		}
+		else {
+			delete pRet;
+			pRet = NULL;
+			return NULL;
+		}
+	}
 	bool init() const;
 private:
 	cocos2d::ui::ListView* m_listView;

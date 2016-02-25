@@ -1,5 +1,11 @@
 #include "UI_HandCardPanal.h"
 
+bool UI_HandCardPanal::init() {
+//	Todo:stm
+	throw "Not yet implemented";
+	return true;
+}
+
 UI_HandCardPage* UI_HandCardPanal::getPageByIndex(const int index) const {
 	//¶ÏÑÔ£¨Õý³£·¶Î§£©
 //·µ»ØUI_handcardPage *

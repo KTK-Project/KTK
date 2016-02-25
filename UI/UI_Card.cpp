@@ -3,14 +3,19 @@
 #include <memory>
 
 using std::shared_ptr;
+using cocos2d::Sprite;
 using cocos2d::Label;
 using cocos2d::Action;
 using cocos2d::EventListenerTouchOneByOne;
 
-bool UI_Card::initWithCard(const shared_ptr<Card> card) const {
-	//初始化各个成员，并且初始化listener，但是不绑定。
-	// TODO - implement UI_Card::initWithCard
-	throw "Not yet implemented";
+bool UI_Card::initWithCard(const std::shared_ptr<Card> card) {
+//	Todo:stm
+	m_cardPattern = Sprite::create("png\\card\\123.png");
+// 	m_suit = Label::create("");
+	m_number = Label::create("A", "ziti.otf", 44);
+	addChild(m_cardPattern);
+	addChild(m_number);
+	return true;
 }
 
 void UI_Card::initListenToUpDown() const {
@@ -27,7 +32,7 @@ void UI_Card::setCard(const std::shared_ptr<Card> & card) {
 	m_card = card;
 }
 
-void UI_Card::setDescription(const cocos2d::Label * description) {
+void UI_Card::setDescription(cocos2d::Label * description) {
 	m_description = description;
 }
 

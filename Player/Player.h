@@ -61,7 +61,7 @@ public:
 
 	// ∂‘”¶UI
 	const UI_PlayerPanal * getPlayerPanal() const;
-	void setPlayerPanal(const UI_PlayerPanal * playerPanal);
+	void setPlayerPanal(UI_PlayerPanal * playerPanal);
 
 private:
 	//  Ù–‘

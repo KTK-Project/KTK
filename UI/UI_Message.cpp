@@ -1,5 +1,10 @@
 #include "UI_Message.h"
 
+bool UI_Message::init() {
+	throw "Not yet implemented";
+	return true;
+}
+
 void UI_Message::setString(const std::string& string) const {
 	// TODO - implement UI_Message::setString
 	throw "Not yet implemented";

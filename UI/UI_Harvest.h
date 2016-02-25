@@ -6,17 +6,27 @@
 #include "UI_Card.h"
 #include "Player/Player.h"
 
-class UI_Harvest {
+class UI_Harvest : public cocos2d::Node {
+public:
+	static UI_Harvest* create(const std::vector<std::shared_ptr<Card>> cards) {
+		UI_Harvest * pRet = new(std::nothrow) UI_Harvest();
+		if (pRet && pRet->initWithCards(cards)) {
+			pRet->autorelease();
+			return pRet;
+		}
+		else {
+			delete pRet;
+			pRet = NULL;
+			return NULL;
+		}
+	}
+	bool initWithCards(const std::vector<std::shared_ptr<Card>> cards) const;
+
+	void chosedCard(const std::shared_ptr<Player> player, const std::shared_ptr<Card> card) const;
+	void chosedCard(const std::shared_ptr<Player> player, const UI_Card* card) const;
 
 private:
 	std::vector<UI_Card*> m_cards;
 	std::vector<std::shared_ptr<Player>> m_players;
-
-public:
-	bool initWithCards(const std::vector<std::shared_ptr<Card>> cards) const;
-
-	void chosedCard(const std::shared_ptr<Player> player, const std::shared_ptr<Card> card) const;
-
-	void chosedCard(const std::shared_ptr<Player> player, const UI_Card* card) const;
 };
 #endif // UI_Harvest_h__

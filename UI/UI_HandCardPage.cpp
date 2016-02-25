@@ -1,5 +1,10 @@
 #include "UI_HandCardPage.h"
 
+bool UI_HandCardPage::init() {
+//	Todo:stm
+	return true;
+}
+
 std::vector<UI_Card*>& UI_HandCardPage::getCards() const {
 	//返回m_cards的引用
 	// TODO - implement UI_HandCardPage::getCards

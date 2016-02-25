@@ -1,6 +1,6 @@
 #include "UI_InformationBox.h"
 
-void UI_InformationBox::init() const {
+bool UI_InformationBox::init() {
 	//初始化layout和background，把他们加入滚动容器中
 	// TODO - implement UI_InformationBox::init
 	throw "Not yet implemented";

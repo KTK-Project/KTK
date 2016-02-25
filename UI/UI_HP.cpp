@@ -1,6 +1,6 @@
 #include "UI_HP.h"
 
-void UI_HP::init() const {
+bool UI_HP::init() {
 	//创建好精灵
 	// TODO - implement UI_HP::init
 	throw "Not yet implemented";

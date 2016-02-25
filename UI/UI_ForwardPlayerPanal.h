@@ -14,6 +14,27 @@
 #include "Manager\KTK_Enum.h"
 
 class UI_ForwardPlayerPanal : public UI_PlayerPanal {
+public:
+	static UI_ForwardPlayerPanal* create(const std::shared_ptr<Player> player) {
+		UI_ForwardPlayerPanal * pRet = new(std::nothrow) UI_ForwardPlayerPanal();
+		if (pRet && pRet->initWithPlayer(player)) {
+			pRet->autorelease();
+			return pRet;
+		}
+		else {
+			delete pRet;
+			pRet = NULL;
+			return NULL;
+		}
+	}
+	bool initWithPlayer(const std::shared_ptr<Player> player) const;
+
+	UI_SkillPanal* getSkillPanal() const;
+	UI_HandCardPanal* getHandCardPanal() const;
+	UI_Message* getMessage() const;
+	void drawCards(const std::vector<std::shared_ptr<Card>>& cards) const;
+	void setPlayerPanalState(const EPlayerPanalState m_playerPanalState) const;
+	void clean() const;
 
 private:
 	UI_SkillPanal* m_skillPanal;
@@ -23,20 +44,5 @@ private:
 	int m_cardFilter;
 	SelectedCards m_selectedCards;
 	SelectedPlayers m_selectedPlayers;
-
-public:
-	void initWithPlayer(const std::shared_ptr<Player> player) const;
-
-	UI_SkillPanal* getSkillPanal() const;
-
-	UI_HandCardPanal* getHandCardPanal() const;
-
-	UI_Message* getMessage() const;
-
-	void drawCards(const std::vector<std::shared_ptr<Card>>& cards) const;
-
-	void setPlayerPanalState(const EPlayerPanalState m_playerPanalState) const;
-
-	void clean() const;
 };
 #endif // UI_ForwardPlayerPanal_h__

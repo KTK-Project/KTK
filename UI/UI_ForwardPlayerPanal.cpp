@@ -1,6 +1,6 @@
 #include "UI_ForwardPlayerPanal.h"
 
-void UI_ForwardPlayerPanal::initWithPlayer(const std::shared_ptr<Player> player) const {
+bool UI_ForwardPlayerPanal::initWithPlayer(const std::shared_ptr<Player> player) const {
 	//调用基类initwithPlayer
 //初始化其他对象
 	// TODO - implement UI_ForwardPlayerPanal::initWithPlayer
