@@ -10,7 +10,7 @@
 class Card_Slash : public Card_Basic {
 
 public:
-	Card_Slash(ECardSuit suit, int number) :Card_Basic(ECardName::SLASH, suit, number) { }
+	Card_Slash(ECardSuit suit, int number) : Card_Basic(ECardName::SLASH, suit, number) { }
 	bool s_usedOnce;
 	
 	int getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const;

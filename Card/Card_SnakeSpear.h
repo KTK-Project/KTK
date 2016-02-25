@@ -5,6 +5,6 @@
 
 class Card_SnakeSpear : public Card_Weapon {
 public:
-	Card_SnakeSpear(ECardSuit Suit, int number) :Card_Weapon(ECardName::SNAKESPEAR, Suit, number) {}
+	Card_SnakeSpear(ECardSuit Suit, int number) : Card_Weapon(ECardName::SNAKESPEAR, Suit, number) { }
 };
 #endif // Card_SnakeSpear_h__
