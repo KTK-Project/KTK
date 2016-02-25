@@ -21,10 +21,8 @@ public:
 		}
 	}
 	bool initWithCards(const std::vector<std::shared_ptr<Card>> cards) const;
-
 	void chosedCard(const std::shared_ptr<Player> player, const std::shared_ptr<Card> card) const;
 	void chosedCard(const std::shared_ptr<Player> player, const UI_Card* card) const;
-
 private:
 	std::vector<UI_Card*> m_cards;
 	std::vector<std::shared_ptr<Player>> m_players;

@@ -28,14 +28,12 @@ public:
 		}
 	}
 	bool initWithPlayer(const std::shared_ptr<Player> player) const;
-
 	UI_SkillPanal* getSkillPanal() const;
 	UI_HandCardPanal* getHandCardPanal() const;
 	UI_Message* getMessage() const;
 	void drawCards(const std::vector<std::shared_ptr<Card>>& cards) const;
 	void setPlayerPanalState(const EPlayerPanalState m_playerPanalState) const;
 	void clean() const;
-
 private:
 	UI_SkillPanal* m_skillPanal;
 	UI_HandCardPanal* m_handCardPanal;

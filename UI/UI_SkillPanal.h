@@ -21,10 +21,8 @@ public:
 		}
 	}
 	bool init();
-
 	void setSkillState(const Skill skill, const ESkillState state) const;
 	void refresh() const;
-
 private:
 	std::vector<cocos2d::Sprite*> m_skillIcons;
 };

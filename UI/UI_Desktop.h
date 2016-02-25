@@ -21,7 +21,6 @@ public:
 		}
 	}
 	bool init() const;
-
 	int pushBack(const UI_Card* card) const;
 	cocos2d::Vec2 getPositionForCard(const int index) const;
 	void addCards(const UI_Card* card, const std::string& description) const;
@@ -30,7 +29,6 @@ public:
 	void setNeedToClean(const bool m_needToClean) const;
 	void clean() const;
 	void update(const float delta) const;
-
 private:
 	std::vector<UI_Card*> m_cards;
 	bool m_needToClean;

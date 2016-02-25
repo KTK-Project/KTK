@@ -19,9 +19,7 @@ public:
 		}
 	}
 	bool init();
-
 	void setMarkID(const ECharID ID) const;
-
 private:
 	cocos2d::Sprite* m_markID;
 	cocos2d::Node* m_IDList;

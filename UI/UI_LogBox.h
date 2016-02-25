@@ -20,9 +20,7 @@ public:
 		}
 	}
 	bool init() const;
-
 	void addLog(const std::string& log) const;
-
 private:
 	cocos2d::ui::ListView* m_listView;
 	cocos2d::ui::CheckBox* m_scrollCheckBox;

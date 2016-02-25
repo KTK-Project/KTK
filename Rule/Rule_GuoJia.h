@@ -6,13 +6,9 @@
 #include "Event\Event_Judge.h"
 
 class Rule_GuoJia : public Rule_Base {
-
-
 public:
 	void beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const;
-
 	void tianDu(const std::shared_ptr<Event_Judge>& event) const;
-
 	void yiJi(const std::shared_ptr<Event_Hurt>& event) const;
 };
 #endif // Rule_GuoJia_h__

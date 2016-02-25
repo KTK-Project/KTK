@@ -20,10 +20,8 @@ public:
 		}
 	}
 	bool init();
-
 	void addLabel(const std::string& information) const;
 	void removeAll() const;
-
 private:
 	std::vector<cocos2d::Label*> m_labels;
 	cocos2d::ui::Layout* m_layout;

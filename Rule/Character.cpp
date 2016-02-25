@@ -2,8 +2,7 @@
 
 Character::Character(ECharName name /*= ECharName::NONE*/) {
 	m_name = name;
-	switch (name)
-	{
+	switch (name) {
 		case ECharName::CAOCAO:
 			m_force = ECharForce::WEI;
 			m_sex = ECharSex::MALE;

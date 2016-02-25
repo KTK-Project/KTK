@@ -23,7 +23,6 @@ public:
 		}
 	}
 	bool init();
-
 	UI_HandCardPage* getPageByIndex(const int index) const;
 	int getCurrentPageIndex() const;
 	void setCurrentPageIndex(const int currentPageIndex) const;
@@ -38,7 +37,6 @@ public:
 	void for_each_card(const std::function<void (const UI_Card*)>& fun) const;
 	void update(const float delta) const;
 	void finish() const;
-
 private:
 	std::vector<UI_HandCardPage*> m_pages;
 	std::deque<UI_Card*> m_addCardQueue;

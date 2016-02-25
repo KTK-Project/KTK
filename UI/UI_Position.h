@@ -18,9 +18,7 @@ public:
 		}
 	}
 	bool init();
-
 	void refresh() const;
-
 private:
 	cocos2d::Sprite* m_positionBackground;
 	cocos2d::Label* m_label;

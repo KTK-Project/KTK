@@ -19,10 +19,8 @@ public:
 		}
 	}
 	bool initWithCards(const std::vector<std::shared_ptr<Card>>& topCards) const;
-
 	std::vector<UI_Card*>& getTopCards() const;
 	std::vector<UI_Card*>& getBottonCards() const;
-
 private:
 	std::vector<UI_Card*> m_topCards;
 	std::vector<UI_Card*> m_bottonCards;

@@ -27,7 +27,6 @@ public:
 		}
 	}
 	bool initWithPlayer(const std::shared_ptr<Player> player) const;
-
 	std::shared_ptr<Player> getPlayer() const;
 	void setPlayer(const std::shared_ptr<Player> player) const;
 	UI_ID* getID() const;
@@ -44,7 +43,6 @@ public:
 	EPlayerPanalState getPlayerPanalState() const;
 	void setPlayerPanalState(const EPlayerPanalState m_playerPanalState) const;
 	void clean() const;
-
 private:
 	cocos2d::Sprite* m_background;
 	cocos2d::Sprite* m_portrait;
