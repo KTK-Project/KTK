@@ -5,14 +5,14 @@ std::deque<UI_Card*>& SelectedCards::getCards() const {
 	throw "Not yet implemented";
 }
 
-void SelectedCards::addCard(const UI_Card* card) const {
+void SelectedCards::addCard(const UI_Card * card) const {
 	//如果卡牌数量为maxsize，调用popfront。调用卡牌setupping(const true)
 //当卡牌选择数量达到maxsize时，调用maxCallBack，否则调用unmaxcallback
 	// TODO - implement SelectedCards::addCard
 	throw "Not yet implemented";
 }
 
-void SelectedCards::removeCard(const UI_Card* card) const {
+void SelectedCards::removeCard(const UI_Card * card) const {
 	//移除这个元素，如果小于max，调用unmaxcallback
 	// TODO - implement SelectedCards::removeCard
 	throw "Not yet implemented";
@@ -35,7 +35,7 @@ bool SelectedCards::hasCard(const std::shared_ptr<Card> card) const {
 	throw "Not yet implemented";
 }
 
-bool SelectedCards::hasCard(const UI_Card* card) const {
+bool SelectedCards::hasCard(const UI_Card * card) const {
 	// TODO - implement SelectedCards::hasCard
 	throw "Not yet implemented";
 }

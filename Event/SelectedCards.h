@@ -9,12 +9,12 @@ class SelectedCards {
 
 public:
 	std::deque<UI_Card*>& getCards() const;
-	void addCard(const UI_Card* card) const;
-	void removeCard(const UI_Card* card) const;
+	void addCard(const UI_Card * card) const;
+	void removeCard(const UI_Card * card) const;
 	void popFront() const;
 	void popAll() const;
 	bool hasCard(const std::shared_ptr<Card> card) const;
-	bool hasCard(const UI_Card* card) const;
+	bool hasCard(const UI_Card * card) const;
 
 	int getMaxSelects() const;
 	void setMaxSelects(int maxSelects);

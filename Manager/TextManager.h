@@ -21,6 +21,7 @@ public:
 	const std::string getTextOfSkillDescription(ESkillName name) const;
 	const std::string getTextOfSuit(ECardSuit suit) const;
 	const std::string getTextOfColorName(ECardColor color) const;
+	const std::string getTextOfNumber(int number) const;
 
 private:
 	DescriptionMap cardDescription;

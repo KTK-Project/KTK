@@ -187,3 +187,12 @@ const string TextManager::getTextOfColorName(ECardColor color) const {
 		default: throw "Can't find match!"; break;
 	}
 } 
+
+//	Todo:stl
+const std::string TextManager::getTextOfNumber(int number) const {
+	switch (number) {
+		case 1: return gbkToUtf8("1"); break;
+		case 13: return gbkToUtf8("K"); break;
+		default: throw "Can't find match!"; break;
+	}
+}

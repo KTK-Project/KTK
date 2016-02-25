@@ -9,9 +9,7 @@ class Event_Theft : public Event_Strategy {
 public:
 	const std::shared_ptr<Player> & getGoalPlayer() const;
 	void setGoalPlayer(const std::shared_ptr<Player> & goalPlayer);
-
 	void eventResolve() const;
-
 private:
 	std::shared_ptr<Player> m_goalPlayer;
 };
