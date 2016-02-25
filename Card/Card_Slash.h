@@ -7,7 +7,7 @@
 #include "Event\Event_Base.h"
 #include "Player\Player.h"
 
-class Card_Slash :public Card_Basic {
+class Card_Slash : public Card_Basic {
 
 public:
 	Card_Slash(ECardSuit suit, int number) :Card_Basic(ECardName::SLASH, suit, number) { }

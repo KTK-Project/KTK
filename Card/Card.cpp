@@ -82,5 +82,5 @@ void Card::useCard(const std::shared_ptr<Player> & playCardPlayer, const std::ve
 }
 
 void Card::setType(ECardType type) {
-	m_Type = type;
+	m_type = type;
 }

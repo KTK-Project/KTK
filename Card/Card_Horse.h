@@ -11,7 +11,6 @@ public:
 	Card_Horse(ECardName name, ECardSuit suit, int number);
 	int getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const override;
 	EHorseType getHorseType() const;
-	virtual ~Card_Horse() = 0 { }
 private:
 	EHorseType m_horseType;
 };

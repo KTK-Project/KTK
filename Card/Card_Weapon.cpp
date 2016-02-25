@@ -13,3 +13,7 @@ void Card_Weapon::useCard(const std::shared_ptr<Player> & playCardPlayer, const 
 	// TODO - implement Card_Weapon::useCard
 	throw "Not yet implemented";
 }
+
+int Card_Weapon::getAttackRange() const {
+	return 0;
+}
