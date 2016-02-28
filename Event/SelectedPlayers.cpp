@@ -1,6 +1,6 @@
 #include "SelectedPlayers.h"
 
-std::deque<std::shared_ptr<Player>> SelectedPlayers::getPlayers() const {
+const std::deque<std::shared_ptr<Player>> & SelectedPlayers::getPlayers() const {
 	return m_players;
 }
 

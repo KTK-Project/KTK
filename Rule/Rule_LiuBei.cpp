@@ -12,7 +12,7 @@ void Rule_LiuBei::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) 
 	throw "Not yet implemented";
 }
 
-void Rule_LiuBei::jiJiang(const std::shared_ptr<Event_Base>& event) const {
+void Rule_LiuBei::jiJiang(const std::shared_ptr<Event_Base> & event) const {
 	//给蜀将封装请求杀事件。参考曹操的护驾技能
 	// TODO - implement Rule_LiuBei::jiJiang
 	throw "Not yet implemented";

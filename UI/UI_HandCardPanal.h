@@ -38,10 +38,10 @@ public:
 	void finish() const;
 	void update(float delta) override;
 private:
-	std::vector<UI_HandCardPage*> m_pages;
-	std::deque<UI_Card*> m_addCardQueue;
+	std::vector<UI_HandCardPage *> m_pages;
+	std::deque<UI_Card *> m_addCardQueue;
 	int m_currentPageIndex;
-	cocos2d::Menu* m_pageUpDownMenu;
+	cocos2d::Menu * m_pageUpDownMenu;
 	std::function<bool(const std::shared_ptr<Card>)> m_cardsCanUpFilter;
 	bool m_needToReset;
 };

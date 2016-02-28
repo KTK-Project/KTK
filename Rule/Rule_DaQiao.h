@@ -10,6 +10,6 @@ public:
 	void playCardStage() const;
 	void guoSe() const;
 	void beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const;
-	void liuLi(const std::shared_ptr<Event_Base>& event) const;
+	void liuLi(const std::shared_ptr<Event_Base> & event) const;
 };
 #endif // Rule_DaQiao_h__

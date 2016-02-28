@@ -8,7 +8,7 @@
 
 class UI_SkillPanal : public cocos2d::Node {
 public:
-	static UI_SkillPanal* create() {
+	static UI_SkillPanal * create() {
 		UI_SkillPanal * pRet = new(std::nothrow) UI_SkillPanal();
 		if (pRet && pRet->init()) {
 			pRet->autorelease();
@@ -24,6 +24,7 @@ public:
 	void setSkillState(const Skill & skill, ESkillState skillState);
 	void refresh() const;
 private:
-	std::vector<cocos2d::Sprite*> m_skillIcons;
+	std::vector<cocos2d::Sprite *> m_skillIcons;
+	UI_SkillPanal() = default;
 };
 #endif // UI_SkillPanal_h__

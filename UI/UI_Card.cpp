@@ -86,6 +86,6 @@ cocos2d::Action * UI_Card::runAction(const cocos2d::Action * action) const {
 	throw "Not yet implemented";
 }
 
-EventListenerTouchOneByOne* UI_Card::getListener() const {
+EventListenerTouchOneByOne * UI_Card::getListener() const {
 	return m_listener;
 }

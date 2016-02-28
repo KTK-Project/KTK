@@ -88,7 +88,7 @@ private:
 	// AI¿ØÖÆÆ÷
 	std::shared_ptr<Controller_Base> m_controller;
 	// ¶ÔÓ¦UI
-	UI_PlayerPanal* m_playerPanal;
+	UI_PlayerPanal * m_playerPanal;
 };
 
 #endif // Player_h__

@@ -20,7 +20,7 @@ public:
 		}
 	}
 	bool init();
-	std::vector<UI_Card*> & getCards() const;
+	std::vector<UI_Card *> & getCards() const;
 	int getSize() const;
 	bool isEmpty() const;
 	bool isFull() const;
@@ -32,10 +32,10 @@ public:
 	void addCard(const UI_Card * card) const;
 	UI_Card * removeCard(const std::shared_ptr<Card> & card) const;
 	UI_Card * removeCard(const UI_Card * card) const;
-	std::vector<UI_Card*> removeAll() const;
+	std::vector<UI_Card *> removeAll() const;
 	void setAddCardFinishCallBack(const std::function<void ()> & m_addCardFinishCallBack);
 private:
-	std::vector<UI_Card*> m_cards;
+	std::vector<UI_Card *> m_cards;
 	int s_maxSize;
 	std::function<void ()> m_addCardFinishCallBack;
 };

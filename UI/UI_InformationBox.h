@@ -23,8 +23,8 @@ public:
 	void addInformation(const std::string & information);
 	void removeAll();
 private:
-	std::vector<cocos2d::Label*> m_information;
-	cocos2d::ui::Layout* m_layout;
-	cocos2d::Sprite* m_background;
+	std::vector<cocos2d::Label *> m_information;
+	cocos2d::ui::Layout * m_layout;
+	cocos2d::Sprite * m_background;
 };
 #endif // UI_InformationBox_h__

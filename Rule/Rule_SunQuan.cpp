@@ -18,7 +18,7 @@ void Rule_SunQuan::zhiHeng() const {
 	throw "Not yet implemented";
 }
 
-void Rule_SunQuan::jiuYuan(const std::shared_ptr<Event_Base>& event) const {
+void Rule_SunQuan::jiuYuan(const std::shared_ptr<Event_Base> & event) const {
 	//濒死者为孙权，且他为主公，且peachplayer是吴势力，加一血。
 	// TODO - implement Rule_SunQuan::jiuYuan
 	throw "Not yet implemented";

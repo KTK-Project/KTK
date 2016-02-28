@@ -93,7 +93,7 @@ int Rule_Base::getDistance(const std::shared_ptr<Player> & player) const {
 }
 
 void Rule_Base::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) const {
-	//if(请求闪事件&&八卦阵valid)	调用八卦阵的eventsolve()
+	//if(请求闪事件 &&八卦阵valid)	调用八卦阵的eventsolve()
 	// TODO - implement Rule_Character::beforeProcessEvent
 	throw "Not yet implemented";
 }

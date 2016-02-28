@@ -8,6 +8,6 @@ public:
 	void playCardStage() const;
 	void afterProcessEvent(const std::shared_ptr<Event_Base> & event) const;
 	void zhiHeng() const;
-	void jiuYuan(const std::shared_ptr<Event_Base>& event) const;
+	void jiuYuan(const std::shared_ptr<Event_Base> & event) const;
 };
 #endif // Rule_SunQuan_h__

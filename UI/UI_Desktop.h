@@ -30,8 +30,8 @@ public:
 	void clean() const;
 	void update(float delta) override;
 private:
-	std::vector<UI_Card*> m_cards;
+	std::vector<UI_Card *> m_cards;
 	bool m_needToClean;
-	std::vector<UI_Card*> m_cleanCards;
+	std::vector<UI_Card *> m_cleanCards;
 };
 #endif // UI_Desktop_h__

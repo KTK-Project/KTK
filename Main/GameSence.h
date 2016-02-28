@@ -11,7 +11,7 @@
 class GameSence : public cocos2d::Layer {
 
 public:
-	static GameSence* create() {
+	static GameSence * create() {
 		GameSence * pRet = new(std::nothrow) GameSence();
 		if (pRet && pRet->init()) {
 			pRet->autorelease();
@@ -26,19 +26,19 @@ public:
 
 	virtual bool init() override;
 
-    static cocos2d::Scene* scene();
+    static cocos2d::Scene * scene();
 
-	UI_Desktop* getDesktop() const;
+	UI_Desktop * getDesktop() const;
 
-	UI_LogBox* getLogBox() const;
+	UI_LogBox * getLogBox() const;
 
-	UI_PlayerPanal* getPlayerPanal(const std::shared_ptr<Player> player) const;
+	UI_PlayerPanal * getPlayerPanal(const std::shared_ptr<Player> player) const;
 
 private:
-	UI_Desktop* m_desktop;
-	UI_LogBox* m_logBox;
-	std::vector<UI_PlayerPanal*> m_playerPanals;
-	cocos2d::Sprite* m_sitToLeft;
-	cocos2d::Sprite* m_sitToRight;
+	UI_Desktop * m_desktop;
+	UI_LogBox * m_logBox;
+	std::vector<UI_PlayerPanal *> m_playerPanals;
+	cocos2d::Sprite * m_sitToLeft;
+	cocos2d::Sprite * m_sitToRight;
 };
 #endif // GameSence_h__

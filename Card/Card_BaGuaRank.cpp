@@ -1,6 +1,6 @@
 #include "Card_BaGuaRank.h"
 
-void Card_BaGuaRank::eventResolve(const Event_RequestCard& event) const {
+void Card_BaGuaRank::eventResolve(const Event_RequestCard & event) const {
 	// TODO - implement Card_BaGuaRank::eventResolve
 	throw "Not yet implemented";
 	//if(事件为请求闪事件)

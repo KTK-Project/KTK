@@ -7,6 +7,6 @@
 class Card_BaGuaRank : public Card_Armor {
 public:
 	Card_BaGuaRank(ECardSuit Suit, int number) : Card_Armor(ECardName::BAGUARANK, Suit, number) { }
-	void eventResolve(const Event_RequestCard& event) const;
+	void eventResolve(const Event_RequestCard & event) const;
 };
 #endif // Card_BaGuaRank_h__

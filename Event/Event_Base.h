@@ -17,6 +17,6 @@ public:
 private:
 	EEventType m_eventType;
 	EEventState m_eventState;
-	std::function<void (const Event_Base&)> m_finishCallBack;
+	std::function<void (const Event_Base &)> m_finishCallBack;
 };
 #endif // Event_Base_h__

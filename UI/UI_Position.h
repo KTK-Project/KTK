@@ -5,7 +5,7 @@
 
 class UI_Position : public cocos2d::Node {
 public:
-	static UI_Position* create() {
+	static UI_Position * create() {
 		UI_Position * pRet = new(std::nothrow) UI_Position();
 		if (pRet && pRet->init()) {
 			pRet->autorelease();
@@ -20,7 +20,8 @@ public:
 	bool init();
 	void refresh() const;
 private:
-	cocos2d::Sprite* m_positionBackground;
-	cocos2d::Label* m_label;
+	cocos2d::Sprite * m_positionBackground;
+	cocos2d::Label * m_label;
+	UI_Position() = default;
 };
 #endif // UI_Position_h__

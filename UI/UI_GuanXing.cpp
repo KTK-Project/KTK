@@ -9,12 +9,12 @@ bool UI_GuanXing::initWithCards(const std::vector<std::shared_ptr<Card>> & topCa
 	throw "Not yet implemented";
 }
 
-std::vector<UI_Card*> & UI_GuanXing::getTopCards() {
+std::vector<UI_Card *> & UI_GuanXing::getTopCards() {
 	// TODO - implement UI_GuanXing::getTopCards
 	throw "Not yet implemented";
 }
 
-std::vector<UI_Card*> & UI_GuanXing::getBottonCards() {
+std::vector<UI_Card *> & UI_GuanXing::getBottonCards() {
 	// TODO - implement UI_GuanXing::getBottonCards
 	throw "Not yet implemented";
 }

@@ -5,7 +5,7 @@ bool UI_HandCardPage::init() {
 	return true;
 }
 
-std::vector<UI_Card*> & UI_HandCardPage::getCards() const {
+std::vector<UI_Card *> & UI_HandCardPage::getCards() const {
 	//返回m_cards的引用
 	// TODO - implement UI_HandCardPage::getCards
 	throw "Not yet implemented";
@@ -78,19 +78,19 @@ void UI_HandCardPage::addCard(const UI_Card * card) const {
 
 UI_Card * UI_HandCardPage::removeCard(const std::shared_ptr<Card> & card) const {
 	//断言（hascard（卡牌））
-//在m_cards中删除这个卡牌指针并返回UI_card*
+//在m_cards中删除这个卡牌指针并返回UI_card *
 	// TODO - implement UI_HandCardPage::removeCard
 	throw "Not yet implemented";
 }
 
 UI_Card * UI_HandCardPage::removeCard(const UI_Card * card) const {
 	//断言（hascard（卡牌））
-//在m_cards中删除这个卡牌指针并返回UI_card*
+//在m_cards中删除这个卡牌指针并返回UI_card *
 	// TODO - implement UI_HandCardPage::removeCard
 	throw "Not yet implemented";
 }
 
-std::vector<UI_Card*> UI_HandCardPage::removeAll() const {
+std::vector<UI_Card *> UI_HandCardPage::removeAll() const {
 	//把m_cards的元素移动到新vec并返回
 	// TODO - implement UI_HandCardPage::removeAll
 	throw "Not yet implemented";

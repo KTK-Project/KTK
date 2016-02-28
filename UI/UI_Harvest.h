@@ -24,7 +24,7 @@ public:
 	void chosedCard(const std::shared_ptr<Player> & player, const std::shared_ptr<Card> & card);
 	void chosedCard(const std::shared_ptr<Player> & player, const UI_Card * card);
 private:
-	std::vector<UI_Card*> m_cards;
+	std::vector<UI_Card *> m_cards;
 	std::vector<std::shared_ptr<Player>> m_players;
 };
 #endif // UI_Harvest_h__

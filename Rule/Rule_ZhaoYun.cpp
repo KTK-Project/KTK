@@ -18,7 +18,7 @@ void Rule_ZhaoYun::afterProcessEvent(const std::shared_ptr<Event_Base> & event) 
 	throw "Not yet implemented";
 }
 
-void Rule_ZhaoYun::longDan(const std::shared_ptr<Event_Base>& event) const {
+void Rule_ZhaoYun::longDan(const std::shared_ptr<Event_Base> & event) const {
 	//点击龙胆时，执行此函数
 	// TODO - implement Rule_ZhaoYun::longDan
 	throw "Not yet implemented";

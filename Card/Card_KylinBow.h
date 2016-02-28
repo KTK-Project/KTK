@@ -7,6 +7,6 @@
 class Card_KylinBow : public Card_Weapon {
 public:
 	Card_KylinBow(ECardSuit Suit, int number) : Card_Weapon(ECardName::KYLINBOW, Suit, number) { }
-	void eventResolve(const Event_Slash& slashEvent) const;
+	void eventResolve(const Event_Slash & slashEvent) const;
 };
 #endif // Card_KylinBow_h__

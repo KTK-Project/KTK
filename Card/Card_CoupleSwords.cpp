@@ -1,6 +1,6 @@
 #include "Card_CoupleSwords.h"
 
-void Card_CoupleSwords::eventResolve(const Event_Slash& slashEvent) const {
+void Card_CoupleSwords::eventResolve(const Event_Slash & slashEvent) const {
 	// TODO - implement Card_CoupleSwords::eventResolve
 	throw "Not yet implemented";
 	//发出“请求布尔值”事件：【响应者为攻击角色。（是否发动雌雄双股剑技能？）】

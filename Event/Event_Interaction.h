@@ -24,6 +24,6 @@ private:
 	std::string m_descrption;
 	bool m_received;
 	bool m_returned;
-	std::function<void (const Event_Base&)> m_returnCallBack;
+	std::function<void (const Event_Base &)> m_returnCallBack;
 };
 #endif // Event_Interaction_h__

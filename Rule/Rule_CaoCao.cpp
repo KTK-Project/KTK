@@ -11,7 +11,7 @@ void Rule_CaoCao::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) 
 	throw "Not yet implemented";
 }
 
-void Rule_CaoCao::huJia(const std::shared_ptr<Event_RequestCard>& event) const {
+void Rule_CaoCao::huJia(const std::shared_ptr<Event_RequestCard> & event) const {
 	//static Player * currentPlayer = nullptr;
 //static std::shared_ptr<Event_RequestCard> event = nullptr;
 //static bool 八卦阵used = false;
@@ -38,7 +38,7 @@ void Rule_CaoCao::huJia(const std::shared_ptr<Event_RequestCard>& event) const {
 	throw "Not yet implemented";
 }
 
-void Rule_CaoCao::jianXiong(const std::shared_ptr<Event_Hurt>& event) const {
+void Rule_CaoCao::jianXiong(const std::shared_ptr<Event_Hurt> & event) const {
 	//获的得事件中的卡牌。
 	// TODO - implement Rule_CaoCao::jianXiong
 	throw "Not yet implemented";

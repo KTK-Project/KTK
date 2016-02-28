@@ -20,7 +20,7 @@ public:
 	bool init();
 	void refresh() const;
 private:
-	cocos2d::Sprite* m_quantityBackground;
-	cocos2d::Label* m_quantity;
+	cocos2d::Sprite * m_quantityBackground;
+	cocos2d::Label * m_quantity;
 };
 #endif // UI_HandCardQuantity_h__

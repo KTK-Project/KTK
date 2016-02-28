@@ -7,17 +7,17 @@ bool UI_ForwardPlayerPanal::initWithPlayer(const std::shared_ptr<Player> & playe
 	throw "Not yet implemented";
 }
 
-UI_SkillPanal* UI_ForwardPlayerPanal::getSkillPanal() const {
+UI_SkillPanal * UI_ForwardPlayerPanal::getSkillPanal() const {
 	// TODO - implement UI_ForwardPlayerPanal::getSkillPanal
 	throw "Not yet implemented";
 }
 
-UI_HandCardPanal* UI_ForwardPlayerPanal::getHandCardPanal() const {
+UI_HandCardPanal * UI_ForwardPlayerPanal::getHandCardPanal() const {
 	// TODO - implement UI_ForwardPlayerPanal::getHandCardPanal
 	throw "Not yet implemented";
 }
 
-UI_Message* UI_ForwardPlayerPanal::getMessage() const {
+UI_Message * UI_ForwardPlayerPanal::getMessage() const {
 	// TODO - implement UI_ForwardPlayerPanal::getMessage
 	throw "Not yet implemented";
 }

@@ -6,8 +6,8 @@ void Rule_LvBu::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) co
 	throw "Not yet implemented";
 }
 
-void Rule_LvBu::wuShuang(const std::shared_ptr<Event_Base>& event) const {
-	//static Event* currentEvent = nullptr
+void Rule_LvBu::wuShuang(const std::shared_ptr<Event_Base> & event) const {
+	//static Event * currentEvent = nullptr
 //static bool again = true;
 //if(事件!=currentEvent)	更新currentevent，设置again为true
 
@@ -16,7 +16,7 @@ void Rule_LvBu::wuShuang(const std::shared_ptr<Event_Base>& event) const {
 //	if(const again)，设置为另一个玩家。again = false;
 //	else	设置again = true;
 
-//如果（杀事件&&吕布杀）
+//如果（杀事件 &&吕布杀）
 //如果是slashfail && again   设置为slashing，again = flase;
 	// TODO - implement Rule_LvBu::wuShuang
 	throw "Not yet implemented";

@@ -18,7 +18,7 @@ void Rule_HuaTuo::qingNang() const {
 	throw "Not yet implemented";
 }
 
-void Rule_HuaTuo::jiJiu(const std::shared_ptr<Event_Base>& event) const {
+void Rule_HuaTuo::jiJiu(const std::shared_ptr<Event_Base> & event) const {
 	//更改卡牌过滤器。参考赵云龙胆技能
 	// TODO - implement Rule_HuaTuo::jiJiu
 	throw "Not yet implemented";

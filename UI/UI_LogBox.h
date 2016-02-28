@@ -7,7 +7,7 @@
 
 class UI_LogBox : public cocos2d::Node {
 public:
-	static UI_LogBox* create() {
+	static UI_LogBox * create() {
 		UI_LogBox * pRet = new(std::nothrow) UI_LogBox();
 		if (pRet && pRet->init()) {
 			pRet->autorelease();
@@ -22,8 +22,10 @@ public:
 	bool init() const;
 	void addLog(const std::string & log) const;
 private:
-	cocos2d::ui::ListView* m_listView;
-	cocos2d::ui::CheckBox* m_scrollCheckBox;
-	cocos2d::Label* m_scrollLabel;
+	cocos2d::ui::ListView * m_listView;
+	cocos2d::ui::CheckBox * m_scrollCheckBox;
+	cocos2d::Label * m_scrollLabel;
+
+	UI_LogBox() = default;
 };
 #endif // UI_LogBox_h__

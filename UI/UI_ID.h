@@ -6,7 +6,7 @@
 
 class UI_ID : public cocos2d::Node {
 public:
-	static UI_ID* create() {
+	static UI_ID * create() {
 		UI_ID * pRet = new(std::nothrow) UI_ID();
 		if (pRet && pRet->init()) {
 			pRet->autorelease();

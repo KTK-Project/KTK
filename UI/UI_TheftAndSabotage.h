@@ -27,7 +27,9 @@ public:
 	void setSelectedCard(const std::shared_ptr<Card> & selectedCard);
 private:
 	std::shared_ptr<Player> m_player;
-	std::vector<UI_Card*> m_cards;
+	std::vector<UI_Card *> m_cards;
 	std::shared_ptr<Card> m_selectedCard;
+
+	UI_TheftAndSabotage() = default;
 };
 #endif // UI_TheftAndSabotage_h__

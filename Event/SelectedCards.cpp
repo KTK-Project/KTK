@@ -1,6 +1,6 @@
 #include "SelectedCards.h"
 
-std::deque<UI_Card*> & SelectedCards::getCards() const {
+std::deque<UI_Card *> & SelectedCards::getCards() const {
 	// TODO - implement SelectedCards::getCards
 	throw "Not yet implemented";
 }

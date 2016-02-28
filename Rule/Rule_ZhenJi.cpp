@@ -12,7 +12,7 @@ void Rule_ZhenJi::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) 
 	throw "Not yet implemented";
 }
 
-void Rule_ZhenJi::qingGuo(const std::shared_ptr<Event_RequestCard>& event) const {
+void Rule_ZhenJi::qingGuo(const std::shared_ptr<Event_RequestCard> & event) const {
 	//发出请求黑色卡牌事件：
 //	响应：黑色卡牌给请求闪事件
 //	不响应：啥也不做

@@ -71,7 +71,7 @@ void Event_Slash::weaponCheckBeforeSlash() const {
 }
 
 void Event_Slash::armorCheckBeforeSlash() const {
-	//如果（仁王盾&&有效）则发调用装备eventResolve
+	//如果（仁王盾 &&有效）则发调用装备eventResolve
 //如果无防具        设置slashstate为slashing
 	// TODO - implement Event_Slash::armorCheckBeforeSlash
 	throw "Not yet implemented";

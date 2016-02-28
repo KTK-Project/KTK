@@ -28,16 +28,18 @@ public:
 		}
 	}
 	bool initWithPlayer(const std::shared_ptr<Player> & player);
-	UI_SkillPanal* getSkillPanal() const;
-	UI_HandCardPanal* getHandCardPanal() const;
-	UI_Message* getMessage() const;
+	UI_SkillPanal * getSkillPanal() const;
+	UI_HandCardPanal * getHandCardPanal() const;
+	UI_Message * getMessage() const;
 	void drawCards(const std::vector<std::shared_ptr<Card>> & cards) const;
 	void setPlayerPanalState(EPlayerPanalState playerPanalState);
 	void clean() const;
+protected:
+	UI_ForwardPlayerPanal() = default;
 private:
-	UI_SkillPanal* m_skillPanal;
-	UI_HandCardPanal* m_handCardPanal;
-	UI_Message* m_message;
+	UI_SkillPanal * m_skillPanal;
+	UI_HandCardPanal * m_handCardPanal;
+	UI_Message * m_message;
 	int m_playerPanalFilter;
 	int m_cardFilter;
 	SelectedCards m_selectedCards;

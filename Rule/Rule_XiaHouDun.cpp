@@ -9,7 +9,7 @@ void Rule_XiaHouDun::beforeProcessEvent(const std::shared_ptr<Event_Base> & even
 	throw "Not yet implemented";
 }
 
-void Rule_XiaHouDun::gangLie(const std::shared_ptr<Event_Hurt>& event) const {
+void Rule_XiaHouDun::gangLie(const std::shared_ptr<Event_Hurt> & event) const {
 	//发动判定事件：
 //	成功：向伤害来源发出请求两张手牌事件：
 //		响应：失去两张牌

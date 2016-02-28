@@ -18,8 +18,8 @@ void Rule_XuChu::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) c
 	throw "Not yet implemented";
 }
 
-void Rule_XuChu::luoYi(const std::shared_ptr<Event_Hurt>& event) const {
-	//if(const usingluoyi && 攻击者为许褚&&（决斗||杀）)  伤害+1
+void Rule_XuChu::luoYi(const std::shared_ptr<Event_Hurt> & event) const {
+	//if(const usingluoyi && 攻击者为许褚 &&（决斗||杀）)  伤害+1
 	// TODO - implement Rule_XuChu::luoYi
 	throw "Not yet implemented";
 }

@@ -12,7 +12,7 @@ void Rule_MaChao::beforeProcessEvent(const std::shared_ptr<Event_Base> & event) 
 	throw "Not yet implemented";
 }
 
-void Rule_MaChao::tieQi(const std::shared_ptr<Event_Base>& event) const {
+void Rule_MaChao::tieQi(const std::shared_ptr<Event_Base> & event) const {
 	//发出判定事件，判定成功，直接进入杀成功阶段
 	// TODO - implement Rule_MaChao::tieQi
 	throw "Not yet implemented";
