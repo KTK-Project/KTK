@@ -34,6 +34,8 @@ public:
 	void setDownCallBack(const std::function<void (const UI_Card *)> & downCallBack);
 	cocos2d::Action * runAction(const cocos2d::Action * action) const;
 	cocos2d::EventListenerTouchOneByOne * getListener() const;
+protected:
+	UI_Card() = default;
 private:
 	std::shared_ptr<Card> m_card;
 	cocos2d::Sprite * m_cardPattern;
@@ -46,7 +48,5 @@ private:
 	std::function<void (const UI_Card *)> m_upCallBack;
 	std::function<void (const UI_Card *)> m_downCallBack;
 	cocos2d::EventListenerTouchOneByOne * m_listener;
-
-	UI_Card() = default;
 };
 #endif // UI_Card_h__

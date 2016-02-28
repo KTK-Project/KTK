@@ -10,8 +10,8 @@
 
 class UI_HandCardPanal : public cocos2d::Node {
 public:
-	static UI_HandCardPage * create() {
-		UI_HandCardPage * pRet = new(std::nothrow) UI_HandCardPage();
+	static UI_HandCardPanal * create() {
+		UI_HandCardPanal * pRet = new(std::nothrow) UI_HandCardPanal();
 		if (pRet && pRet->init()) {
 			pRet->autorelease();
 			return pRet;
@@ -37,6 +37,8 @@ public:
 	void for_each_card(const std::function<void (const UI_Card *)> & fun) const;
 	void finish() const;
 	void update(float delta) override;
+protected:
+	UI_HandCardPanal() = default;
 private:
 	std::vector<UI_HandCardPage *> m_pages;
 	std::deque<UI_Card *> m_addCardQueue;

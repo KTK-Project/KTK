@@ -19,9 +19,10 @@ public:
 	}
 	bool init();
 	void refresh() const;
+protected:
+	UI_Position() = default;
 private:
 	cocos2d::Sprite * m_positionBackground;
 	cocos2d::Label * m_label;
-	UI_Position() = default;
 };
 #endif // UI_Position_h__

@@ -25,11 +25,11 @@ public:
 	bool initWithPlayer(const std::shared_ptr<Player> & player, ECardName cardName);
 	const std::shared_ptr<Card> & getSelectedCard() const;
 	void setSelectedCard(const std::shared_ptr<Card> & selectedCard);
+protected:
+	UI_TheftAndSabotage() = default;
 private:
 	std::shared_ptr<Player> m_player;
 	std::vector<UI_Card *> m_cards;
 	std::shared_ptr<Card> m_selectedCard;
-
-	UI_TheftAndSabotage() = default;
 };
 #endif // UI_TheftAndSabotage_h__

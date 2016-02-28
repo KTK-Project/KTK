@@ -23,6 +23,8 @@ public:
 	bool initWithCards(const std::vector<std::shared_ptr<Card>> & cards);
 	void chosedCard(const std::shared_ptr<Player> & player, const std::shared_ptr<Card> & card);
 	void chosedCard(const std::shared_ptr<Player> & player, const UI_Card * card);
+protected:
+	UI_Harvest() = default;
 private:
 	std::vector<UI_Card *> m_cards;
 	std::vector<std::shared_ptr<Player>> m_players;

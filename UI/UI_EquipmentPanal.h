@@ -26,6 +26,8 @@ public:
 	void setOffensiveHorse(const std::shared_ptr<Card> & offensiveHorse);
 	void setEquipmentPanalState(const std::shared_ptr<Card> & card, EEquipmentPanalState & state);
 	void refresh() const;
+protected:
+	UI_EquipmentPanal() = default;
 private:
 	cocos2d::Sprite * m_weapon;
 	cocos2d::Sprite * m_armor;

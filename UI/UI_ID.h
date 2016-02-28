@@ -20,6 +20,8 @@ public:
 	}
 	bool init();
 	void setMarkID(ECharID ID);
+protected:
+	UI_ID() = default;
 private:
 	cocos2d::Sprite * m_markID;
 	cocos2d::Node * m_IDList;

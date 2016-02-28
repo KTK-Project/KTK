@@ -29,6 +29,8 @@ public:
 	void setNeedToClean(bool needToClean);
 	void clean() const;
 	void update(float delta) override;
+protected:
+	UI_Desktop() = default;
 private:
 	std::vector<UI_Card *> m_cards;
 	bool m_needToClean;

@@ -22,6 +22,8 @@ public:
 	bool init();
 	void addInformation(const std::string & information);
 	void removeAll();
+protected:
+	UI_InformationBox() = default;
 private:
 	std::vector<cocos2d::Label *> m_information;
 	cocos2d::ui::Layout * m_layout;

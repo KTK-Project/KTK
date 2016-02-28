@@ -23,8 +23,9 @@ public:
 	bool init();
 	void setSkillState(const Skill & skill, ESkillState skillState);
 	void refresh() const;
+protected:
+	UI_SkillPanal() = default;
 private:
 	std::vector<cocos2d::Sprite *> m_skillIcons;
-	UI_SkillPanal() = default;
 };
 #endif // UI_SkillPanal_h__

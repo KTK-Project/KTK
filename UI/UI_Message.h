@@ -27,13 +27,13 @@ public:
 	void setButton1CallBack(const std::function<void (const std::shared_ptr<Event_Base> &)> & button1CallBack);
 	void setButton2CallBack(const std::function<void (const std::shared_ptr<Event_Base> &)> & button2CallBack);
 	void update(float delta) override;
+protected:
+	UI_Message() = default;
 private:
 	cocos2d::Label * m_message;
 	cocos2d::ui::Button * m_button1;
 	cocos2d::ui::Button * m_button2;
 	std::function<bool ()> m_button1ValidCheck;
 	std::function<bool ()> m_button2ValidCheck;
-
-	UI_Message() = default;
 };
 #endif // UI_Message_h__

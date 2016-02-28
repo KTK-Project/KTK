@@ -21,11 +21,11 @@ public:
 	}
 	bool init() const;
 	void addLog(const std::string & log) const;
+protected:
+	UI_LogBox() = default;
 private:
 	cocos2d::ui::ListView * m_listView;
 	cocos2d::ui::CheckBox * m_scrollCheckBox;
 	cocos2d::Label * m_scrollLabel;
-
-	UI_LogBox() = default;
 };
 #endif // UI_LogBox_h__

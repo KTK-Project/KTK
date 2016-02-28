@@ -34,6 +34,8 @@ public:
 	UI_Card * removeCard(const UI_Card * card) const;
 	std::vector<UI_Card *> removeAll() const;
 	void setAddCardFinishCallBack(const std::function<void ()> & m_addCardFinishCallBack);
+protected:
+	UI_HandCardPage() = default;
 private:
 	std::vector<UI_Card *> m_cards;
 	int s_maxSize;

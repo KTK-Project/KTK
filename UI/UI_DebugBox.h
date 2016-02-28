@@ -19,6 +19,8 @@ public:
 		}
 	}
 	bool init() const;
+protected:
+	UI_DebugBox() = default;
 private:
 	cocos2d::ui::ListView * m_listView;
 	cocos2d::Label * m_scrollLabel;

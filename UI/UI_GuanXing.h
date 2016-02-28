@@ -21,6 +21,8 @@ public:
 	bool initWithCards(const std::vector<std::shared_ptr<Card>> & topCards);
 	std::vector<UI_Card *> & getTopCards();
 	std::vector<UI_Card *> & getBottonCards();
+protected:
+	UI_GuanXing() = default;
 private:
 	std::vector<UI_Card *> m_topCards;
 	std::vector<UI_Card *> m_bottonCards;

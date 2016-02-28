@@ -20,6 +20,8 @@ public:
 	}
 	bool init();
 	void refresh() const;
+protected:
+	UI_HP() = default;
 private:
 	std::vector<cocos2d::Sprite *> m_bloods;
 	std::vector<cocos2d::Sprite *> m_emptyBloods;
