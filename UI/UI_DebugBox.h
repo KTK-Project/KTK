@@ -6,7 +6,7 @@
 
 class UI_DebugBox : public cocos2d::Node {
 public:
-	static UI_DebugBox* create() {
+	static UI_DebugBox * create() {
 		UI_DebugBox * pRet = new(std::nothrow) UI_DebugBox();
 		if (pRet && pRet->init()) {
 			pRet->autorelease();
@@ -20,8 +20,8 @@ public:
 	}
 	bool init() const;
 private:
-	cocos2d::ui::ListView* m_listView;
-	cocos2d::Label* m_scrollLabel;
-	cocos2d::ui::TextField* m_lineEdit;
+	cocos2d::ui::ListView * m_listView;
+	cocos2d::Label * m_scrollLabel;
+	cocos2d::ui::TextField * m_lineEdit;
 };
 #endif // UI_DebugBox_h__

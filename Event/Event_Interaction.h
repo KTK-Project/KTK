@@ -18,9 +18,7 @@ public:
 	void setReturned(bool returned);
 	const std::function<void (const Event_Base &)> & getReturnCallBack() const;
 	void setReturnCallBack(const std::function<void (const Event_Base &)> & returnCallBack);
-
 	void eventResolve() const;
-
 private:
 	std::shared_ptr<Player> m_interactPlayer;
 	std::string m_descrption;

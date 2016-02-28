@@ -7,7 +7,7 @@
 
 class UI_InformationBox : public cocos2d::Node {
 public:
-	static UI_InformationBox* create() {
+	static UI_InformationBox * create() {
 		UI_InformationBox * pRet = new(std::nothrow) UI_InformationBox();
 		if (pRet && pRet->init()) {
 			pRet->autorelease();
@@ -20,10 +20,10 @@ public:
 		}
 	}
 	bool init();
-	void addLabel(const std::string& information) const;
-	void removeAll() const;
+	void addInformation(const std::string & information);
+	void removeAll();
 private:
-	std::vector<cocos2d::Label*> m_labels;
+	std::vector<cocos2d::Label*> m_information;
 	cocos2d::ui::Layout* m_layout;
 	cocos2d::Sprite* m_background;
 };

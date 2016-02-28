@@ -1,5 +1,13 @@
 #include "Event_OathInPeachGarden.h"
 
+const std::shared_ptr<Player> & Event_OathInPeachGarden::getCurrentPlayer() const {
+	return m_currentPlayer;
+}
+
+void Event_OathInPeachGarden::setCurrentPlayer(const std::shared_ptr<Player> & currentPlayer) {
+	m_currentPlayer = currentPlayer;
+}
+
 void Event_OathInPeachGarden::eventResolve() const {
 	//static player * currentplayer = nullptr;
 //if(!currentplayer)             第一次执行：currentPlayer = playcardplayer

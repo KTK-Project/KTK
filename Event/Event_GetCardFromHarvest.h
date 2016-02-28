@@ -7,25 +7,15 @@
 #include "Player\Player.h"
 
 class Event_GetCardFromHarvest : public Event_Interaction {
-
+public:
+	std::vector<std::shared_ptr<Card>> & getCards();
+	std::vector<std::shared_ptr<Player>> & getPlayers();
+	const std::shared_ptr<Card> & getReceiver() const;
+	void setReceiver(const std::shared_ptr<Card> & receiver);
+	void eventResolve() const;
 private:
 	std::vector<std::shared_ptr<Card>> m_cards;
 	std::vector<std::shared_ptr<Player>> m_players;
 	std::shared_ptr<Card> m_receiver;
-
-public:
-	std::vector<std::shared_ptr<Card>> getCards() const;
-
-	void setCards(const std::vector<std::shared_ptr<Card>> m_cards) const;
-
-	std::vector<std::shared_ptr<Player>> getPlayers() const;
-
-	void setPlayers(const std::vector<std::shared_ptr<Player>> m_players) const;
-
-	std::shared_ptr<Card> getReceiver() const;
-
-	void setReceiver(const std::shared_ptr<Card> m_receiver) const;
-
-	void eventResolve() const;
 };
 #endif // Event_GetCardFromHarvest_h__

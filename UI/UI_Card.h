@@ -19,7 +19,7 @@ public:
 			return NULL;
 		}
 	}
-	bool initWithCard(const std::shared_ptr<Card> card);
+	bool initWithCard(const std::shared_ptr<Card> & card);
 	void initListenToUpDown() const;
 	const std::shared_ptr<Card> & getCard() const;
 	void setCard(const std::shared_ptr<Card> & card);

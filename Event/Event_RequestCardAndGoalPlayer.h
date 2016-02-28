@@ -7,20 +7,14 @@
 #include "Event_RequestGoalPlayer.h"
 
 class Event_RequestCardAndGoalPlayer : public Event_Interaction {
-
+public:
+	const std::shared_ptr<Event_RequestCard> & getRequestCardEvent() const;
+	void setRequestCardEvent(const std::shared_ptr<Event_RequestCard> & requestCardEvent);
+	const std::shared_ptr<Event_RequestGoalPlayer> & getRequestGoalPlayerEvent() const;
+	void setRequestGoalPlayerEvent(const std::shared_ptr<Event_RequestGoalPlayer> & requestGoalPlayerEvent);
+	void eventResolve() const;
 private:
 	std::shared_ptr<Event_RequestCard> m_requestCardEvent;
 	std::shared_ptr<Event_RequestGoalPlayer> m_requestGoalPlayerEvent;
-
-public:
-	std::shared_ptr<Event_RequestCard> getRequestCardEvent() const;
-
-	void setRequestCardEvent(const std::shared_ptr<Event_RequestCard> m_requestCardEvent) const;
-
-	std::shared_ptr<Event_RequestGoalPlayer> getRequestGoalPlayerEvent() const;
-
-	void setRequestGoalPlayerEvent(const std::shared_ptr<Event_RequestGoalPlayer> m_requestGoalPlayerEvent) const;
-
-	void eventResolve() const;
 };
 #endif // Event_RequestCardAndGoalPlayer_h__

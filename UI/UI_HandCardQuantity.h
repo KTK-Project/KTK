@@ -5,7 +5,7 @@
 
 class UI_HandCardQuantity : public cocos2d::Node {
 public:
-	static UI_HandCardQuantity* create() {
+	static UI_HandCardQuantity * create() {
 		UI_HandCardQuantity * pRet = new(std::nothrow) UI_HandCardQuantity();
 		if (pRet && pRet->init()) {
 			pRet->autorelease();

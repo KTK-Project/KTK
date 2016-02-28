@@ -1,7 +1,7 @@
 #include "SelectedPlayers.h"
 
 std::deque<std::shared_ptr<Player>> SelectedPlayers::getPlayers() const {
-	return this->m_players;
+	return m_players;
 }
 
 void SelectedPlayers::addPlayer(const std::shared_ptr<Player> & player) const {

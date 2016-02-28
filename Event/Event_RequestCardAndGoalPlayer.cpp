@@ -1,19 +1,19 @@
 #include "Event_RequestCardAndGoalPlayer.h"
 
-std::shared_ptr<Event_RequestCard> Event_RequestCardAndGoalPlayer::getRequestCardEvent() const {
-	return this->m_requestCardEvent;
+const std::shared_ptr<Event_RequestCard> & Event_RequestCardAndGoalPlayer::getRequestCardEvent() const {
+	return m_requestCardEvent;
 }
 
-void Event_RequestCardAndGoalPlayer::setRequestCardEvent(const std::shared_ptr<Event_RequestCard> m_requestCardEvent) const {
-	throw "Not yet implemented";
+void Event_RequestCardAndGoalPlayer::setRequestCardEvent(const std::shared_ptr<Event_RequestCard> & requestCardEvent) {
+	m_requestCardEvent = requestCardEvent;
 }
 
-std::shared_ptr<Event_RequestGoalPlayer> Event_RequestCardAndGoalPlayer::getRequestGoalPlayerEvent() const {
-	return this->m_requestGoalPlayerEvent;
+const std::shared_ptr<Event_RequestGoalPlayer> & Event_RequestCardAndGoalPlayer::getRequestGoalPlayerEvent() const {
+	return m_requestGoalPlayerEvent;
 }
 
-void Event_RequestCardAndGoalPlayer::setRequestGoalPlayerEvent(const std::shared_ptr<Event_RequestGoalPlayer> m_requestGoalPlayerEvent) const {
-	throw "Not yet implemented";
+void Event_RequestCardAndGoalPlayer::setRequestGoalPlayerEvent(const std::shared_ptr<Event_RequestGoalPlayer> & requestGoalPlayerEvent) {
+	m_requestGoalPlayerEvent = requestGoalPlayerEvent;
 }
 
 void Event_RequestCardAndGoalPlayer::eventResolve() const {

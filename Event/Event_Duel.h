@@ -5,12 +5,14 @@
 #include "Player\Player.h"
 
 class Event_Duel : public Event_Strategy {
-
+public:
+	const std::shared_ptr<Player> & getGoalPlayer() const;
+	void setGoalPlayer(const std::shared_ptr<Player> & goalPlayer);
+	const std::shared_ptr<Player> & getCurrentPlayer() const;
+	void setCurrentPlayer(const std::shared_ptr<Player> & currentPlayer);
+	void eventResolve() const;
 private:
 	std::shared_ptr<Player> m_goalPlayer;
 	std::shared_ptr<Player> m_currentPlayer;
-
-public:
-	void eventResolve() const;
 };
 #endif // Event_Duel_h__

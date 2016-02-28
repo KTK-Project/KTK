@@ -1,35 +1,31 @@
 #include "Event_Hurt.h"
 
-std::shared_ptr<Player> Event_Hurt::getAttacker() const {
-	return this->m_attacker;
+const std::shared_ptr<Player> & Event_Hurt::getAttacker() const {
+	return m_attacker;
 }
 
-void Event_Hurt::setAttacker(const std::shared_ptr<Player> m_attacker) const {
-	throw "Not yet implemented";
+void Event_Hurt::setAttacker(const std::shared_ptr<Player> & attacker) {
+	m_attacker = attacker;
 }
 
-std::shared_ptr<Player> Event_Hurt::getGoal() const {
-	return this->m_goal;
+const std::shared_ptr<Player> & Event_Hurt::getGoal() const {
+	return m_goal;
 }
 
-void Event_Hurt::setGoal(const std::shared_ptr<Player> m_goal) const {
-	throw "Not yet implemented";
+void Event_Hurt::setGoal(const std::shared_ptr<Player> & goal) {
+	m_goal = goal;
 }
 
 int Event_Hurt::getDemage() const {
-	return this->m_demage;
+	return m_demage;
 }
 
-void Event_Hurt::setDemage(const int m_demage) const {
-	throw "Not yet implemented";
+void Event_Hurt::setDemage(int demage) {
+	m_demage = demage;
 }
 
-std::vector<std::shared_ptr<Card>> Event_Hurt::getCards() const {
-	return this->m_cards;
-}
-
-void Event_Hurt::setCards(const std::vector<std::shared_ptr<Card>> m_cards) const {
-	throw "Not yet implemented";
+std::vector<std::shared_ptr<Card>> & Event_Hurt::getCards() {
+	return m_cards;
 }
 
 void Event_Hurt::eventResolve() const {

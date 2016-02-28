@@ -6,7 +6,7 @@ bool UI_LogBox::init() const {
 	throw "Not yet implemented";
 }
 
-void UI_LogBox::addLog(const std::string& log) const {
+void UI_LogBox::addLog(const std::string & log) const {
 	// TODO - implement UI_LogBox::addLog
 	throw "Not yet implemented";
 }

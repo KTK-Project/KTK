@@ -20,13 +20,13 @@ public:
 		}
 	}
 	bool init();
-	void setString(const std::string& string) const;
-	void setVisible(const bool visible) const;
-	void update(const float delta) const;
-	void setButton1ValidCheck(const std::function<bool ()> m_button1ValidCheck) const;
-	void setButton2ValidCheck(const std::function<bool ()> m_button2ValidCheck) const;
-	void setButton1CallBack(const std::function<void (const std::shared_ptr<Event_Base>&)> m_button1CallBack) const;
-	void setButton2CallBack(const std::function<void (const std::shared_ptr<Event_Base>&)> m_button2CallBack) const;
+	void setString(const std::string & string);
+	void setVisible(bool visible);
+	void setButton1ValidCheck(const std::function<bool()> & button1ValidCheck);
+	void setButton2ValidCheck(const std::function<bool ()> & button2ValidCheck);
+	void setButton1CallBack(const std::function<void (const std::shared_ptr<Event_Base> &)> & button1CallBack);
+	void setButton2CallBack(const std::function<void (const std::shared_ptr<Event_Base> &)> & button2CallBack);
+	void update(float delta) override;
 private:
 	cocos2d::Label* m_message;
 	cocos2d::ui::Button* m_button1;

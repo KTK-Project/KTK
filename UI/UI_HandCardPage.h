@@ -7,7 +7,7 @@
 
 class UI_HandCardPage : public cocos2d::Node {
 public:
-	static UI_HandCardPage* create() {
+	static UI_HandCardPage * create() {
 		UI_HandCardPage * pRet = new(std::nothrow) UI_HandCardPage();
 		if (pRet && pRet->init()) {
 			pRet->autorelease();
@@ -20,20 +20,20 @@ public:
 		}
 	}
 	bool init();
-	std::vector<UI_Card*>& getCards() const;
+	std::vector<UI_Card*> & getCards() const;
 	int getSize() const;
 	bool isEmpty() const;
 	bool isFull() const;
-	void settleUp(const bool useAction) const;
-	cocos2d::Vec2 getPositionWithIndex(const int index) const;
-	bool hasCard(const std::shared_ptr<Card> card) const;
-	bool hasCard(const UI_Card* card) const;
-	void addCard(const std::shared_ptr<Card> card) const;
-	void addCard(const UI_Card* card) const;
-	UI_Card* removeCard(const std::shared_ptr<Card> card) const;
-	UI_Card* removeCard(const UI_Card* card) const;
+	void settleUp(bool useAction);
+	cocos2d::Vec2 getPositionWithIndex(int index) const;
+	bool hasCard(const std::shared_ptr<Card> & card) const;
+	bool hasCard(const UI_Card * card) const;
+	void addCard(const std::shared_ptr<Card> & card) const;
+	void addCard(const UI_Card * card) const;
+	UI_Card * removeCard(const std::shared_ptr<Card> & card) const;
+	UI_Card * removeCard(const UI_Card * card) const;
 	std::vector<UI_Card*> removeAll() const;
-	void setAddCardFinishCallBack(const std::function<void ()>& m_addCardFinishCallBack) const;
+	void setAddCardFinishCallBack(const std::function<void ()> & m_addCardFinishCallBack);
 private:
 	std::vector<UI_Card*> m_cards;
 	int s_maxSize;

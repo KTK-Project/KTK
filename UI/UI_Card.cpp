@@ -8,7 +8,7 @@ using cocos2d::Label;
 using cocos2d::Action;
 using cocos2d::EventListenerTouchOneByOne;
 
-bool UI_Card::initWithCard(const std::shared_ptr<Card> card) {
+bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 //	Todo:stm
 	m_cardPattern = Sprite::create("png\\card\\123.png");
 // 	m_suit = Label::create("");

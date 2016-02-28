@@ -4,7 +4,6 @@
 #include "Event_DelayedStrategy.h"
 
 class Event_Lightning : public Event_DelayedStrategy {
-
 public:
 	void eventResolve() const;
 };

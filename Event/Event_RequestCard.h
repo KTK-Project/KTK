@@ -6,7 +6,23 @@
 #include "SelectedCards.h"
 
 class Event_RequestCard : public Event_Interaction {
-
+public:
+	bool getHandCard() const;
+	void setHandCard(bool handCard);
+	ECardName getRequestHandCardName() const;
+	void setRequestHandCardName(ECardName requestHandCardName);
+	int getRequestHandCardQuantity() const;
+	void setRequestHandCardQuantity(int requestHandCardQuantity);
+	bool getWeapon() const;
+	void setWeapon(bool weapon);
+	bool getArmor() const;
+	void setArmor(bool armor);
+	bool getOffensiveHorse() const;
+	void setOffensiveHorse(bool offensiveHorse);
+	bool getDefensiveHorse() const;
+	void setDefensiveHorse(bool defensiveHorse);
+	SelectedCards & getReceiver();
+	void eventResolve() const;
 private:
 	bool m_handCard;
 	ECardName m_requestHandCardName;
@@ -16,40 +32,5 @@ private:
 	bool m_offensiveHorse;
 	bool m_defensiveHorse;
 	SelectedCards m_receiver;
-
-public:
-	bool getHandCard() const;
-
-	void setHandCard(const bool m_handCard) const;
-
-	ECardName getRequestHandCardName() const;
-
-	void setRequestHandCardName(const ECardName m_requestHandCardName) const;
-
-	int getRequestHandCardQuantity() const;
-
-	void setRequestHandCardQuantity(const int m_requestHandCardQuantity) const;
-
-	bool getWeapon() const;
-
-	void setWeapon(const bool m_weapon) const;
-
-	bool getArmor() const;
-
-	void setArmor(const bool m_armor) const;
-
-	bool getOffensiveHorse() const;
-
-	void setOffensiveHorse(const bool m_offensiveHorse) const;
-
-	bool getDefensiveHorse() const;
-
-	void setDefensiveHorse(const bool m_defensiveHorse) const;
-
-	SelectedCards getReceiver() const;
-
-	void setReceiver(const SelectedCards m_receiver) const;
-
-	void eventResolve() const;
 };
 #endif // Event_RequestCard_h__

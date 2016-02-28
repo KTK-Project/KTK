@@ -12,9 +12,7 @@ public:
 	void setDyingPlayer(const std::shared_ptr<Player> & dyingPlayer);
 	const std::shared_ptr<Player> & getPeachPlayer() const;
 	void setPeachPlayer(const std::shared_ptr<Player> & peachPlayer);
-
 	void eventResolve() const;
-
 private:
 	std::shared_ptr<Player> m_firstPlayer;
 	std::shared_ptr<Player> m_dyingPlayer;

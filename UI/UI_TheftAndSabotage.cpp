@@ -1,6 +1,6 @@
 #include "UI_TheftAndSabotage.h"
 
-bool UI_TheftAndSabotage::initWithPlayer(const std::shared_ptr<Player> player, const ECardName cardName) const {
+bool UI_TheftAndSabotage::initWithPlayer(const std::shared_ptr<Player> & player, ECardName cardName) {
 	//根据卡牌名字获取标题。
 //根据Player获取其所有卡牌资料，再产生8个UI_Card *，某些为空指针。
 //为每个UI_Card *设置触摸事件，注意只允许一个UI_card *处于选中状态。
@@ -8,10 +8,10 @@ bool UI_TheftAndSabotage::initWithPlayer(const std::shared_ptr<Player> player, c
 	throw "Not yet implemented";
 }
 
-std::shared_ptr<Card> UI_TheftAndSabotage::getSelectedCard() const {
-	return this->m_selectedCard;
+const std::shared_ptr<Card> & UI_TheftAndSabotage::getSelectedCard() const {
+	return m_selectedCard;
 }
 
-void UI_TheftAndSabotage::setSelectedCard(const std::shared_ptr<Card> m_selectedCard) const {
-	throw "Not yet implemented";
+void UI_TheftAndSabotage::setSelectedCard(const std::shared_ptr<Card> & selectedCard) {
+	m_selectedCard = selectedCard;
 }

@@ -11,11 +11,9 @@ public:
 	EEventState getEventState() const;
 	void setEventState(EEventState eventState);
 	const std::function<void (const Event_Base &)> & getFinishCallBack() const;
-
 	void setFinishCallBack(const std::function<void (const Event_Base &)> & finishCallBack);
 	void finish() const;
 	void eventResolve() const;
-
 private:
 	EEventType m_eventType;
 	EEventState m_eventState;

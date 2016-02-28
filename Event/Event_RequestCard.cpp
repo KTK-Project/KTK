@@ -1,67 +1,63 @@
 #include "Event_RequestCard.h"
 
 bool Event_RequestCard::getHandCard() const {
-	throw "Not yet implemented";
+	return m_handCard;
 }
 
-void Event_RequestCard::setHandCard(const bool m_handCard) const {
-	throw "Not yet implemented";
+void Event_RequestCard::setHandCard(bool handCard) {
+	m_handCard = handCard;
 }
 
 ECardName Event_RequestCard::getRequestHandCardName() const {
-	throw "Not yet implemented";
+	return m_requestHandCardName;
 }
 
-void Event_RequestCard::setRequestHandCardName(const ECardName m_requestHandCardName) const {
-	throw "Not yet implemented";
+void Event_RequestCard::setRequestHandCardName(ECardName requestHandCardName) {
+	m_requestHandCardName = requestHandCardName;
 }
 
 int Event_RequestCard::getRequestHandCardQuantity() const {
-	throw "Not yet implemented";
+	return m_requestHandCardQuantity;
 }
 
-void Event_RequestCard::setRequestHandCardQuantity(const int m_requestHandCardQuantity) const {
-	throw "Not yet implemented";
+void Event_RequestCard::setRequestHandCardQuantity(int requestHandCardQuantity) {
+	m_requestHandCardQuantity = requestHandCardQuantity;
 }
 
 bool Event_RequestCard::getWeapon() const {
-	throw "Not yet implemented";
+	return m_weapon;
 }
 
-void Event_RequestCard::setWeapon(const bool m_weapon) const {
-	throw "Not yet implemented";
+void Event_RequestCard::setWeapon(bool weapon) {
+	m_weapon = weapon;
 }
 
 bool Event_RequestCard::getArmor() const {
-	throw "Not yet implemented";
+	return m_armor;
 }
 
-void Event_RequestCard::setArmor(const bool m_armor) const {
-	throw "Not yet implemented";
+void Event_RequestCard::setArmor(bool armor) {
+	m_armor = armor;
 }
 
 bool Event_RequestCard::getOffensiveHorse() const {
-	return this->m_offensiveHorse;
+	return m_offensiveHorse;
 }
 
-void Event_RequestCard::setOffensiveHorse(const bool m_offensiveHorse) const {
-	throw "Not yet implemented";
+void Event_RequestCard::setOffensiveHorse(bool offensiveHorse) {
+	m_offensiveHorse = offensiveHorse;
 }
 
 bool Event_RequestCard::getDefensiveHorse() const {
-	return this->m_defensiveHorse;
+	return m_defensiveHorse;
 }
 
-void Event_RequestCard::setDefensiveHorse(const bool m_defensiveHorse) const {
-	throw "Not yet implemented";
+void Event_RequestCard::setDefensiveHorse(bool defensiveHorse) {
+	m_defensiveHorse = defensiveHorse;
 }
 
-SelectedCards Event_RequestCard::getReceiver() const {
-	return this->m_receiver;
-}
-
-void Event_RequestCard::setReceiver(const SelectedCards m_receiver) const {
-	throw "Not yet implemented";
+SelectedCards & Event_RequestCard::getReceiver() {
+	return m_receiver;
 }
 
 void Event_RequestCard::eventResolve() const {

@@ -4,8 +4,6 @@
 #include "Event_DelayedStrategy.h"
 
 class Event_DrownInHappiness : public Event_DelayedStrategy {
-
-
 public:
 	void eventResolve() const;
 };

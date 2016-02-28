@@ -5,10 +5,11 @@
 #include "Manager\KTK_Enum.h"
 
 class Event_RequestCardSuit : public Event_Interaction {
-
 public:
-	ECardSuit m_receiver;
-
+	ECardSuit getReceiver() const;
+	void setReceiver(ECardSuit receiver);
 	void eventResolve() const;
+private:
+	ECardSuit m_receiver;
 };
 #endif // Event_RequestCardSuit_h__

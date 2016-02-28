@@ -188,10 +188,20 @@ const string TextManager::getTextOfColorName(ECardColor color) const {
 	}
 } 
 
-//	Todo:stl
 const std::string TextManager::getTextOfNumber(int number) const {
 	switch (number) {
 		case 1: return gbkToUtf8("1"); break;
+		case 2: return gbkToUtf8("2"); break;
+		case 3: return gbkToUtf8("3"); break;
+		case 4: return gbkToUtf8("4"); break;
+		case 5: return gbkToUtf8("5"); break;
+		case 6: return gbkToUtf8("6"); break;
+		case 7: return gbkToUtf8("7"); break;
+		case 8: return gbkToUtf8("8"); break;
+		case 9: return gbkToUtf8("9"); break;
+		case 10: return gbkToUtf8("10"); break;
+		case 11: return gbkToUtf8("J"); break;
+		case 12: return gbkToUtf8("Q"); break;
 		case 13: return gbkToUtf8("K"); break;
 		default: throw "Can't find match!"; break;
 	}

@@ -6,7 +6,7 @@
 
 class UI_GuanXing : public cocos2d::Node {
 public:
-	static UI_GuanXing* create(const std::vector<std::shared_ptr<Card>>& topCards) {
+	static UI_GuanXing * create(const std::vector<std::shared_ptr<Card>> & topCards) {
 		UI_GuanXing * pRet = new(std::nothrow) UI_GuanXing();
 		if (pRet && pRet->initWithCards(topCards)) {
 			pRet->autorelease();
@@ -18,9 +18,9 @@ public:
 			return NULL;
 		}
 	}
-	bool initWithCards(const std::vector<std::shared_ptr<Card>>& topCards) const;
-	std::vector<UI_Card*>& getTopCards() const;
-	std::vector<UI_Card*>& getBottonCards() const;
+	bool initWithCards(const std::vector<std::shared_ptr<Card>> & topCards);
+	std::vector<UI_Card*> & getTopCards();
+	std::vector<UI_Card*> & getBottonCards();
 private:
 	std::vector<UI_Card*> m_topCards;
 	std::vector<UI_Card*> m_bottonCards;

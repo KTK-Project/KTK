@@ -13,9 +13,7 @@ public:
 	void setJudgeCheck(const std::function<bool (const std::shared_ptr<Card> &)> & judgeCheck);
 	bool getJudgeResult() const;
 	void setJudgeResult(bool judgeResult);
-
 	void eventResolve() const;
-
 private:
 	std::shared_ptr<Card> m_judgeCard;
 	std::function<bool (const std::shared_ptr<Card> &)> m_judgeCheck;

@@ -4,14 +4,11 @@
 #include "Event_Interaction.h"
 
 class Event_RequestBoolean : public Event_Interaction {
-
 public:
-	bool m_receiver;
-
 	bool getReceiver() const;
-
-	void setReceiver(const bool m_receiver) const;
-
+	void setReceiver(bool receiver);
 	void eventResolve() const;
+private:
+	bool m_receiver;
 };
 #endif // Event_RequestBoolean_h__

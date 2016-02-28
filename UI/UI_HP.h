@@ -6,7 +6,7 @@
 
 class UI_HP : public cocos2d::Node {
 public:
-	static UI_HP* create() {
+	static UI_HP * create() {
 		UI_HP * pRet = new(std::nothrow) UI_HP();
 		if (pRet && pRet->init()) {
 			pRet->autorelease();

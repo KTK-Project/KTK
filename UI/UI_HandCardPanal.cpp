@@ -6,7 +6,7 @@ bool UI_HandCardPanal::init() {
 	return true;
 }
 
-UI_HandCardPage* UI_HandCardPanal::getPageByIndex(const int index) const {
+UI_HandCardPage * UI_HandCardPanal::getPageByIndex(int index) const {
 	//断言（正常范围）
 //返回UI_handcardPage *
 	// TODO - implement UI_HandCardPanal::getPageByIndex
@@ -19,7 +19,7 @@ int UI_HandCardPanal::getCurrentPageIndex() const {
 	throw "Not yet implemented";
 }
 
-void UI_HandCardPanal::setCurrentPageIndex(const int currentPageIndex) const {
+void UI_HandCardPanal::setCurrentPageIndex(int currentPageIndex) {
 	//if(const m_currentpage == currentpage) return;
 //断言（正确的范围）
 //旧页执行setvisible(const false)
@@ -43,39 +43,39 @@ void UI_HandCardPanal::pageDown() const {
 	throw "Not yet implemented";
 }
 
-void UI_HandCardPanal::addCard(const std::shared_ptr<Card> card) const {
+void UI_HandCardPanal::addCard(const std::shared_ptr<Card> & card) {
 	//封装UI_Card *,压入addcardqueue
 	// TODO - implement UI_HandCardPanal::addCard
 	throw "Not yet implemented";
 }
 
-void UI_HandCardPanal::addCard(const UI_Card* card) const {
+void UI_HandCardPanal::addCard(const UI_Card * card) {
 	//压入addcardqueue
 	// TODO - implement UI_HandCardPanal::addCard
 	throw "Not yet implemented";
 }
 
-UI_Card* UI_HandCardPanal::removeCard(const std::shared_ptr<Card> card) const {
+UI_Card * UI_HandCardPanal::removeCard(const std::shared_ptr<Card> & card) const {
 	//找到这个卡牌所在页，卡牌页.调用remove，然后return UI_Card *
 //设置needToReset为true
 	// TODO - implement UI_HandCardPanal::removeCard
 	throw "Not yet implemented";
 }
 
-UI_Card* UI_HandCardPanal::removeCard(const UI_Card* card) const {
+UI_Card * UI_HandCardPanal::removeCard(const UI_Card * card) const {
 	//找到这个卡牌所在页，卡牌页.调用remove，然后return UI_Card *
 //设置needToReset为true
 	// TODO - implement UI_HandCardPanal::removeCard
 	throw "Not yet implemented";
 }
 
-void UI_HandCardPanal::removeEmptyPage() const {
+void UI_HandCardPanal::removeEmptyPage() {
 	//移除空的卡牌页，设置当前页为1
 	// TODO - implement UI_HandCardPanal::removeEmptyPage
 	throw "Not yet implemented";
 }
 
-void UI_HandCardPanal::reset() const {
+void UI_HandCardPanal::reset() {
 	//if(总页数只为1)
 //{-----------------------------------------------------------------------
 //getcurrentpage().settleup(const true) const;
@@ -93,13 +93,13 @@ void UI_HandCardPanal::reset() const {
 	throw "Not yet implemented";
 }
 
-void UI_HandCardPanal::for_each_card(const std::function<void (const UI_Card*)>& fun) const {
+void UI_HandCardPanal::for_each_card(const std::function<void (const UI_Card *)> & fun) const {
 	//遍历所有卡牌执行此函数。
 	// TODO - implement UI_HandCardPanal::for_each_card
 	throw "Not yet implemented";
 }
 
-void UI_HandCardPanal::update(const float delta) const {
+void UI_HandCardPanal::update(float delta) {
 	//if(const needToReset) const {调用reset()，设置needtoreset为false}
 //---------------------------------------------------
 //[[[[[[[[把增加的卡牌压入各个页中。
@@ -128,8 +128,7 @@ void UI_HandCardPanal::update(const float delta) const {
 //}
 ////把增加的卡牌压入各个页中。]]]]
 //---------------------------------------------------
-	// TODO - implement UI_HandCardPanal::update
-	throw "Not yet implemented";
+	throw std::logic_error("The method or operation is not implemented.");
 }
 
 void UI_HandCardPanal::finish() const {

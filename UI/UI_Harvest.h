@@ -8,7 +8,7 @@
 
 class UI_Harvest : public cocos2d::Node {
 public:
-	static UI_Harvest* create(const std::vector<std::shared_ptr<Card>> cards) {
+	static UI_Harvest * create(const std::vector<std::shared_ptr<Card>> & cards) {
 		UI_Harvest * pRet = new(std::nothrow) UI_Harvest();
 		if (pRet && pRet->initWithCards(cards)) {
 			pRet->autorelease();
@@ -20,9 +20,9 @@ public:
 			return NULL;
 		}
 	}
-	bool initWithCards(const std::vector<std::shared_ptr<Card>> cards) const;
-	void chosedCard(const std::shared_ptr<Player> player, const std::shared_ptr<Card> card) const;
-	void chosedCard(const std::shared_ptr<Player> player, const UI_Card* card) const;
+	bool initWithCards(const std::vector<std::shared_ptr<Card>> & cards);
+	void chosedCard(const std::shared_ptr<Player> & player, const std::shared_ptr<Card> & card);
+	void chosedCard(const std::shared_ptr<Player> & player, const UI_Card * card);
 private:
 	std::vector<UI_Card*> m_cards;
 	std::vector<std::shared_ptr<Player>> m_players;

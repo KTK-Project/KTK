@@ -9,7 +9,6 @@ public:
 	Event_DelayedStrategy();
 	const std::shared_ptr<Player> & getOwnerPlayer() const;
 	void setOwnerPlayer(const std::shared_ptr<Player> & ownerPlayer);
-
 private:
 	std::shared_ptr<Player> m_ownerPlayer;
 };

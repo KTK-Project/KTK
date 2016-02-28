@@ -10,7 +10,7 @@
 
 class UI_HandCardPanal : public cocos2d::Node {
 public:
-	static UI_HandCardPage* create() {
+	static UI_HandCardPage * create() {
 		UI_HandCardPage * pRet = new(std::nothrow) UI_HandCardPage();
 		if (pRet && pRet->init()) {
 			pRet->autorelease();
@@ -23,20 +23,20 @@ public:
 		}
 	}
 	bool init();
-	UI_HandCardPage* getPageByIndex(const int index) const;
+	UI_HandCardPage * getPageByIndex(int index) const;
 	int getCurrentPageIndex() const;
-	void setCurrentPageIndex(const int currentPageIndex) const;
+	void setCurrentPageIndex(int currentPageIndex);
 	void pageUp() const;
 	void pageDown() const;
-	void addCard(const std::shared_ptr<Card> card) const;
-	void addCard(const UI_Card* card) const;
-	UI_Card* removeCard(const std::shared_ptr<Card> card) const;
-	UI_Card* removeCard(const UI_Card* card) const;
-	void removeEmptyPage() const;
-	void reset() const;
-	void for_each_card(const std::function<void (const UI_Card*)>& fun) const;
-	void update(const float delta) const;
+	void addCard(const std::shared_ptr<Card> & card);
+	void addCard(const UI_Card * card);
+	UI_Card * removeCard(const std::shared_ptr<Card> & card) const;
+	UI_Card * removeCard(const UI_Card * card) const;
+	void removeEmptyPage();
+	void reset();
+	void for_each_card(const std::function<void (const UI_Card *)> & fun) const;
 	void finish() const;
+	void update(float delta) override;
 private:
 	std::vector<UI_HandCardPage*> m_pages;
 	std::deque<UI_Card*> m_addCardQueue;

@@ -8,7 +8,7 @@
 
 class UI_Desktop : public cocos2d::Node {
 public:
-	static UI_Desktop* create() {
+	static UI_Desktop * create() {
 		UI_Desktop * pRet = new(std::nothrow) UI_Desktop();
 		if (pRet && pRet->init()) {
 			pRet->autorelease();
@@ -21,14 +21,14 @@ public:
 		}
 	}
 	bool init() const;
-	int pushBack(const UI_Card* card) const;
+	int pushBack(const UI_Card * card);
 	cocos2d::Vec2 getPositionForCard(const int index) const;
-	void addCards(const UI_Card* card, const std::string& description) const;
-	void settleUp() const;
+	void addCards(const UI_Card * card, const std::string & description);
+	void settleUp();
 	bool getNeedToClean() const;
-	void setNeedToClean(const bool m_needToClean) const;
+	void setNeedToClean(bool needToClean);
 	void clean() const;
-	void update(const float delta) const;
+	void update(float delta) override;
 private:
 	std::vector<UI_Card*> m_cards;
 	bool m_needToClean;

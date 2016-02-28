@@ -10,8 +10,7 @@
 
 class UI_TheftAndSabotage : public cocos2d::Node {
 public:
-//	Todo:stl
-	static UI_TheftAndSabotage* create(const std::shared_ptr<Player> player, const ECardName cardName) {
+	static UI_TheftAndSabotage * create(const std::shared_ptr<Player> & player, ECardName cardName) {
 		UI_TheftAndSabotage * pRet = new(std::nothrow) UI_TheftAndSabotage();
 		if (pRet && pRet->initWithPlayer(player, cardName)) {
 			pRet->autorelease();
@@ -23,12 +22,9 @@ public:
 			return NULL;
 		}
 	}
-//	Todo:stl
-	bool initWithPlayer(const std::shared_ptr<Player> player, const ECardName cardName) const;
-//	Todo:stl
-	std::shared_ptr<Card> getSelectedCard() const;
-//	Todo:stl
-	void setSelectedCard(const std::shared_ptr<Card> m_selectedCard) const;
+	bool initWithPlayer(const std::shared_ptr<Player> & player, ECardName cardName);
+	const std::shared_ptr<Card> & getSelectedCard() const;
+	void setSelectedCard(const std::shared_ptr<Card> & selectedCard);
 private:
 	std::shared_ptr<Player> m_player;
 	std::vector<UI_Card*> m_cards;

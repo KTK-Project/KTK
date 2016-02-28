@@ -5,38 +5,38 @@ bool UI_Message::init() {
 	return true;
 }
 
-void UI_Message::setString(const std::string& string) const {
+void UI_Message::setString(const std::string & string) {
 	// TODO - implement UI_Message::setString
 	throw "Not yet implemented";
 }
 
-void UI_Message::setVisible(const bool visible) const {
+void UI_Message::setVisible(bool visible) {
 	//true调用scheduleUpdate
 //false调用unscheduleUpdate
 	// TODO - implement UI_Message::setVisible
 	throw "Not yet implemented";
 }
 
-void UI_Message::update(const float delta) const {
-	//调用validcheck来确定按钮是否生效
-	// TODO - implement UI_Message::update
+void UI_Message::setButton1ValidCheck(const std::function<bool()> & button1ValidCheck) {
 	throw "Not yet implemented";
 }
 
-void UI_Message::setButton1ValidCheck(const std::function<bool ()> m_button1ValidCheck) const {
+void UI_Message::setButton2ValidCheck(const std::function<bool ()> & button2ValidCheck) {
 	throw "Not yet implemented";
 }
 
-void UI_Message::setButton2ValidCheck(const std::function<bool ()> m_button2ValidCheck) const {
-	throw "Not yet implemented";
-}
-
-void UI_Message::setButton1CallBack(const std::function<void (const std::shared_ptr<Event_Base>&)> m_button1CallBack) const {
+void UI_Message::setButton1CallBack(const std::function<void (const std::shared_ptr<Event_Base> &)> & button1CallBack) {
 	// TODO - implement UI_Message::setButton1CallBack
 	throw "Not yet implemented";
 }
 
-void UI_Message::setButton2CallBack(const std::function<void (const std::shared_ptr<Event_Base>&)> m_button2CallBack) const {
+void UI_Message::setButton2CallBack(const std::function<void (const std::shared_ptr<Event_Base> &)> & button2CallBack) {
 	// TODO - implement UI_Message::setButton2CallBack
 	throw "Not yet implemented";
+}
+
+void UI_Message::update(float delta) {
+	//调用validcheck来确定按钮是否生效
+	// TODO - implement UI_Message::update
+	throw std::logic_error("The method or operation is not implemented.");
 }
