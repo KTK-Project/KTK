@@ -5,6 +5,7 @@
 #include "PlayersManager.h"
 #include "EventManagers.h"
 #include "Card\CardPile.h"
+#include "TextManager.h"
 
 class GameManager {
 public:
@@ -17,6 +18,7 @@ public:
 	EventManagers & getEventManager();
 	CardPile & getDarkcardPile();
 	CardPile & getDiscardPile();
+	TextManager & getTextManger();
 
 	void gameBegin();
 	void gameEnd() const;
@@ -29,5 +31,6 @@ private:
 	EventManagers m_eventManager;
 	CardPile m_darkcardPile;
 	CardPile m_discardPile;
+	TextManager m_textManger;
 };
 #endif // GameManager_h__

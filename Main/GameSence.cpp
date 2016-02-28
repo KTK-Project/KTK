@@ -4,15 +4,16 @@
 #include "Manager/TextManager.h"
 #include <fstream>
 #include "UI/UI_Card.h"
+#include "Card\Card_AllOutOfNone.h"
 
 using namespace cocos2d;
 
 bool GameSence::init() {
 	auto size = Director::getInstance()->getVisibleSize();
-	TextManager m;
-	auto label = Label::create(m.getTextOfCardDescription(ECardName::ALLOUTOFNONE), "ziti.otf", 10);
-	label->setPosition(size.width / 2, size.height / 2);
-	addChild(label);
+	auto cardr = std::make_shared<Card_AllOutOfNone>(ECardSuit::DIAMOND, 1);
+	auto card = UI_Card::create(cardr);
+	card->setPosition(size.width / 2, size.height / 2);
+	addChild(card);
 	return true;
 }
 

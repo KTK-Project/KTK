@@ -35,8 +35,8 @@ GameManager * GameManager::getInstance() {
 }
 
 GameManager::GameManager() {
+//	Todo:stm
 	// ¹¹½¨playermanager
-	throw "Not yet implemented";
 }
 
 PlayersManager & GameManager::getPlayerManager() {
@@ -57,6 +57,10 @@ CardPile & GameManager::getDarkcardPile() {
 
 CardPile & GameManager::getDiscardPile() {
 	return m_discardPile;
+}
+
+TextManager & GameManager::getTextManger() {
+	return m_textManger;
 }
 
 void GameManager::gameBegin() {

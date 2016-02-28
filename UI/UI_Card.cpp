@@ -1,20 +1,46 @@
 #include "cocos2d.h"
 #include "UI_Card.h"
 #include <memory>
+#include <string>
+#include "Manager\TextManager.h"
+#include "Manager\GameManager.h"
 
 using std::shared_ptr;
+using std::string;
 using cocos2d::Sprite;
 using cocos2d::Label;
 using cocos2d::Action;
 using cocos2d::EventListenerTouchOneByOne;
+using cocos2d::Color3B;
 
 bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
-//	Todo:stm
-	m_cardPattern = Sprite::create("png\\card\\123.png");
-// 	m_suit = Label::create("");
-	m_number = Label::create("A", "ziti.otf", 44);
+	string path;
+
+	path += "png\\card\\";
+	path += GameManager::getInstance()->getTextManger().getStringOfCardName(card->getName());
+	path += ".png";
+	m_cardPattern = Sprite::create(path);
+	auto cardSize = m_cardPattern->getContentSize();
+
+	path.clear();
+	path += "png\\suit\\";
+	path += GameManager::getInstance()->getTextManger().getStringOfSuit(card->getSuit());
+	path += ".png";
+	m_suit = Sprite::create(path);
+	m_suit->setScale(0.2);
+	m_suit->setPosition(23, cardSize.height - 37);
+
+	m_number = Label::create(GameManager::getInstance()->getTextManger().getTextOfNumber(card->getNumber()), "ziti.otf", 13);
+	switch (card->getColor()) {
+		case ECardColor::BLACK: m_number->setColor(Color3B::BLACK); break;
+		case ECardColor::RED: m_number->setColor(Color3B::RED); break;
+		default: throw "Can't find match!"; break;
+	}
+	m_number->setPosition(23, cardSize.height - 23);
+
+	m_cardPattern->addChild(m_suit);
+	m_cardPattern->addChild(m_number);
 	addChild(m_cardPattern);
-	addChild(m_number);
 	return true;
 }
 
@@ -41,9 +67,9 @@ bool UI_Card::getDark() const {
 }
 
 void UI_Card::setDark(bool dark) {
-//	Todo:stm
-	//if(true)	使其变暗
-//if(false)	不变暗
+	//	Todo:stm
+		//if(true)	使其变暗
+	//if(false)	不变暗
 	throw "Not yet implemented";
 }
 
@@ -52,10 +78,10 @@ bool UI_Card::getCanUp() const {
 }
 
 void UI_Card::setCanUp(bool canUp) {
-//	Todo:stm
-	//设置canUp属性
-//true : 调用addEventListenerWithSceneGraphPriority
-//false:调用removeEventListener
+	//	Todo:stm
+		//设置canUp属性
+	//true : 调用addEventListenerWithSceneGraphPriority
+	//false:调用removeEventListener
 	throw "Not yet implemented";
 }
 
@@ -64,19 +90,19 @@ bool UI_Card::getUpping() const {
 }
 
 void UI_Card::setUpping(bool upping) {
-//	Todo:stm
-	//if(已经是up或down) return;
-//设置upping，并且发出动作事件。
-//if(true)	调用upCallBack
-//if(false)	调用downCallBack
+	//	Todo:stm
+		//if(已经是up或down) return;
+	//设置upping，并且发出动作事件。
+	//if(true)	调用upCallBack
+	//if(false)	调用downCallBack
 	throw "Not yet implemented";
 }
 
-void UI_Card::setUpCallBack(const std::function<void (const UI_Card *)> & upCallBack) {
+void UI_Card::setUpCallBack(const std::function<void(const UI_Card *)> & upCallBack) {
 	m_upCallBack = upCallBack;
 }
 
-void UI_Card::setDownCallBack(const std::function<void (const UI_Card *)> & downCallBack) {
+void UI_Card::setDownCallBack(const std::function<void(const UI_Card *)> & downCallBack) {
 	m_downCallBack = downCallBack;
 }
 

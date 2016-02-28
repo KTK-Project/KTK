@@ -78,6 +78,37 @@ const string TextManager::getTextOfCharName(ECharName name) const {
 	}
 }
 
+const std::string TextManager::getStringOfCharName(ECharName name) const {
+	switch (name) {
+		case ECharName::CAOCAO: return "CAOCAO"; break;
+		case ECharName::DAQIAO: return "DAQIAO"; break;
+		case ECharName::DIAOCHAN: return "DIAOCHAN"; break;
+		case ECharName::GANNING: return "GANNING"; break;
+		case ECharName::GUANYU: return "GUANYU"; break;
+		case ECharName::GUOJIA: return "GUOJIA"; break;
+		case ECharName::HUANGGAI: return "HUANGGAI"; break;
+		case ECharName::HUANGYUEYING: return "HUANGYUEYING"; break;
+		case ECharName::HUATUO: return "HUATUO"; break;
+		case ECharName::LIUBEI: return "LIUBEI"; break;
+		case ECharName::LUXUN: return "LUXUN"; break;
+		case ECharName::LVBU: return "LVBU"; break;
+		case ECharName::LVMENG: return "LVMENG"; break;
+		case ECharName::MACHAO: return "MACHAO"; break;
+		case ECharName::SIMAYI: return "SIMAYI"; break;
+		case ECharName::SUNSHANGXIANG: return "SUNSHANGXIANG"; break;
+		case ECharName::XIAHOUDUN: return "XIAHOUDUN"; break;
+		case ECharName::SUNQUAN: return "SUNQUAN"; break;
+		case ECharName::XUZHU: return "XUZHU"; break;
+		case ECharName::ZHANGFEI: return "ZHANGFEI"; break;
+		case ECharName::ZHANGLIAO: return "ZHANGLIAO"; break;
+		case ECharName::ZHAOYUN: return "ZHAOYUN"; break;
+		case ECharName::ZHENJI: return "ZHENJI"; break;
+		case ECharName::ZHOUYU: return "ZHOUYU"; break;
+		case ECharName::ZHUGELIANG: return "ZHUGELIANG"; break;
+		default: throw "Can't find match!"; break;
+	}
+}
+
 const string TextManager::getTextOfCardName(ECardName name) const {
 	switch (name) {	
 		case ECardName::ALLOUTOFNONE: return gbkToUtf8("无中生有"); break;
@@ -112,6 +143,44 @@ const string TextManager::getTextOfCardName(ECardName name) const {
 		case ECardName::ZHUAHUANGFEIDIAN: return gbkToUtf8("爪黄飞电"); break;
 		case ECardName::ZHUGECROSSBOW: return gbkToUtf8("诸葛连弩"); break;
 		case ECardName::ZIXING: return gbkToUtf8("紫騂"); break;
+		default: throw "Can't find match!"; break;
+	}
+}
+
+const std::string TextManager::getStringOfCardName(ECardName name) const {
+	switch (name) {
+		case ECardName::ALLOUTOFNONE: return "ALLOUTOFNONE"; break;
+		case ECardName::ARROWRAIN: return "ARROWRAIN"; break;
+		case ECardName::BAGUARANK: return "BAGUARANK"; break;
+		case ECardName::COUPLESWORDS: return "COUPLESWORDS"; break;
+		case ECardName::DODGE: return "DODGE"; break;
+		case ECardName::DRAGONBROADSWORD: return "DRAGONBROADSWORD"; break;
+		case ECardName::DROWNLNHAPPINESS: return "DROWNLNHAPPINESS"; break;
+		case ECardName::DUEL: return "DUEL"; break;
+		case ECardName::FLAWLESSDEFENSE: return "FLAWLESSDEFENSE"; break;
+		case ECardName::GUANSHIAXE: return "GUANSHIAXE"; break;
+		case ECardName::HARVEST: return "HARVEST"; break;
+		case ECardName::ICESWORD: return "ICESWORD"; break;
+		case ECardName::JUSTICESHIELD: return "JUSTICESHIELD"; break;
+		case ECardName::KYLINBOW: return "KYLINBOW"; break;
+		case ECardName::LIGHTNING: return "LIGHTNING"; break;
+		case ECardName::MURDERWITHBORROWEDWEAPON: return "MURDERWITHBORROWEDWEAPON"; break;
+		case ECardName::OATHLNPEACHGARDEN: return "OATHLNPEACHGARDEN"; break;
+		case ECardName::PEACH: return "PEACH"; break;
+		case ECardName::SABOTAGE: return "SABOTAGE"; break;
+		case ECardName::SLASH: return "SLASH"; break;
+		case ECardName::SNAKESPEAR: return "SNAKESPEAR"; break;
+		case ECardName::SOUTHLNVASION: return "SOUTHLNVASION"; break;
+		case ECardName::THEFT: return "THEFT"; break;
+		case ECardName::TRIPLEHALBERD: return "TRIPLEHALBERD"; break;
+		case ECardName::TSINGGANGSWORD: return "TSINGGANGSWORD"; break;
+		case ECardName::ZHUGECROSSBOW: return "ZHUGECROSSBOW"; break;
+		case ECardName::JUEYING: return "JUEYING"; break;
+		case ECardName::ZHUAHUANGFEIDIAN: return "ZHUAHUANGFEIDIAN"; break;
+		case ECardName::DILU: return "DILU"; break;
+		case ECardName::ZIXING: return "ZIXING"; break;
+		case ECardName::CHITU: return "CHITU"; break;
+		case ECardName::DAWAN: return "DAWAN"; break;
 		default: throw "Can't find match!"; break;
 	}
 }
@@ -180,6 +249,16 @@ const string TextManager::getTextOfSuit(ECardSuit suit) const {
 	}
 }
 
+const std::string TextManager::getStringOfSuit(ECardSuit suit) const {
+	switch (suit) {
+		case ECardSuit::CLUB: return "CLUB"; break;
+		case ECardSuit::DIAMOND: return "DIAMOND"; break;
+		case ECardSuit::HEART: return "HEART"; break;
+		case ECardSuit::SPADE: return "SPADE"; break;
+		default: throw "Can't find match!"; break;
+	}
+}
+
 const string TextManager::getTextOfColorName(ECardColor color) const {
 	switch (color) {
 		case ECardColor::RED: return gbkToUtf8("红色"); break;
@@ -190,7 +269,7 @@ const string TextManager::getTextOfColorName(ECardColor color) const {
 
 const std::string TextManager::getTextOfNumber(int number) const {
 	switch (number) {
-		case 1: return gbkToUtf8("1"); break;
+		case 1: return gbkToUtf8("A"); break;
 		case 2: return gbkToUtf8("2"); break;
 		case 3: return gbkToUtf8("3"); break;
 		case 4: return gbkToUtf8("4"); break;

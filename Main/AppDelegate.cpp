@@ -6,6 +6,7 @@
 #include "HelloWorldScene.h"
 #include "AppMacros.h"
 #include "GameSence.h"
+#include "Manager\TextManager.h"
 
 USING_NS_CC;
 using namespace std;
@@ -30,14 +31,15 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLViewImpl::create("KTK");
+        glview = GLViewImpl::create(TextManager::gbkToUtf8("Èý¹úÉ±"));
+		glview->setFrameSize(1280, 720);
         director->setOpenGLView(glview);
     }
 
     director->setOpenGLView(glview);
 
     // Set the design resolution
-    glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::NO_BORDER);
+    glview->setDesignResolutionSize(1280, 720, ResolutionPolicy::EXACT_FIT);
 
 	Size frameSize = glview->getFrameSize();
     
@@ -69,7 +71,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
         director->setContentScaleFactor(MIN(smallResource.size.height/designResolutionSize.height, smallResource.size.width/designResolutionSize.width));
     }
-    
+
     // set searching path
     FileUtils::getInstance()->setSearchPaths(searchPath);
 	
