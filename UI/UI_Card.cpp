@@ -7,11 +7,7 @@
 
 using std::shared_ptr;
 using std::string;
-using cocos2d::Sprite;
-using cocos2d::Label;
-using cocos2d::Action;
-using cocos2d::EventListenerTouchOneByOne;
-using cocos2d::Color3B;
+using namespace cocos2d;
 
 bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 	string path;
@@ -20,6 +16,7 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 	path += GameManager::getInstance()->getTextManger().getStringOfCardName(card->getName());
 	path += ".png";
 	m_cardPattern = Sprite::create(path);
+	m_cardPattern->setAnchorPoint(Vec2::ZERO);
 	auto cardSize = m_cardPattern->getContentSize();
 
 	path.clear();
@@ -27,7 +24,7 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 	path += GameManager::getInstance()->getTextManger().getStringOfSuit(card->getSuit());
 	path += ".png";
 	m_suit = Sprite::create(path);
-	m_suit->setScale(0.2);
+	m_suit->setScale(0.2f);
 	m_suit->setPosition(23, cardSize.height - 37);
 
 	m_number = Label::create(GameManager::getInstance()->getTextManger().getTextOfNumber(card->getNumber()), "ziti.otf", 13);
@@ -41,21 +38,59 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 	m_cardPattern->addChild(m_suit);
 	m_cardPattern->addChild(m_number);
 	addChild(m_cardPattern);
+
+	// 设置UI_Card的锚点。
+	setAnchorPoint(Vec2::ANCHOR_MIDDLE);
+	// 设置UI_Card的大小为卡牌图片的大小。
+	setContentSize(m_cardPattern->getContentSize());
+
+	// 其他属性初始化
+	initListener();
+	m_card = card;
+	setDark(false);
+	setCanUp(false);
+	setUpping(false);
+	setUpCallBack([](const UI_Card *) {});
+	setDownCallBack([](const UI_Card *) {});
 	return true;
 }
 
-void UI_Card::initListenToUpDown() const {
-	//listener的初始化：触摸时：设置upping为相反。
-	// TODO - implement UI_Card::initListenToUpDown
-	throw "Not yet implemented";
+void UI_Card::initListener() {
+	m_touchFlag = 0;
+	m_listener = EventListenerTouchOneByOne::create();
+	m_listener->onTouchBegan = [=](Touch * touch, Event * event) {
+		auto target = static_cast<UI_Card *>(event->getCurrentTarget());
+		auto point = target->convertToNodeSpace(touch->getLocation());
+		auto size = target->getContentSize();
+		auto rect = Rect(Vec2::ZERO, size);
+		if (rect.containsPoint(point)) {
+			m_touchFlag = 1;
+			return true;
+		}
+		return false;
+	};
+
+	m_listener->onTouchEnded = [=](Touch * touch, Event * event) {
+		auto target = static_cast<UI_Card *>(event->getCurrentTarget());
+		auto point = target->convertToNodeSpace(touch->getLocation());
+		auto size = target->getContentSize();
+		auto rect = Rect(Vec2::ZERO, size);
+		if (rect.containsPoint(point)) {
+			m_touchFlag++;
+			if (m_touchFlag == 2)
+				setUpping(!getUpping());
+		}
+		else
+			m_touchFlag = 0;
+	};
+
+	m_listener->onTouchCancelled = [=](Touch * touch, Event * event) {
+		m_touchFlag = 0;
+	};
 }
 
 const std::shared_ptr<Card> & UI_Card::getCard() const {
 	return m_card;
-}
-
-void UI_Card::setCard(const std::shared_ptr<Card> & card) {
-	m_card = card;
 }
 
 void UI_Card::setDescription(cocos2d::Label * description) {
@@ -67,10 +102,19 @@ bool UI_Card::getDark() const {
 }
 
 void UI_Card::setDark(bool dark) {
-	//	Todo:stm
-		//if(true)	使其变暗
-	//if(false)	不变暗
-	throw "Not yet implemented";
+	if (m_dark == dark)
+		return;
+	m_dark = dark;
+	if (dark) {
+		m_cardPattern->runAction(TintTo::create(0.5f, 255 * 0.45, 255 * 0.45, 255 * 0.45));
+		m_suit->runAction(TintTo::create(0.5f, 255 * 0.45, 255 * 0.45, 255 * 0.45));
+		m_number->runAction(TintTo::create(0.5f, m_number->getColor().r * 0.45, m_number->getColor().g * 0.45, m_number->getColor().b * 0.45));
+	}
+	else {
+		m_cardPattern->runAction(TintTo::create(0.5f, 255, 255, 255));
+		m_suit->runAction(TintTo::create(0.5f, 255, 255, 255));
+		m_number->runAction(TintTo::create(0.5f, m_number->getColor().r, m_number->getColor().g, m_number->getColor().b));
+	}
 }
 
 bool UI_Card::getCanUp() const {
@@ -78,11 +122,13 @@ bool UI_Card::getCanUp() const {
 }
 
 void UI_Card::setCanUp(bool canUp) {
-	//	Todo:stm
-		//设置canUp属性
-	//true : 调用addEventListenerWithSceneGraphPriority
-	//false:调用removeEventListener
-	throw "Not yet implemented";
+	if (canUp == m_canUp)
+		return;
+	m_canUp = canUp;
+	if (canUp)
+		_eventDispatcher->addEventListenerWithSceneGraphPriority(m_listener, this);
+	else
+		_eventDispatcher->removeEventListener(m_listener);
 }
 
 bool UI_Card::getUpping() const {
@@ -90,12 +136,21 @@ bool UI_Card::getUpping() const {
 }
 
 void UI_Card::setUpping(bool upping) {
-	//	Todo:stm
-		//if(已经是up或down) return;
-	//设置upping，并且发出动作事件。
-	//if(true)	调用upCallBack
-	//if(false)	调用downCallBack
-	throw "Not yet implemented";
+	if (upping == m_upping)
+		return;
+	if (upping && !m_upping) {
+		auto action1 = MoveBy::create(0.3f, Vec2(0, 20));
+		auto action2 = CallFunc::create(std::bind(m_upCallBack, this));
+		auto action3 = Sequence::create(action1, action2, nullptr);
+		runAction(action3);
+	}
+	else if(!upping && m_upping) {
+		auto action1 = MoveBy::create(0.3f, Vec2(0, -20));
+		auto action2 = CallFunc::create(std::bind(m_downCallBack, this));
+		auto action3 = Sequence::create(action1, action2, nullptr);
+		runAction(action3);
+	}
+	m_upping = upping;
 }
 
 void UI_Card::setUpCallBack(const std::function<void(const UI_Card *)> & upCallBack) {
@@ -106,12 +161,12 @@ void UI_Card::setDownCallBack(const std::function<void(const UI_Card *)> & downC
 	m_downCallBack = downCallBack;
 }
 
-cocos2d::Action * UI_Card::runAction(const cocos2d::Action * action) const {
-	//把action封装为（Eventmanager.increase, action, eventmanager.decrease）
-	// TODO - implement UI_Card::runAction
-	throw "Not yet implemented";
+cocos2d::Action * UI_Card::runAction(cocos2d::Action * action) {
+//	Todo:stm lock和unlock
+	return Node::runAction(action);
 }
 
-EventListenerTouchOneByOne * UI_Card::getListener() const {
-	return m_listener;
-}
+//	Todo:stm delete or not?
+// EventListenerTouchOneByOne * UI_Card::getListener() const {
+// 	return m_listener;
+// }
