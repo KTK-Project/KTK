@@ -1,9 +1,6 @@
-#include "AppDelegate.h"
-
 #include <vector>
 #include <string>
-
-#include "HelloWorldScene.h"
+#include "AppDelegate.h"
 #include "AppMacros.h"
 #include "GameSence.h"
 #include "Manager\TextManager.h"

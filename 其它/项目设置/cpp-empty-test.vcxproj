@@ -204,6 +204,7 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClCompile Include="..\KTK\Event\SelectedPlayers.cpp" />
     <ClCompile Include="..\KTK\Main\AppDelegate.cpp" />
     <ClCompile Include="..\KTK\Main\GameSence.cpp" />
+    <ClCompile Include="..\KTK\Main\main.cpp" />
     <ClCompile Include="..\KTK\Manager\EventManagers.cpp" />
     <ClCompile Include="..\KTK\Manager\GameManager.cpp" />
     <ClCompile Include="..\KTK\Manager\PlayersManager.cpp" />
@@ -259,8 +260,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClCompile Include="..\KTK\UI\UI_Position.cpp" />
     <ClCompile Include="..\KTK\UI\UI_SkillPanal.cpp" />
     <ClCompile Include="..\KTK\UI\UI_TheftAndSabotage.cpp" />
-    <ClCompile Include="..\Test\HelloWorldScene.cpp" />
-    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\KTK\Card\Card.h" />
@@ -356,6 +355,7 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClInclude Include="..\KTK\Main\AppDelegate.h" />
     <ClInclude Include="..\KTK\Main\AppMacros.h" />
     <ClInclude Include="..\KTK\Main\GameSence.h" />
+    <ClInclude Include="..\KTK\Main\main.h" />
     <ClInclude Include="..\KTK\Manager\EventManagers.h" />
     <ClInclude Include="..\KTK\Manager\GameManager.h" />
     <ClInclude Include="..\KTK\Manager\KTK_Enum.h" />
@@ -413,8 +413,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClInclude Include="..\KTK\UI\UI_Position.h" />
     <ClInclude Include="..\KTK\UI\UI_SkillPanal.h" />
     <ClInclude Include="..\KTK\UI\UI_TheftAndSabotage.h" />
-    <ClInclude Include="..\Test\HelloWorldScene.h" />
-    <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\cocos\2d\libcocos2d.vcxproj">

@@ -1,13 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="win32">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Test">
-      <UniqueIdentifier>{93b97080-c6ff-48bd-b740-4ff3a7018aba}</UniqueIdentifier>
-    </Filter>
     <Filter Include="KTK">
       <UniqueIdentifier>{dc49164b-2b20-4b97-8e2f-1ba64af391d3}</UniqueIdentifier>
     </Filter>
@@ -43,12 +36,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Test\HelloWorldScene.cpp">
-      <Filter>Test</Filter>
-    </ClCompile>
     <ClCompile Include="..\KTK\Card\Card.cpp">
       <Filter>KTK\Card</Filter>
     </ClCompile>
@@ -406,14 +393,11 @@
     <ClCompile Include="..\KTK\Rule\Rule_Base.cpp">
       <Filter>KTK\Rule</Filter>
     </ClCompile>
+    <ClCompile Include="..\KTK\Main\main.cpp">
+      <Filter>KTK\Main</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.h">
-      <Filter>win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Test\HelloWorldScene.h">
-      <Filter>Test</Filter>
-    </ClInclude>
     <ClInclude Include="..\KTK\Card\Card.h">
       <Filter>KTK\Card</Filter>
     </ClInclude>
@@ -863,6 +847,9 @@
     </ClInclude>
     <ClInclude Include="..\KTK\Manager\KTK_Enum.h">
       <Filter>KTK\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\KTK\Main\main.h">
+      <Filter>KTK\Main</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
