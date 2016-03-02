@@ -15,7 +15,7 @@ public:
 	Player();
 
 	//基本属性设置
-	const Character & getCharacter() const;
+	Character & getCharacter();
 	void setCharacter(const Character & character);
 	ECharID getID() const;
 	void setID(ECharID ID);

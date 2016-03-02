@@ -10,6 +10,9 @@ using std::string;
 using namespace cocos2d;
 
 bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
+	if (!Node::init())
+		return false;
+
 	string path;
 
 	path += "png\\card\\";
@@ -17,6 +20,7 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 	path += ".png";
 	m_cardPattern = Sprite::create(path);
 	m_cardPattern->setAnchorPoint(Vec2::ZERO);
+	m_cardPattern->setPosition(Vec2::ZERO);
 	auto cardSize = m_cardPattern->getContentSize();
 
 	path.clear();
@@ -39,10 +43,9 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 	m_cardPattern->addChild(m_number);
 	addChild(m_cardPattern);
 
-	// 设置UI_Card的锚点。
-	setAnchorPoint(Vec2::ANCHOR_MIDDLE);
 	// 设置UI_Card的大小为卡牌图片的大小。
-	setContentSize(m_cardPattern->getContentSize());
+	setContentSize(cardSize);
+	setAnchorPoint(Vec2::ANCHOR_MIDDLE);
 
 	// 其他属性初始化
 	initListener();
@@ -52,6 +55,7 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 	setUpping(false);
 	setUpCallBack([](const UI_Card *) {});
 	setDownCallBack([](const UI_Card *) {});
+
 	return true;
 }
 
@@ -105,15 +109,18 @@ void UI_Card::setDark(bool dark) {
 	if (m_dark == dark)
 		return;
 	m_dark = dark;
+	float time = 1.3;
 	if (dark) {
-		m_cardPattern->runAction(TintTo::create(0.5f, 255 * 0.45, 255 * 0.45, 255 * 0.45));
-		m_suit->runAction(TintTo::create(0.5f, 255 * 0.45, 255 * 0.45, 255 * 0.45));
-		m_number->runAction(TintTo::create(0.5f, m_number->getColor().r * 0.45, m_number->getColor().g * 0.45, m_number->getColor().b * 0.45));
+		m_cardPattern->runAction(TintTo::create(time, 255 * 0.45, 255 * 0.45, 255 * 0.45));
+		m_suit->runAction(TintTo::create(time, 255 * 0.45, 255 * 0.45, 255 * 0.45));
+		m_number->runAction(TintTo::create(time, m_number->getColor().r * 0.45, m_number->getColor().g * 0.45, m_number->getColor().b * 0.45));
+		runAction(DelayTime::create(time));
 	}
 	else {
-		m_cardPattern->runAction(TintTo::create(0.5f, 255, 255, 255));
-		m_suit->runAction(TintTo::create(0.5f, 255, 255, 255));
-		m_number->runAction(TintTo::create(0.5f, m_number->getColor().r, m_number->getColor().g, m_number->getColor().b));
+		m_cardPattern->runAction(TintTo::create(time, 255, 255, 255));
+		m_suit->runAction(TintTo::create(time, 255, 255, 255));
+		m_number->runAction(TintTo::create(time, m_number->getColor().r, m_number->getColor().g, m_number->getColor().b));
+		runAction(DelayTime::create(time));
 	}
 }
 
@@ -138,14 +145,15 @@ bool UI_Card::getUpping() const {
 void UI_Card::setUpping(bool upping) {
 	if (upping == m_upping)
 		return;
+	float time = 0.3;
 	if (upping && !m_upping) {
-		auto action1 = MoveBy::create(0.3f, Vec2(0, 20));
+		auto action1 = MoveBy::create(time, Vec2(0, 20));
 		auto action2 = CallFunc::create(std::bind(m_upCallBack, this));
 		auto action3 = Sequence::create(action1, action2, nullptr);
 		runAction(action3);
 	}
 	else if(!upping && m_upping) {
-		auto action1 = MoveBy::create(0.3f, Vec2(0, -20));
+		auto action1 = MoveBy::create(time, Vec2(0, -20));
 		auto action2 = CallFunc::create(std::bind(m_downCallBack, this));
 		auto action3 = Sequence::create(action1, action2, nullptr);
 		runAction(action3);

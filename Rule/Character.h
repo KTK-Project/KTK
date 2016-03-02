@@ -12,7 +12,7 @@ public:
 	ECharForce getForce() const;
 	ECharSex getSex() const;
 	int getHP() const;
-	const SkillList & getSkillList() const;
+	SkillList & getSkillList();
 	void setSkillList(const SkillList & skillList);
 
 private:

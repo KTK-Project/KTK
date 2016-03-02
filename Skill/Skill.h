@@ -5,7 +5,7 @@
 
 class Skill {
 public:
-	Skill(ESkillName skillName, bool lordSkill, ESkillState skillState = ESkillState::NONE);
+	Skill(ESkillName skillName, bool lordSkill, ESkillState skillState = ESkillState::CANTUSE);
 	ESkillName getSkillName() const;
 	bool isLordSkill() const;
 	ESkillState getSkillState() const;

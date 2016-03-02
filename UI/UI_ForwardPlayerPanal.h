@@ -40,8 +40,9 @@ private:
 	UI_SkillPanal * m_skillPanal;
 	UI_HandCardPanal * m_handCardPanal;
 	UI_Message * m_message;
-	int m_playerPanalFilter;
-	int m_cardFilter;
+//	Todo:stm	delete or not?
+// 	int m_playerPanalFilter;
+// 	int m_cardFilter;
 	SelectedCards m_selectedCards;
 	SelectedPlayers m_selectedPlayers;
 };

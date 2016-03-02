@@ -3,6 +3,11 @@
 Character::Character(ECharName name /*= ECharName::NONE*/) {
 	m_name = name;
 	switch (name) {
+		case ECharName::NONE:
+			m_force = ECharForce::NONE;
+			m_sex = ECharSex::NONE;
+			m_HP = 0;
+			break;
 		case ECharName::CAOCAO:
 			m_force = ECharForce::WEI;
 			m_sex = ECharSex::MALE;
@@ -168,9 +173,7 @@ Character::Character(ECharName name /*= ECharName::NONE*/) {
 			m_skillList.addSkill(Skill(ESkillName::GUANXING, false));
 			m_skillList.addSkill(Skill(ESkillName::KONGCHENG, false));
 			break;
-		default:
-			throw "Can't find match";
-			break;
+		default: throw "Can't find match"; break;
 	}
 }
 
@@ -194,7 +197,7 @@ int Character::getHP() const {
 	return m_HP;
 }
 
-const SkillList & Character::getSkillList() const {
+SkillList & Character::getSkillList() {
 	return m_skillList;
 }
 

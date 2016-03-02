@@ -7,7 +7,7 @@
 
 class SkillList {
 public:
-	int getSize() const;
+	size_t getSize() const;
 	Skill & getSkillByName(ESkillName name);
 	Skill & getSkillByIndex(int index);
 	void addSkill(const Skill & skill);

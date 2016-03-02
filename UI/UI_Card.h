@@ -46,7 +46,8 @@ private:
 	bool m_upping;
 	std::function<void (const UI_Card *)> m_upCallBack;
 	std::function<void (const UI_Card *)> m_downCallBack;
-	int m_touchFlag;
 	cocos2d::EventListenerTouchOneByOne * m_listener;
+
+	int m_touchFlag;
 };
 #endif // UI_Card_h__

@@ -15,7 +15,7 @@ Player::Player() {
 	m_playerPanal = nullptr;
 }
 
-const Character & Player::getCharacter() const {
+Character & Player::getCharacter() {
 	return m_character;
 }
 
