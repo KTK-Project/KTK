@@ -2,12 +2,13 @@
 #define UI_Position_h__
 
 #include "cocos2d.h"
+#include "Player/Player.h"
 
 class UI_Position : public cocos2d::Node {
 public:
-	static UI_Position * create() {
+	static UI_Position * create(const std::shared_ptr<Player> & player) {
 		UI_Position * pRet = new(std::nothrow) UI_Position();
-		if (pRet && pRet->init()) {
+		if (pRet && pRet->initWithPlayer(player)) {
 			pRet->autorelease();
 			return pRet;
 		}
@@ -17,12 +18,13 @@ public:
 			return NULL;
 		}
 	}
-	bool init();
-	void refresh() const;
+	bool initWithPlayer(const std::shared_ptr<Player> & player);
+	void refresh();
 protected:
 	UI_Position() = default;
 private:
-	cocos2d::Sprite * m_positionBackground;
+	std::shared_ptr<Player> m_player;
+	cocos2d::LayerColor * m_positionBackground;
 	cocos2d::Label * m_label;
 };
 #endif // UI_Position_h__

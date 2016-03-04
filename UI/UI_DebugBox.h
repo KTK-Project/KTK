@@ -18,12 +18,13 @@ public:
 			return NULL;
 		}
 	}
-	bool init() const;
+	bool init();
+	void addLog(const std::string & log);
 protected:
 	UI_DebugBox() = default;
 private:
+	int m_counter;
 	cocos2d::ui::ListView * m_listView;
-	cocos2d::Label * m_scrollLabel;
 	cocos2d::ui::TextField * m_lineEdit;
 };
 #endif // UI_DebugBox_h__

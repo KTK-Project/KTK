@@ -8,7 +8,7 @@
 
 class Card_DrownInHappiness : public Card_DelayedStrategy {
 public:
-	Card_DrownInHappiness(ECardSuit Suit, int number) : Card_DelayedStrategy(ECardName::DROWNLNHAPPINESS, Suit, number) { }
+	Card_DrownInHappiness(ECardSuit Suit, int number) : Card_DelayedStrategy(ECardName::DROWNINHAPPINESS, Suit, number) { }
 	int getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const;
 	std::vector<std::shared_ptr<Player>> getCandidates(const std::shared_ptr<Player> & playCardPlayer) const;
 	void useCard(const std::shared_ptr<Player> & playCardPlayer, const std::vector<std::shared_ptr<Player>> & goalPlayer) const;

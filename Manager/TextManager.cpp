@@ -120,7 +120,7 @@ const string TextManager::getTextOfCardName(ECardName name) const {
 		case ECardName::DILU: return gbkToUtf8("的卢"); break;
 		case ECardName::DODGE: return gbkToUtf8("闪"); break;
 		case ECardName::DRAGONBROADSWORD: return gbkToUtf8("青龙偃月刀"); break;
-		case ECardName::DROWNLNHAPPINESS: return gbkToUtf8("乐不思蜀"); break;
+		case ECardName::DROWNINHAPPINESS: return gbkToUtf8("乐不思蜀"); break;
 		case ECardName::DUEL: return gbkToUtf8("决斗"); break;
 		case ECardName::FLAWLESSDEFENSE: return gbkToUtf8("无懈可击"); break;
 		case ECardName::GUANSHIAXE: return gbkToUtf8("贯石斧"); break;
@@ -155,7 +155,7 @@ const std::string TextManager::getStringOfCardName(ECardName name) const {
 		case ECardName::COUPLESWORDS: return "COUPLESWORDS"; break;
 		case ECardName::DODGE: return "DODGE"; break;
 		case ECardName::DRAGONBROADSWORD: return "DRAGONBROADSWORD"; break;
-		case ECardName::DROWNLNHAPPINESS: return "DROWNLNHAPPINESS"; break;
+		case ECardName::DROWNINHAPPINESS: return "DROWNLNHAPPINESS"; break;
 		case ECardName::DUEL: return "DUEL"; break;
 		case ECardName::FLAWLESSDEFENSE: return "FLAWLESSDEFENSE"; break;
 		case ECardName::GUANSHIAXE: return "GUANSHIAXE"; break;

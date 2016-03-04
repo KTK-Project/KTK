@@ -65,6 +65,7 @@ bool UI_SkillPanal::initWithPlayer(const std::shared_ptr<Player> & player) {
 		m_listeners.push_back(listener);
 	}
 
+	setContentSize(Size(100, 20));
 	setAnchorPoint(Vec2::ANCHOR_MIDDLE);
 	return true;
 }

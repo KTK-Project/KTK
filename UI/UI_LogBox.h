@@ -19,13 +19,12 @@ public:
 			return NULL;
 		}
 	}
-	bool init() const;
-	void addLog(const std::string & log) const;
+	bool init();
+	void addLog(const std::string & log);
 protected:
 	UI_LogBox() = default;
 private:
+	int m_counter;
 	cocos2d::ui::ListView * m_listView;
-	cocos2d::ui::CheckBox * m_scrollCheckBox;
-	cocos2d::Label * m_scrollLabel;
 };
 #endif // UI_LogBox_h__

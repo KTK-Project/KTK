@@ -3,12 +3,13 @@
 
 #include <vector>
 #include "cocos2d.h"
+#include "Player/Player.h"
 
 class UI_JudgeIcon : public cocos2d::Node {
 public:
-	static UI_JudgeIcon * create() {
+	static UI_JudgeIcon * create(const std::shared_ptr<Player> & player) {
 		UI_JudgeIcon * pRet = new(std::nothrow) UI_JudgeIcon();
-		if (pRet && pRet->init()) {
+		if (pRet && pRet->initWithPlayer(player)) {
 			pRet->autorelease();
 			return pRet;
 		}
@@ -18,11 +19,12 @@ public:
 			return NULL;
 		}
 	}
-	bool init();
-	void refresh() const;
+	bool initWithPlayer(const std::shared_ptr<Player> & player);
+	void refresh();
 protected:
 	UI_JudgeIcon() = default;
 private:
-	std::vector<cocos2d::Sprite *> m_icon;
+	std::shared_ptr<Player> m_player;
+	std::vector<cocos2d::LayerColor *> m_icon;
 };
 #endif // UI_JudgeIcon_h__
