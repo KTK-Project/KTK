@@ -31,9 +31,6 @@ private:
 	std::shared_ptr<Player> m_player;
 	std::vector<cocos2d::LayerColor *> m_skillIcons;
 	std::vector<cocos2d::Label *> m_skillLabel;
-
-	std::vector<int> m_touchFlags;
-	std::vector<cocos2d::EventListener *> m_listeners;
 	std::vector<std::function<void()>> m_skillCallBack;
 };
 #endif // UI_SkillPanal_h__

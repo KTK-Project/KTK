@@ -60,15 +60,15 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 }
 
 void UI_Card::initListener() {
-	m_touchFlag = 0;
+	static int touchFlag = 0;
 	m_listener = EventListenerTouchOneByOne::create();
-	m_listener->onTouchBegan = [=](Touch * touch, Event * event) {
+	m_listener->onTouchBegan = [](Touch * touch, Event * event) {
 		auto target = static_cast<UI_Card *>(event->getCurrentTarget());
 		auto point = target->convertToNodeSpace(touch->getLocation());
 		auto size = target->getContentSize();
 		auto rect = Rect(Vec2::ZERO, size);
 		if (rect.containsPoint(point)) {
-			m_touchFlag = 1;
+			touchFlag++;
 			return true;
 		}
 		return false;
@@ -80,16 +80,15 @@ void UI_Card::initListener() {
 		auto size = target->getContentSize();
 		auto rect = Rect(Vec2::ZERO, size);
 		if (rect.containsPoint(point)) {
-			m_touchFlag++;
-			if (m_touchFlag == 2)
+			touchFlag++;
+			if (touchFlag == 2)
 				setUpping(!getUpping());
 		}
-		else
-			m_touchFlag = 0;
+		touchFlag = 0;
 	};
 
 	m_listener->onTouchCancelled = [=](Touch * touch, Event * event) {
-		m_touchFlag = 0;
+		touchFlag = 0;
 	};
 }
 

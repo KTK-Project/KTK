@@ -31,7 +31,7 @@ bool UI_SkillPanal::initWithPlayer(const std::shared_ptr<Player> & player) {
 		m_skillLabel.push_back(skillLabel);
 		m_skillCallBack.push_back([]() {});
 
-		m_touchFlags.push_back(0);
+		static int touchFlag = 0;
 		auto listener = EventListenerTouchOneByOne::create();
 		listener->onTouchBegan = [=](Touch * touch, Event * event) {
 			auto target = static_cast<LayerColor *>(event->getCurrentTarget());
@@ -39,7 +39,7 @@ bool UI_SkillPanal::initWithPlayer(const std::shared_ptr<Player> & player) {
 			auto size = target->getContentSize();
 			auto rect = Rect(Vec2::ZERO, size);
 			if (rect.containsPoint(point)) {
-				m_touchFlags[i] = 1;
+				touchFlag++;
 				return true;
 			}
 			return false;
@@ -50,19 +50,16 @@ bool UI_SkillPanal::initWithPlayer(const std::shared_ptr<Player> & player) {
 			auto size = target->getContentSize();
 			auto rect = Rect(Vec2::ZERO, size);
 			if (rect.containsPoint(point)) {
-				m_touchFlags[i]++;
-				if (m_touchFlags[i] == 2)
+				touchFlag++;
+				if (touchFlag == 2)
 					m_skillCallBack[i]();
 			}
-			else
-				m_touchFlags[i] = 0;
+			touchFlag = 0;
 		};
 		listener->onTouchCancelled = [=](Touch * touch, Event * event) {
-			m_touchFlags[i] = 0;
+			touchFlag = 0;
 		};
 		_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, skillIcon);
-
-		m_listeners.push_back(listener);
 	}
 
 	setContentSize(Size(100, 20));

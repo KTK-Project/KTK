@@ -7,6 +7,7 @@
 #include "UI/UI_DebugBox.h"
 #include "Card/Card_DrownInHappiness.h"
 #include "Card/Card_Lightning.h"
+#include "Manager/GameManager.h"
 
 using namespace cocos2d;
 
@@ -75,12 +76,18 @@ bool GameSence::init() {
 // 	judgeIcon->setPosition(size.width / 2, size.height / 2);
 // 	addChild(judgeIcon);
 
+// 	auto player = std::make_shared<Player>();
+// 	player->setMaxHP(5);
+// 	player->setHP(4);
+// 	auto hp = UI_HP::create(player);
+// 	hp->setPosition(size.width / 2, size.height / 2);
+// 	addChild(hp);
+
 	auto player = std::make_shared<Player>();
-	player->setMaxHP(5);
-	player->setHP(4);
-	auto hp = UI_HP::create(player);
-	hp->setPosition(size.width / 2, size.height / 2);
-	addChild(hp);
+	auto id = UI_ID::create(player);
+	id->setPosition(size.width / 2, size.height / 2);
+	addChild(id);
+
 
 	return true;
 }
