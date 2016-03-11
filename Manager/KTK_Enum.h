@@ -33,6 +33,10 @@ enum class EEquipmentPanalState {
 	SELECTED, CANSELECTED, CANTSELECTED
 };
 
+enum class EEquipmentPanalType {
+	WEAPON, ARMOR, OFFENSIVEHORSE, DEFENSIVEHORSE
+};
+
 enum class EEquipmentCard_Type {
 	NONE, WEAPON, ARMOR, HORSE
 };

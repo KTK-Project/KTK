@@ -21,11 +21,11 @@ public:
 	}
 	bool init();
 	void setString(const std::string & string);
-	void setVisible(bool visible);
+	void setVisible(bool visible) override;
 	void setButton1ValidCheck(const std::function<bool()> & button1ValidCheck);
 	void setButton2ValidCheck(const std::function<bool ()> & button2ValidCheck);
-	void setButton1CallBack(const std::function<void (const std::shared_ptr<Event_Base> &)> & button1CallBack);
-	void setButton2CallBack(const std::function<void (const std::shared_ptr<Event_Base> &)> & button2CallBack);
+	void setButton1CallBack(const std::function<void ()> & button1CallBack);
+	void setButton2CallBack(const std::function<void ()> & button2CallBack);
 	void update(float delta) override;
 protected:
 	UI_Message() = default;

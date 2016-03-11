@@ -1,13 +1,19 @@
+#include <memory>
 #include "cocos2d.h"
 #include "GameSence.h"
+
 #include "Manager/TextManager.h"
 #include "Card/Card_Slash.h"
-#include <memory>
 #include "UI/UI_SkillPanal.h"
 #include "UI/UI_DebugBox.h"
 #include "Card/Card_DrownInHappiness.h"
 #include "Card/Card_Lightning.h"
 #include "Manager/GameManager.h"
+#include "UI/UI_Message.h"
+#include "UI/UI_EquipmentPanal.h"
+#include "Card/Card_Horse.h"
+#include "Card/Card_DragonBroadSword.h"
+#include "Card/Card_BaGuaRank.h"
 
 using namespace cocos2d;
 
@@ -25,7 +31,6 @@ bool GameSence::init() {
 	lineY->setContentSize(Size(3, size.height));
 	lineY->setPosition(size.width / 2, 0);
 	addChild(lineY, 100);
-
 
 // 	auto card_ptr = std::make_shared<Card_Slash>(ECardSuit::DIAMOND, 13);
 // 	auto ui_card = UI_Card::create(card_ptr);
@@ -83,11 +88,30 @@ bool GameSence::init() {
 // 	hp->setPosition(size.width / 2, size.height / 2);
 // 	addChild(hp);
 
-	auto player = std::make_shared<Player>();
-	auto id = UI_ID::create(player);
-	id->setPosition(size.width / 2, size.height / 2);
-	addChild(id);
+// 	auto player = std::make_shared<Player>();
+// 	auto id = UI_ID::create(player);
+// 	id->setPosition(size.width / 2, size.height / 2);
+// 	addChild(id);
 
+// 	auto message = UI_Message::create();
+// 	message->setString(TextManager::gbkToUtf8("是否发动护驾？"));
+// 	message->setPosition(size.width / 2, size.height / 2);
+// // 	message->setVisible(false);
+// 	addChild(message);
+
+// 	auto player = std::make_shared<Player>();
+// 	player->setWeapon(std::make_shared<Card_DragonBroadSword>(ECardSuit::CLUB, 13));
+// 	player->setArmor(std::make_shared<Card_BaGuaRank>(ECardSuit::CLUB, 13));
+// 	player->setOffensiveHorse(std::make_shared<Card_Horse>(ECardName::CHITU, ECardSuit::CLUB, 13));
+// 	player->setDefensiveHorse(std::make_shared<Card_Horse>(ECardName::DILU, ECardSuit::CLUB, 13));
+// 	auto equipment = UI_EquipmentPanal::create(player);
+// 	equipment->setPosition(size.width / 2, size.height / 2);
+// 	addChild(equipment);
+
+// 	auto player = std::make_shared<Player>();
+// 	auto quantity = UI_HandCardQuantity::create(player);
+// 	quantity->setPosition(size.width / 2, size.height / 2);
+// 	addChild(quantity);
 
 	return true;
 }

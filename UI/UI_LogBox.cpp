@@ -11,7 +11,7 @@ bool UI_LogBox::init() {
 	m_counter = 0;
 	m_listView = ListView::create();
 	m_listView->setDirection(ScrollView::Direction::VERTICAL);
-	m_listView->setBackGroundImage("png\\ui\\logBox1.png");
+	m_listView->setBackGroundImage("png\\ui\\black.png");
 	m_listView->setBounceEnabled(true);
 	m_listView->setBackGroundImageScale9Enabled(true);
 	m_listView->setContentSize(Size(300, 260));

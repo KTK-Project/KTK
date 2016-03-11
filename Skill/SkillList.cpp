@@ -1,7 +1,6 @@
 #include "SkillList.h"
 
-size_t SkillList::getSize() const
-{
+size_t SkillList::getSize() const {
 	return m_skills.size();
 }
 

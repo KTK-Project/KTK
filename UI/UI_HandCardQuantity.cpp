@@ -1,14 +1,27 @@
 #include "UI_HandCardQuantity.h"
 
-bool UI_HandCardQuantity::init() {
-	//创建好两个成员
-	// TODO - implement UI_HandCardQuantity::init
-	throw "Not yet implemented";
+using namespace cocos2d;
+
+bool UI_HandCardQuantity::initWithPlayer(const std::shared_ptr<Player> & player) {
+	if (!Node::init())
+		return false;
+
+	m_player = player;
+
+	auto size = Size(40, 40);
+	m_quantityBackground = LayerColor::create(Color4B::BLACK);
+	m_quantityBackground->setContentSize(size);
+	addChild(m_quantityBackground);
+
+	m_quantity = Label::create("", "ziti.otf", 20);
+	m_quantity->setPosition(Vec2(size.width / 2, size.height / 2));
+	m_quantityBackground->addChild(m_quantity);
+
+	refresh();
+	return true;
 }
 
-void UI_HandCardQuantity::refresh() const {
-	//处理Player为nullptr的情况
-//根据player设置label
-	// TODO - implement UI_HandCardQuantity::refresh
-	throw "Not yet implemented";
+void UI_HandCardQuantity::refresh() {
+	int quantity = m_player->getHandCardPile().getSize();
+	m_quantity->setString(std::to_string(quantity));
 }

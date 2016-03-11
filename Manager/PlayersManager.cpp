@@ -14,7 +14,6 @@ const shared_ptr<Player> & PlayersManager::getLordPlayer() const {
 	return m_lordPlayer;
 }
 
-
 void PlayersManager::setLordPlayer(const shared_ptr<Player> & lordPlayer) {
 	auto currentIndex = std::find(m_players.cbegin(), m_players.cend(), lordPlayer) - m_players.cbegin();
 	if (currentIndex == KTK_Info::PLAYER_QUANTITY)

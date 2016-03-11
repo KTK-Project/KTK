@@ -4,12 +4,13 @@
 #include "cocos2d.h"
 #include "Card\Card.h"
 #include "Manager\KTK_Enum.h"
+#include "Player\Player.h"
 
 class UI_EquipmentPanal : public cocos2d::Node {
 public:
-	static UI_EquipmentPanal * create() {
+	static UI_EquipmentPanal * create(const std::shared_ptr<Player> & player) {
 		UI_EquipmentPanal * pRet = new(std::nothrow) UI_EquipmentPanal();
-		if (pRet && pRet->init()) {
+		if (pRet && pRet->initWithPlayer(player)) {
 			pRet->autorelease();
 			return pRet;
 		}
@@ -19,19 +20,18 @@ public:
 			return NULL;
 		}
 	}
-	bool init();
-	void setWeapon(const std::shared_ptr<Card> & weapon);
-	void setArmor(const std::shared_ptr<Card> & armor);
-	void setDefensiveHorse(const std::shared_ptr<Card> & defensiveHorse);
-	void setOffensiveHorse(const std::shared_ptr<Card> & offensiveHorse);
-	void setEquipmentPanalState(const std::shared_ptr<Card> & card, EEquipmentPanalState & state);
-	void refresh() const;
+	bool initWithPlayer(const std::shared_ptr<Player> & player);
+	void setEquipmentPanalState(EEquipmentPanalType type, EEquipmentPanalState state);
+	void setEquipmentPanalTouchEvent(EEquipmentPanalType type, std::function<void()> callBack);
+	void refresh();
 protected:
 	UI_EquipmentPanal() = default;
 private:
-	cocos2d::Sprite * m_weapon;
-	cocos2d::Sprite * m_armor;
-	cocos2d::Sprite * m_defensiveHorse;
-	cocos2d::Sprite * m_offensiveHorse;
+	std::shared_ptr<Player> m_player;
+	cocos2d::LayerColor * m_weapon;
+	cocos2d::LayerColor * m_armor;
+	cocos2d::LayerColor * m_defensiveHorse;
+	cocos2d::LayerColor * m_offensiveHorse;
+	std::vector<std::function<void()>> m_touchEvents;
 };
 #endif // UI_EquipmentPanal_h__

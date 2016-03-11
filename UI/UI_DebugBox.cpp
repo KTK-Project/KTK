@@ -13,7 +13,7 @@ bool UI_DebugBox::init() {
 
 	m_listView = ListView::create();
 	m_listView->setDirection(ScrollView::Direction::VERTICAL);
-	m_listView->setBackGroundImage("png\\ui\\logBox2.png");
+	m_listView->setBackGroundImage("png\\ui\\green.png");
 	m_listView->setBounceEnabled(true);
 	m_listView->setBackGroundImageScale9Enabled(true);
 	m_listView->setAnchorPoint(Vec2::ANCHOR_MIDDLE);

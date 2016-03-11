@@ -1,8 +1,5 @@
 #include "Skill.h"
 
-Skill::Skill(ESkillName skillName, bool lordSkill, ESkillState skillState)
-	:m_skillName(skillName),m_lordSkill(lordSkill),m_skillState(skillState){}
-
 ESkillName Skill::getSkillName() const {
 	return m_skillName;
 }
