@@ -1,56 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Event_AllOutOfNone">
-    <Position X="5.75" Y="3.25" Width="1.75" />
+    <Position X="5.75" Y="7" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_AllOutOfNone.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Event_ArrowRain">
-    <Position X="10.75" Y="3.25" Width="1.5" />
+    <Position X="10.75" Y="7" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_ArrowRain.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_Base" Collapsed="true">
-    <Position X="30.5" Y="0.5" Width="1.5" />
+  <Class Name="Event_Base">
+    <Position X="31.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AIAAAAgAQAAgAAACIAAAAAAAAAAAAAIABAAACAEAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Base.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_DelayedStrategy" Collapsed="true">
-    <Position X="33" Y="1.75" Width="2" />
+  <Class Name="Event_DelayedStrategy">
+    <Position X="33.5" Y="4.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAAAAAAAIAAAAAAAAAAgAAACAAAAAAAAAA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_DelayedStrategy.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_DrownInHappiness" Collapsed="true">
-    <Position X="34" Y="3.25" Width="2.25" />
+  <Class Name="Event_DrownInHappiness">
+    <Position X="34.75" Y="7.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_DrownInHappiness.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_Duel" Collapsed="true">
-    <Position X="29.25" Y="3.25" Width="1.5" />
+  <Class Name="Event_Duel">
+    <Position X="29.75" Y="7" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAACEAAAAAAAAAABAAAAIAAAAAAAAAAAABAAAQAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Duel.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Event_Dying">
-    <Position X="1.25" Y="1.75" Width="1.5" />
+    <Position X="1.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAgAAFQBQAQAAAAAAAAAAAAAAAIwA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Dying.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_FlawlessDefense" Collapsed="true">
-    <Position X="13" Y="3.25" Width="2" />
+  <Class Name="Event_FlawlessDefense">
+    <Position X="13.25" Y="7" Width="2" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -59,148 +59,148 @@
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_FlawlessDefense.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_GetCardFromHarvest" Collapsed="true">
-    <Position X="45.5" Y="3.25" Width="2.25" />
+  <Class Name="Event_GetCardFromHarvest">
+    <Position X="46.25" Y="9.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>IAAAAAQAAIBACAAAAAAEAgAAAAAAAAAEAgAAAAAAAgA=</HashCode>
+      <HashCode>IAAAAAQAAIBAAAAAAAAEAAAAAAAAAAAEAgAAAAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_GetCardFromHarvest.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_Harvest" Collapsed="true">
-    <Position X="21.75" Y="3.25" Width="1.5" />
+  <Class Name="Event_Harvest">
+    <Position X="22" Y="7" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Harvest.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_Hurt" Collapsed="true">
-    <Position X="37" Y="1.75" Width="1.5" />
+  <Class Name="Event_Hurt">
+    <Position X="37.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEQQAIAACAAAAAAAABBAEAABAQAAAAACIAAAAgA=</HashCode>
+      <HashCode>AAAAAEQQAIAAAAAAAAAAABBAEAABAQAAAAACIAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Hurt.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_Interaction" Collapsed="true">
-    <Position X="48.5" Y="1.75" Width="1.5" />
+  <Class Name="Event_Interaction">
+    <Position X="49.25" Y="4.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AhAAAAAAAAAAgAAAECAAAAAAAAEiCyAAEAgAAAABAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Interaction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Event_Judge">
-    <Position X="3.5" Y="1.75" Width="1.5" />
+    <Position X="3.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIAAKgAAAAAABAAAAACAAAgAAEAAAAhA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Judge.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_Lightning" Collapsed="true">
-    <Position X="31.5" Y="3.25" Width="1.75" />
+  <Class Name="Event_Lightning">
+    <Position X="32.25" Y="7.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Lightning.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_MurderWithBorrowedWeapon" Collapsed="true">
-    <Position X="15.75" Y="3.25" Width="3" />
+  <Class Name="Event_MurderWithBorrowedWeapon">
+    <Position X="16" Y="7" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAIAAARAAAAAAAIgAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_MurderWithBorrowedWeapon.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_OathInPeachGarden" Collapsed="true">
-    <Position X="24" Y="3.25" Width="2.25" />
+  <Class Name="Event_OathInPeachGarden">
+    <Position X="24.5" Y="7" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAACEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_OathInPeachGarden.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_RequestBoolean" Collapsed="true">
-    <Position X="54.5" Y="3.25" Width="2" />
+  <Class Name="Event_RequestBoolean">
+    <Position X="55.25" Y="9.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAEAgAAAAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_RequestBoolean.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_RequestCard" Collapsed="true">
-    <Position X="57.25" Y="3.25" Width="1.75" />
+  <Class Name="Event_RequestCard">
+    <Position X="58" Y="9.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>BACAECAIAABAAAgFAAAEEAAAAQAABRAEQgAQIAACAhA=</HashCode>
+      <HashCode>BACAECAIAABAAAgFAAAEEAAAAQAABRAAQgAQIAACAhA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_RequestCard.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_RequestCardAndGoalPlayer" Collapsed="true">
-    <Position X="39.25" Y="3.25" Width="2.75" />
+  <Class Name="Event_RequestCardAndGoalPlayer">
+    <Position X="40" Y="9.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAAEAAAAAgAAAAEYAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_RequestCardAndGoalPlayer.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_RequestCardSuit" Collapsed="true">
-    <Position X="42.75" Y="3.25" Width="2" />
+  <Class Name="Event_RequestCardSuit">
+    <Position X="43.5" Y="9.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAEAgAAAAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_RequestCardSuit.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Event_RequestGoalPlayer">
-    <Position X="48.5" Y="3.25" Width="2.25" />
+    <Position X="49.25" Y="9.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAQAgAAABAAAAAAAABAAABQAAAAAAEAgAAABAQQgA=</HashCode>
+      <HashCode>AAAAQAgAAABAAAAAAAABAAABQAAAAAAEAgAAAAAQQgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_RequestGoalPlayer.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_RequestPlayerCard" Collapsed="true">
-    <Position X="51.5" Y="3.25" Width="2.25" />
+  <Class Name="Event_RequestPlayerCard">
+    <Position X="52.25" Y="9.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>BACAECAIMABAAQAFAkAEAAAAAAAAARAEQgAQIIASKgQ=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_RequestPlayerCard.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_Sabotage" Collapsed="true">
-    <Position X="27" Y="3.25" Width="1.5" />
+  <Class Name="Event_Sabotage">
+    <Position X="27.5" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAABAAAQAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Sabotage.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_Slash" Collapsed="true">
-    <Position X="59.75" Y="1.75" Width="1.5" />
+  <Class Name="Event_Slash">
+    <Position X="61.25" Y="4.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAIAACAMEAAAAABIAAABABAAACABGxAAgBCgIAACogA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Slash.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_SouthInvasion" Collapsed="true">
-    <Position X="8.25" Y="3.25" Width="1.75" />
+  <Class Name="Event_SouthInvasion">
+    <Position X="8.25" Y="7" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_SouthInvasion.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_Strategy" Collapsed="true">
-    <Position X="17.5" Y="1.75" Width="1.5" />
+  <Class Name="Event_Strategy">
+    <Position X="17.75" Y="4.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Strategy.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Event_Theft" Collapsed="true">
-    <Position X="19.5" Y="3.25" Width="1.5" />
+  <Class Name="Event_Theft">
+    <Position X="19.75" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAABAAAQAAAgA=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\Event_Theft.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SelectedCards" Collapsed="true">
-    <Position X="62.25" Y="0.5" Width="1.5" />
+  <Class Name="SelectedCards">
+    <Position X="64.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQgAwACJCAAAMAAAAGAAAAAAQAAAQAAAAAAAAAACg=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\SelectedCards.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SelectedPlayers" Collapsed="true">
-    <Position X="64" Y="0.5" Width="1.5" />
+  <Class Name="SelectedPlayers">
+    <Position X="66.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAQgAAACBCAAAMAAAAGAAAAAAQACAAAABAAAAAAAAg=</HashCode>
       <FileName>C:\Program-Project\KTK\cocos2d-x-3.7\tests\cpp-empty-test\KTK\Event\SelectedPlayers.h</FileName>

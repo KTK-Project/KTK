@@ -859,5 +859,14 @@
     <None Include="..\KTK\ClassDiagram\Event.cd">
       <Filter>KTK\ClassDiagram</Filter>
     </None>
+    <None Include="..\KTK\ClassDiagram\Rule.cd">
+      <Filter>KTK\ClassDiagram</Filter>
+    </None>
+    <None Include="..\KTK\ClassDiagram\Controller.cd">
+      <Filter>KTK\ClassDiagram</Filter>
+    </None>
+    <None Include="..\KTK\ClassDiagram\Manager.cd">
+      <Filter>KTK\ClassDiagram</Filter>
+    </None>
   </ItemGroup>
 </Project>
