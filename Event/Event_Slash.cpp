@@ -1,7 +1,7 @@
 #include "Event_Slash.h"
 
-const std::shared_ptr<Player> & Event_Slash::getFirstPlayer() const {
-	return m_firstPlayer;
+std::shared_ptr<Player> Event_Slash::getFirstPlayer() const {
+	return m_firstPlayer.lock();
 }
 
 void Event_Slash::setFirstPlayer(const std::shared_ptr<Player> & firstPlayer) {
@@ -16,8 +16,8 @@ void Event_Slash::setWeapon(const std::shared_ptr<Card> & weapon) {
 	m_weapon = weapon;
 }
 
-const std::shared_ptr<Player> & Event_Slash::getGoalPlayers() const {
-	return m_goalPlayers;
+std::shared_ptr<Player> Event_Slash::getGoalPlayers() const {
+	return m_goalPlayers.lock();
 }
 
 void Event_Slash::setGoalPlayers(const std::shared_ptr<Player> & goalPlayers) {

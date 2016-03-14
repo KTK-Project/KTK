@@ -7,7 +7,7 @@
 
 class Event_RequestGoalPlayer : public Event_Interaction {
 public:
-	std::vector<std::shared_ptr<Player>> getCandidate();
+	std::vector<std::weak_ptr<Player>> getCandidate();
 	int getGoalPlayerMaxQulitity() const;
 	void setGoalPlayerMaxQulitity(int goalPlayerMaxQulitity);
 	int getGoalPlayerMinQulitity() const;
@@ -15,7 +15,7 @@ public:
 	SelectedPlayers & getReceiver();
 	void eventResolve() const;
 private:
-	std::vector<std::shared_ptr<Player>> m_candidate;
+	std::vector<std::weak_ptr<Player>> m_candidate;
 	int m_goalPlayerMaxQulitity;
 	int m_goalPlayerMinQulitity;
 	SelectedPlayers m_receiver;

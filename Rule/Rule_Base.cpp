@@ -5,8 +5,8 @@ Rule_Base::Rule_Base(const std::shared_ptr<Player> & player) {
 	throw "Not yet implemented";
 }
 
-const std::shared_ptr<Player> & Rule_Base::getPlayer() const {
-	return m_player;
+std::shared_ptr<Player> Rule_Base::getPlayer() const {
+	return m_player.lock();
 }
 
 void Rule_Base::setPlayer(const std::shared_ptr<Player> & player) {

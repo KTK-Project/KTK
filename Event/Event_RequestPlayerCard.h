@@ -8,7 +8,7 @@
 
 class Event_RequestPlayerCard : public Event_Interaction {
 public:
-	const std::shared_ptr<Player> & getPlayer() const;
+	std::shared_ptr<Player> getPlayer() const;
 	void setPlayer(const std::shared_ptr<Player> & player);
 	bool getHandCard() const;
 	void setHandCard(bool handCard);
@@ -30,7 +30,7 @@ public:
 	void setReceiver(const std::shared_ptr<Card> & receiver);
 	void eventResolve() const;
 private:
-	std::shared_ptr<Player> m_player;
+	std::weak_ptr<Player> m_player;
 	bool m_handCard;
 	bool m_lightning;
 	bool m_drownInHappiness;

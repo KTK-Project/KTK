@@ -1,7 +1,7 @@
 #include "Controller_Base.h"
 
-const std::shared_ptr<Event_Base> & Controller_Base::getEvent() const {
-	return m_event;
+std::shared_ptr<Event_Base> Controller_Base::getEvent() const {
+	return m_event.lock();
 }
 
 void Controller_Base::setEvent(const std::shared_ptr<Event_Base> & event) {

@@ -125,10 +125,10 @@ void UI_EquipmentPanal::setEquipmentPanalTouchEvent(EEquipmentPanalType type, st
 void UI_EquipmentPanal::refresh() {
 	LayerColor * boxs[4] = { m_weapon, m_armor, m_offensiveHorse, m_defensiveHorse };
 	std::shared_ptr<Card> cards[4];
-	cards[0] = m_player->getWeapon();
-	cards[1] = m_player->getArmor();
-	cards[2] = m_player->getOffensiveHorse();
-	cards[3] = m_player->getDefensiveHorse();
+	cards[0] = m_player.lock()->getWeapon();
+	cards[1] = m_player.lock()->getArmor();
+	cards[2] = m_player.lock()->getOffensiveHorse();
+	cards[3] = m_player.lock()->getDefensiveHorse();
 
 	for (size_t i = 0; i < 4; i++) {
 		if (cards[i] == nullptr) {
@@ -142,7 +142,7 @@ void UI_EquipmentPanal::refresh() {
 		path += GameManager::getInstance()->getTextManger().getStringOfSuit(cards[i]->getSuit());
 		path += ".png";
 		auto suit = Sprite::create(path);
-		suit->setScale(0.2);
+		suit->setScale(0.2f);
 		suit->setPosition(Vec2(10, size.height / 2));
 		boxs[i]->addChild(suit);
 

@@ -20,7 +20,7 @@ public:
 		}
 	}
 	bool init();
-	std::vector<UI_Card *> & getCards() const;
+	std::vector<UI_Card *> & getCards();
 	int getSize() const;
 	bool isEmpty() const;
 	bool isFull() const;
@@ -28,17 +28,20 @@ public:
 	cocos2d::Vec2 getPositionWithIndex(int index) const;
 	bool hasCard(const std::shared_ptr<Card> & card) const;
 	bool hasCard(const UI_Card * card) const;
-	void addCard(const std::shared_ptr<Card> & card) const;
-	void addCard(const UI_Card * card) const;
-	UI_Card * removeCard(const std::shared_ptr<Card> & card) const;
-	UI_Card * removeCard(const UI_Card * card) const;
-	std::vector<UI_Card *> removeAll() const;
-	void setAddCardFinishCallBack(const std::function<void ()> & m_addCardFinishCallBack);
+	void addCard(const std::shared_ptr<Card> & card);
+	void addCard(UI_Card * card);
+
+	//从容器中移除card，但不调用removeChild，你仍然需要手动调用removeChild来彻底移除。
+	UI_Card * removeCard(const std::shared_ptr<Card> & card);
+	//从容器中移除card，但不调用removeChild，你仍然需要手动调用removeChild来彻底移除。
+	UI_Card * removeCard(const UI_Card * card);
+	//清空容器中所有的card，但不调用removeChild，你仍然需要手动调用removeChild来彻底移除。
+	std::vector<UI_Card *> removeAll();
 protected:
 	UI_HandCardPage() = default;
 private:
+	const int m_maxSize = 7;
 	std::vector<UI_Card *> m_cards;
-	int s_maxSize;
-	std::function<void ()> m_addCardFinishCallBack;
+	std::function<void()> m_addCardFinishCallBack;
 };
 #endif // UI_HandCardPage_h__

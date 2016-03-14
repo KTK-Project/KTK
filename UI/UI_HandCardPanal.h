@@ -42,9 +42,9 @@ protected:
 private:
 	std::vector<UI_HandCardPage *> m_pages;
 	std::deque<UI_Card *> m_addCardQueue;
-	int m_currentPageIndex;
 	cocos2d::Menu * m_pageUpDownMenu;
 	std::function<bool(const std::shared_ptr<Card>)> m_cardsCanUpFilter;
+	int m_currentPageIndex;
 	bool m_needToReset;
 };
 #endif // UI_HandCardPanal_h__

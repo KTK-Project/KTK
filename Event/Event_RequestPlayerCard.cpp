@@ -1,7 +1,7 @@
 #include "Event_RequestPlayerCard.h"
 
-const std::shared_ptr<Player> & Event_RequestPlayerCard::getPlayer() const {
-	return m_player;
+std::shared_ptr<Player> Event_RequestPlayerCard::getPlayer() const {
+	return m_player.lock();
 }
 
 void Event_RequestPlayerCard::setPlayer(const std::shared_ptr<Player> & player) {

@@ -68,7 +68,7 @@ bool UI_SkillPanal::initWithPlayer(const std::shared_ptr<Player> & player) {
 }
 
 void UI_SkillPanal::setSkillState(ESkillName skillName, ESkillState skillState) {
-	auto skillList = m_player->getCharacter().getSkillList();
+	auto skillList = m_player.lock()->getCharacter().getSkillList();
 	for (size_t i = 0; i < skillList.getSize(); i++) {
 		if (skillList.getSkillByIndex(i).getSkillName() == skillName) {
 			switch (skillState) {
@@ -88,14 +88,14 @@ void UI_SkillPanal::setSkillState(ESkillName skillName, ESkillState skillState) 
 }
 
 void UI_SkillPanal::setSkillCallBack(ESkillName skillName, const std::function<void()> & skillCallBack) {
-	auto skillList = m_player->getCharacter().getSkillList();
+	auto skillList = m_player.lock()->getCharacter().getSkillList();
 	for (size_t i = 0; i < skillList.getSize(); i++)
 		if (skillList.getSkillByIndex(i).getSkillName() == skillName)
 			m_skillCallBack[i] = skillCallBack;
 }
 
 void UI_SkillPanal::refresh() {
-	auto skillList = m_player->getCharacter().getSkillList();
+	auto skillList = m_player.lock()->getCharacter().getSkillList();
 	for (size_t i = 0; i < skillList.getSize(); i++) {
 		auto skillName = skillList.getSkillByIndex(i).getSkillName();
 		auto skillState = skillList.getSkillByIndex(i).getSkillState();

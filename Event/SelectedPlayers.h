@@ -8,7 +8,7 @@
 
 class SelectedPlayers {
 public:
-	const std::deque<std::shared_ptr<Player>> & getPlayers() const;
+	const std::deque<std::weak_ptr<Player>> & getPlayers() const;
 	void addPlayer(const std::shared_ptr<Player> & player) const;
 	void removePlayer(const std::shared_ptr<Player> & player) const;
 	void popFront() const;
@@ -24,6 +24,6 @@ private:
 	int m_maxSelects;
 	std::function<void ()> m_maxCallBack;
 	std::function<void ()> m_unmaxCallBack;
-	std::deque<std::shared_ptr<Player>> m_players;
+	std::deque<std::weak_ptr<Player>> m_players;
 };
 #endif // SelectedPlayers_h__

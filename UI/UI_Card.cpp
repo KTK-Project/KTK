@@ -92,8 +92,8 @@ void UI_Card::initListener() {
 	};
 }
 
-const std::shared_ptr<Card> & UI_Card::getCard() const {
-	return m_card;
+std::shared_ptr<Card> UI_Card::getCard() const {
+	return m_card.lock();
 }
 
 void UI_Card::setDescription(cocos2d::Label * description) {
@@ -108,7 +108,7 @@ void UI_Card::setDark(bool dark) {
 	if (m_dark == dark)
 		return;
 	m_dark = dark;
-	float time = 1.3;
+	float time = 1.3f;
 	if (dark) {
 		m_cardPattern->runAction(TintTo::create(time, 255 * 0.45, 255 * 0.45, 255 * 0.45));
 		m_suit->runAction(TintTo::create(time, 255 * 0.45, 255 * 0.45, 255 * 0.45));
@@ -144,7 +144,7 @@ bool UI_Card::getUpping() const {
 void UI_Card::setUpping(bool upping) {
 	if (upping == m_upping)
 		return;
-	float time = 0.3;
+	float time = 0.3f;
 	if (upping && !m_upping) {
 		auto action1 = MoveBy::create(time, Vec2(0, 20));
 		auto action2 = CallFunc::create(std::bind(m_upCallBack, this));

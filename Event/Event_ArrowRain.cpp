@@ -1,7 +1,7 @@
 #include "Event_ArrowRain.h"
 
-const std::shared_ptr<Player> & Event_ArrowRain::getCurrentPlayer() const {
-	return m_currentPlayer;
+std::shared_ptr<Player> Event_ArrowRain::getCurrentPlayer() const {
+	return m_currentPlayer.lock();
 }
 
 void Event_ArrowRain::setCurrentPlayer(const std::shared_ptr<Player> & currentPlayer) {

@@ -1,15 +1,15 @@
 #include "Event_Hurt.h"
 
-const std::shared_ptr<Player> & Event_Hurt::getAttacker() const {
-	return m_attacker;
+std::shared_ptr<Player> Event_Hurt::getAttacker() const {
+	return m_attacker.lock();
 }
 
 void Event_Hurt::setAttacker(const std::shared_ptr<Player> & attacker) {
 	m_attacker = attacker;
 }
 
-const std::shared_ptr<Player> & Event_Hurt::getGoal() const {
-	return m_goal;
+std::shared_ptr<Player> Event_Hurt::getGoal() const {
+	return m_goal.lock();
 }
 
 void Event_Hurt::setGoal(const std::shared_ptr<Player> & goal) {

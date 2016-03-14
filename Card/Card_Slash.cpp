@@ -1,5 +1,7 @@
 #include "Card_Slash.h"
 
+bool Card_Slash::s_usedOnce = false;
+
 int Card_Slash::getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const {
 	//查看出牌者是否装备了方天画戟，若是，返回3
 //否则返回1

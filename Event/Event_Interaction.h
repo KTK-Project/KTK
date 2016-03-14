@@ -8,7 +8,7 @@
 
 class Event_Interaction : public Event_Base {
 public:
-	const std::shared_ptr<Player> & getInteractPlayer() const;
+	std::shared_ptr<Player> getInteractPlayer() const;
 	void setInteractPlayer(const std::shared_ptr<Player> & interactPlayer);
 	const std::string & getDescrption() const;
 	void setDescrption(const std::string & descrption);
@@ -20,7 +20,7 @@ public:
 	void setReturnCallBack(const std::function<void (const Event_Base &)> & returnCallBack);
 	void eventResolve() const;
 private:
-	std::shared_ptr<Player> m_interactPlayer;
+	std::weak_ptr<Player> m_interactPlayer;
 	std::string m_descrption;
 	bool m_received;
 	bool m_returned;

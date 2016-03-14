@@ -1,7 +1,7 @@
 #include "Event_Harvest.h"
 
-const std::shared_ptr<Player> & Event_Harvest::getCurrentPlayer() const {
-	return m_currentPlayer;
+std::shared_ptr<Player> Event_Harvest::getCurrentPlayer() const {
+	return m_currentPlayer.lock();
 }
 
 void Event_Harvest::setCurrentPlayer(const std::shared_ptr<Player> & currentPlayer) {

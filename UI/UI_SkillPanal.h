@@ -28,7 +28,7 @@ public:
 protected:
 	UI_SkillPanal() = default;
 private:
-	std::shared_ptr<Player> m_player;
+	std::weak_ptr<Player> m_player;
 	std::vector<cocos2d::LayerColor *> m_skillIcons;
 	std::vector<cocos2d::Label *> m_skillLabel;
 	std::vector<std::function<void()>> m_skillCallBack;

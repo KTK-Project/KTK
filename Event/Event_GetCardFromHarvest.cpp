@@ -4,7 +4,7 @@ std::vector<std::shared_ptr<Card>> & Event_GetCardFromHarvest::getCards() {
 	return m_cards;
 }
 
-std::vector<std::shared_ptr<Player>> & Event_GetCardFromHarvest::getPlayers() {
+std::vector<std::weak_ptr<Player>> & Event_GetCardFromHarvest::getPlayers() {
 	return m_players;
 }
 

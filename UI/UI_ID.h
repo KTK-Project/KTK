@@ -24,7 +24,7 @@ public:
 protected:
 	UI_ID() = default;
 private:
-	std::shared_ptr<Player> m_player;
+	std::weak_ptr<Player> m_player;
 	cocos2d::LayerColor * m_markID;
 	cocos2d::Node * m_IDList;
 };

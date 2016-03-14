@@ -21,7 +21,7 @@ public:
 	}
 	bool initWithCard(const std::shared_ptr<Card> & card);
 	void initListener();
-	const std::shared_ptr<Card> & getCard() const;
+	std::shared_ptr<Card> getCard() const;
 	void setDescription(cocos2d::Label * description);
 	bool getDark() const;
 	void setDark(bool dark);
@@ -36,7 +36,7 @@ public:
 protected:
 	UI_Card() = default;
 private:
-	std::shared_ptr<Card> m_card;
+	std::weak_ptr<Card> m_card;
 	cocos2d::Sprite * m_cardPattern;
 	cocos2d::Label * m_number;
 	cocos2d::Sprite * m_suit;

@@ -27,7 +27,7 @@ public:
 protected:
 	UI_EquipmentPanal() = default;
 private:
-	std::shared_ptr<Player> m_player;
+	std::weak_ptr<Player> m_player;
 	cocos2d::LayerColor * m_weapon;
 	cocos2d::LayerColor * m_armor;
 	cocos2d::LayerColor * m_defensiveHorse;

@@ -27,6 +27,6 @@ protected:
 	UI_Harvest() = default;
 private:
 	std::vector<UI_Card *> m_cards;
-	std::vector<std::shared_ptr<Player>> m_players;
+	std::vector<std::weak_ptr<Player>> m_players;
 };
 #endif // UI_Harvest_h__

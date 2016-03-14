@@ -22,6 +22,6 @@ bool UI_HandCardQuantity::initWithPlayer(const std::shared_ptr<Player> & player)
 }
 
 void UI_HandCardQuantity::refresh() {
-	int quantity = m_player->getHandCardPile().getSize();
+	int quantity = m_player.lock()->getHandCardPile().getSize();
 	m_quantity->setString(std::to_string(quantity));
 }

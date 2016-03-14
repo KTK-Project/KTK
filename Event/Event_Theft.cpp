@@ -1,7 +1,7 @@
 #include "Event_Theft.h"
 
-const std::shared_ptr<Player> & Event_Theft::getGoalPlayer() const {
-	return m_goalPlayer;
+std::shared_ptr<Player> Event_Theft::getGoalPlayer() const {
+	return m_goalPlayer.lock();
 }
 
 void Event_Theft::setGoalPlayer(const std::shared_ptr<Player> & goalPlayer) {

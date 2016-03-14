@@ -1,6 +1,6 @@
 #include "Event_RequestGoalPlayer.h"
 
-std::vector<std::shared_ptr<Player>> Event_RequestGoalPlayer::getCandidate() {
+std::vector<std::weak_ptr<Player>> Event_RequestGoalPlayer::getCandidate() {
 	return m_candidate;
 }
 

@@ -6,16 +6,16 @@
 
 class Event_Dying : public Event_Base {
 public:
-	const std::shared_ptr<Player> & getFirstPlayer() const;
+	std::shared_ptr<Player> getFirstPlayer() const;
 	void setFirstPlayer(const std::shared_ptr<Player> & firstPlayer);
-	const std::shared_ptr<Player> & getDyingPlayer() const;
+	std::shared_ptr<Player> getDyingPlayer() const;
 	void setDyingPlayer(const std::shared_ptr<Player> & dyingPlayer);
-	const std::shared_ptr<Player> & getPeachPlayer() const;
+	std::shared_ptr<Player> getPeachPlayer() const;
 	void setPeachPlayer(const std::shared_ptr<Player> & peachPlayer);
 	void eventResolve() const;
 private:
-	std::shared_ptr<Player> m_firstPlayer;
-	std::shared_ptr<Player> m_dyingPlayer;
-	std::shared_ptr<Player> m_peachPlayer;
+	std::weak_ptr<Player> m_firstPlayer;
+	std::weak_ptr<Player> m_dyingPlayer;
+	std::weak_ptr<Player> m_peachPlayer;
 };
 #endif // Event_Dying_h__

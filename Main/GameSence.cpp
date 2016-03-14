@@ -14,6 +14,7 @@
 #include "Card/Card_Horse.h"
 #include "Card/Card_DragonBroadSword.h"
 #include "Card/Card_BaGuaRank.h"
+#include "UI/UI_HandCardPage.h"
 
 using namespace cocos2d;
 
@@ -112,6 +113,45 @@ bool GameSence::init() {
 // 	auto quantity = UI_HandCardQuantity::create(player);
 // 	quantity->setPosition(size.width / 2, size.height / 2);
 // 	addChild(quantity);
+
+	auto page = UI_HandCardPage::create();
+	page->setPosition(100, size.height / 2);
+	auto card_ptr = std::make_shared<Card_Slash>(ECardSuit::DIAMOND, 13);
+	page->addCard(card_ptr);
+	page->addCard(card_ptr);
+	page->addCard(card_ptr);
+	page->addCard(card_ptr);
+	page->addCard(card_ptr);
+	page->addCard(card_ptr);
+	page->addCard(card_ptr);
+	page->settleUp(true);
+	auto action1 = DelayTime::create(2.0f);
+	auto action2 = CallFunc::create([=]() {
+		auto & v = page->getCards();
+		auto card1 = v[0];
+		auto card2 = v[2];
+		auto card3 = v[4];
+		card1->retain();
+		page->removeChild(card1);
+		page->removeCard(card1);
+
+		card2->retain();
+		page->removeChild(card2);
+		page->removeCard(card2);
+
+		card3->retain();
+		page->removeChild(card3);
+		page->removeCard(card3);
+
+		page->settleUp(true);
+	});
+	auto seq = Sequence::create(action1, action2, nullptr);
+	runAction(seq);
+	auto & v = page->getCards();
+	for (size_t i = 0; i < v.size(); i++) {
+		v[i]->setCanUp(true);
+	}
+	addChild(page);
 
 	return true;
 }

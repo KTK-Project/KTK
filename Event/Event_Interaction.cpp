@@ -1,7 +1,7 @@
 #include "Event_Interaction.h"
 
-const std::shared_ptr<Player> & Event_Interaction::getInteractPlayer() const {
-	return m_interactPlayer;
+std::shared_ptr<Player> Event_Interaction::getInteractPlayer() const {
+	return m_interactPlayer.lock();
 }
 
 void Event_Interaction::setInteractPlayer(const std::shared_ptr<Player> & interactPlayer) {

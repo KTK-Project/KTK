@@ -26,7 +26,7 @@ bool UI_Position::initWithPlayer(const std::shared_ptr<Player> & player) {
 }
 
 void UI_Position::refresh() {
-	int position = m_player->getPosition();
+	int position = m_player.lock()->getPosition();
 	std::string str;
 	switch (position) {
 		case 1: str = "һ"; break;

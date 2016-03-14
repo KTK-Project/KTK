@@ -24,7 +24,7 @@ public:
 protected:
 	UI_JudgeIcon() = default;
 private:
-	std::shared_ptr<Player> m_player;
+	std::weak_ptr<Player> m_player;
 	std::vector<cocos2d::LayerColor *> m_icon;
 };
 #endif // UI_JudgeIcon_h__

@@ -10,7 +10,7 @@ bool UI_HP::initWithPlayer(const std::shared_ptr<Player> & player) {
 
 	m_player = player;
 
-	for (size_t i = 0; i < m_player->getMaxHP(); i++) {
+	for (int i = 0; i < m_player.lock()->getMaxHP(); i++) {
 		auto emptyBlood = LayerColor::create(Color4B::WHITE);
 		emptyBlood->setContentSize(Size(20, 20));
 		emptyBlood->setPosition(Vec2(0, i * 25));
@@ -31,8 +31,8 @@ bool UI_HP::initWithPlayer(const std::shared_ptr<Player> & player) {
 }
 
 void UI_HP::refresh() const {
-	for (size_t i = 0; i < m_player->getMaxHP(); i++)
-		if (i < m_player->getHP())
+	for (int i = 0; i < m_player.lock()->getMaxHP(); i++)
+		if (i < m_player.lock()->getHP())
 			m_bloods[i]->setVisible(true);
 		else
 			m_bloods[i]->setVisible(false);

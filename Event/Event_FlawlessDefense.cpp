@@ -1,7 +1,7 @@
 #include "Event_FlawlessDefense.h"
 
-const std::shared_ptr<Player> & Event_FlawlessDefense::getFirstPlayer() const {
-	return m_firstPlayer;
+std::shared_ptr<Player> Event_FlawlessDefense::getFirstPlayer() const {
+	return m_firstPlayer.lock();
 }
 
 void Event_FlawlessDefense::setFirstPlayer(const std::shared_ptr<Player> & firstPlayer) {

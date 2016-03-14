@@ -35,7 +35,7 @@ bool UI_JudgeIcon::initWithPlayer(const std::shared_ptr<Player> & player) {
 }
 
 void UI_JudgeIcon::refresh() { 
-	auto vec = m_player->getJudgeCards();
+	auto vec = m_player.lock()->getJudgeCards();
 	for (size_t i = 0; i < vec.size(); i++) {
 		if (vec[i]->getName() == ECardName::DROWNINHAPPINESS) {
 			auto label = static_cast<Label *>(m_icon[i]->getChildByTag(0));

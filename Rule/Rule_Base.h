@@ -9,7 +9,7 @@
 class Rule_Base {
 public:
 	Rule_Base(const std::shared_ptr<Player> & player);
-	const std::shared_ptr<Player> & getPlayer() const;
+	std::shared_ptr<Player> getPlayer() const;
 	void setPlayer(const std::shared_ptr<Player> & player);
 	void readyStage() const;
 	void judgeStage() const;
@@ -30,7 +30,7 @@ public:
 	void afterProcessEvent(const std::shared_ptr<Event_Base> & event) const;
 
 private:
-	std::shared_ptr<Player> m_player;
+	std::weak_ptr<Player> m_player;
 };
 
 #endif // Rule_Base_h__

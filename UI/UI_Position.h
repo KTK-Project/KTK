@@ -23,7 +23,7 @@ public:
 protected:
 	UI_Position() = default;
 private:
-	std::shared_ptr<Player> m_player;
+	std::weak_ptr<Player> m_player;
 	cocos2d::LayerColor * m_positionBackground;
 	cocos2d::Label * m_label;
 };

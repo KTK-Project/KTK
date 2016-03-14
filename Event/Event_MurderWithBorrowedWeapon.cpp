@@ -1,15 +1,15 @@
 #include "Event_MurderWithBorrowedWeapon.h"
 
-const std::shared_ptr<Player> & Event_MurderWithBorrowedWeapon::getGoalPlayer1() const {
-	return m_goalPlayer1;
+std::shared_ptr<Player> Event_MurderWithBorrowedWeapon::getGoalPlayer1() const {
+	return m_goalPlayer1.lock();
 }
 
 void Event_MurderWithBorrowedWeapon::setGoalPlayer1(const std::shared_ptr<Player> & goalPlayer1) {
 	m_goalPlayer1 = goalPlayer1;
 }
 
-const std::shared_ptr<Player> & Event_MurderWithBorrowedWeapon::getGoalPlayer2() const {
-	return m_goalPlayer2;
+std::shared_ptr<Player> Event_MurderWithBorrowedWeapon::getGoalPlayer2() const {
+	return m_goalPlayer2.lock();
 }
 
 void Event_MurderWithBorrowedWeapon::setGoalPlayer2(const std::shared_ptr<Player> & goalPlayer2) {

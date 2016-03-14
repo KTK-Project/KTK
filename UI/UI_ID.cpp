@@ -88,7 +88,7 @@ bool UI_ID::initWithPlayer(const std::shared_ptr<Player> & player) {
 		if (rect.containsPoint(point)) {
 			touchFlag++;
 			if (touchFlag == 2) {
-				if (target == m_markID && !m_player->isForwardPlayer())
+				if (target == m_markID && !m_player.lock()->isForwardPlayer())
 					m_IDList->setVisible(!m_IDList->isVisible());
 				else if (target == mark1) {
 					setMarkID(ECharID::NONE);

@@ -7,9 +7,9 @@
 
 class Event_Strategy : public Event_Base {
 public:
-	const std::shared_ptr<Player> & getPlayCardPlayer() const;
+	std::shared_ptr<Player> getPlayCardPlayer() const;
 	void setPlayCardPlayer(const std::shared_ptr<Player> & playCardPlayer);
 private:
-	std::shared_ptr<Player> m_playCardPlayer;
+	std::weak_ptr<Player> m_playCardPlayer;
 };
 #endif // Event_Strategy_h__

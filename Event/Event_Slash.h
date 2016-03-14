@@ -10,11 +10,11 @@
 
 class Event_Slash : public  Event_Base {
 public:
-	const std::shared_ptr<Player> & getFirstPlayer() const;
+	std::shared_ptr<Player> getFirstPlayer() const;
 	void setFirstPlayer(const std::shared_ptr<Player> & firstPlayer);
 	const std::shared_ptr<Card> & getWeapon() const;
 	void setWeapon(const std::shared_ptr<Card> & weapon);
-	const std::shared_ptr<Player> & getGoalPlayers() const;
+	std::shared_ptr<Player> getGoalPlayers() const;
 	void setGoalPlayers(const std::shared_ptr<Player> & goalPlayers);
 	const std::shared_ptr<Card> & getArmor() const;
 	void setArmor(const std::shared_ptr<Card> & armor);
@@ -34,9 +34,9 @@ public:
 	void slashFinish() const;
 
 private:
-	std::shared_ptr<Player> m_firstPlayer;
+	std::weak_ptr<Player> m_firstPlayer;
 	std::shared_ptr<Card> m_weapon;
-	std::shared_ptr<Player> m_goalPlayers;
+	std::weak_ptr<Player> m_goalPlayers;
 	std::shared_ptr<Card> m_armor;
 	std::vector<std::shared_ptr<Card>> m_slashs;
 	ESlashState m_slashState;

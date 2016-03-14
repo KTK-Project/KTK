@@ -46,6 +46,7 @@ public:
 protected:
 	UI_PlayerPanal() = default;
 private:
+	std::weak_ptr<Player> m_player;
 	cocos2d::Sprite * m_background;
 	cocos2d::Sprite * m_portrait;
 	cocos2d::Sprite * m_force;
@@ -58,7 +59,6 @@ private:
 	UI_JudgeIcon * m_judgeIcon;
 	UI_InformationBox * m_informationBox;
 	UI_LogBox * m_logBox;
-	std::shared_ptr<Player> m_player;
 	EPlayerColor m_playerColor;
 	EPlayerPanalState m_playerPanalState;
 };

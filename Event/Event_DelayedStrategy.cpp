@@ -5,8 +5,8 @@ Event_DelayedStrategy::Event_DelayedStrategy() {
 	throw "Not yet implemented";
 }
 
-const std::shared_ptr<Player> & Event_DelayedStrategy::getOwnerPlayer() const {
-	return m_ownerPlayer;
+std::shared_ptr<Player> Event_DelayedStrategy::getOwnerPlayer() const {
+	return m_ownerPlayer.lock();
 }
 
 void Event_DelayedStrategy::setOwnerPlayer(const std::shared_ptr<Player> & ownerPlayer) {

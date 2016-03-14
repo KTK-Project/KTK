@@ -7,10 +7,10 @@
 
 class Event_OathInPeachGarden : public Event_Strategy {
 public:
-	const std::shared_ptr<Player> & getCurrentPlayer() const;
+	std::shared_ptr<Player> getCurrentPlayer() const;
 	void setCurrentPlayer(const std::shared_ptr<Player> & currentPlayer);
 	void eventResolve() const;
 private:
-	std::shared_ptr<Player> m_currentPlayer;
+	std::weak_ptr<Player> m_currentPlayer;
 };
 #endif // Event_OathInPeachGarden_h__

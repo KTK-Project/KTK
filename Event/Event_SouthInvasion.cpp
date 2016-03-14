@@ -1,7 +1,7 @@
 #include "Event_SouthInvasion.h"
 
-const std::shared_ptr<Player> & Event_SouthInvasion::getCurrentPlayer() const {
-	return m_currentPlayer;
+std::shared_ptr<Player> Event_SouthInvasion::getCurrentPlayer() const {
+	return m_currentPlayer.lock();
 }
 
 void Event_SouthInvasion::setCurrentPlayer(const std::shared_ptr<Player> & currentPlayer) {

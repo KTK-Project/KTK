@@ -1,15 +1,15 @@
 #include "Event_Duel.h"
 
-const std::shared_ptr<Player> & Event_Duel::getGoalPlayer() const {
-	return m_goalPlayer;
+std::shared_ptr<Player> Event_Duel::getGoalPlayer() const {
+	return m_goalPlayer.lock();
 }
 
 void Event_Duel::setGoalPlayer(const std::shared_ptr<Player> & goalPlayer) {
 	m_goalPlayer = goalPlayer;
 }
 
-const std::shared_ptr<Player> & Event_Duel::getCurrentPlayer() const {
-	return m_currentPlayer;
+std::shared_ptr<Player> Event_Duel::getCurrentPlayer() const {
+	return m_currentPlayer.lock();
 }
 
 void Event_Duel::setCurrentPlayer(const std::shared_ptr<Player> & currentPlayer) {

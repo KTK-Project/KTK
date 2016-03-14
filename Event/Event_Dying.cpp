@@ -1,23 +1,23 @@
 #include "Event_Dying.h"
 
-const std::shared_ptr<Player> & Event_Dying::getFirstPlayer() const {
-	return m_firstPlayer;
+std::shared_ptr<Player> Event_Dying::getFirstPlayer() const {
+	return m_firstPlayer.lock();
 }
 
 void Event_Dying::setFirstPlayer(const std::shared_ptr<Player> & firstPlayer) {
 	m_firstPlayer = firstPlayer;
 }
 
-const std::shared_ptr<Player> & Event_Dying::getDyingPlayer() const {
-	return m_dyingPlayer;
+std::shared_ptr<Player> Event_Dying::getDyingPlayer() const {
+	return m_dyingPlayer.lock();
 }
 
 void Event_Dying::setDyingPlayer(const std::shared_ptr<Player> & dyingPlayer) {
 	m_dyingPlayer = dyingPlayer;
 }
 
-const std::shared_ptr<Player> & Event_Dying::getPeachPlayer() const {
-	return m_peachPlayer;
+std::shared_ptr<Player> Event_Dying::getPeachPlayer() const {
+	return m_peachPlayer.lock();
 }
 
 void Event_Dying::setPeachPlayer(const std::shared_ptr<Player> & peachPlayer) {

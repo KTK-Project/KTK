@@ -24,7 +24,7 @@ public:
 protected:
 	UI_HP() = default;
 private:
-	std::shared_ptr<Player> m_player;
+	std::weak_ptr<Player> m_player;
 	std::vector<cocos2d::LayerColor *> m_bloods;
 	std::vector<cocos2d::LayerColor *> m_emptyBloods;
 };

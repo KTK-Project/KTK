@@ -1,102 +1,108 @@
 #include "UI_HandCardPage.h"
 
+using namespace cocos2d;
+
 bool UI_HandCardPage::init() {
-//	Todo:stm
+	if (!Node::init())
+		return false;
+	auto layer = LayerColor::create(Color4B::YELLOW);
+	layer->setContentSize(Size(900, 190));
+	addChild(layer);
+
 	return true;
 }
 
-std::vector<UI_Card *> & UI_HandCardPage::getCards() const {
-	//返回m_cards的引用
-	// TODO - implement UI_HandCardPage::getCards
-	throw "Not yet implemented";
+std::vector<UI_Card *> & UI_HandCardPage::getCards() {
+	return m_cards;
 }
 
 int UI_HandCardPage::getSize() const {
-	// TODO - implement UI_HandCardPage::getSize
-	throw "Not yet implemented";
+	return m_cards.size();
 }
 
 bool UI_HandCardPage::isEmpty() const {
-	// TODO - implement UI_HandCardPage::isEmpty
-	throw "Not yet implemented";
+	return m_cards.empty();
 }
 
 bool UI_HandCardPage::isFull() const {
-	// TODO - implement UI_HandCardPage::isFull
-	throw "Not yet implemented";
+	if (m_cards.size() > m_maxSize)
+		throw "Out of range!";
+	return m_cards.size() == m_maxSize;
 }
 
 void UI_HandCardPage::settleUp(bool useAction) {
-	//if(使用动作)
-//[
-//m_cards的元素都给予一个moveto动作，用getPositionWithIndex获取位置。
-//动作
-//}
-//else
-//{
-//所有卡牌设置正确的位置。
-//}
-	// TODO - implement UI_HandCardPage::settleUp
-	throw "Not yet implemented";
+	if (useAction) {
+		for (size_t i = 0; i < m_cards.size(); i++)
+			m_cards[i]->runAction(MoveTo::create(1.0f, getPositionWithIndex(i)));
+	}
+	else {
+		for (size_t i = 0; i < m_cards.size(); i++)
+			m_cards[i]->setPosition(getPositionWithIndex(i));
+	}
 }
 
 cocos2d::Vec2 UI_HandCardPage::getPositionWithIndex(int index) const {
-	//根据index获取一个合理的位置并返回
-	// TODO - implement UI_HandCardPage::getPositionWithIndex
-	throw "Not yet implemented";
+	if (index > m_maxSize) throw "Out of Range!";
+	return Vec2(8 + index * 115, 8);
 }
 
 bool UI_HandCardPage::hasCard(const std::shared_ptr<Card> & card) const {
-	// TODO - implement UI_HandCardPage::hasCard
-	throw "Not yet implemented";
+	for (auto & i : m_cards)
+		if (card == i->getCard())
+			return true;
+	return false;
 }
 
 bool UI_HandCardPage::hasCard(const UI_Card * card) const {
-	// TODO - implement UI_HandCardPage::hasCard
-	throw "Not yet implemented";
+	for (auto & i : m_cards)
+		if (card == i)
+			return true;
+	return false;
 }
 
-void UI_HandCardPage::addCard(const std::shared_ptr<Card> & card) const {
-	//断言（!isfull）
-//封装为UI_Card *，调用addcard(const UI_card *)
-	// TODO - implement UI_HandCardPage::addCard
-	throw "Not yet implemented";
+void UI_HandCardPage::addCard(const std::shared_ptr<Card> & card) {
+	if (isFull()) throw "Page is full!";
+	auto cardUi = UI_Card::create(card);
+	addCard(cardUi);
 }
 
-void UI_HandCardPage::addCard(const UI_Card * card) const {
-	//断言（!isfull）
-//static int 计数器 = 0;
-//pushback到m_cards
-//检查自身是否是visible
-//若是：
-//给予一个压入的动作(增加计数器，移动动作，减少计数器，检查是否减为0为0调用addcardfinishcallback)
-//若否：
-//调用settleup
-	// TODO - implement UI_HandCardPage::addCard
-	throw "Not yet implemented";
+void UI_HandCardPage::addCard(UI_Card * card) {
+	if (isFull()) throw "Page is full!";
+	card->setAnchorPoint(Vec2::ANCHOR_BOTTOM_LEFT);
+	card->setScale(0.6f);
+	card->setPosition(getPositionWithIndex(m_maxSize));
+	addChild(card);
+	m_cards.push_back(card);
 }
 
-UI_Card * UI_HandCardPage::removeCard(const std::shared_ptr<Card> & card) const {
-	//断言（hascard（卡牌））
-//在m_cards中删除这个卡牌指针并返回UI_card *
-	// TODO - implement UI_HandCardPage::removeCard
-	throw "Not yet implemented";
+UI_Card * UI_HandCardPage::removeCard(const std::shared_ptr<Card> & card) {
+	for (auto i = m_cards.begin(); i != m_cards.end(); i++)
+		if ((*i)->getCard() == card) {
+			auto val = *i;
+			i = m_cards.erase(i);
+			return val;
+		}
+	throw "Can't find match!";
 }
 
-UI_Card * UI_HandCardPage::removeCard(const UI_Card * card) const {
-	//断言（hascard（卡牌））
-//在m_cards中删除这个卡牌指针并返回UI_card *
-	// TODO - implement UI_HandCardPage::removeCard
-	throw "Not yet implemented";
+UI_Card * UI_HandCardPage::removeCard(const UI_Card * card) {
+	for (auto i = m_cards.begin(); i != m_cards.end(); i++)
+		if (*i == card) {
+			auto val = *i;
+			i = m_cards.erase(i);
+			return val;
+		}
+	throw "Can't find match!";
 }
 
-std::vector<UI_Card *> UI_HandCardPage::removeAll() const {
-	//把m_cards的元素移动到新vec并返回
-	// TODO - implement UI_HandCardPage::removeAll
-	throw "Not yet implemented";
+std::vector<UI_Card *> UI_HandCardPage::removeAll() {
+	std::vector<UI_Card *> v(m_cards.cbegin(), m_cards.cend());
+	m_cards.clear();
+	return v;
 }
 
-void UI_HandCardPage::setAddCardFinishCallBack(const std::function<void ()> & m_addCardFinishCallBack) {
-	// TODO - implement UI_HandCardPage::setAddCardFinishCallBack
-	throw "Not yet implemented";
-}
+//	Todo:delete of not;
+// void UI_HandCardPage::setAddCardFinishCallBack(const std::function<void ()> & m_addCardFinishCallBack) {
+// 	// TODO - implement UI_HandCardPage::setAddCardFinishCallBack
+// 	throw "Not yet implemented";
+// }

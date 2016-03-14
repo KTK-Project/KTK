@@ -16,6 +16,6 @@ public:
 	void eventCallBack(const std::shared_ptr<Event_Base> & event) const;
 
 private:
-	bool s_usedOnce;
+	static bool s_usedOnce;
 };
 #endif // Card_Slash_h__
