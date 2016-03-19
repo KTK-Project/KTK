@@ -21,9 +21,9 @@ public:
 		}
 	}
 	bool init() const;
-	int pushBack(const UI_Card * card);
+	int pushBack(const std::shared_ptr<UI_Card> & card);
 	cocos2d::Vec2 getPositionForCard(const int index) const;
-	void addCards(const UI_Card * card, const std::string & description);
+	void addCards(const std::shared_ptr<UI_Card> & card, const std::string & description);
 	void settleUp();
 	bool getNeedToClean() const;
 	void setNeedToClean(bool needToClean);
@@ -32,8 +32,8 @@ public:
 protected:
 	UI_Desktop() = default;
 private:
-	std::vector<UI_Card *> m_cards;
+	std::vector<std::shared_ptr<UI_Card>> m_cards;
 	bool m_needToClean;
-	std::vector<UI_Card *> m_cleanCards;
+	std::vector<std::shared_ptr<UI_Card>> m_cleanCards;
 };
 #endif // UI_Desktop_h__

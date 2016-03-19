@@ -7,13 +7,13 @@
 
 class SelectedCards {
 public:
-	std::deque<UI_Card *> & getCards() const;
-	void addCard(const UI_Card * card);
-	void removeCard(const UI_Card * card);
+	std::deque<std::shared_ptr<UI_Card>> & getCards() const;
+	void addCard(const std::shared_ptr<UI_Card> & card);
+	void removeCard(const std::shared_ptr<UI_Card> & card);
 	void popFront();
 	void popAll();
 	bool hasCard(const std::shared_ptr<Card> & card) const;
-	bool hasCard(const UI_Card * card) const;
+	bool hasCard(const std::shared_ptr<UI_Card> & card) const;
 	int getMaxSelects() const;
 	void setMaxSelects(int maxSelects);
 	const std::function<void()> & getMaxCallBack() const;
@@ -21,7 +21,7 @@ public:
 	const std::function<void()> & getUnmaxCallBack() const;
 	void setUnmaxCallBack(const std::function<void ()> & unmaxCallBack);
 private:
-	std::deque<UI_Card *> m_cards;
+	std::deque<std::shared_ptr<UI_Card>> m_cards;
 	int m_maxSelects;
 	std::function<void ()> m_maxCallBack;
 	std::function<void ()> m_unmaxCallBack;

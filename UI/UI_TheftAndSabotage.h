@@ -30,6 +30,6 @@ protected:
 private:
 	std::weak_ptr<Player> m_player;
 	std::weak_ptr<Card> m_selectedCard;
-	std::vector<UI_Card *> m_cards;
+	std::vector<std::shared_ptr<UI_Card>> m_cards;
 };
 #endif // UI_TheftAndSabotage_h__

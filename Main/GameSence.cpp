@@ -15,6 +15,8 @@
 #include "Card/Card_DragonBroadSword.h"
 #include "Card/Card_BaGuaRank.h"
 #include "UI/UI_HandCardPage.h"
+#include "UI/UI_HandCardPanal.h"
+#include <array>
 
 using namespace cocos2d;
 
@@ -34,11 +36,17 @@ bool GameSence::init() {
 	addChild(lineY, 100);
 
 // 	auto card_ptr = std::make_shared<Card_Slash>(ECardSuit::DIAMOND, 13);
-// 	auto ui_card = UI_Card::create(card_ptr);
-// 	ui_card->setScale(0.6);
-// 	ui_card->setPosition(size.width / 2, size.height / 2);
-// 	addChild(ui_card);
-// 	ui_card->setCanUp(true);
+// 	auto ui_card1 = UI_Card::create(card_ptr);
+// 	ui_card1->setScale(0.6);
+// 	ui_card1->setPosition(size.width / 2, size.height / 2);
+// 	addChild(ui_card1.get());
+// 	ui_card1->setCanUp(true);
+// 
+// 	auto ui_card2 = UI_Card::create(card_ptr);
+// 	ui_card2->setScale(0.6);
+// 	ui_card2->setPosition(size.width / 2, size.height / 2);
+// 	addChild(ui_card2.get());
+// 	ui_card2->setCanUp(true);
 
 // 	auto player = std::make_shared<Player>();
 // 	player->setCharacter(Character(ECharName::DAQIAO));
@@ -114,44 +122,64 @@ bool GameSence::init() {
 // 	quantity->setPosition(size.width / 2, size.height / 2);
 // 	addChild(quantity);
 
-	auto page = UI_HandCardPage::create();
-	page->setPosition(100, size.height / 2);
-	auto card_ptr = std::make_shared<Card_Slash>(ECardSuit::DIAMOND, 13);
-	page->addCard(card_ptr);
-	page->addCard(card_ptr);
-	page->addCard(card_ptr);
-	page->addCard(card_ptr);
-	page->addCard(card_ptr);
-	page->addCard(card_ptr);
-	page->addCard(card_ptr);
-	page->settleUp(true);
-	auto action1 = DelayTime::create(2.0f);
-	auto action2 = CallFunc::create([=]() {
-		auto & v = page->getCards();
-		auto card1 = v[0];
-		auto card2 = v[2];
-		auto card3 = v[4];
-		card1->retain();
-		page->removeChild(card1);
-		page->removeCard(card1);
+// 	auto page = UI_HandCardPage::create();
+// 	page->setPosition(100, size.height / 2);
+// 	auto card_ptr = std::make_shared<Card_Slash>(ECardSuit::DIAMOND, 13);
+// 	page->addCard(card_ptr);
+// 	page->addCard(card_ptr);
+// 	page->addCard(card_ptr);
+// 	page->addCard(card_ptr);
+// 	page->addCard(card_ptr);
+// 	page->addCard(card_ptr);
+// 	page->addCard(card_ptr);
+// 	page->settleUp(true);
+// 	auto action1 = DelayTime::create(2.0f);
+// 	auto action2 = CallFunc::create([=]() {
+// 		auto & v = page->getCards();
+// 		auto card1 = v[0];
+// 		auto card2 = v[2];
+// 		auto card3 = v[4];
+// 
+// 		page->removeCard(card1);
+// 		card1->setVisible(false);
+// 
+// 		page->removeCard(card2);
+// 		card2->setVisible(false);
+// 
+// 		page->removeCard(card3);
+// 		card3->setVisible(false);
+// 
+// 		page->settleUp(true);
+// 	});
+// 	auto seq = Sequence::create(action1, action2, nullptr);
+// 	runAction(seq);
+// 	auto & v = page->getCards();
+// 	for (size_t i = 0; i < v.size(); i++) {
+// 		v[i]->setCanUp(true);
+// 	}
+// 	addChild(page);
 
-		card2->retain();
-		page->removeChild(card2);
-		page->removeCard(card2);
-
-		card3->retain();
-		page->removeChild(card3);
-		page->removeCard(card3);
-
-		page->settleUp(true);
-	});
-	auto seq = Sequence::create(action1, action2, nullptr);
-	runAction(seq);
-	auto & v = page->getCards();
-	for (size_t i = 0; i < v.size(); i++) {
-		v[i]->setCanUp(true);
+	auto handCardPanal = UI_HandCardPanal::create();
+	handCardPanal->setScale(1.3);
+	handCardPanal->setPosition(100, size.height / 2);
+	const size_t length = 13;
+	std::array<std::shared_ptr<Card_Slash>, length> card_ptr;
+	for (size_t i = 0; i < length; i++) {
+		card_ptr[i] = std::make_shared<Card_Slash>(ECardSuit::DIAMOND, i + 1);
 	}
-	addChild(page);
+	for (size_t i = 0; i < length; i++) {
+		auto ui = handCardPanal->addCard(card_ptr[i]);
+		ui->setCanUp(true);
+	}
+	addChild(handCardPanal);
+	auto action1 = DelayTime::create(3.0f);
+	auto action2 = CallFunc::create([=]() {
+		handCardPanal->removeCard(card_ptr[3]);
+		handCardPanal->removeCard(card_ptr[5]);
+		handCardPanal->removeCard(card_ptr[7]);
+		handCardPanal->removeCard(card_ptr[9]);
+	});
+	handCardPanal->runAction(Sequence::create(action1, action2, nullptr));
 
 	return true;
 }

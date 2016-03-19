@@ -13,7 +13,7 @@ void UI_Harvest::chosedCard(const std::shared_ptr<Player> & player, const std::s
 	throw "Not yet implemented";
 }
 
-void UI_Harvest::chosedCard(const std::shared_ptr<Player> & player, const UI_Card * card) {
+void UI_Harvest::chosedCard(const std::shared_ptr<Player> & player, const std::shared_ptr<UI_Card> & card) {
 	//在卡牌图形上，加上名字，并且调用XXXplayer得到一张牌的函数
 //在对应位置上修改players数组
 	// TODO - implement UI_Harvest::chosedCard

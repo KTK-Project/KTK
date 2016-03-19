@@ -8,7 +8,7 @@ bool UI_Desktop::init() const {
 	throw "Not yet implemented";
 }
 
-int UI_Desktop::pushBack(const UI_Card * card) {
+int UI_Desktop::pushBack(const std::shared_ptr<UI_Card> & card) {
 	//直接压入cards中，并返回cards.size()
 	// TODO - implement UI_Desktop::pushBack
 	throw "Not yet implemented";
@@ -20,14 +20,14 @@ Vec2 UI_Desktop::getPositionForCard(const int index) const {
 	throw "Not yet implemented";
 }
 
-void UI_Desktop::addCards(const UI_Card * card, const std::string & description) {
+void UI_Desktop::addCards(const std::shared_ptr<UI_Card> & card, const std::string & description) {
 	//把设置卡牌的description，然后push进cards，调用settleup
 	// TODO - implement UI_Desktop::addCards
 	throw "Not yet implemented";
 }
 
 void UI_Desktop::settleUp() {
-	//为每一个UI_card * 设置一个到正确位置的移动动作
+	//为每一个std::shared_ptr<UI_Card> 设置一个到正确位置的移动动作
 	// TODO - implement UI_Desktop::settleUp
 	throw "Not yet implemented";
 }

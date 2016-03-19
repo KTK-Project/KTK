@@ -7,14 +7,14 @@
 
 class UI_Card : public cocos2d::Node {
 public:
-	static UI_Card * create(const std::shared_ptr<Card> & card) {
-		UI_Card  * pRet = new(std::nothrow) UI_Card ();
+	static std::shared_ptr<UI_Card> create(const std::shared_ptr<Card> & card) {
+		std::shared_ptr<UI_Card> pRet(new(std::nothrow) UI_Card(), [](UI_Card * p) { p->release(); });
 		if (pRet && pRet->initWithCard(card)) {
+			pRet->retain();
 			pRet->autorelease();
 			return pRet;
 		}
 		else {
-			delete pRet;
 			pRet = NULL;
 			return NULL;
 		}
@@ -32,6 +32,7 @@ public:
 	void setUpCallBack(const std::function<void (const UI_Card *)> & upCallBack);
 	void setDownCallBack(const std::function<void (const UI_Card *)> & downCallBack);
 	cocos2d::Action * runAction(cocos2d::Action * action);
+//	Todo:stm delete or not?
 // 	cocos2d::EventListenerTouchOneByOne * getListener() const;
 protected:
 	UI_Card() = default;
@@ -47,5 +48,6 @@ private:
 	std::function<void (const UI_Card *)> m_upCallBack;
 	std::function<void (const UI_Card *)> m_downCallBack;
 	cocos2d::EventListenerTouchOneByOne * m_listener;
+	int m_touchFlag;
 };
 #endif // UI_Card_h__

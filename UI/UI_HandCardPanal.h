@@ -5,6 +5,7 @@
 #include <vector>
 #include <functional>
 #include "cocos2d.h"
+#include "ui\CocosGUI.h"
 #include "UI_HandCardPage.h"
 #include "UI_Card.h"
 
@@ -23,28 +24,31 @@ public:
 		}
 	}
 	bool init();
-	UI_HandCardPage * getPageByIndex(int index) const;
-	int getCurrentPageIndex() const;
-	void setCurrentPageIndex(int currentPageIndex);
-	void pageUp() const;
-	void pageDown() const;
-	void addCard(const std::shared_ptr<Card> & card);
-	void addCard(const UI_Card * card);
-	UI_Card * removeCard(const std::shared_ptr<Card> & card) const;
-	UI_Card * removeCard(const UI_Card * card) const;
+	UI_HandCardPage * getPageByIndex(size_t index) const;
+	UI_HandCardPage * getCurrentPage() const;
+	void setCurrentPage(size_t index);
+	void pageUp();
+	void pageDown();
+	std::shared_ptr<UI_Card> addCard(const std::shared_ptr<Card> & card);
+	void addCard(const std::shared_ptr<UI_Card> & card);
+	std::shared_ptr<UI_Card> removeCard(const std::shared_ptr<Card> & card);
+	std::shared_ptr<UI_Card> removeCard(const std::shared_ptr<UI_Card> & card);
 	void removeEmptyPage();
 	void reset();
-	void for_each_card(const std::function<void (const UI_Card *)> & fun) const;
-	void finish() const;
+	void for_each_card(const std::function<void (const std::shared_ptr<UI_Card> &)> & fun) const;
 	void update(float delta) override;
+//	Todo:stm delete or not
+// 	void finish() const;
 protected:
 	UI_HandCardPanal() = default;
 private:
 	std::vector<UI_HandCardPage *> m_pages;
-	std::deque<UI_Card *> m_addCardQueue;
-	cocos2d::Menu * m_pageUpDownMenu;
+	std::deque<std::shared_ptr<UI_Card>> m_addCardQueue;
+	cocos2d::ui::Button * m_upButton;
+	cocos2d::ui::Button * m_downButton;
+	cocos2d::Label * m_pageLabel;
 	std::function<bool(const std::shared_ptr<Card>)> m_cardsCanUpFilter;
-	int m_currentPageIndex;
+	size_t m_currentPageIndex;
 	bool m_needToReset;
 };
 #endif // UI_HandCardPanal_h__

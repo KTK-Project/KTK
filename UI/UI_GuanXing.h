@@ -19,12 +19,12 @@ public:
 		}
 	}
 	bool initWithCards(const std::vector<std::shared_ptr<Card>> & topCards);
-	std::vector<UI_Card *> & getTopCards();
-	std::vector<UI_Card *> & getBottonCards();
+	const std::vector<std::shared_ptr<UI_Card>> & getTopCards();
+	const std::vector<std::shared_ptr<UI_Card>> & getBottonCards();
 protected:
 	UI_GuanXing() = default;
 private:
-	std::vector<UI_Card *> m_topCards;
-	std::vector<UI_Card *> m_bottonCards;
+	std::vector<std::shared_ptr<UI_Card>> m_topCards;
+	std::vector<std::shared_ptr<UI_Card>> m_bottonCards;
 };
 #endif // UI_GuanXing_h__

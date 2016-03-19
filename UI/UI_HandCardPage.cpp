@@ -1,23 +1,25 @@
 #include "UI_HandCardPage.h"
+#include <algorithm>
 
 using namespace cocos2d;
 
 bool UI_HandCardPage::init() {
 	if (!Node::init())
 		return false;
-	auto layer = LayerColor::create(Color4B::YELLOW);
-	layer->setContentSize(Size(900, 190));
-	addChild(layer);
-
+	m_settleUpFinishCallBack = []() {};
 	return true;
 }
 
-std::vector<UI_Card *> & UI_HandCardPage::getCards() {
+std::vector<std::shared_ptr<UI_Card>> & UI_HandCardPage::getCards() {
 	return m_cards;
 }
 
-int UI_HandCardPage::getSize() const {
+size_t UI_HandCardPage::getSize() const {
 	return m_cards.size();
+}
+
+size_t UI_HandCardPage::getMaxSize() const {
+	return m_maxSize;
 }
 
 bool UI_HandCardPage::isEmpty() const {
@@ -30,10 +32,27 @@ bool UI_HandCardPage::isFull() const {
 	return m_cards.size() == m_maxSize;
 }
 
+void UI_HandCardPage::setVisible(bool visible) {
+	Node::setVisible(visible);
+	for (auto & i : m_cards)
+		i->setVisible(visible);
+}
+
 void UI_HandCardPage::settleUp(bool useAction) {
 	if (useAction) {
-		for (size_t i = 0; i < m_cards.size(); i++)
-			m_cards[i]->runAction(MoveTo::create(1.0f, getPositionWithIndex(i)));
+		float time1 = 1.0f;
+		float time2 = 0.5f;
+		for (size_t i = 0; i < m_cards.size(); i++) {
+			if (m_cards[i]->getPosition() == getPositionWithIndex(i))
+				continue;
+			m_cards[i]->setOpacity(100);
+			auto action1 = MoveTo::create(time1, getPositionWithIndex(i));
+			auto action2 = FadeIn::create(time1 * 0.7f);
+			auto action3 = Spawn::create(action1, action2, nullptr);
+			auto action4 = DelayTime::create(time2);
+			m_cards[i]->runAction(Sequence::create(action3, action4, nullptr));
+		}
+		runAction(Sequence::create(DelayTime::create(time1 + time2), CallFunc::create([=]() { m_settleUpFinishCallBack(); }), nullptr));
 	}
 	else {
 		for (size_t i = 0; i < m_cards.size(); i++)
@@ -53,9 +72,9 @@ bool UI_HandCardPage::hasCard(const std::shared_ptr<Card> & card) const {
 	return false;
 }
 
-bool UI_HandCardPage::hasCard(const UI_Card * card) const {
+bool UI_HandCardPage::hasCard(const std::shared_ptr<UI_Card> & card) const {
 	for (auto & i : m_cards)
-		if (card == i)
+		if (card->getCard() == i->getCard())
 			return true;
 	return false;
 }
@@ -66,43 +85,51 @@ void UI_HandCardPage::addCard(const std::shared_ptr<Card> & card) {
 	addCard(cardUi);
 }
 
-void UI_HandCardPage::addCard(UI_Card * card) {
+void UI_HandCardPage::addCard(const std::shared_ptr<UI_Card> & card) {
 	if (isFull()) throw "Page is full!";
 	card->setAnchorPoint(Vec2::ANCHOR_BOTTOM_LEFT);
 	card->setScale(0.6f);
-	card->setPosition(getPositionWithIndex(m_maxSize));
-	addChild(card);
+	auto pos = getPositionWithIndex(m_maxSize - 1);
+	card->setPosition(Vec2(pos.x + 20, pos.y));
+	addChild(card.get(), m_maxSize - m_cards.size());
 	m_cards.push_back(card);
 }
 
-UI_Card * UI_HandCardPage::removeCard(const std::shared_ptr<Card> & card) {
-	for (auto i = m_cards.begin(); i != m_cards.end(); i++)
+std::shared_ptr<UI_Card> UI_HandCardPage::removeCard(const std::shared_ptr<Card> & card) {
+	auto i = m_cards.begin();
+	while (i != m_cards.end()) {
 		if ((*i)->getCard() == card) {
-			auto val = *i;
+			removeChild((*i).get());
 			i = m_cards.erase(i);
-			return val;
+			return *i;
 		}
+		else
+			i++;
+	}
 	throw "Can't find match!";
 }
 
-UI_Card * UI_HandCardPage::removeCard(const UI_Card * card) {
-	for (auto i = m_cards.begin(); i != m_cards.end(); i++)
+std::shared_ptr<UI_Card> UI_HandCardPage::removeCard(const std::shared_ptr<UI_Card> & card) {
+	auto i = m_cards.begin();
+	while (i != m_cards.end()) {
 		if (*i == card) {
-			auto val = *i;
+			removeChild((*i).get());
 			i = m_cards.erase(i);
-			return val;
+			return *i;
 		}
+		else
+			i++;
+	}
 	throw "Can't find match!";
 }
 
-std::vector<UI_Card *> UI_HandCardPage::removeAll() {
-	std::vector<UI_Card *> v(m_cards.cbegin(), m_cards.cend());
+std::vector<std::shared_ptr<UI_Card>> UI_HandCardPage::removeAll() {
+	std::vector<std::shared_ptr<UI_Card>> v(m_cards.cbegin(), m_cards.cend());
 	m_cards.clear();
+	removeAllChildren();
 	return v;
 }
 
-//	Todo:delete of not;
-// void UI_HandCardPage::setAddCardFinishCallBack(const std::function<void ()> & m_addCardFinishCallBack) {
-// 	// TODO - implement UI_HandCardPage::setAddCardFinishCallBack
-// 	throw "Not yet implemented";
-// }
+void UI_HandCardPage::setSettleUpFinishCallBack(const std::function<void()> & fun) {
+	m_settleUpFinishCallBack = fun;
+}

@@ -1,138 +1,225 @@
 #include "UI_HandCardPanal.h"
+#include <algorithm>
+#include "Manager\TextManager.h"
+
+using namespace cocos2d;
+using namespace cocos2d::ui;
 
 bool UI_HandCardPanal::init() {
-//	Todo:stm
-	throw "Not yet implemented";
+	if (!Node::init())
+		return false;
+
+	auto layer = LayerColor::create(Color4B::YELLOW);
+	layer->setContentSize(Size(900, 190));
+	addChild(layer);
+
+	auto page = UI_HandCardPage::create();
+	addChild(page);
+	m_pages.push_back(page);
+
+	m_pageLabel = Label::create("", "ziti.otf", 20);
+	m_pageLabel->setColor(Color3B::BLACK);
+	std::string currentIndex = std::to_string(m_currentPageIndex + 1);
+	std::string maxIndex = std::to_string(m_pages.size());
+	std::string indexString = currentIndex + "/" + maxIndex;
+	m_pageLabel->setString(TextManager::gbkToUtf8(indexString));
+	m_pageLabel->setPosition(Vec2(858, 90));
+	addChild(m_pageLabel);
+
+	m_upButton = Button::create("png\\ui\\arrow_up.png");
+	m_upButton->setScale(0.5f);
+	m_upButton->setPosition(Vec2(858, 135));
+	m_upButton->addTouchEventListener([=](Ref* pSender, Widget::TouchEventType type) {
+		switch (type) {
+			case Widget::TouchEventType::BEGAN: break;
+			case Widget::TouchEventType::MOVED: break;
+			case Widget::TouchEventType::ENDED:
+				setCurrentPage(m_currentPageIndex - 1);
+				break;
+			case Widget::TouchEventType::CANCELED: break;
+			default: throw "Can't find match!"; break;
+		}
+	});
+	addChild(m_upButton);
+
+	m_downButton = Button::create("png\\ui\\arrow_down.png");
+	m_downButton->setScale(0.5f);
+	m_downButton->setPosition(Vec2(858, 45));
+	m_downButton->addTouchEventListener([=](Ref* pSender, Widget::TouchEventType type) {
+		switch (type) {
+			case Widget::TouchEventType::BEGAN: break;
+			case Widget::TouchEventType::MOVED: break;
+			case Widget::TouchEventType::ENDED:
+				setCurrentPage(m_currentPageIndex + 1);
+				break;
+			case Widget::TouchEventType::CANCELED: break;
+			default: throw "Can't find match!"; break;
+		}
+	});
+	addChild(m_downButton);
+
+	scheduleUpdate();
 	return true;
 }
 
-UI_HandCardPage * UI_HandCardPanal::getPageByIndex(int index) const {
-	//断言（正常范围）
-	//返回UI_handcardPage *
-	// TODO - implement UI_HandCardPanal::getPageByIndex
-	throw "Not yet implemented";
+UI_HandCardPage * UI_HandCardPanal::getPageByIndex(size_t index) const {
+	if (index < 0 || index >= m_pages.size())
+		throw "Out of Range!";
+	return m_pages[index];
 }
 
-int UI_HandCardPanal::getCurrentPageIndex() const {
-	//返回m_currentPageindex
-	// TODO - implement UI_HandCardPanal::getCurrentPageIndex
-	throw "Not yet implemented";
+UI_HandCardPage * UI_HandCardPanal::getCurrentPage() const {
+	return getPageByIndex(m_currentPageIndex);
 }
 
-void UI_HandCardPanal::setCurrentPageIndex(int currentPageIndex) {
-	//if(const m_currentpage == currentpage) return;
-	//断言（正确的范围）
-	//旧页执行setvisible(const false)
-	//新页执行setvisible(const true)
-	//设置m_currentPageIndex
-	// TODO - implement UI_HandCardPanal::setCurrentPageIndex
-	throw "Not yet implemented";
+void UI_HandCardPanal::setCurrentPage(size_t index) {
+	if (index < 0 || index >= m_pages.size())
+		throw "Out of Range!";
+	if (m_currentPageIndex == index)
+		return;
+
+	m_pages[m_currentPageIndex]->setVisible(false);
+	m_currentPageIndex = index;
+	m_pages[m_currentPageIndex]->setVisible(true);
 }
 
-void UI_HandCardPanal::pageUp() const {
-	//断言（正确的范围）
-	//调用setcurrentPageIndex
-	// TODO - implement UI_HandCardPanal::pageUp
-	throw "Not yet implemented";
+void UI_HandCardPanal::pageUp() {
+	if (m_currentPageIndex - 1 < 0)
+		throw "Out of Range!";
+	setCurrentPage(m_currentPageIndex - 1);
 }
 
-void UI_HandCardPanal::pageDown() const {
-	//断言（正确的范围）
-	//调用setcurrentPageIndex
-	// TODO - implement UI_HandCardPanal::pageDown
-	throw "Not yet implemented";
+void UI_HandCardPanal::pageDown() {
+	if (m_currentPageIndex + 1 > m_pages.size())
+		throw "Out of Range!";
+	setCurrentPage(m_currentPageIndex + 1);
 }
 
-void UI_HandCardPanal::addCard(const std::shared_ptr<Card> & card) {
-	//封装UI_Card *,压入addcardqueue
-	// TODO - implement UI_HandCardPanal::addCard
-	throw "Not yet implemented";
+std::shared_ptr<UI_Card> UI_HandCardPanal::addCard(const std::shared_ptr<Card> & card) {
+	auto uiCard = UI_Card::create(card);
+	addCard(uiCard);
+	return uiCard;
 }
 
-void UI_HandCardPanal::addCard(const UI_Card * card) {
-	//压入addcardqueue
-	// TODO - implement UI_HandCardPanal::addCard
-	throw "Not yet implemented";
+void UI_HandCardPanal::addCard(const std::shared_ptr<UI_Card> & card) {
+	m_addCardQueue.push_back(card);
 }
 
-UI_Card * UI_HandCardPanal::removeCard(const std::shared_ptr<Card> & card) const {
-	//找到这个卡牌所在页，卡牌页.调用remove，然后return UI_Card *
-	//设置needToReset为true
-	// TODO - implement UI_HandCardPanal::removeCard
-	throw "Not yet implemented";
+std::shared_ptr<UI_Card> UI_HandCardPanal::removeCard(const std::shared_ptr<Card> & card) {
+	for (auto & i : m_pages) {
+		if (i->hasCard(card)) {
+			m_needToReset = true;
+			return i->removeCard(card);
+		}
+	}
+	throw "Can't find Card!";
 }
 
-UI_Card * UI_HandCardPanal::removeCard(const UI_Card * card) const {
-	//找到这个卡牌所在页，卡牌页.调用remove，然后return UI_Card *
-	//设置needToReset为true
-	// TODO - implement UI_HandCardPanal::removeCard
-	throw "Not yet implemented";
+std::shared_ptr<UI_Card> UI_HandCardPanal::removeCard(const std::shared_ptr<UI_Card> & card) {
+	for (auto & i : m_pages) {
+		if (i->hasCard(card)) {
+			m_needToReset = true;
+			return i->removeCard(card);
+		}
+	}
+	throw "Can't find Card!";
 }
 
 void UI_HandCardPanal::removeEmptyPage() {
-	//移除空的卡牌页，设置当前页为1
-	// TODO - implement UI_HandCardPanal::removeEmptyPage
-	throw "Not yet implemented";
+	auto i = m_pages.begin();
+	while (i != m_pages.end()) {
+		if ((*i)->isEmpty()) {
+			removeChild(*i);
+			i = m_pages.erase(i);
+		}
+		else
+			i++;
+	}
+	if (!m_pages.empty())
+		setCurrentPage(0);
+	else {
+		auto page = UI_HandCardPage::create();
+		addChild(page);
+		m_pages.push_back(page);
+		setCurrentPage(0);
+	}
 }
 
 void UI_HandCardPanal::reset() {
-	//if(总页数只为1)
-	//{-----------------------------------------------------------------------
-	//getcurrentpage().settleup(const true) const;
-	//}-----------------------------------------------------------------------
-	//else
-	//{-----------------------------------------------------------------------
-	//setcurrentpage(0) const;
-	//getcurrentpage().settleup(const true) const;
-	//把所有第2页起removeAll，把所有卡牌压入一个容器中
-	//检查第一页还缺几个卡牌，调用addcard
-	//循环构建新卡牌页，压入这些卡牌并调用settleup(const false)
-	//调用removeEmptypage
-	//}-----------------------------------------------------------------------
-	// TODO - implement UI_HandCardPanal::reset
-	throw "Not yet implemented";
+	if (m_pages.size() == 1)
+		getPageByIndex(0)->settleUp(true);
+	else {
+		setCurrentPage(0);
+		auto i = m_pages.begin() + 1;
+		while (i != m_pages.end()) {
+			auto & v = (*i)->removeAll();
+			m_addCardQueue.insert(m_addCardQueue.end(), v.begin(), v.end());
+			removeChild(*i);
+			i = m_pages.erase(i);
+		}
+		getCurrentPage()->settleUp(true);
+	}
 }
 
-void UI_HandCardPanal::for_each_card(const std::function<void (const UI_Card *)> & fun) const {
-	//遍历所有卡牌执行此函数。
-	// TODO - implement UI_HandCardPanal::for_each_card
-	throw "Not yet implemented";
+void UI_HandCardPanal::for_each_card(const std::function<void(const std::shared_ptr<UI_Card> &)> & fun) const {
+	auto i = m_pages.begin();
+	while (i != m_pages.end()) {
+		auto & v = (*i)->getCards();
+		std::for_each(v.begin(), v.end(), fun);
+		i++;
+	}
 }
 
 void UI_HandCardPanal::update(float delta) {
-	//if(const needToReset) const {调用reset()，设置needtoreset为false}
-	//---------------------------------------------------
-	//[[[[[[[[把增加的卡牌压入各个页中。
-	//static bool canAddCard = true
-	//if( !addCardQueue.empty() && canAddCard ) 
-	//{
-	//canaddcard = false;
-	//auto lastpage = m_pages.back() const;
-	//int left =  UI_handCardpage::s_maxsize - lastpage.getSize()
-	//if(!left)
-	//{
-	//创建新页，压入m_pages.
-	//lastpage = m_pages.back() const;
-	//left = UI_handCardpage::s_maxsize;
-	//}
-	//setcurrentpageindex(const m_pages.size() - 1) const;
-	//int length = std::min(const left, const addcardqueue.size()) const;
-	//for(const int i = 0; i < length; i++)
-	//{
-	//lastpage.addcard(const addcardueue.popfront()) const;
-	//}
-	//lastpage.setaddcardcardfinishCallback([]()
-	// {
-	// canaddcard = true;
-	// }) const;
-	//}
-	////把增加的卡牌压入各个页中。]]]]
-	//---------------------------------------------------
-	throw std::logic_error("The method or operation is not implemented.");
+	static bool canAddCard = true;
+	if (m_needToReset) {
+		canAddCard = false;
+		m_pages[0]->setSettleUpFinishCallBack([]() { 
+			canAddCard = true; 
+		});
+		reset();
+		m_needToReset = false;
+	}
+
+	if (!m_addCardQueue.empty() && canAddCard) {
+		canAddCard = false;
+		auto lastPage = m_pages.back();
+		size_t left = lastPage->getMaxSize() - lastPage->getSize();
+
+		if (!left) {
+			auto page = UI_HandCardPage::create();
+			addChild(page);
+			m_pages.push_back(page);
+			lastPage = page;
+			left = lastPage->getMaxSize();
+		}
+
+		setCurrentPage(m_pages.size() - 1);
+		size_t length = std::min(left, m_addCardQueue.size());
+
+		for (size_t i = 0; i < length; i++) {
+			auto card = m_addCardQueue.front();
+			card->setVisible(true);
+			lastPage->addCard(card);
+			m_addCardQueue.pop_front();
+		}
+
+		setCurrentPage(m_pages.size() - 1);
+		lastPage->settleUp(true);
+		lastPage->setSettleUpFinishCallBack([]() { canAddCard = true; });
+	}
+
+	std::string currentIndex = std::to_string(m_currentPageIndex + 1);
+	std::string maxIndex = std::to_string(m_pages.size());
+	std::string indexString = currentIndex + "/" + maxIndex;
+	m_pageLabel->setString(TextManager::gbkToUtf8(indexString));
+	m_upButton->setEnabled(m_currentPageIndex > 0);
+	m_downButton->setEnabled(m_currentPageIndex < m_pages.size() - 1);
 }
 
-void UI_HandCardPanal::finish() const {
-	//善后处理：所有卡牌setuppding(const false)，setdark(const false)，
-	// TODO - implement UI_HandCardPanal::finish
-	throw "Not yet implemented";
-}
+//	Todo:stm delete or not
+// void UI_HandCardPanal::finish() const {
+// 	//善后处理：所有卡牌setuppding(const false)，setdark(const false)，
+// 	// TODO - implement UI_HandCardPanal::finish
+// 	throw "Not yet implemented";
+// }

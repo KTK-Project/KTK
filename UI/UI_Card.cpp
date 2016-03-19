@@ -21,6 +21,9 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 	m_cardPattern = Sprite::create(path);
 	m_cardPattern->setAnchorPoint(Vec2::ZERO);
 	m_cardPattern->setPosition(Vec2::ZERO);
+	m_cardPattern->setCascadeOpacityEnabled(true);
+	m_cardPattern->setCascadeColorEnabled(true);
+
 	auto cardSize = m_cardPattern->getContentSize();
 
 	path.clear();
@@ -30,6 +33,8 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 	m_suit = Sprite::create(path);
 	m_suit->setScale(0.2f);
 	m_suit->setPosition(23, cardSize.height - 37);
+	m_suit->setCascadeOpacityEnabled(true);
+	m_suit->setCascadeColorEnabled(true);
 
 	m_number = Label::create(GameManager::getInstance()->getTextManger().getTextOfNumber(card->getNumber()), "ziti.otf", 13);
 	switch (card->getColor()) {
@@ -38,6 +43,8 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 		default: throw "Can't find match!"; break;
 	}
 	m_number->setPosition(23, cardSize.height - 23);
+	m_number->setCascadeOpacityEnabled(true);
+	m_number->setCascadeColorEnabled(true);
 
 	m_cardPattern->addChild(m_suit);
 	m_cardPattern->addChild(m_number);
@@ -46,8 +53,11 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 	// 设置UI_Card的大小为卡牌图片的大小。
 	setContentSize(cardSize);
 	setAnchorPoint(Vec2::ANCHOR_MIDDLE);
+	setCascadeOpacityEnabled(true);
+	setCascadeColorEnabled(true);
 
 	// 其他属性初始化
+	m_touchFlag = 0;
 	initListener();
 	m_card = card;
 	setDark(false);
@@ -60,15 +70,18 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 }
 
 void UI_Card::initListener() {
-	static int touchFlag = 0;
 	m_listener = EventListenerTouchOneByOne::create();
-	m_listener->onTouchBegan = [](Touch * touch, Event * event) {
+	m_listener->onTouchBegan = [=](Touch * touch, Event * event) {
 		auto target = static_cast<UI_Card *>(event->getCurrentTarget());
+		if (!target->isVisible())		//isvisible?
+			return false;
+		if (target->numberOfRunningActions())
+			return false;
 		auto point = target->convertToNodeSpace(touch->getLocation());
 		auto size = target->getContentSize();
 		auto rect = Rect(Vec2::ZERO, size);
 		if (rect.containsPoint(point)) {
-			touchFlag++;
+			m_touchFlag++;
 			return true;
 		}
 		return false;
@@ -80,16 +93,17 @@ void UI_Card::initListener() {
 		auto size = target->getContentSize();
 		auto rect = Rect(Vec2::ZERO, size);
 		if (rect.containsPoint(point)) {
-			touchFlag++;
-			if (touchFlag == 2)
+			m_touchFlag++;
+			if (m_touchFlag == 2)
 				setUpping(!getUpping());
 		}
-		touchFlag = 0;
+		m_touchFlag = 0;
 	};
 
 	m_listener->onTouchCancelled = [=](Touch * touch, Event * event) {
-		touchFlag = 0;
+		m_touchFlag = 0;
 	};
+	m_listener->setSwallowTouches(true);
 }
 
 std::shared_ptr<Card> UI_Card::getCard() const {
@@ -109,18 +123,10 @@ void UI_Card::setDark(bool dark) {
 		return;
 	m_dark = dark;
 	float time = 1.3f;
-	if (dark) {
-		m_cardPattern->runAction(TintTo::create(time, 255 * 0.45, 255 * 0.45, 255 * 0.45));
-		m_suit->runAction(TintTo::create(time, 255 * 0.45, 255 * 0.45, 255 * 0.45));
-		m_number->runAction(TintTo::create(time, m_number->getColor().r * 0.45, m_number->getColor().g * 0.45, m_number->getColor().b * 0.45));
-		runAction(DelayTime::create(time));
-	}
-	else {
+	if (dark)
+		m_cardPattern->runAction(TintTo::create(time, 255 * 0.65, 255 * 0.65, 255 * 0.65));
+	else
 		m_cardPattern->runAction(TintTo::create(time, 255, 255, 255));
-		m_suit->runAction(TintTo::create(time, 255, 255, 255));
-		m_number->runAction(TintTo::create(time, m_number->getColor().r, m_number->getColor().g, m_number->getColor().b));
-		runAction(DelayTime::create(time));
-	}
 }
 
 bool UI_Card::getCanUp() const {
