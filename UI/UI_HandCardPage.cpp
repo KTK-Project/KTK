@@ -14,11 +14,11 @@ std::vector<std::shared_ptr<UI_Card>> & UI_HandCardPage::getCards() {
 	return m_cards;
 }
 
-size_t UI_HandCardPage::getSize() const {
+int UI_HandCardPage::getSize() const {
 	return m_cards.size();
 }
 
-size_t UI_HandCardPage::getMaxSize() const {
+int UI_HandCardPage::getMaxSize() const {
 	return m_maxSize;
 }
 
@@ -42,10 +42,11 @@ void UI_HandCardPage::settleUp(bool useAction) {
 	if (useAction) {
 		float time1 = 1.0f;
 		float time2 = 0.5f;
-		for (size_t i = 0; i < m_cards.size(); i++) {
+		for (int i = 0; i < m_cards.size(); i++) {
 			if (m_cards[i]->getPosition() == getPositionWithIndex(i))
 				continue;
-			m_cards[i]->setOpacity(100);
+			if (m_cards[i]->getPosition().x > getPositionWithIndex(m_maxSize - 1).x)
+				m_cards[i]->setOpacity(100);
 			auto action1 = MoveTo::create(time1, getPositionWithIndex(i));
 			auto action2 = FadeIn::create(time1 * 0.7f);
 			auto action3 = Spawn::create(action1, action2, nullptr);
@@ -55,7 +56,7 @@ void UI_HandCardPage::settleUp(bool useAction) {
 		runAction(Sequence::create(DelayTime::create(time1 + time2), CallFunc::create([=]() { m_settleUpFinishCallBack(); }), nullptr));
 	}
 	else {
-		for (size_t i = 0; i < m_cards.size(); i++)
+		for (int i = 0; i < m_cards.size(); i++)
 			m_cards[i]->setPosition(getPositionWithIndex(i));
 	}
 }

@@ -24,9 +24,9 @@ public:
 		}
 	}
 	bool init();
-	UI_HandCardPage * getPageByIndex(size_t index) const;
+	UI_HandCardPage * getPageByIndex(int index) const;
 	UI_HandCardPage * getCurrentPage() const;
-	void setCurrentPage(size_t index);
+	void setCurrentPage(int index);
 	void pageUp();
 	void pageDown();
 	std::shared_ptr<UI_Card> addCard(const std::shared_ptr<Card> & card);
@@ -48,7 +48,7 @@ private:
 	cocos2d::ui::Button * m_downButton;
 	cocos2d::Label * m_pageLabel;
 	std::function<bool(const std::shared_ptr<Card>)> m_cardsCanUpFilter;
-	size_t m_currentPageIndex;
+	int m_currentPageIndex;
 	bool m_needToReset;
 };
 #endif // UI_HandCardPanal_h__

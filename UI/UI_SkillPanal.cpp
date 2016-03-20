@@ -10,7 +10,7 @@ bool UI_SkillPanal::initWithPlayer(const std::shared_ptr<Player> & player) {
 
 	m_player = player;
 	auto skillList = player->getCharacter().getSkillList();
-	for (size_t i = 0; i < skillList.getSize(); i++) {
+	for (int i = 0; i < skillList.getSize(); i++) {
 		auto skillName = skillList.getSkillByIndex(i).getSkillName();
 		float boxWidth = (100 - (skillList.getSize() - 1) * 4) / skillList.getSize();
 		float boxHeight = 20;
@@ -69,7 +69,7 @@ bool UI_SkillPanal::initWithPlayer(const std::shared_ptr<Player> & player) {
 
 void UI_SkillPanal::setSkillState(ESkillName skillName, ESkillState skillState) {
 	auto skillList = m_player.lock()->getCharacter().getSkillList();
-	for (size_t i = 0; i < skillList.getSize(); i++) {
+	for (int i = 0; i < skillList.getSize(); i++) {
 		if (skillList.getSkillByIndex(i).getSkillName() == skillName) {
 			switch (skillState) {
 				case ESkillState::CANTUSE:
@@ -89,14 +89,14 @@ void UI_SkillPanal::setSkillState(ESkillName skillName, ESkillState skillState) 
 
 void UI_SkillPanal::setSkillCallBack(ESkillName skillName, const std::function<void()> & skillCallBack) {
 	auto skillList = m_player.lock()->getCharacter().getSkillList();
-	for (size_t i = 0; i < skillList.getSize(); i++)
+	for (int i = 0; i < skillList.getSize(); i++)
 		if (skillList.getSkillByIndex(i).getSkillName() == skillName)
 			m_skillCallBack[i] = skillCallBack;
 }
 
 void UI_SkillPanal::refresh() {
 	auto skillList = m_player.lock()->getCharacter().getSkillList();
-	for (size_t i = 0; i < skillList.getSize(); i++) {
+	for (int i = 0; i < skillList.getSize(); i++) {
 		auto skillName = skillList.getSkillByIndex(i).getSkillName();
 		auto skillState = skillList.getSkillByIndex(i).getSkillState();
 		setSkillState(skillName, skillState);

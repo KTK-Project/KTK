@@ -19,7 +19,7 @@ void PlayersManager::setLordPlayer(const shared_ptr<Player> & lordPlayer) {
 	if (currentIndex == KTK_Info::PLAYER_QUANTITY)
 		throw "Can't find player";
 	m_lordPlayer = lordPlayer;
-	for (size_t i = 0; i < KTK_Info::PLAYER_QUANTITY; i++)
+	for (int i = 0; i < KTK_Info::PLAYER_QUANTITY; i++)
 		m_players[(currentIndex + i) % KTK_Info::PLAYER_QUANTITY]->setPosition(i);
 }
 
@@ -63,7 +63,7 @@ shared_ptr<Player> PlayersManager::getNextPlayerWithFilter(const shared_ptr<Play
 	int currentPlayerIndex = std::find(m_players.cbegin(), m_players.cend(), currentPlayer) - m_players.cbegin();
 	if (currentPlayerIndex == KTK_Info::PLAYER_QUANTITY)
 		throw "Can't find player!";
-	for (size_t i = 1; i < KTK_Info::PLAYER_QUANTITY; i++) {
+	for (int i = 1; i < KTK_Info::PLAYER_QUANTITY; i++) {
 		int resultIndex = (currentPlayerIndex + i) % KTK_Info::PLAYER_QUANTITY;
 		if (filter(m_players[resultIndex]))
 			return m_players[resultIndex];

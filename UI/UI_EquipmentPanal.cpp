@@ -33,7 +33,7 @@ bool UI_EquipmentPanal::initWithPlayer(const std::shared_ptr<Player> & player) {
 	m_defensiveHorse->setPosition(Vec2(0, 0));
 	addChild(m_defensiveHorse);
 
-	for (size_t i = 0; i < 4; i++)
+	for (int i = 0; i < 4; i++)
 		m_touchEvents.push_back([=]() { });
 
 	static int touchFlag = 0;
@@ -130,7 +130,7 @@ void UI_EquipmentPanal::refresh() {
 	cards[2] = m_player.lock()->getOffensiveHorse();
 	cards[3] = m_player.lock()->getDefensiveHorse();
 
-	for (size_t i = 0; i < 4; i++) {
+	for (int i = 0; i < 4; i++) {
 		if (cards[i] == nullptr) {
 			boxs[i]->removeAllChildren();
 			continue;

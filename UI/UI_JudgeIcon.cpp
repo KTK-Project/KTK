@@ -11,7 +11,7 @@ bool UI_JudgeIcon::initWithPlayer(const std::shared_ptr<Player> & player) {
 
 	m_player = player;
 
-	for (size_t i = 0; i < 2; i++) {
+	for (int i = 0; i < 2; i++) {
 		auto layerColor = LayerColor::create(Color4B::BLACK);
 		layerColor->setContentSize(Size(40, 40));
 		layerColor->setRotation(45);
@@ -36,7 +36,7 @@ bool UI_JudgeIcon::initWithPlayer(const std::shared_ptr<Player> & player) {
 
 void UI_JudgeIcon::refresh() { 
 	auto vec = m_player.lock()->getJudgeCards();
-	for (size_t i = 0; i < vec.size(); i++) {
+	for (int i = 0; i < vec.size(); i++) {
 		if (vec[i]->getName() == ECardName::DROWNINHAPPINESS) {
 			auto label = static_cast<Label *>(m_icon[i]->getChildByTag(0));
 			label->setString(TextManager::gbkToUtf8("¿÷"));
@@ -48,7 +48,7 @@ void UI_JudgeIcon::refresh() {
 		else throw "Can't find match!";
 	}
 
-	for (size_t i = 0; i < 2; i++)
+	for (int i = 0; i < 2; i++)
 		if (i < vec.size())
 			m_icon[i]->setVisible(true);
 		else

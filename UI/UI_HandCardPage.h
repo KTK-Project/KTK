@@ -21,8 +21,8 @@ public:
 	}
 	bool init();
 	std::vector<std::shared_ptr<UI_Card>> & getCards();
-	size_t getSize() const;
-	size_t getMaxSize() const;
+	int getSize() const;
+	int getMaxSize() const;
 	bool isEmpty() const;
 	bool isFull() const;
 	void setVisible(bool visible) override;
@@ -39,7 +39,7 @@ public:
 protected:
 	UI_HandCardPage() = default;
 private:
-	const size_t m_maxSize = 7;
+	const int m_maxSize = 7;
 	std::vector<std::shared_ptr<UI_Card>> m_cards;
 	std::function<void()> m_settleUpFinishCallBack;
 };

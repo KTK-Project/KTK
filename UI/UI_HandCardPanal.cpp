@@ -62,7 +62,7 @@ bool UI_HandCardPanal::init() {
 	return true;
 }
 
-UI_HandCardPage * UI_HandCardPanal::getPageByIndex(size_t index) const {
+UI_HandCardPage * UI_HandCardPanal::getPageByIndex(int index) const {
 	if (index < 0 || index >= m_pages.size())
 		throw "Out of Range!";
 	return m_pages[index];
@@ -72,7 +72,7 @@ UI_HandCardPage * UI_HandCardPanal::getCurrentPage() const {
 	return getPageByIndex(m_currentPageIndex);
 }
 
-void UI_HandCardPanal::setCurrentPage(size_t index) {
+void UI_HandCardPanal::setCurrentPage(int index) {
 	if (index < 0 || index >= m_pages.size())
 		throw "Out of Range!";
 	if (m_currentPageIndex == index)
@@ -195,9 +195,9 @@ void UI_HandCardPanal::update(float delta) {
 		}
 
 		setCurrentPage(m_pages.size() - 1);
-		size_t length = std::min(left, m_addCardQueue.size());
+		int length = std::min(left, m_addCardQueue.size());
 
-		for (size_t i = 0; i < length; i++) {
+		for (int i = 0; i < length; i++) {
 			auto card = m_addCardQueue.front();
 			card->setVisible(true);
 			lastPage->addCard(card);

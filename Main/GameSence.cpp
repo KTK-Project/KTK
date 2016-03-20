@@ -154,20 +154,18 @@ bool GameSence::init() {
 // 	auto seq = Sequence::create(action1, action2, nullptr);
 // 	runAction(seq);
 // 	auto & v = page->getCards();
-// 	for (size_t i = 0; i < v.size(); i++) {
+// 	for (int i = 0; i < v.size(); i++) {
 // 		v[i]->setCanUp(true);
 // 	}
 // 	addChild(page);
 
 	auto handCardPanal = UI_HandCardPanal::create();
-	handCardPanal->setScale(1.3);
+	handCardPanal->setScale(1.3f);
 	handCardPanal->setPosition(100, size.height / 2);
-	const size_t length = 13;
+	const int length = 7;
 	std::array<std::shared_ptr<Card_Slash>, length> card_ptr;
-	for (size_t i = 0; i < length; i++) {
+	for (int i = 0; i < length; i++) {
 		card_ptr[i] = std::make_shared<Card_Slash>(ECardSuit::DIAMOND, i + 1);
-	}
-	for (size_t i = 0; i < length; i++) {
 		auto ui = handCardPanal->addCard(card_ptr[i]);
 		ui->setCanUp(true);
 	}
@@ -176,8 +174,6 @@ bool GameSence::init() {
 	auto action2 = CallFunc::create([=]() {
 		handCardPanal->removeCard(card_ptr[3]);
 		handCardPanal->removeCard(card_ptr[5]);
-		handCardPanal->removeCard(card_ptr[7]);
-		handCardPanal->removeCard(card_ptr[9]);
 	});
 	handCardPanal->runAction(Sequence::create(action1, action2, nullptr));
 
