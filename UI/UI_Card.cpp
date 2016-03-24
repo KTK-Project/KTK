@@ -31,18 +31,20 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 	path += GameManager::getInstance()->getTextManger().getStringOfSuit(card->getSuit());
 	path += ".png";
 	m_suit = Sprite::create(path);
-	m_suit->setScale(0.2f);
-	m_suit->setPosition(23, cardSize.height - 37);
+	auto size0 = m_suit->getContentSize();
+	auto size1 = Size(18, 18);
+	m_suit->setScale(size1.width / size0.width, size1.height / size0.height);
+	m_suit->setPosition(28, cardSize.height - 47);
 	m_suit->setCascadeOpacityEnabled(true);
 	m_suit->setCascadeColorEnabled(true);
 
-	m_number = Label::create(GameManager::getInstance()->getTextManger().getTextOfNumber(card->getNumber()), "ziti.otf", 13);
+	m_number = Label::create(GameManager::getInstance()->getTextManger().getTextOfNumber(card->getNumber()), "ziti.otf", 18);
 	switch (card->getColor()) {
 		case ECardColor::BLACK: m_number->setColor(Color3B::BLACK); break;
 		case ECardColor::RED: m_number->setColor(Color3B::RED); break;
 		default: throw "Can't find match!"; break;
 	}
-	m_number->setPosition(23, cardSize.height - 23);
+	m_number->setPosition(28, cardSize.height - 27);
 	m_number->setCascadeOpacityEnabled(true);
 	m_number->setCascadeColorEnabled(true);
 
@@ -157,7 +159,7 @@ void UI_Card::setUpping(bool upping) {
 		auto action3 = Sequence::create(action1, action2, nullptr);
 		runAction(action3);
 	}
-	else if(!upping && m_upping) {
+	else if (!upping && m_upping) {
 		auto action1 = MoveBy::create(time, Vec2(0, -20));
 		auto action2 = CallFunc::create(std::bind(m_downCallBack, this));
 		auto action3 = Sequence::create(action1, action2, nullptr);
@@ -175,7 +177,7 @@ void UI_Card::setDownCallBack(const std::function<void(const UI_Card *)> & downC
 }
 
 cocos2d::Action * UI_Card::runAction(cocos2d::Action * action) {
-//	Todo:stm lockºÍunlock
+	//	Todo:stm lockºÍunlock
 	return Node::runAction(action);
 }
 

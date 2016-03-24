@@ -17,33 +17,35 @@
 #include "UI/UI_HandCardPage.h"
 #include "UI/UI_HandCardPanal.h"
 #include <array>
+#include "UI/UI_ForwardPlayerPanal.h"
+#include "Card/Card.h"
 
 using namespace cocos2d;
 
 bool GameSence::init() {
 	auto size = Director::getInstance()->getVisibleSize();
-	auto l = LayerColor::create(Color4B::GRAY);
+	auto l = LayerColor::create(Color4B::WHITE);
 	addChild(l, -10);
 
-	auto lineX = LayerColor::create(Color4B::RED);
-	lineX->setContentSize(Size(size.width, 3));
-	lineX->setPosition(0, size.height / 2);
-	addChild(lineX, 100);
+// 	auto lineX = LayerColor::create(Color4B::RED);
+// 	lineX->setContentSize(Size(size.width, 3));
+// 	lineX->setPosition(0, size.height / 2);
+// 	addChild(lineX, 100);
+// 
+// 	auto lineY = LayerColor::create(Color4B::RED);
+// 	lineY->setContentSize(Size(3, size.height));
+// 	lineY->setPosition(size.width / 2, 0);
+// 	addChild(lineY, 100);
 
-	auto lineY = LayerColor::create(Color4B::RED);
-	lineY->setContentSize(Size(3, size.height));
-	lineY->setPosition(size.width / 2, 0);
-	addChild(lineY, 100);
-
-// 	auto card_ptr = std::make_shared<Card_Slash>(ECardSuit::DIAMOND, 13);
+// 	auto card_ptr = std::make_shared<Card_Lightning>(ECardSuit::CLUB, 12);
 // 	auto ui_card1 = UI_Card::create(card_ptr);
-// 	ui_card1->setScale(0.6);
+// 	ui_card1->setScale(0.6f);
 // 	ui_card1->setPosition(size.width / 2, size.height / 2);
 // 	addChild(ui_card1.get());
 // 	ui_card1->setCanUp(true);
 // 
 // 	auto ui_card2 = UI_Card::create(card_ptr);
-// 	ui_card2->setScale(0.6);
+// 	ui_card2->setScale(0.6f);
 // 	ui_card2->setPosition(size.width / 2, size.height / 2);
 // 	addChild(ui_card2.get());
 // 	ui_card2->setCanUp(true);
@@ -159,23 +161,88 @@ bool GameSence::init() {
 // 	}
 // 	addChild(page);
 
-	auto handCardPanal = UI_HandCardPanal::create();
-	handCardPanal->setScale(1.3f);
-	handCardPanal->setPosition(100, size.height / 2);
-	const int length = 7;
-	std::array<std::shared_ptr<Card_Slash>, length> card_ptr;
-	for (int i = 0; i < length; i++) {
-		card_ptr[i] = std::make_shared<Card_Slash>(ECardSuit::DIAMOND, i + 1);
-		auto ui = handCardPanal->addCard(card_ptr[i]);
-		ui->setCanUp(true);
-	}
-	addChild(handCardPanal);
-	auto action1 = DelayTime::create(3.0f);
-	auto action2 = CallFunc::create([=]() {
-		handCardPanal->removeCard(card_ptr[3]);
-		handCardPanal->removeCard(card_ptr[5]);
-	});
-	handCardPanal->runAction(Sequence::create(action1, action2, nullptr));
+// 	auto handCardPanal = UI_HandCardPanal::create();
+// 	handCardPanal->setScale(1.3f);
+// 	handCardPanal->setPosition(100, size.height / 2);
+// 	const int length = 7;
+// 	std::array<std::shared_ptr<Card_Slash>, length> card_ptr;
+// 	for (int i = 0; i < length; i++) {
+// 		card_ptr[i] = std::make_shared<Card_Slash>(ECardSuit::DIAMOND, i + 1);
+// 		auto ui = handCardPanal->addCard(card_ptr[i]);
+// 		ui->setCanUp(true);
+// 	}
+// 	addChild(handCardPanal);
+// 	auto action1 = DelayTime::create(3.0f);
+// 	auto action2 = CallFunc::create([=]() {
+// 		handCardPanal->removeCard(card_ptr[3]);
+// 		handCardPanal->removeCard(card_ptr[5]);
+// 	});
+// 	handCardPanal->runAction(Sequence::create(action1, action2, nullptr));
+
+// 	auto player = std::make_shared<Player>();
+// 	GameManager::getInstance()->getPlayerManager().getPlayers()[0] = player;
+// 	player->setCharacter(Character(ECharName::DIAOCHAN));
+// 	player->setHP(3);
+// 	player->setID(ECharID::LORD);
+// 	player->setPosition(4);
+// 	player->setMaxHP(5);
+// 	auto card1 = std::make_shared<Card_DragonBroadSword>(ECardSuit::DIAMOND, 1);
+// 	auto card2 = std::make_shared<Card_BaGuaRank>(ECardSuit::CLUB, 11);
+// 	auto card3 = std::make_shared<Card_Horse>(ECardName::DILU, ECardSuit::HEART, 12);
+// 	auto card4 = std::make_shared<Card_Horse>(ECardName::CHITU, ECardSuit::SPADE, 13);
+// 	player->setWeapon(card1);
+// 	player->setArmor(card2);
+// 	player->setOffensiveHorse(card4);
+// 	player->setDefensiveHorse(card3);
+// 	auto card5 = std::make_shared<Card_Lightning>(ECardSuit::DIAMOND, 4);
+// 	auto card6 = std::make_shared<Card_DrownInHappiness>(ECardSuit::DIAMOND, 4);
+// 	player->getJudgeCards().push_back(card5);
+// 	player->getJudgeCards().push_back(card6);
+// 	auto playerPanal = UI_PlayerPanal::create(player);
+// 	playerPanal->setPosition(size.width / 2, size.height / 2);
+// 	addChild(playerPanal);
+
+// 	auto player = std::make_shared<Player>();
+// 	GameManager::getInstance()->getPlayerManager().getPlayers()[0] = player;
+// 	GameManager::getInstance()->getPlayerManager().setForwardPlayer(player);
+// 	player->setCharacter(Character(ECharName::DIAOCHAN));
+// 	player->setHP(3);
+// 	player->setID(ECharID::LORD);
+// 	player->setPosition(4);
+// 	player->setMaxHP(5);
+// 	auto card1 = std::make_shared<Card_DragonBroadSword>(ECardSuit::DIAMOND, 1);
+// 	auto card2 = std::make_shared<Card_BaGuaRank>(ECardSuit::CLUB, 11);
+// 	auto card3 = std::make_shared<Card_Horse>(ECardName::DILU, ECardSuit::HEART, 12);
+// 	auto card4 = std::make_shared<Card_Horse>(ECardName::CHITU, ECardSuit::SPADE, 13);
+// 	player->setWeapon(card1);
+// 	player->setArmor(card2);
+// 	player->setOffensiveHorse(card4);
+// 	player->setDefensiveHorse(card3);
+// 	auto card5 = std::make_shared<Card_Lightning>(ECardSuit::DIAMOND, 4);
+// 	auto card6 = std::make_shared<Card_DrownInHappiness>(ECardSuit::DIAMOND, 4);
+// 	player->getJudgeCards().push_back(card5);
+// 	player->getJudgeCards().push_back(card6);
+// 	auto playerPanal = UI_ForwardPlayerPanal::create(player);
+// 	playerPanal->setPosition(Vec2::ZERO);
+// 	addChild(playerPanal);
+// 	auto cardui = playerPanal->getHandCardPanal()->addCard(card1);
+// 	cardui->setCanUp(true);
+// 	cardui = playerPanal->getHandCardPanal()->addCard(card2);
+// 	cardui->setCanUp(true);
+// 	cardui = playerPanal->getHandCardPanal()->addCard(card2);
+// 	cardui->setCanUp(true);
+// 	cardui = playerPanal->getHandCardPanal()->addCard(card2);
+// 	cardui->setCanUp(true);
+// 	cardui = playerPanal->getHandCardPanal()->addCard(card2);
+// 	cardui->setCanUp(true);
+// 	cardui = playerPanal->getHandCardPanal()->addCard(card2);
+// 	cardui->setCanUp(true);
+// 	cardui = playerPanal->getHandCardPanal()->addCard(card2);
+// 	cardui->setCanUp(true);
+// 	cardui = playerPanal->getHandCardPanal()->addCard(card2);
+// 	cardui->setCanUp(true);
+// 	cardui = playerPanal->getHandCardPanal()->addCard(card2);
+// 	cardui->setCanUp(true);
 
 	return true;
 }

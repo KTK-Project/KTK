@@ -13,6 +13,8 @@ bool UI_HandCardPanal::init() {
 	layer->setContentSize(Size(900, 190));
 	addChild(layer);
 
+	setContentSize(layer->getContentSize());
+
 	auto page = UI_HandCardPage::create();
 	addChild(page);
 	m_pages.push_back(page);
@@ -216,7 +218,6 @@ void UI_HandCardPanal::update(float delta) {
 	m_upButton->setEnabled(m_currentPageIndex > 0);
 	m_downButton->setEnabled(m_currentPageIndex < m_pages.size() - 1);
 }
-
 //	Todo:stm delete or not
 // void UI_HandCardPanal::finish() const {
 // 	//善后处理：所有卡牌setuppding(const false)，setdark(const false)，

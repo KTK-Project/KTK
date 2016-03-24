@@ -231,6 +231,16 @@ const string TextManager::getTextOfSkillName(ESkillName name) const {
 	}
 }
 
+const std::string TextManager::getTextOfForce(ECharForce name) const {
+	switch (name) {
+		case ECharForce::WEI: return gbkToUtf8("Œ∫"); break;
+		case ECharForce::SHU: return gbkToUtf8(" Ò"); break;
+		case ECharForce::WU: return gbkToUtf8("Œ‚"); break;
+		case ECharForce::QUN: return gbkToUtf8("»∫"); break;
+		default: throw "Can't find match!"; break;
+	}
+}
+
 const string TextManager::getTextOfCardDescription(ECardName name) const {
 	return cardDescription.at(getTextOfCardName(name)).c_str();
 }

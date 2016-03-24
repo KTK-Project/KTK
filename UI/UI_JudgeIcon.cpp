@@ -16,14 +16,14 @@ bool UI_JudgeIcon::initWithPlayer(const std::shared_ptr<Player> & player) {
 		layerColor->setContentSize(Size(40, 40));
 		layerColor->setRotation(45);
 		layerColor->setVisible(false);
-		layerColor->setPosition(i * 70, 0);
+		layerColor->setPosition(0, i * -60);
 		m_icon.push_back(layerColor);
 
 		auto size = layerColor->getContentSize();
 
-		auto label = Label::create("", "ziti.otf", 24);
+		auto label = Label::create("", "ziti.otf", 27);
 		label->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
-		label->setPosition(size.width / 2, size.height / 2);
+		label->setPosition(size.width / 2 + 1, size.height / 2 - 1);
 		label->setRotation(-45);
 		label->setTag(0);
 		layerColor->addChild(label);

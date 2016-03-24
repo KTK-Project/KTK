@@ -13,8 +13,8 @@ bool UI_HandCardQuantity::initWithPlayer(const std::shared_ptr<Player> & player)
 	m_quantityBackground->setContentSize(size);
 	addChild(m_quantityBackground);
 
-	m_quantity = Label::create("", "ziti.otf", 20);
-	m_quantity->setPosition(Vec2(size.width / 2, size.height / 2));
+	m_quantity = Label::create("", "ziti.otf", 23);
+	m_quantity->setPosition(Vec2(size.width / 2, size.height / 2 - 2));
 	m_quantityBackground->addChild(m_quantity);
 
 	refresh();

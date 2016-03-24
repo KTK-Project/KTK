@@ -15,7 +15,7 @@
 
 class UI_ForwardPlayerPanal : public UI_PlayerPanal {
 public:
-	static UI_PlayerPanal * create(const std::shared_ptr<Player> & player) {
+	static UI_ForwardPlayerPanal * create(const std::shared_ptr<Player> & player) {
 		UI_ForwardPlayerPanal * pRet = new(std::nothrow) UI_ForwardPlayerPanal();
 		if (pRet && pRet->initWithPlayer(player)) {
 			pRet->autorelease();
@@ -31,9 +31,9 @@ public:
 	UI_SkillPanal * getSkillPanal() const;
 	UI_HandCardPanal * getHandCardPanal() const;
 	UI_Message * getMessage() const;
-	void drawCards(const std::vector<std::shared_ptr<Card>> & cards) const;
 	void setPlayerPanalState(EPlayerPanalState playerPanalState);
-	void clean() const;
+//	Todo:stm delete or not;
+// 	void clean() const;
 protected:
 	UI_ForwardPlayerPanal() = default;
 private:

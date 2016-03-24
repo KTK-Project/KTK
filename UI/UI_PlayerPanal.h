@@ -27,38 +27,43 @@ public:
 		}
 	}
 	bool initWithPlayer(const std::shared_ptr<Player> & player);
-	const std::shared_ptr<Player> & getPlayer() const;
-	void setPlayer(const std::shared_ptr<Player> & player);
+	std::shared_ptr<Player> getPlayer() const;
 	UI_ID * getID() const;
 	UI_HP * getHP() const;
 	UI_Position * getPositionUI() const;
 	UI_HandCardQuantity * getHandCardQuantity() const;
 	UI_EquipmentPanal * getEquipmentPanal() const;
 	UI_JudgeIcon * getJudgeIcon() const;
-	UI_InformationBox * getInformationBox() const;
-	UI_LogBox * getLogBox() const;
-	void drawCards(const std::vector<std::shared_ptr<Card>> & cards) const;
+//	Todo:stm delete or not?
+// 	UI_InformationBox * getInformationBox() const;
+// 	UI_LogBox * getLogBox() const;
+	virtual void drawCards(const std::vector<std::shared_ptr<Card>> & cards) const;
 	EPlayerColor getPlayerColor() const;
 	void setPlayerColor(EPlayerColor playerColor);
 	EPlayerPanalState getPlayerPanalState() const;
 	void setPlayerPanalState(EPlayerPanalState playerPanalState);
-	void clean() const;
+	void update(float delta) override;
+//	Todo:stm delete or not?
+// 	void clean() const;
 protected:
 	UI_PlayerPanal() = default;
-private:
+
 	std::weak_ptr<Player> m_player;
-	cocos2d::Sprite * m_background;
+	cocos2d::LayerColor * m_background;
 	cocos2d::Sprite * m_portrait;
-	cocos2d::Sprite * m_force;
 	cocos2d::Label * m_name;
+	cocos2d::LayerColor * m_force;
 	UI_ID * m_ID;
 	UI_HP * m_HP;
 	UI_Position * m_position;
 	UI_HandCardQuantity * m_handCardQuantity;
 	UI_EquipmentPanal * m_equipmentPanal;
 	UI_JudgeIcon * m_judgeIcon;
-	UI_InformationBox * m_informationBox;
-	UI_LogBox * m_logBox;
+
+private:
+//	Todo:stm delete or not?
+// 	UI_InformationBox * m_informationBox;
+// 	UI_LogBox * m_logBox;
 	EPlayerColor m_playerColor;
 	EPlayerPanalState m_playerPanalState;
 };

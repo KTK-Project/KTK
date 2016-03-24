@@ -1,72 +1,151 @@
 #include "UI_PlayerPanal.h"
+#include "Manager\GameManager.h"
+
+using namespace cocos2d;
 
 bool UI_PlayerPanal::initWithPlayer(const std::shared_ptr<Player> & player) {
-	// TODO - implement UI_PlayerPanal::initWithPlayer
-	throw "Not yet implemented";
-	//创建所有组件，addchild以后调用各个组件的refresh
+	if (!Node::init())
+		return false;
+
+	m_player = player;
+	auto & textManager = GameManager::getInstance()->getTextManger();
+
+	m_background = LayerColor::create(Color4B::RED);
+	m_background->setContentSize(Size(162, 200));
+	addChild(m_background);
+
+	std::string path = "png\\character\\";
+	path += textManager.getStringOfCharName(player->getCharacter().getName());
+	path += ".png";
+	m_portrait = Sprite::create(path);
+	m_portrait->setAnchorPoint(Vec2::ZERO);
+	addChild(m_portrait);
+
+	m_name = Label::create(textManager.getTextOfCharName(player->getCharacter().getName()), "ziti.otf", 30);
+	m_name->setColor(Color3B::BLACK);
+	m_name->setScale(0.65f);
+	m_name->setAnchorPoint(Vec2::ZERO);
+	m_name->setPosition(5, 170);
+	addChild(m_name);
+
+	auto forceSize = Size(30, 30);
+	m_force = LayerColor::create(Color4B::BLACK);
+	m_force->setContentSize(forceSize);
+	m_force->setAnchorPoint(Vec2::ZERO);
+	m_force->setPosition(50, 172);
+	m_force->setScale(0.8f);
+	addChild(m_force);
+	auto forceLabel = Label::create(textManager.getTextOfForce(player->getCharacter().getForce()), "ziti.otf", 30);
+	forceLabel->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
+	forceLabel->setPosition(Size(forceSize.width / 2, forceSize.height / 2 - 2));
+	forceLabel->setScale(0.7f);
+	m_force->addChild(forceLabel);
+
+	m_ID = UI_ID::create(player);
+	m_ID->setScale(0.6f);
+	m_ID->setAnchorPoint(Vec2::ZERO);
+	m_ID->setPosition(106, 172);
+	addChild(m_ID);
+
+	m_HP = UI_HP::create(player);
+	m_HP->setPosition(139, 7);
+	m_HP->setScale(0.8f);
+	addChild(m_HP);
+
+	m_position = UI_Position::create(player);
+	m_position->setScale(0.6f);
+	m_position->setAnchorPoint(Vec2::ZERO);
+	m_position->setPosition(134, 172);
+	addChild(m_position);
+
+	m_handCardQuantity = UI_HandCardQuantity::create(player);
+	m_handCardQuantity->setScale(0.6f);
+	m_handCardQuantity->setAnchorPoint(Vec2::ZERO);
+	m_handCardQuantity->setPosition(78, 172);
+	addChild(m_handCardQuantity);
+
+	m_equipmentPanal = UI_EquipmentPanal::create(player);
+	m_equipmentPanal->setScale(0.9f);
+	m_equipmentPanal->setAnchorPoint(Vec2::ZERO);
+	m_equipmentPanal->setPosition(0, 4);
+	addChild(m_equipmentPanal);
+
+	m_judgeIcon = UI_JudgeIcon::create(player);
+	m_judgeIcon->setScale(0.45f);
+	m_judgeIcon->setAnchorPoint(Vec2::ZERO);
+	m_judgeIcon->setPosition(137, 143);
+	addChild(m_judgeIcon);
+
+	switch (player->getCharacter().getForce()) {
+		case ECharForce::WEI:
+			m_background->setColor(Color3B::BLUE);
+			forceLabel->setColor(Color3B::BLUE);
+			break;
+		case ECharForce::SHU:
+			m_background->setColor(Color3B::ORANGE);
+			forceLabel->setColor(Color3B::ORANGE);
+			break;
+		case ECharForce::WU:
+			m_background->setColor(Color3B::GREEN);
+			forceLabel->setColor(Color3B::GREEN);
+			break;
+		case ECharForce::QUN:
+			m_background->setColor(Color3B::GRAY);
+			forceLabel->setColor(Color3B::GRAY);
+			break;
+		default: throw "Can't find match!"; break;
+	}
+
+	return true;
 }
 
-const std::shared_ptr<Player> & UI_PlayerPanal::getPlayer() const {
-	// TODO - implement UI_PlayerPanal::getPlayer
-	throw "Not yet implemented";
-}
-
-void UI_PlayerPanal::setPlayer(const std::shared_ptr<Player> & player) {
-	// TODO - implement UI_PlayerPanal::setPlayer
-	throw "Not yet implemented";
-	//调用initwithplayer
+std::shared_ptr<Player> UI_PlayerPanal::getPlayer() const {
+	return m_player.lock();
 }
 
 UI_ID * UI_PlayerPanal::getID() const {
-	// TODO - implement UI_PlayerPanal::getID
-	throw "Not yet implemented";
-	//所有的get以前都要检查是否为空指针，若为空，报错，提醒要先调用initwithplayer
+	return m_ID;
 }
 
 UI_HP * UI_PlayerPanal::getHP() const {
-	// TODO - implement UI_PlayerPanal::getHP
-	throw "Not yet implemented";
+	return m_HP;
 }
 
 UI_Position * UI_PlayerPanal::getPositionUI() const {
-	// TODO - implement UI_PlayerPanal::getPosition
-	throw "Not yet implemented";
+	return m_position;
 }
 
 UI_HandCardQuantity * UI_PlayerPanal::getHandCardQuantity() const {
-	// TODO - implement UI_PlayerPanal::getHandCardQuantity
-	throw "Not yet implemented";
+	return m_handCardQuantity;
 }
 
 UI_EquipmentPanal * UI_PlayerPanal::getEquipmentPanal() const {
-	// TODO - implement UI_PlayerPanal::getEquipmentPanal
-	throw "Not yet implemented";
+	return m_equipmentPanal;
 }
 
 UI_JudgeIcon * UI_PlayerPanal::getJudgeIcon() const {
-	// TODO - implement UI_PlayerPanal::getJudgeIcon
-	throw "Not yet implemented";
+	return m_judgeIcon;
 }
 
-UI_InformationBox * UI_PlayerPanal::getInformationBox() const {
-	// TODO - implement UI_PlayerPanal::getInformationBox
-	throw "Not yet implemented";
-}
+//	Todo:stm delete or not?
+// UI_InformationBox * UI_PlayerPanal::getInformationBox() const {
+// 	return m_informationBox;
+// }
 
-UI_LogBox * UI_PlayerPanal::getLogBox() const {
-	// TODO - implement UI_PlayerPanal::getLogBox
-	throw "Not yet implemented";
-}
+//	Todo:stm delete or not?
+// UI_LogBox * UI_PlayerPanal::getLogBox() const {
+// 	return m_logBox;
+// }
 
 void UI_PlayerPanal::drawCards(const std::vector<std::shared_ptr<Card>> & cards) const {
 	//直接获取cards.size()，
-//再为这几个卡牌封装为反面的卡牌并给予一个移动，隐去，removechild的动作
+	//再为这几个卡牌封装为反面的卡牌并给予一个移动，隐去，removechild的动作
 	// TODO - implement UI_PlayerPanal::drawCards
 	throw "Not yet implemented";
 }
 
 EPlayerColor UI_PlayerPanal::getPlayerColor() const {
-	return this->m_playerColor;
+	return m_playerColor;
 }
 
 void UI_PlayerPanal::setPlayerColor(EPlayerColor playerColor) {
@@ -83,7 +162,12 @@ void UI_PlayerPanal::setPlayerPanalState(EPlayerPanalState playerPanalState) {
 	throw "Not yet implemented";
 }
 
-void UI_PlayerPanal::clean() const {
-	// TODO - implement UI_PlayerPanal::clean
+void UI_PlayerPanal::update(float delta) {
 	throw "Not yet implemented";
 }
+
+//	Todo:stm delete or not?
+// void UI_PlayerPanal::clean() const {
+// 	// TODO - implement UI_PlayerPanal::clean
+// 	throw "Not yet implemented";
+// }

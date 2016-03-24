@@ -142,8 +142,10 @@ void UI_EquipmentPanal::refresh() {
 		path += GameManager::getInstance()->getTextManger().getStringOfSuit(cards[i]->getSuit());
 		path += ".png";
 		auto suit = Sprite::create(path);
-		suit->setScale(0.2f);
-		suit->setPosition(Vec2(10, size.height / 2));
+		auto size0 = suit->getContentSize();
+		auto size1 = Size(13, 13);
+		suit->setScale(size1.width / size0.width, size1.height / size0.height);
+		suit->setPosition(Vec2(8, size.height / 2));
 		boxs[i]->addChild(suit);
 
 		auto number = Label::create("", "ziti.otf", 13);

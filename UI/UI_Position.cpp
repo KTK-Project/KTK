@@ -15,9 +15,9 @@ bool UI_Position::initWithPlayer(const std::shared_ptr<Player> & player) {
 	m_positionBackground->setContentSize(Size(40, 40));
 	auto size = m_positionBackground->getContentSize();
 	
-	m_label = Label::create("", "ziti.otf", 30);
+	m_label = Label::create("", "ziti.otf", 25);
 	m_label->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
-	m_label->setPosition(size.width / 2, size.height / 2);
+	m_label->setPosition(size.width / 2, size.height / 2 - 2);
 	m_positionBackground->addChild(m_label);
 
 	refresh();

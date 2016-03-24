@@ -19,6 +19,7 @@ public:
 	const std::string getTextOfCardName(ECardName name) const;
 	const std::string getStringOfCardName(ECardName name) const;
 	const std::string getTextOfSkillName(ESkillName name) const;
+	const std::string getTextOfForce(ECharForce name) const;
 	const std::string getTextOfCardDescription(ECardName name) const;
 	const std::string getTextOfSkillDescription(ESkillName name) const;
 	const std::string getTextOfSuit(ECardSuit suit) const;

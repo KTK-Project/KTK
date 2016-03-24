@@ -10,53 +10,56 @@ bool UI_ID::initWithPlayer(const std::shared_ptr<Player> & player) {
 
 	m_player = player;
 
-	auto size = Size(20, 20);
+	auto size = Size(40, 40);
+	auto labelSize = 23;
+	auto position = Vec2(size.width / 2 - 1, size.height / 2 - 2);
+
 	m_markID = LayerColor::create(Color4B::BLACK);
 	m_markID->setContentSize(size);
 	m_markID->setPosition(Vec2::ZERO);
 	addChild(m_markID);
 
-	auto markIDLabel = Label::create(TextManager::gbkToUtf8("？"), "ziti.otf", 15);
+	auto markIDLabel = Label::create(TextManager::gbkToUtf8("？"), "ziti.otf", labelSize);
 	markIDLabel->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
-	markIDLabel->setPosition(size.width / 2, size.height / 2);
+	markIDLabel->setPosition(position);
 	markIDLabel->setTag(0);
 	m_markID->addChild(markIDLabel);
 
 	auto mark1 = LayerColor::create(Color4B::BLACK);
 	mark1->setContentSize(size);
-	auto markLabel1 = Label::create(TextManager::gbkToUtf8("？"), "ziti.otf", 15);
+	auto markLabel1 = Label::create(TextManager::gbkToUtf8("？"), "ziti.otf", labelSize);
 	markLabel1->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
-	markLabel1->setPosition(size.width / 2, size.height / 2);
+	markLabel1->setPosition(position);
 	mark1->addChild(markLabel1);
 
 	auto mark2 = LayerColor::create(Color4B::BLACK);
 	mark2->setContentSize(size);
-	auto markLabel2 = Label::create(TextManager::gbkToUtf8("忠"), "ziti.otf", 15);
+	auto markLabel2 = Label::create(TextManager::gbkToUtf8("忠"), "ziti.otf", labelSize);
 	markLabel2->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
-	markLabel2->setPosition(size.width / 2, size.height / 2);
+	markLabel2->setPosition(position);
 	mark2->addChild(markLabel2);
 
 	auto mark3 = LayerColor::create(Color4B::BLACK);
 	mark3->setContentSize(size);
-	auto markLabel3 = Label::create(TextManager::gbkToUtf8("内"), "ziti.otf", 15);
+	auto markLabel3 = Label::create(TextManager::gbkToUtf8("内"), "ziti.otf", labelSize);
 	markLabel3->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
-	markLabel3->setPosition(size.width / 2, size.height / 2);
+	markLabel3->setPosition(position);
 	mark3->addChild(markLabel3);
 
 	auto mark4 = LayerColor::create(Color4B::BLACK);
 	mark4->setContentSize(size);
-	auto markLabel4 = Label::create(TextManager::gbkToUtf8("反"), "ziti.otf", 15);
+	auto markLabel4 = Label::create(TextManager::gbkToUtf8("反"), "ziti.otf", labelSize);
 	markLabel4->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
-	markLabel4->setPosition(size.width / 2, size.height / 2);
+	markLabel4->setPosition(position);
 	mark4->addChild(markLabel4);
 
 	mark1->setPosition(Vec2(0, 0));
-	mark2->setPosition(Vec2(0, -30));
-	mark3->setPosition(Vec2(0, -60));
-	mark4->setPosition(Vec2(0, -90));
+	mark2->setPosition(Vec2(0, -43));
+	mark3->setPosition(Vec2(0, -86));
+	mark4->setPosition(Vec2(0, -129));
 
 	m_IDList = Node::create();
-	m_IDList->setPosition(Vec2(0, -30));
+	m_IDList->setPosition(Vec2(0, -47));
 	m_IDList->addChild(mark1);
 	m_IDList->addChild(mark2);
 	m_IDList->addChild(mark3);
@@ -88,6 +91,7 @@ bool UI_ID::initWithPlayer(const std::shared_ptr<Player> & player) {
 		if (rect.containsPoint(point)) {
 			touchFlag++;
 			if (touchFlag == 2) {
+				log("%d", m_player.lock());
 				if (target == m_markID && !m_player.lock()->isForwardPlayer())
 					m_IDList->setVisible(!m_IDList->isVisible());
 				else if (target == mark1) {
@@ -106,6 +110,7 @@ bool UI_ID::initWithPlayer(const std::shared_ptr<Player> & player) {
 					setMarkID(ECharID::INSURGENT);
 					m_IDList->setVisible(false); 
 				}
+				log("touching!");
 			}
 		}
 		touchFlag = 0;
@@ -120,6 +125,9 @@ bool UI_ID::initWithPlayer(const std::shared_ptr<Player> & player) {
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener->clone(), mark2);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener->clone(), mark3);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener->clone(), mark4);
+
+	if (player->isForwardPlayer())
+		setMarkID(player->getID());
 
 	return true;
 }
