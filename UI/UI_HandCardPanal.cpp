@@ -8,19 +8,15 @@ using namespace cocos2d::ui;
 bool UI_HandCardPanal::init() {
 	if (!Node::init())
 		return false;
-/*
-	auto layer = LayerColor::create(Color4B::YELLOW);
-	layer->setContentSize(Size(900, 190));
-	addChild(layer);
 
-	setContentSize(layer->getContentSize());
-*/
-	CCSprite* bg = CCSprite::create("png/ui/bg.png");
-	bg->setContentSize(Size(1290, 590));
-	bg->setPosition(719, 100);
-	bg->setScale(1.118f, 0.451f);
-	addChild(bg);
-	setContentSize(Size(900, 190));
+	Sprite* background = Sprite::create("png/ui/handcardbackground.png");
+	auto size0 = background->getContentSize();
+	auto size1 = Size(900, 190);
+	background->setScale(size1.width / size0.width, size1.height / size0.height);
+	background->setAnchorPoint(Vec2::ZERO);
+	addChild(background);
+
+	setContentSize(size1);
 
 	auto page = UI_HandCardPage::create();
 	addChild(page);

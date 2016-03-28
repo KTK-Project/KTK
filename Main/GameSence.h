@@ -29,8 +29,9 @@ public:
 	UI_LogBox * getLogBox() const;
 	UI_PlayerPanal * getPlayerPanal(const std::shared_ptr<Player> & player) const;
 private:
-	bool initPlayerPanal();
-	bool initLogBox();
+	void initPlayerPanal();
+	void initLogBox();
+
 	UI_Desktop * m_desktop;
 	UI_LogBox * m_logBox;
 	std::vector<UI_PlayerPanal *> m_playerPanals;

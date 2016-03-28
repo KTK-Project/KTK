@@ -15,14 +15,14 @@ bool UI_HP::initWithPlayer(const std::shared_ptr<Player> & player) {
 		emptyBlood->setContentSize(Size(20, 20));
 		emptyBlood->setPosition(Vec2(0, i * 25));
 		emptyBlood->setRotation(45);
-		addChild(emptyBlood);
+		addChild(emptyBlood, m_player.lock()->getMaxHP() - i);
 		m_emptyBloods.push_back(emptyBlood);
 
 		auto blood = LayerColor::create(Color4B::RED);
 		blood->setContentSize(Size(20, 20));
 		blood->setPosition(Vec2(0, i * 25));
 		blood->setRotation(45);
-		addChild(blood);
+		addChild(blood, m_player.lock()->getMaxHP() - i);
 		m_bloods.push_back(blood);
 	}
 

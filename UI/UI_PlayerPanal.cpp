@@ -23,9 +23,13 @@ bool UI_PlayerPanal::initWithPlayer(const std::shared_ptr<Player> & player) {
 
 	m_name = Label::create(textManager.getTextOfCharName(player->getCharacter().getName()), "ziti.otf", 30);
 	m_name->setColor(Color3B::BLACK);
-	m_name->setScale(0.65f);
-	m_name->setAnchorPoint(Vec2::ZERO);
-	m_name->setPosition(5, 170);
+	m_name->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
+	switch (m_name->getStringLength()) {
+		case 2: m_name->setScale(0.65f); break;
+		case 3: m_name->setScaleX(0.51f); m_name->setScaleY(0.58f); break;
+		default: throw "Can't find match!"; break;
+	}
+	m_name->setPosition(25, 182);
 	addChild(m_name);
 
 	auto forceSize = Size(30, 30);
