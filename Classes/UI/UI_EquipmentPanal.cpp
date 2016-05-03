@@ -40,6 +40,7 @@ bool UI_EquipmentPanal::initWithPlayer(const std::shared_ptr<Player> & player) {
 	auto listener = EventListenerTouchOneByOne::create();
 	listener->onTouchBegan = [](Touch * touch, Event * event) {
 		auto target = static_cast<LayerColor *>(event->getCurrentTarget());
+		if (!target->isVisible()) return false;
 		auto point = target->convertToNodeSpace(touch->getLocation());
 		auto size = target->getContentSize();
 		auto rect = Rect(Vec2::ZERO, size);
@@ -133,6 +134,8 @@ void UI_EquipmentPanal::refresh() {
 	for (int i = 0; i < 4; i++) {
 		if (cards[i] == nullptr) {
 			boxs[i]->removeAllChildren();
+			if (!m_player.lock()->isForwardPlayer())
+				boxs[i]->setVisible(false);
 			continue;
 		}
 

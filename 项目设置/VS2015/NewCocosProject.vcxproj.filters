@@ -1,0 +1,863 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Card">
+      <UniqueIdentifier>{466122c2-fcde-4d1e-9e85-b453d5396798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{266bc512-527a-46b9-9693-7c2debc3fc6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event">
+      <UniqueIdentifier>{f9923e69-bfa3-48d0-95e2-efad321e1808}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{ad145863-2419-4831-ba39-3f9f5f0a2d87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{7cf3831d-61c1-445a-898d-817e74fd2436}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{20c29da5-7364-43c3-92f0-11d521549708}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rule">
+      <UniqueIdentifier>{d0d3e626-2f08-440b-b2c6-db411c5a1d77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill">
+      <UniqueIdentifier>{bd7aba42-23eb-46f9-ac14-1b668c9fe195}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{a115ae32-0662-489f-81e4-f887d913d41b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_Card.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_DebugBox.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_Desktop.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_EquipmentPanal.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_ForwardPlayerPanal.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_GuanXing.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_HandCardPage.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_HandCardPanal.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_HandCardQuantity.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_Harvest.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_HP.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_ID.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_InformationBox.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_JudgeIcon.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_LogBox.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_Message.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_PlayerPanal.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_Position.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_SkillPanal.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UI_TheftAndSabotage.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Skill\Skill.cpp">
+      <Filter>Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Skill\SkillList.cpp">
+      <Filter>Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Character.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_Base.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_CaoCao.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_DaQiao.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_DiaoChan.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_GanNing.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_GuanYu.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_GuoJia.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_HuangGai.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_HuangYueYing.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_HuaTuo.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_LiuBei.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_LuXun.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_LvBu.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_LvMeng.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_MaChao.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_SiMaYi.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_SunQuan.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_SunShangXiang.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_XiaHouDun.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_XuChu.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_ZhangFei.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_ZhangLiao.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_ZhaoYun.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_ZhenJi.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_ZhouYu.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rule\Rule_ZhuGeLiang.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Player\Player.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Manager\EventManagers.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Manager\GameManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Manager\PlayersManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Manager\RoundManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Manager\TextManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Main\GameSence.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_AllOutOfNone.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_ArrowRain.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_Base.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_DelayedStrategy.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_DrownInHappiness.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_Duel.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_Dying.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_FlawlessDefense.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_GetCardFromHarvest.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_Harvest.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_Hurt.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_Interaction.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_Judge.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_Lightning.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_MurderWithBorrowedWeapon.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_OathInPeachGarden.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_RequestBoolean.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_RequestCard.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_RequestCardAndGoalPlayer.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_RequestCardSuit.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_RequestGoalPlayer.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_RequestPlayerCard.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_Sabotage.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_Slash.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_SouthInvasion.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_Strategy.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\Event_Theft.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\SelectedCards.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Event\SelectedPlayers.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Controller\Controller_Base.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_AllOutOfNone.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Armor.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_ArrowRain.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_BaGuaRank.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Basic.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_CoupleSwords.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_DelayedStrategy.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Dodge.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_DragonBroadSword.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_DrownInHappiness.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Duel.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Equipment.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_FlawlessDefense.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_GuanShiAxe.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Harvest.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Horse.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_IceSword.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_JusticeShield.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_KylinBow.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Lightning.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_MurderWithBorrowedWeapon.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_OathInPeachGarden.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Peach.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Sabotage.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Slash.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_SouthInvasion.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Strategy.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Theft.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_TsingGangSword.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\Card_Weapon.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Card\CardPile.cpp">
+      <Filter>Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_Card.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_DebugBox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_Desktop.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_EquipmentPanal.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_ForwardPlayerPanal.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_GuanXing.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_HandCardPage.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_HandCardPanal.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_HandCardQuantity.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_Harvest.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_HP.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_ID.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_InformationBox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_JudgeIcon.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_LogBox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_Message.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_PlayerPanal.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_Position.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_SkillPanal.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UI_TheftAndSabotage.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Skill\Skill.h">
+      <Filter>Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Skill\SkillList.h">
+      <Filter>Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Character.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_Base.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_CaoCao.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_DaQiao.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_DiaoChan.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_GanNing.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_GuanYu.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_GuoJia.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_HuangGai.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_HuangYueYing.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_HuaTuo.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_LiuBei.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_LuXun.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_LvBu.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_LvMeng.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_MaChao.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_SiMaYi.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_SunQuan.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_SunShangXiang.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_XiaHouDun.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_XuChu.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_ZhangFei.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_ZhangLiao.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_ZhaoYun.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_ZhenJi.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_ZhouYu.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rule\Rule_ZhuGeLiang.h">
+      <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Player\Player.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Manager\EventManagers.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Manager\GameManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Manager\KTK_Enum.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Manager\KTK_Info.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Manager\PlayersManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Manager\RoundManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Manager\TextManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Main\AppMacros.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Main\GameSence.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_AllOutOfNone.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_ArrowRain.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_Base.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_DelayedStrategy.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_DrownInHappiness.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_Duel.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_Dying.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_FlawlessDefense.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_GetCardFromHarvest.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_Harvest.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_Hurt.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_Interaction.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_Judge.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_Lightning.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_MurderWithBorrowedWeapon.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_OathInPeachGarden.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_RequestBoolean.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_RequestCard.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_RequestCardAndGoalPlayer.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_RequestCardSuit.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_RequestGoalPlayer.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_RequestPlayerCard.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_Sabotage.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_Slash.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_SouthInvasion.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_Strategy.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\Event_Theft.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\SelectedCards.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Event\SelectedPlayers.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_Base.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_CaoCao.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_DaQiao.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_DiaoChan.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_GanNing.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_GuanYu.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_GuoJia.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_HuangGai.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_HuangYueYing.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_HuaTuo.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_LiuBei.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_LuXun.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_LvBu.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_LvMeng.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_MaChao.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_SiMaYi.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_SunQuan.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_SunShangXiang.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_XiaHouDun.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_XuChu.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_ZhangFei.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_ZhangLiao.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_ZhaoYun.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_ZhenJi.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_ZhouYu.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controller\Controller_ZhuGeLiang.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_AllOutOfNone.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Armor.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_ArrowRain.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_BaGuaRank.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Basic.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_CoupleSwords.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_DelayedStrategy.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Dodge.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_DragonBroadSword.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_DrownInHappiness.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Duel.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Equipment.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_FlawlessDefense.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_GuanShiAxe.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Harvest.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Horse.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_IceSword.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_JusticeShield.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_KylinBow.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Lightning.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_MurderWithBorrowedWeapon.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_OathInPeachGarden.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Peach.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Sabotage.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Slash.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_SnakeSpear.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_SouthInvasion.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Strategy.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Theft.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_TripleHalberd.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_TsingGangSword.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_Weapon.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\Card_ZhuGeCrossBow.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Card\CardPile.h">
+      <Filter>Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Manager\NDK_iconv.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

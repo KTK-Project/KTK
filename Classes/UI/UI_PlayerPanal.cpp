@@ -27,21 +27,11 @@ bool UI_PlayerPanal::initWithPlayer(const std::shared_ptr<Player> & player) {
 	m_name->setColor(Color3B::BLACK);
 	m_name->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
 
-#if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32
 	switch (m_name->getStringLength()) {
 		case 2: m_name->setScale(0.65f); break;
 		case 3: m_name->setScaleX(0.51f); m_name->setScaleY(0.58f); break;
 		default: throw "Can't find match!"; break;
 	}
-#endif
-
-#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
-	switch (nameStr.length()) {
-		case 4: m_name->setScale(0.65f); break;
-		case 6: m_name->setScaleX(0.51f); m_name->setScaleY(0.58f); break;
-		default: throw "Can't find match!"; break;
-	}
-#endif
 
 	m_name->setPosition(25, 182);
 	addChild(m_name);

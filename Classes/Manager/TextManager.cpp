@@ -1,12 +1,15 @@
 #include "platform/CCPlatformConfig.h"
 #include "TextManager.h"
 #include <fstream>
-#if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32
-#include <codecvt>
-#endif
 #include <string>
 #include <unordered_map>
 #include <utility>
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32
+#include <codecvt>
+#endif
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+#include "NDK_iconv.h"
+#endif
 
 using std::string;
 using std::ifstream;
@@ -94,7 +97,7 @@ const string TextManager::gbkToUtf8(const string & str) {
 #endif
 
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
-	return str;
+	return GBK(str.c_str()).toUtf8();
 #endif
 
 }

@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{76A39BB2-9B84-4C65-98A5-654D86B86F2A}</ProjectGuid>
+    <RootNamespace>test_win32</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v120_xp</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v140_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v120_xp</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v140_xp</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+    <Import Project="cocos2dx.props" />
+    <Import Project="$(COCOS_X_ROOT)\cocos2d-x-3.10\cocos\2d\cocos2d_headers.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+    <Import Project="cocos2dx.props" />
+    <Import Project="$(COCOS_X_ROOT)\cocos2d-x-3.10\cocos\2d\cocos2d_headers.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration).win32\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration).win32\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(COCOS_X_ROOT)\cocos2d-x-3.10\cocos\audio\include;$(COCOS_X_ROOT)\cocos2d-x-3.10\external;$(COCOS_X_ROOT)\cocos2d-x-3.10\external\chipmunk\include\chipmunk;$(COCOS_X_ROOT)\cocos2d-x-3.10\extensions;..\Classes;..;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies);$(_COCOS_LIB_WIN32_BEGIN);$(_COCOS_LIB_WIN32_END)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories);$(_COCOS_LIB_PATH_WIN32_BEGIN);$(_COCOS_LIB_PATH_WIN32_END)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
+xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
+</Command>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <CustomBuildStep>
+      <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
+xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
+      </Command>
+      <Outputs>$(TargetName).cab</Outputs>
+      <Inputs>$(TargetFileName)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(COCOS_X_ROOT)\cocos2d-x-3.10\cocos\audio\include;$(COCOS_X_ROOT)\cocos2d-x-3.10\external;$(COCOS_X_ROOT)\cocos2d-x-3.10\external\chipmunk\include\chipmunk;$(COCOS_X_ROOT)\cocos2d-x-3.10\extensions;..\Classes;..;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libcurl_imp.lib;websockets.lib;%(AdditionalDependencies);$(_COCOS_LIB_WIN32_BEGIN);$(_COCOS_LIB_WIN32_END)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories);$(_COCOS_LIB_PATH_WIN32_BEGIN);$(_COCOS_LIB_PATH_WIN32_END)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
+xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
+</Command>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\Card\Card.cpp" />
+    <ClCompile Include="..\Classes\Card\CardPile.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_AllOutOfNone.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Armor.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_ArrowRain.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_BaGuaRank.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Basic.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_CoupleSwords.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_DelayedStrategy.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Dodge.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_DragonBroadSword.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_DrownInHappiness.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Duel.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Equipment.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_FlawlessDefense.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_GuanShiAxe.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Harvest.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Horse.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_IceSword.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_JusticeShield.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_KylinBow.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Lightning.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_MurderWithBorrowedWeapon.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_OathInPeachGarden.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Peach.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Sabotage.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Slash.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_SouthInvasion.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Strategy.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Theft.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_TsingGangSword.cpp" />
+    <ClCompile Include="..\Classes\Card\Card_Weapon.cpp" />
+    <ClCompile Include="..\Classes\Controller\Controller_Base.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_AllOutOfNone.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_ArrowRain.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_Base.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_DelayedStrategy.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_DrownInHappiness.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_Duel.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_Dying.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_FlawlessDefense.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_GetCardFromHarvest.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_Harvest.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_Hurt.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_Interaction.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_Judge.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_Lightning.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_MurderWithBorrowedWeapon.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_OathInPeachGarden.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_RequestBoolean.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_RequestCard.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_RequestCardAndGoalPlayer.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_RequestCardSuit.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_RequestGoalPlayer.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_RequestPlayerCard.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_Sabotage.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_Slash.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_SouthInvasion.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_Strategy.cpp" />
+    <ClCompile Include="..\Classes\Event\Event_Theft.cpp" />
+    <ClCompile Include="..\Classes\Event\SelectedCards.cpp" />
+    <ClCompile Include="..\Classes\Event\SelectedPlayers.cpp" />
+    <ClCompile Include="..\Classes\Main\GameSence.cpp" />
+    <ClCompile Include="..\Classes\Manager\EventManagers.cpp" />
+    <ClCompile Include="..\Classes\Manager\GameManager.cpp" />
+    <ClCompile Include="..\Classes\Manager\PlayersManager.cpp" />
+    <ClCompile Include="..\Classes\Manager\RoundManager.cpp" />
+    <ClCompile Include="..\Classes\Manager\TextManager.cpp" />
+    <ClCompile Include="..\Classes\Player\Player.cpp" />
+    <ClCompile Include="..\Classes\Rule\Character.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_Base.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_CaoCao.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_DaQiao.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_DiaoChan.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_GanNing.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_GuanYu.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_GuoJia.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_HuangGai.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_HuangYueYing.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_HuaTuo.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_LiuBei.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_LuXun.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_LvBu.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_LvMeng.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_MaChao.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_SiMaYi.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_SunQuan.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_SunShangXiang.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_XiaHouDun.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_XuChu.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_ZhangFei.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_ZhangLiao.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_ZhaoYun.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_ZhenJi.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_ZhouYu.cpp" />
+    <ClCompile Include="..\Classes\Rule\Rule_ZhuGeLiang.cpp" />
+    <ClCompile Include="..\Classes\Skill\Skill.cpp" />
+    <ClCompile Include="..\Classes\Skill\SkillList.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_Card.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_DebugBox.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_Desktop.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_EquipmentPanal.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_ForwardPlayerPanal.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_GuanXing.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_HandCardPage.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_HandCardPanal.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_HandCardQuantity.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_Harvest.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_HP.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_ID.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_InformationBox.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_JudgeIcon.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_LogBox.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_Message.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_PlayerPanal.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_Position.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_SkillPanal.cpp" />
+    <ClCompile Include="..\Classes\UI\UI_TheftAndSabotage.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\Card\Card.h" />
+    <ClInclude Include="..\Classes\Card\CardPile.h" />
+    <ClInclude Include="..\Classes\Card\Card_AllOutOfNone.h" />
+    <ClInclude Include="..\Classes\Card\Card_Armor.h" />
+    <ClInclude Include="..\Classes\Card\Card_ArrowRain.h" />
+    <ClInclude Include="..\Classes\Card\Card_BaGuaRank.h" />
+    <ClInclude Include="..\Classes\Card\Card_Basic.h" />
+    <ClInclude Include="..\Classes\Card\Card_CoupleSwords.h" />
+    <ClInclude Include="..\Classes\Card\Card_DelayedStrategy.h" />
+    <ClInclude Include="..\Classes\Card\Card_Dodge.h" />
+    <ClInclude Include="..\Classes\Card\Card_DragonBroadSword.h" />
+    <ClInclude Include="..\Classes\Card\Card_DrownInHappiness.h" />
+    <ClInclude Include="..\Classes\Card\Card_Duel.h" />
+    <ClInclude Include="..\Classes\Card\Card_Equipment.h" />
+    <ClInclude Include="..\Classes\Card\Card_FlawlessDefense.h" />
+    <ClInclude Include="..\Classes\Card\Card_GuanShiAxe.h" />
+    <ClInclude Include="..\Classes\Card\Card_Harvest.h" />
+    <ClInclude Include="..\Classes\Card\Card_Horse.h" />
+    <ClInclude Include="..\Classes\Card\Card_IceSword.h" />
+    <ClInclude Include="..\Classes\Card\Card_JusticeShield.h" />
+    <ClInclude Include="..\Classes\Card\Card_KylinBow.h" />
+    <ClInclude Include="..\Classes\Card\Card_Lightning.h" />
+    <ClInclude Include="..\Classes\Card\Card_MurderWithBorrowedWeapon.h" />
+    <ClInclude Include="..\Classes\Card\Card_OathInPeachGarden.h" />
+    <ClInclude Include="..\Classes\Card\Card_Peach.h" />
+    <ClInclude Include="..\Classes\Card\Card_Sabotage.h" />
+    <ClInclude Include="..\Classes\Card\Card_Slash.h" />
+    <ClInclude Include="..\Classes\Card\Card_SnakeSpear.h" />
+    <ClInclude Include="..\Classes\Card\Card_SouthInvasion.h" />
+    <ClInclude Include="..\Classes\Card\Card_Strategy.h" />
+    <ClInclude Include="..\Classes\Card\Card_Theft.h" />
+    <ClInclude Include="..\Classes\Card\Card_TripleHalberd.h" />
+    <ClInclude Include="..\Classes\Card\Card_TsingGangSword.h" />
+    <ClInclude Include="..\Classes\Card\Card_Weapon.h" />
+    <ClInclude Include="..\Classes\Card\Card_ZhuGeCrossBow.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_Base.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_CaoCao.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_DaQiao.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_DiaoChan.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_GanNing.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_GuanYu.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_GuoJia.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_HuangGai.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_HuangYueYing.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_HuaTuo.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_LiuBei.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_LuXun.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_LvBu.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_LvMeng.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_MaChao.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_SiMaYi.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_SunQuan.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_SunShangXiang.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_XiaHouDun.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_XuChu.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_ZhangFei.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_ZhangLiao.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_ZhaoYun.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_ZhenJi.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_ZhouYu.h" />
+    <ClInclude Include="..\Classes\Controller\Controller_ZhuGeLiang.h" />
+    <ClInclude Include="..\Classes\Event\Event_AllOutOfNone.h" />
+    <ClInclude Include="..\Classes\Event\Event_ArrowRain.h" />
+    <ClInclude Include="..\Classes\Event\Event_Base.h" />
+    <ClInclude Include="..\Classes\Event\Event_DelayedStrategy.h" />
+    <ClInclude Include="..\Classes\Event\Event_DrownInHappiness.h" />
+    <ClInclude Include="..\Classes\Event\Event_Duel.h" />
+    <ClInclude Include="..\Classes\Event\Event_Dying.h" />
+    <ClInclude Include="..\Classes\Event\Event_FlawlessDefense.h" />
+    <ClInclude Include="..\Classes\Event\Event_GetCardFromHarvest.h" />
+    <ClInclude Include="..\Classes\Event\Event_Harvest.h" />
+    <ClInclude Include="..\Classes\Event\Event_Hurt.h" />
+    <ClInclude Include="..\Classes\Event\Event_Interaction.h" />
+    <ClInclude Include="..\Classes\Event\Event_Judge.h" />
+    <ClInclude Include="..\Classes\Event\Event_Lightning.h" />
+    <ClInclude Include="..\Classes\Event\Event_MurderWithBorrowedWeapon.h" />
+    <ClInclude Include="..\Classes\Event\Event_OathInPeachGarden.h" />
+    <ClInclude Include="..\Classes\Event\Event_RequestBoolean.h" />
+    <ClInclude Include="..\Classes\Event\Event_RequestCard.h" />
+    <ClInclude Include="..\Classes\Event\Event_RequestCardAndGoalPlayer.h" />
+    <ClInclude Include="..\Classes\Event\Event_RequestCardSuit.h" />
+    <ClInclude Include="..\Classes\Event\Event_RequestGoalPlayer.h" />
+    <ClInclude Include="..\Classes\Event\Event_RequestPlayerCard.h" />
+    <ClInclude Include="..\Classes\Event\Event_Sabotage.h" />
+    <ClInclude Include="..\Classes\Event\Event_Slash.h" />
+    <ClInclude Include="..\Classes\Event\Event_SouthInvasion.h" />
+    <ClInclude Include="..\Classes\Event\Event_Strategy.h" />
+    <ClInclude Include="..\Classes\Event\Event_Theft.h" />
+    <ClInclude Include="..\Classes\Event\SelectedCards.h" />
+    <ClInclude Include="..\Classes\Event\SelectedPlayers.h" />
+    <ClInclude Include="..\Classes\Main\AppMacros.h" />
+    <ClInclude Include="..\Classes\Main\GameSence.h" />
+    <ClInclude Include="..\Classes\Manager\EventManagers.h" />
+    <ClInclude Include="..\Classes\Manager\GameManager.h" />
+    <ClInclude Include="..\Classes\Manager\KTK_Enum.h" />
+    <ClInclude Include="..\Classes\Manager\KTK_Info.h" />
+    <ClInclude Include="..\Classes\Manager\NDK_iconv.h" />
+    <ClInclude Include="..\Classes\Manager\PlayersManager.h" />
+    <ClInclude Include="..\Classes\Manager\RoundManager.h" />
+    <ClInclude Include="..\Classes\Manager\TextManager.h" />
+    <ClInclude Include="..\Classes\Player\Player.h" />
+    <ClInclude Include="..\Classes\Rule\Character.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_Base.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_CaoCao.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_DaQiao.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_DiaoChan.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_GanNing.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_GuanYu.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_GuoJia.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_HuangGai.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_HuangYueYing.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_HuaTuo.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_LiuBei.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_LuXun.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_LvBu.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_LvMeng.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_MaChao.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_SiMaYi.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_SunQuan.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_SunShangXiang.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_XiaHouDun.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_XuChu.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_ZhangFei.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_ZhangLiao.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_ZhaoYun.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_ZhenJi.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_ZhouYu.h" />
+    <ClInclude Include="..\Classes\Rule\Rule_ZhuGeLiang.h" />
+    <ClInclude Include="..\Classes\Skill\Skill.h" />
+    <ClInclude Include="..\Classes\Skill\SkillList.h" />
+    <ClInclude Include="..\Classes\UI\UI_Card.h" />
+    <ClInclude Include="..\Classes\UI\UI_DebugBox.h" />
+    <ClInclude Include="..\Classes\UI\UI_Desktop.h" />
+    <ClInclude Include="..\Classes\UI\UI_EquipmentPanal.h" />
+    <ClInclude Include="..\Classes\UI\UI_ForwardPlayerPanal.h" />
+    <ClInclude Include="..\Classes\UI\UI_GuanXing.h" />
+    <ClInclude Include="..\Classes\UI\UI_HandCardPage.h" />
+    <ClInclude Include="..\Classes\UI\UI_HandCardPanal.h" />
+    <ClInclude Include="..\Classes\UI\UI_HandCardQuantity.h" />
+    <ClInclude Include="..\Classes\UI\UI_Harvest.h" />
+    <ClInclude Include="..\Classes\UI\UI_HP.h" />
+    <ClInclude Include="..\Classes\UI\UI_ID.h" />
+    <ClInclude Include="..\Classes\UI\UI_InformationBox.h" />
+    <ClInclude Include="..\Classes\UI\UI_JudgeIcon.h" />
+    <ClInclude Include="..\Classes\UI\UI_LogBox.h" />
+    <ClInclude Include="..\Classes\UI\UI_Message.h" />
+    <ClInclude Include="..\Classes\UI\UI_PlayerPanal.h" />
+    <ClInclude Include="..\Classes\UI\UI_Position.h" />
+    <ClInclude Include="..\Classes\UI\UI_SkillPanal.h" />
+    <ClInclude Include="..\Classes\UI\UI_TheftAndSabotage.h" />
+    <ClInclude Include="main.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
