@@ -26,6 +26,12 @@
 #include "Card\Card_Theft.h"
 #include "Card\Card_Sabotage.h"
 #include "Card\Card_Horse.h"
+#include "KTK_Info.h"
+#include <vector>
+#include <memory>
+
+using std::vector;
+using std::make_shared;
 
 GameManager * GameManager::getInstance() {
 	static GameManager * instance = nullptr;
@@ -36,7 +42,10 @@ GameManager * GameManager::getInstance() {
 
 GameManager::GameManager() {
 //	Todo:stm
-	// 构建playermanager
+	// 初始化玩家管理器
+	for (size_t i = 0; i < KTK_Info::PLAYER_QUANTITY; i++) {
+		m_playerManager.getPlayers()[i] = make_shared<Player>();
+	}
 }
 
 PlayersManager & GameManager::getPlayerManager() {
@@ -64,12 +73,51 @@ TextManager & GameManager::getTextManger() {
 }
 
 void GameManager::gameBegin() {
-//	Todo:stm
-	m_darkcardPile.clear();
-	m_discardPile.clear();
-	// 玩家选择角色。
+	// 随机产生角色。
+	ECharID idArr[8] = {
+		ECharID::LORD,
+		ECharID::MINISTER,
+		ECharID::MINISTER,
+		ECharID::SPY,
+		ECharID::INSURGENT,
+		ECharID::INSURGENT,
+		ECharID::INSURGENT,
+		ECharID::INSURGENT
+	};
+
+	srand(time(NULL));
+	for (size_t i = 1; i < KTK_Info::PLAYER_QUANTITY; i++) {
+		std::swap(idArr[i], idArr[rand() % (KTK_Info::PLAYER_QUANTITY - 1) + 1]);
+	}
+
+	vector<ECharName> vecChar;
+	while (vecChar.size() != KTK_Info::PLAYER_QUANTITY) {
+		ECharName charName = static_cast<ECharName>(rand() % 25 + 1);
+		if (std::find(vecChar.begin(), vecChar.end(), charName) == vecChar.end())
+			vecChar.push_back(charName);
+	}
+
+	for (size_t i = 0; i < KTK_Info::PLAYER_QUANTITY; i++) {
+		auto player = m_playerManager.getPlayers()[i];
+		player->setCharacter(Character(vecChar[i]));
+		player->setID(idArr[i]);
+		player->setPosition(i);
+		if (i == 0)
+			player->setMaxHP(player->getCharacter().getHP() + 1);
+		else
+			player->setMaxHP(player->getCharacter().getHP());
+		player->setHP(player->getMaxHP());
+		player->setAlive(true);
+	}
+
+	m_playerManager.setLordPlayer(m_playerManager.getPlayers()[0]);
+	m_playerManager.setForwardPlayer(m_playerManager.getPlayers()[rand() % 8]);
+
 	// 初始化所有的管理器。
 
+	// 初始化卡牌堆。
+	m_darkcardPile.clear();
+	m_discardPile.clear();
 	m_darkcardPile.pushBack(std::make_shared<Card_Slash>(ECardSuit::CLUB, 2));
 	m_darkcardPile.pushBack(std::make_shared<Card_Slash>(ECardSuit::CLUB, 3));
 	m_darkcardPile.pushBack(std::make_shared<Card_Slash>(ECardSuit::CLUB, 4));
@@ -101,7 +149,7 @@ void GameManager::gameBegin() {
 	m_darkcardPile.pushBack(std::make_shared<Card_Slash>(ECardSuit::SPADE, 10));
 	m_darkcardPile.pushBack(std::make_shared<Card_Slash>(ECardSuit::SPADE, 10));
 
-	m_darkcardPile.pushBack(std::make_shared<Card_Dodge>(ECardSuit::DIAMOND,2));
+	m_darkcardPile.pushBack(std::make_shared<Card_Dodge>(ECardSuit::DIAMOND, 2));
 	m_darkcardPile.pushBack(std::make_shared<Card_Dodge>(ECardSuit::DIAMOND, 2));
 	m_darkcardPile.pushBack(std::make_shared<Card_Dodge>(ECardSuit::DIAMOND, 3));
 	m_darkcardPile.pushBack(std::make_shared<Card_Dodge>(ECardSuit::DIAMOND, 4));
@@ -177,14 +225,25 @@ void GameManager::gameBegin() {
 	m_darkcardPile.pushBack(std::make_shared<Card_Sabotage>(ECardSuit::CLUB, 3));
 	m_darkcardPile.pushBack(std::make_shared<Card_Sabotage>(ECardSuit::CLUB, 4));
 
-	m_darkcardPile.pushBack(std::make_shared<Card_Horse>(ECardName::ZHUAHUANGFEIDIAN,ECardSuit::HEART, 13));
-	m_darkcardPile.pushBack(std::make_shared<Card_Horse>(ECardName::DILU,ECardSuit::CLUB, 5));
-	m_darkcardPile.pushBack(std::make_shared<Card_Horse>(ECardName::JUEYING,ECardSuit::SPADE, 5));
-	m_darkcardPile.pushBack(std::make_shared<Card_Horse>(ECardName::DAWAN,ECardSuit::SPADE, 13));
-	m_darkcardPile.pushBack(std::make_shared<Card_Horse>(ECardName::ZIXING,ECardSuit::DIAMOND, 13));
-	m_darkcardPile.pushBack(std::make_shared<Card_Horse>(ECardName::CHITU,ECardSuit::HEART, 5));
+	m_darkcardPile.pushBack(std::make_shared<Card_Horse>(ECardName::ZHUAHUANGFEIDIAN, ECardSuit::HEART, 13));
+	m_darkcardPile.pushBack(std::make_shared<Card_Horse>(ECardName::DILU, ECardSuit::CLUB, 5));
+	m_darkcardPile.pushBack(std::make_shared<Card_Horse>(ECardName::JUEYING, ECardSuit::SPADE, 5));
+	m_darkcardPile.pushBack(std::make_shared<Card_Horse>(ECardName::DAWAN, ECardSuit::SPADE, 13));
+	m_darkcardPile.pushBack(std::make_shared<Card_Horse>(ECardName::ZIXING, ECardSuit::DIAMOND, 13));
+	m_darkcardPile.pushBack(std::make_shared<Card_Horse>(ECardName::CHITU, ECardSuit::HEART, 5));
 
-	throw "Not yet implemented";
+	auto & cards = m_darkcardPile.getCards();
+	for (size_t i = 0; i < KTK_Info::CARD_QUANTITY; i++) {
+		std::swap(cards[i], cards[rand() % KTK_Info::CARD_QUANTITY]);
+	}
+
+	for (size_t i = 0; i < KTK_Info::PLAYER_QUANTITY; i++) {
+		auto player = m_playerManager.getPlayers()[i];
+		player->getHandCardPile().pushBack(m_darkcardPile.popBack());
+		player->getHandCardPile().pushBack(m_darkcardPile.popBack());
+		player->getHandCardPile().pushBack(m_darkcardPile.popBack());
+		player->getHandCardPile().pushBack(m_darkcardPile.popBack());
+	}
 }
 
 void GameManager::gameEnd() const {

@@ -1,3 +1,4 @@
+#include "platform/CCPlatformConfig.h"
 #include "UI_PlayerPanal.h"
 #include "Manager\GameManager.h"
 
@@ -14,21 +15,34 @@ bool UI_PlayerPanal::initWithPlayer(const std::shared_ptr<Player> & player) {
 	m_background->setContentSize(Size(162, 200));
 	addChild(m_background);
 
-	std::string path = "png\\character\\";
+	std::string path = "png/character/";
 	path += textManager.getStringOfCharName(player->getCharacter().getName());
 	path += ".png";
 	m_portrait = Sprite::create(path);
 	m_portrait->setAnchorPoint(Vec2::ZERO);
 	addChild(m_portrait);
 
-	m_name = Label::create(textManager.getTextOfCharName(player->getCharacter().getName()), "ziti.otf", 30);
+	auto nameStr = textManager.getTextOfCharName(player->getCharacter().getName());
+	m_name = Label::create(nameStr, "ziti.otf", 30);
 	m_name->setColor(Color3B::BLACK);
 	m_name->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
+
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32
 	switch (m_name->getStringLength()) {
 		case 2: m_name->setScale(0.65f); break;
 		case 3: m_name->setScaleX(0.51f); m_name->setScaleY(0.58f); break;
 		default: throw "Can't find match!"; break;
 	}
+#endif
+
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+	switch (nameStr.length()) {
+		case 4: m_name->setScale(0.65f); break;
+		case 6: m_name->setScaleX(0.51f); m_name->setScaleY(0.58f); break;
+		default: throw "Can't find match!"; break;
+	}
+#endif
+
 	m_name->setPosition(25, 182);
 	addChild(m_name);
 

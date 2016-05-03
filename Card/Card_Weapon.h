@@ -12,7 +12,7 @@ public:
 	void useCard(const std::shared_ptr<Player> & playCardPlayer, const std::vector<std::shared_ptr<Player>> & goalPlayer) const override;
 //	Todo:stm
 	virtual int getAttackRange() const;	// = 0
-	virtual ~Card_Weapon() = 0 { }
+	virtual ~Card_Weapon() { }
 private:
 	int m_attackRange;
 };

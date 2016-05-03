@@ -9,7 +9,7 @@ public:
 	int getGoalPlayerQuantity(const std::shared_ptr<Player> & requester) const override;
 	bool getValid() const;
 	void setValid(bool valid) ;
-	virtual ~Card_Armor() = 0 { }
+	virtual ~Card_Armor() { }
 private:
 	bool m_valid;
 };

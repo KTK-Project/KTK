@@ -17,6 +17,7 @@ public:
 	int countCard(const std::function<bool (const std::shared_ptr<Card> &)> & filter) const;
 	void shuffle();
 	void sort();
+	std::deque<std::shared_ptr<Card>> & getCards();
 	std::vector<std::shared_ptr<Card>> getCards(const std::function<bool (const std::shared_ptr<Card> &)> & filter) const;
 	void removeCard(const std::shared_ptr<Card> & card);
 	void removeCards(const std::vector<std::shared_ptr<Card>> & cards);

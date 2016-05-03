@@ -24,14 +24,14 @@ bool UI_HandCardPanal::init() {
 
 	m_pageLabel = Label::create("", "ziti.otf", 20);
 	m_pageLabel->setColor(Color3B::BLACK);
-	std::string currentIndex = std::to_string(m_currentPageIndex + 1);
-	std::string maxIndex = std::to_string(m_pages.size());
+	std::string currentIndex = TextManager::intToString(m_currentPageIndex + 1);
+	std::string maxIndex = TextManager::intToString(m_pages.size());
 	std::string indexString = currentIndex + "/" + maxIndex;
 	m_pageLabel->setString(TextManager::gbkToUtf8(indexString));
 	m_pageLabel->setPosition(Vec2(858, 90));
 	addChild(m_pageLabel);
 
-	m_upButton = Button::create("png\\ui\\arrow_up.png");
+	m_upButton = Button::create("png/ui/arrow_up.png");
 	m_upButton->setScale(0.5f);
 	m_upButton->setPosition(Vec2(858, 135));
 	m_upButton->addTouchEventListener([=](Ref* pSender, Widget::TouchEventType type) {
@@ -47,7 +47,7 @@ bool UI_HandCardPanal::init() {
 	});
 	addChild(m_upButton);
 
-	m_downButton = Button::create("png\\ui\\arrow_down.png");
+	m_downButton = Button::create("png/ui/arrow_down.png");
 	m_downButton->setScale(0.5f);
 	m_downButton->setPosition(Vec2(858, 45));
 	m_downButton->addTouchEventListener([=](Ref* pSender, Widget::TouchEventType type) {
@@ -157,7 +157,7 @@ void UI_HandCardPanal::reset() {
 		setCurrentPage(0);
 		auto i = m_pages.begin() + 1;
 		while (i != m_pages.end()) {
-			auto & v = (*i)->removeAll();
+			auto v = (*i)->removeAll();
 			m_addCardQueue.insert(m_addCardQueue.end(), v.begin(), v.end());
 			removeChild(*i);
 			i = m_pages.erase(i);
@@ -214,16 +214,10 @@ void UI_HandCardPanal::update(float delta) {
 		lastPage->setSettleUpFinishCallBack([]() { canAddCard = true; });
 	}
 
-	std::string currentIndex = std::to_string(m_currentPageIndex + 1);
-	std::string maxIndex = std::to_string(m_pages.size());
+	std::string currentIndex = TextManager::intToString(m_currentPageIndex + 1);
+	std::string maxIndex = TextManager::intToString(m_pages.size());
 	std::string indexString = currentIndex + "/" + maxIndex;
 	m_pageLabel->setString(TextManager::gbkToUtf8(indexString));
 	m_upButton->setEnabled(m_currentPageIndex > 0);
 	m_downButton->setEnabled(m_currentPageIndex < m_pages.size() - 1);
 }
-//	Todo:stm delete or not
-// void UI_HandCardPanal::finish() const {
-// 	//善后处理：所有卡牌setuppding(const false)，setdark(const false)，
-// 	// TODO - implement UI_HandCardPanal::finish
-// 	throw "Not yet implemented";
-// }

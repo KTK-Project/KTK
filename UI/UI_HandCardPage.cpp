@@ -89,7 +89,6 @@ void UI_HandCardPage::addCard(const std::shared_ptr<Card> & card) {
 void UI_HandCardPage::addCard(const std::shared_ptr<UI_Card> & card) {
 	if (isFull()) throw "Page is full!";
 	card->setAnchorPoint(Vec2::ANCHOR_BOTTOM_LEFT);
-	card->setScale(0.6f);
 	auto pos = getPositionWithIndex(m_maxSize - 1);
 	card->setPosition(Vec2(pos.x + 20, pos.y));
 	addChild(card.get(), m_maxSize - m_cards.size());

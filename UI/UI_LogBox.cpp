@@ -14,7 +14,7 @@ bool UI_LogBox::init() {
 	auto size = Size(275, 505);
 	m_listView = ListView::create();
 	m_listView->setDirection(ScrollView::Direction::VERTICAL);
-	m_listView->setBackGroundImage("png\\ui\\black.png");
+	m_listView->setBackGroundImage("png/ui/black.png");
 	m_listView->setBounceEnabled(true);
 	m_listView->setBackGroundImageScale9Enabled(true);
 	m_listView->setContentSize(size);
@@ -29,8 +29,8 @@ bool UI_LogBox::init() {
 
 void UI_LogBox::addLog(const std::string & log) {
 	m_counter++;
-	auto Str = std::to_string(m_counter) + ": " + log;
-	auto label = Label::create(Str.c_str(), "ziti.otf", 17);
+	auto str = TextManager::intToString(m_counter) + ": " + log;
+	auto label = Label::create(str.c_str(), "ziti.otf", 17);
 	label->setAnchorPoint(Vec2::ZERO);
 	label->setPosition(Vec2::ZERO);
 	label->setWidth(m_listView->getContentSize().width);

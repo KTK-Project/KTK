@@ -37,8 +37,6 @@ public:
 	void reset();
 	void for_each_card(const std::function<void (const std::shared_ptr<UI_Card> &)> & fun) const;
 	void update(float delta) override;
-//	Todo:stm delete or not
-// 	void finish() const;
 protected:
 	UI_HandCardPanal() = default;
 private:

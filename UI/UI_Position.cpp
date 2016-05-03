@@ -29,14 +29,14 @@ void UI_Position::refresh() {
 	int position = m_player.lock()->getPosition();
 	std::string str;
 	switch (position) {
-		case 1: str = "一"; break;
-		case 2: str = "二"; break;
-		case 3: str = "三"; break;
-		case 4: str = "四"; break;
-		case 5: str = "五"; break;
-		case 6: str = "六"; break;
-		case 7: str = "七"; break;
-		case 8: str = "八"; break;
+		case 0: str = "一"; break;
+		case 1: str = "二"; break;
+		case 2: str = "三"; break;
+		case 3: str = "四"; break;
+		case 4: str = "五"; break;
+		case 5: str = "六"; break;
+		case 6: str = "七"; break;
+		case 7: str = "八"; break;
 		default: throw "Can't find match!"; break;
 	}
 	m_label->setString(TextManager::gbkToUtf8(str));

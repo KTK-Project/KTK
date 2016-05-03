@@ -18,7 +18,7 @@ public:
 
 	// 获取player容器
 	std::vector<std::shared_ptr<Player>> & getPlayers();
-	// 获取满足过滤器的player
+	// 获取满足过滤器的players
 	std::vector<std::shared_ptr<Player>> getPlayersWithFilter(const std::function<bool(const std::shared_ptr<Player> &)> & filter) const;
 	// 获取下一个player
 	std::shared_ptr<Player> getNextPlayer(const std::shared_ptr<Player> & currentPlayer) const;

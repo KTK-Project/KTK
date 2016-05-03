@@ -7,7 +7,7 @@ class Card_Equipment : public Card {
 public:
 	Card_Equipment(ECardName name, ECardSuit suit, int number, EEquipmentCard_Type equipType);
 	EEquipmentCard_Type getEquipmentType() const;
-	virtual ~Card_Equipment() = 0 { }
+	virtual ~Card_Equipment() { }
 private:
 	EEquipmentCard_Type m_equipType;
 };

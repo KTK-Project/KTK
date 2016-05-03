@@ -21,7 +21,7 @@ public:
 	virtual void onUpping() const;
 	virtual void useCard(const std::shared_ptr<Player> & playCardPlayer, const std::vector<std::shared_ptr<Player>> & goalPlayer) const;
 
-	virtual ~Card() = 0 { };
+	virtual ~Card() { }
 
 protected:
 	void setType(ECardType type);

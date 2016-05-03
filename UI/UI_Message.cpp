@@ -20,7 +20,7 @@ bool UI_Message::init() {
 
 	auto size = Size(75, 30);
 
-	m_button1 = Button::create("png\\ui\\green.png", "png\\ui\\black.png", "png\\ui\\black.png");
+	m_button1 = Button::create("png/ui/green.png", "png/ui/black.png", "png/ui/black.png");
 	m_button1->setScale9Enabled(true);
 	m_button1->setContentSize(size);
 	m_button1->setTitleText(TextManager::gbkToUtf8("确定"));
@@ -32,7 +32,7 @@ bool UI_Message::init() {
 	addChild(m_button1);
 
 
-	m_button2 = Button::create("png\\ui\\green.png", "png\\ui\\black.png", "png\\ui\\black.png");
+	m_button2 = Button::create("png/ui/green.png", "png/ui/black.png", "png/ui/black.png");
 	m_button2->setScale9Enabled(true);
 	m_button2->setContentSize(size);
 	m_button2->setTitleText(TextManager::gbkToUtf8("取消"));

@@ -1,4 +1,5 @@
 #include "UI_HandCardQuantity.h"
+#include "Manager\TextManager.h"
 
 using namespace cocos2d;
 
@@ -23,5 +24,5 @@ bool UI_HandCardQuantity::initWithPlayer(const std::shared_ptr<Player> & player)
 
 void UI_HandCardQuantity::refresh() {
 	int quantity = m_player.lock()->getHandCardPile().getSize();
-	m_quantity->setString(std::to_string(quantity));
+	m_quantity->setString(TextManager::intToString(quantity));
 }

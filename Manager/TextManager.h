@@ -11,8 +11,9 @@ public:
 	TextManager();
 
 	//因为源代码为gbk格式，需要转换为UTF-8才能在cocos2dx正常显示字符串。
-	static const std::string gbkToUtf8(const std::string & gbkStr);
-	static const std::string gbkToUtf8(const char * gbkStr);
+	static const std::string gbkToUtf8(const std::string & str);
+	static const std::string gbkToUtf8(const char * str);
+	static const std::string intToString(int number);
 
 	const std::string getTextOfCharName(ECharName name) const;
 	const std::string getStringOfCharName(ECharName name) const;

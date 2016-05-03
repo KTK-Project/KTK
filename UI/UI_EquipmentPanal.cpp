@@ -138,7 +138,7 @@ void UI_EquipmentPanal::refresh() {
 
 		auto size = boxs[i]->getContentSize();
 
-		std::string path("png\\suit\\");
+		std::string path("png/suit/");
 		path += GameManager::getInstance()->getTextManger().getStringOfSuit(cards[i]->getSuit());
 		path += ".png";
 		auto suit = Sprite::create(path);

@@ -73,6 +73,7 @@ bool UI_ID::initWithPlayer(const std::shared_ptr<Player> & player) {
 
 	listener->onTouchBegan = [](Touch * touch, Event * event) {
 		auto target = static_cast<LayerColor *>(event->getCurrentTarget());
+		if (!target->isVisible()) return false;
 		auto point = target->convertToNodeSpace(touch->getLocation());
 		auto size = target->getContentSize();
 		auto rect = Rect(Vec2::ZERO, size);
@@ -91,26 +92,24 @@ bool UI_ID::initWithPlayer(const std::shared_ptr<Player> & player) {
 		if (rect.containsPoint(point)) {
 			touchFlag++;
 			if (touchFlag == 2) {
-				log("%d", m_player.lock());
-				if (target == m_markID && !m_player.lock()->isForwardPlayer())
+				if (target == m_markID && !m_player.lock()->isForwardPlayer() && !m_player.lock()->isLordPlayer())
 					m_IDList->setVisible(!m_IDList->isVisible());
-				else if (target == mark1) {
+				else if (target == mark1 && m_IDList->isVisible()) {
 					setMarkID(ECharID::NONE);
 					m_IDList->setVisible(false); 
 				}
-				else if (target == mark2) {
+				else if (target == mark2 && m_IDList->isVisible()) {
 					setMarkID(ECharID::MINISTER);
 					m_IDList->setVisible(false); 
 				}
-				else if (target == mark3) {
+				else if (target == mark3 && m_IDList->isVisible()) {
 					setMarkID(ECharID::SPY);
 					m_IDList->setVisible(false); 
 				}
-				else if (target == mark4) {
+				else if (target == mark4 && m_IDList->isVisible()) {
 					setMarkID(ECharID::INSURGENT);
 					m_IDList->setVisible(false); 
 				}
-				log("touching!");
 			}
 		}
 		touchFlag = 0;

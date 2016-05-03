@@ -1,104 +1,87 @@
+#include "platform/CCPlatformConfig.h"
+#include "AppDelegate.h"
+#include "Main/GameSence.h"
+#include "Main/AppMacros.h"
+#include "Manager/TextManager.h"
 #include <vector>
 #include <string>
-#include "AppDelegate.h"
-#include "AppMacros.h"
-#include "GameSence.h"
-#include "Manager\TextManager.h"
+#include "base/CCConsole.h"
 
 USING_NS_CC;
-using namespace std;
+using std::vector;
+using std::string;
 
 AppDelegate::AppDelegate() {
 
 }
 
-AppDelegate::~AppDelegate() 
+AppDelegate::~AppDelegate()
 {
 }
 
+//if you want a different context,just modify the value of glContextAttrs
+//it will takes effect on all platforms
 void AppDelegate::initGLContextAttrs()
 {
-    GLContextAttrs glContextAttrs = {8, 8, 8, 8, 24, 8};
+	//set OpenGL context attributions,now can only set six attributions:
+	//red,green,blue,alpha,depth,stencil
+	GLContextAttrs glContextAttrs = { 8, 8, 8, 8, 24, 8 };
 
-    GLView::setGLContextAttrs(glContextAttrs);
+	GLView::setGLContextAttrs(glContextAttrs);
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
-    // initialize director
-    auto director = Director::getInstance();
-    auto glview = director->getOpenGLView();
-    if(!glview) {
-        glview = GLViewImpl::create(TextManager::gbkToUtf8("三国杀"));
+	// initialize director
+	auto director = Director::getInstance();
+	auto glview = director->getOpenGLView();
+	if (!glview) {
+		glview = GLViewImpl::create(TextManager::gbkToUtf8("三国杀"));
 		glview->setFrameSize(1280, 720);
-        director->setOpenGLView(glview);
-    }
+		director->setOpenGLView(glview);
+	}
 
-    director->setOpenGLView(glview);
+	director->setOpenGLView(glview);
 
-    // Set the design resolution
-    glview->setDesignResolutionSize(1280, 720, ResolutionPolicy::EXACT_FIT);
+	// Set the design resolution
+	glview->setDesignResolutionSize(1280, 720, ResolutionPolicy::EXACT_FIT);
 
 	Size frameSize = glview->getFrameSize();
-    
-    vector<string> searchPath;
 
-    // In this demo, we select resource according to the frame's height.
-    // If the resource size is different from design resolution size, you need to set contentScaleFactor.
-    // We use the ratio of resource's height to the height of design resolution,
-    // this can make sure that the resource's height could fit for the height of design resolution.
+	vector<string> searchPath;
+	searchPath.push_back(mediumResource.directory);
+	director->setContentScaleFactor(MIN(mediumResource.size.height / designResolutionSize.height, mediumResource.size.width / designResolutionSize.width));
+	FileUtils::getInstance()->setSearchPaths(searchPath);
 
-    // if the frame's height is larger than the height of medium resource size, select large resource.
-	if (frameSize.height > mediumResource.size.height)
-	{
-        searchPath.push_back(largeResource.directory);
+	// turn on display FPS
+	director->setDisplayStats(false);
 
-        director->setContentScaleFactor(MIN(largeResource.size.height/designResolutionSize.height, largeResource.size.width/designResolutionSize.width));
-	}
-    // if the frame's height is larger than the height of small resource size, select medium resource.
-    else if (frameSize.height > smallResource.size.height)
-    {
-        searchPath.push_back(mediumResource.directory);
-        
-        director->setContentScaleFactor(MIN(mediumResource.size.height/designResolutionSize.height, mediumResource.size.width/designResolutionSize.width));
-    }
-    // if the frame's height is smaller than the height of medium resource size, select small resource.
-	else
-    {
-        searchPath.push_back(smallResource.directory);
+	// set FPS. the default value is 1.0/60 if you don't call this
+	director->setAnimationInterval(1.0 / 60);
 
-        director->setContentScaleFactor(MIN(smallResource.size.height/designResolutionSize.height, smallResource.size.width/designResolutionSize.width));
-    }
+	auto log = FileUtils::getInstance()->getSearchPaths();
 
-    // set searching path
-    FileUtils::getInstance()->setSearchPaths(searchPath);
-	
-    // turn on display FPS
-    director->setDisplayStats(false);
+	// create a scene. it's an autorelease object
+	auto scene = GameSence::scene();
 
-    // set FPS. the default value is 1.0/60 if you don't call this
-    director->setAnimationInterval(1.0 / 60);
+	// run
+	director->runWithScene(scene);
 
-    // create a scene. it's an autorelease object
-    auto scene = GameSence::scene();
+	return true;
 
-    // run
-    director->runWithScene(scene);
-
-    return true;
 }
 
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
 void AppDelegate::applicationDidEnterBackground() {
-    Director::getInstance()->stopAnimation();
+	Director::getInstance()->stopAnimation();
 
-    // if you use SimpleAudioEngine, it must be pause
-    // SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+	// if you use SimpleAudioEngine, it must be pause
+	// SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
 }
 
 // this function will be called when the app is active again
 void AppDelegate::applicationWillEnterForeground() {
-    Director::getInstance()->startAnimation();
+	Director::getInstance()->startAnimation();
 
-    // if you use SimpleAudioEngine, it must resume here
-    // SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
+	// if you use SimpleAudioEngine, it must resume here
+	// SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
 }

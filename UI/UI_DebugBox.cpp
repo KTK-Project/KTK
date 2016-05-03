@@ -1,6 +1,7 @@
 #include "UI_DebugBox.h"
 #include "cocos2d.h"
 #include "Manager\TextManager.h"
+#include <string>
 
 using namespace cocos2d;
 using namespace cocos2d::ui;
@@ -13,7 +14,7 @@ bool UI_DebugBox::init() {
 
 	m_listView = ListView::create();
 	m_listView->setDirection(ScrollView::Direction::VERTICAL);
-	m_listView->setBackGroundImage("png\\ui\\green.png");
+	m_listView->setBackGroundImage("png/ui/green.png");
 	m_listView->setBounceEnabled(true);
 	m_listView->setBackGroundImageScale9Enabled(true);
 	m_listView->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
@@ -55,8 +56,9 @@ bool UI_DebugBox::init() {
 
 void UI_DebugBox::addLog(const std::string & log) {
 	m_counter++;
-	auto Str = std::to_string(m_counter) + ": " + log;
-	auto label = Label::create(Str.c_str(), "ziti.otf", 20);
+	std::string str = TextManager::intToString(m_counter);
+	str = str + ": " + log;
+	auto label = Label::create(str.c_str(), "ziti.otf", 20);
 	label->setAnchorPoint(Vec2::ZERO);
 	label->setPosition(Vec2::ZERO);
 	label->setWidth(300);

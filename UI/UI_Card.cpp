@@ -15,36 +15,33 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 
 	string path;
 
-	path += "png\\card\\";
+	path += "png/card/";
 	path += GameManager::getInstance()->getTextManger().getStringOfCardName(card->getName());
 	path += ".png";
 	m_cardPattern = Sprite::create(path);
 	m_cardPattern->setAnchorPoint(Vec2::ZERO);
+	m_cardPattern->setScale(2.1f);
 	m_cardPattern->setPosition(Vec2::ZERO);
 	m_cardPattern->setCascadeOpacityEnabled(true);
 	m_cardPattern->setCascadeColorEnabled(true);
 
-	auto cardSize = m_cardPattern->getContentSize();
-
 	path.clear();
-	path += "png\\suit\\";
+	path += "png/suit/";
 	path += GameManager::getInstance()->getTextManger().getStringOfSuit(card->getSuit());
 	path += ".png";
 	m_suit = Sprite::create(path);
-	auto size0 = m_suit->getContentSize();
-	auto size1 = Size(18, 18);
-	m_suit->setScale(size1.width / size0.width, size1.height / size0.height);
-	m_suit->setPosition(28, cardSize.height - 47);
+	m_suit->setScale(0.25f);
+	m_suit->setPosition(7, 61);
 	m_suit->setCascadeOpacityEnabled(true);
 	m_suit->setCascadeColorEnabled(true);
 
-	m_number = Label::create(GameManager::getInstance()->getTextManger().getTextOfNumber(card->getNumber()), "ziti.otf", 18);
+	m_number = Label::create(GameManager::getInstance()->getTextManger().getTextOfNumber(card->getNumber()), "ziti.otf", 6);
 	switch (card->getColor()) {
 		case ECardColor::BLACK: m_number->setColor(Color3B::BLACK); break;
 		case ECardColor::RED: m_number->setColor(Color3B::RED); break;
 		default: throw "Can't find match!"; break;
 	}
-	m_number->setPosition(28, cardSize.height - 27);
+	m_number->setPosition(7, 68);
 	m_number->setCascadeOpacityEnabled(true);
 	m_number->setCascadeColorEnabled(true);
 
@@ -53,7 +50,7 @@ bool UI_Card::initWithCard(const std::shared_ptr<Card> & card) {
 	addChild(m_cardPattern);
 
 	// 设置UI_Card的大小为卡牌图片的大小。
-	setContentSize(cardSize);
+	setContentSize(Size(115, 161));
 	setAnchorPoint(Vec2::ANCHOR_MIDDLE);
 	setCascadeOpacityEnabled(true);
 	setCascadeColorEnabled(true);

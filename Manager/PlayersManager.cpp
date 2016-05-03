@@ -1,6 +1,6 @@
 #include "PlayersManager.h"
 #include "KTK_Info.h"
-#include <xutility>
+#include <algorithm>
 
 using std::shared_ptr;
 using std::vector;
@@ -19,8 +19,6 @@ void PlayersManager::setLordPlayer(const shared_ptr<Player> & lordPlayer) {
 	if (currentIndex == KTK_Info::PLAYER_QUANTITY)
 		throw "Can't find player";
 	m_lordPlayer = lordPlayer;
-	for (int i = 0; i < KTK_Info::PLAYER_QUANTITY; i++)
-		m_players[(currentIndex + i) % KTK_Info::PLAYER_QUANTITY]->setPosition(i);
 }
 
 const shared_ptr<Player> & PlayersManager::getCurrentPlayer() const {

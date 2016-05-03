@@ -1,6 +1,9 @@
+#include "platform/CCPlatformConfig.h"
 #include "TextManager.h"
-#include <codecvt>
 #include <fstream>
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32
+#include <codecvt>
+#endif
 #include <string>
 #include <unordered_map>
 #include <utility>
@@ -13,38 +16,101 @@ using std::make_pair;
 using std::getline;
 
 TextManager::TextManager() {
-	//card.dat和skill.dat文件已经为UTF-8编码
-	ifstream cardInput("card.dat");
-	if (!cardInput) throw "Can't find card.dat!";
-	while (cardInput) {
-		string str1, str2;
-		cardInput >> str1;
-		getline(cardInput, str2);
-		cardDescription.insert(make_pair(str1, str2));
-	}
+	cardDescription.insert(make_pair("过河拆桥", "出牌阶段，对除你以外任意一名角色使用。弃掉该角色的一张牌。"));
+	cardDescription.insert(make_pair("借刀杀人", "出牌阶段，对除你外，装备区里有武器牌的一名角色使用。该角色需对其攻击范围内，你指定的另一名角色使用一张【杀】，否则将武器交给你。"));
+	cardDescription.insert(make_pair("决斗", "出牌阶段，对除你以外任意一名角色使用。由该角色开始，轮流打出一张【杀】。首先不出【杀】的一方受到"));
+	cardDescription.insert(make_pair("乐不思蜀", "出牌阶段，对除你外任意一名角色使用。将【乐不思蜀】横置于该角色的判定区里，若判定结果不为【红桃】，则跳过该角色出牌阶段。"));
+	cardDescription.insert(make_pair("南蛮入侵", "出牌阶段，对除你以外的所有角色使用。目标角色需一次打出一张【杀】，否则该角色受到"));
+	cardDescription.insert(make_pair("闪电", "出牌阶段，对你使用。将【闪电】横置于你的判定区里。若判定结果为【黑桃】"));
+	cardDescription.insert(make_pair("顺手牵羊", "出牌阶段，对除你以外，与你距离"));
+	cardDescription.insert(make_pair("桃园结义", "出牌阶段，对所有角色使用。各回复"));
+	cardDescription.insert(make_pair("万箭齐发", "出牌阶段，对除你以外的所有角色使用。目标角色需依次打出一张【闪】，否则该角色受到"));
+	cardDescription.insert(make_pair("无懈可击", "抵消任意锦囊（生效时）将对任意一名玩家造成的影响。"));
+	cardDescription.insert(make_pair("无中生有", "出牌阶段，对你自己使用。摸两张牌。"));
+	cardDescription.insert(make_pair("五谷丰登", "出牌阶段，对所有角色使用。你从牌堆亮出等同于现存角色数量的牌，目标角色依次选择并获得其中的一张。"));
+	cardDescription.insert(make_pair("八卦阵", "当自己需出【闪】时，可判定，若为红色花色，则等效于出了一张【闪】。"));
+	cardDescription.insert(make_pair("仁王盾", "锁定技，黑色的【杀】对你无效。"));
+	cardDescription.insert(make_pair("雌雄双股剑", "用【杀】攻击异性角色时，对方首先须选择：1.弃掉一张手牌"));
+	cardDescription.insert(make_pair("方天画戟", "当打出的【杀】是最后一张手牌时，可攻击最多三名攻击范围内的玩家。"));
+	cardDescription.insert(make_pair("贯石斧", "用【杀】攻击被对方闪避后，可弃两张牌强制命中。"));
+	cardDescription.insert(make_pair("麒麟弓", "用【杀】攻击命中后，对方弃掉一匹已装备的马。"));
+	cardDescription.insert(make_pair("青釭剑", "用此武器攻击，可无视对方的防具。"));
+	cardDescription.insert(make_pair("青龙偃月刀", "用【杀】攻击时，只要对方出【闪】闪避，便可再出【杀】继续攻击。"));
+	cardDescription.insert(make_pair("丈八蛇矛", "可用任意两张手牌当【杀】使用。"));
+	cardDescription.insert(make_pair("诸葛连弩", "一回合内可以出任意张【杀】。"));
+	cardDescription.insert(make_pair("寒冰剑", "用【杀】攻击成功后，可选择不造成对方的伤害，而是弃掉对方两张牌。"));
 
-	ifstream skillInput("skill.dat");
-	if (!skillInput) throw "Can't find skill.dat!";
-	while (skillInput) {
-		string str1, str2;
-		skillInput >> str1;
-		getline(skillInput, str2);
-		skillDescription.insert(make_pair(str1, str2));
-	}
+	skillDescription.insert(make_pair("奸雄", "你可以立即获得对你造成伤害的牌。"));
+	skillDescription.insert(make_pair("护驾", "主公技，魏国势力角色可以替你出【闪】。"));
+	skillDescription.insert(make_pair("天妒", "在你的判定牌生效后，你可以立即获得它。"));
+	skillDescription.insert(make_pair("遗计", "你每受到1点伤害，可摸两张牌，将其中一张交给任意一名角色，然后将另一张交给任意一名角色。"));
+	skillDescription.insert(make_pair("反馈", "你可以立即从对你造成伤害的来源处获得一张牌。"));
+	skillDescription.insert(make_pair("鬼才", "在任意角色的判定牌生效前，你可以打出一张手牌代替之。"));
+	skillDescription.insert(make_pair("刚烈", "你每受到一次伤害，可进行一次判定：若结果不为【红桃】，则目标来源必须进行二选一：弃两张手牌或受到你对其造成的1点伤害。"));
+	skillDescription.insert(make_pair("裸衣", "摸牌阶段，你可以少摸一张牌；若如此做，该回合的出牌阶段，你使用【杀】或【决斗】（你为伤害来源时）造成的伤害+1。"));
+	skillDescription.insert(make_pair("突袭", "摸牌阶段，你可以放弃摸牌，然后从至多两名（至少一名）角色的手牌里各的抽取一张牌。"));
+	skillDescription.insert(make_pair("倾国", "你可以将你的【黑色】手牌当【闪】使用或打出。"));
+	skillDescription.insert(make_pair("洛神", "回合开始阶段，你可以进行判定：若为【黑色】牌，立即获得此牌，并可以再次使用洛神——如此反复，直到出现【红色】牌为止。"));
+	skillDescription.insert(make_pair("龙胆", "你可以将你手牌的【杀】当【闪】、【闪】当【杀】使用或打出。"));
+	skillDescription.insert(make_pair("仁德", "出牌阶段，你可以将任意数量的手牌以任意分配方式交给其他角色，若你一共给出的牌数不少于于两张时，你回复1点体力。"));
+	skillDescription.insert(make_pair("激将", "主公技，蜀势力角色可以替你出【杀】。"));
+	skillDescription.insert(make_pair("武圣", "你可以将你的任意一张【红色】牌当【杀】使用或打出。"));
+	skillDescription.insert(make_pair("集智", "每当你使用一张非延时类锦囊时，（在它结算之前）你可以立即摸一张牌。"));
+	skillDescription.insert(make_pair("奇才", "你使用任何锦囊无距离限制。"));
+	skillDescription.insert(make_pair("马术", "锁定技，当你计算与其他角色的距离时，始终-1。"));
+	skillDescription.insert(make_pair("铁骑", "当你使用【杀】指定一名角色为目标后，你可以进行判定，若结果为【红色】，此【杀】不可被闪避。"));
+	skillDescription.insert(make_pair("咆哮", "出牌阶段，你可以使个数量的【杀】。"));
+	skillDescription.insert(make_pair("观星", "回合开始阶段，你可以观看牌堆顶的X张牌（X为存活角色的数量且最多为5），将其中任意顺序置于牌堆顶，其余以任意顺序置于牌堆底。"));
+	skillDescription.insert(make_pair("空城", "锁定技，当你没有手牌时，你不能成为【杀】或【决斗】的目标。"));
+	skillDescription.insert(make_pair("国色", "出牌阶段，你可以将你的任意【方块】花色的牌当【乐不思蜀】使用。"));
+	skillDescription.insert(make_pair("流离", "当你成为【杀】的目标时，你可以弃一张牌，将此【杀】转移给你攻击范围内的另一名角色。（该角色不得是【杀】的使用者）。"));
+	skillDescription.insert(make_pair("奇袭", "出牌阶段，你可以将你的任意一张【黑色】牌当【过河拆桥】使用。"));
+	skillDescription.insert(make_pair("苦肉", "出牌阶段，你可以失去一点体力，然后摸两张牌。每回合中，你可以多次使用苦肉。"));
+	skillDescription.insert(make_pair("谦逊", "锁定技，你不能成为【顺手牵羊】和【乐不思蜀】的目标。"));
+	skillDescription.insert(make_pair("连营", "每当你失去最后一张手牌时，可立即摸一张牌。"));
+	skillDescription.insert(make_pair("克己", "若你于出牌阶段未使用或打出过任何一张【杀】，你可以跳过此回合的弃牌阶段。"));
+	skillDescription.insert(make_pair("制衡", "出牌阶段，你可以弃掉任意数量的牌，然后摸取等量的牌，每回合限用一次。"));
+	skillDescription.insert(make_pair("救援", "主公技，锁定技，其他吴势力角色在你濒死状态下对你使用【桃】时，你额外回复1点体力。"));
+	skillDescription.insert(make_pair("结姻", "出牌阶段，你可以弃两张手牌并指定一名受伤的男性角色：你和该角色各回复1点体力。每回合限用一次。"));
+	skillDescription.insert(make_pair("枭姬", "当你失去一张装备区里的牌时，你可以立即摸两张牌。"));
+	skillDescription.insert(make_pair("英姿", "摸牌阶段，你可以额外摸一张牌。"));
+	skillDescription.insert(make_pair("反间", "出牌阶段，你可以指定另一名角色选择一种花色，抽取你的一张手牌并亮出，若此牌与所选花色不吻合，则你对该角色造成1点伤害。然后不论结果，该角色都获得此牌。每回合限用一次。"));
+	skillDescription.insert(make_pair("离间", "出牌阶段，你可以弃一张牌并选择两名男性角色。若如此做，视为其中一名角色对另一名角色使用一张【决斗】（此【决斗】不能被【无懈可击】响应）。每回合限用一次。"));
+	skillDescription.insert(make_pair("闭月", "回合结束阶段，你可以摸一张牌。"));
+	skillDescription.insert(make_pair("急救", "你的回合外，你可以将你的任意【红色】牌当【桃】使用。"));
+	skillDescription.insert(make_pair("青囊", "出牌阶段，你可以主动弃掉一张手牌，令任一角色回复1点体力。每回合限用一次。"));
+	skillDescription.insert(make_pair("无双", "锁定技，你使用【杀】时，目标角色需连续使用两张【闪】才能抵消；与你进行【决斗】的角色每次需连续打出两张【杀】。"));
 }
 
-const string TextManager::gbkToUtf8(const string & gbkStr) {
+const string TextManager::gbkToUtf8(const string & str) {
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32
 	using Codecvt = std::codecvt_byname<wchar_t, char, std::mbstate_t>;
 	const char * GBK_LOCAL_NAME = ".936";	//win下GBK编码对应的代码页。
 	std::wstring_convert<Codecvt> conv1(new Codecvt(GBK_LOCAL_NAME));
-	std::wstring temp_wstr = conv1.from_bytes(gbkStr);
+	std::wstring temp_wstr = conv1.from_bytes(str);
 	std::wstring_convert<std::codecvt_utf8<wchar_t>> conv2;
 	string utf8Str = conv2.to_bytes(temp_wstr);
 	return utf8Str;
+#endif
+
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+	return str;
+#endif
+
 }
 
-const string TextManager::gbkToUtf8(const char * gbkStr) {
-	return gbkToUtf8(string(gbkStr));
+const string TextManager::gbkToUtf8(const char * str) {
+	return gbkToUtf8(string(str));
+}
+
+const std::string TextManager::intToString(int number) {
+	std::string str;
+	while (number != 0) {
+		str += '0' + number % 10;
+		number /= 10;
+	}
+	str.reserve();
+	return str;
 }
 
 const string TextManager::getTextOfCharName(ECharName name) const {
@@ -110,7 +176,7 @@ const std::string TextManager::getStringOfCharName(ECharName name) const {
 }
 
 const string TextManager::getTextOfCardName(ECardName name) const {
-	switch (name) {	
+	switch (name) {
 		case ECardName::ALLOUTOFNONE: return gbkToUtf8("无中生有"); break;
 		case ECardName::ARROWRAIN: return gbkToUtf8("万箭齐发"); break;
 		case ECardName::BAGUARANK: return gbkToUtf8("八卦阵"); break;
@@ -251,7 +317,7 @@ const string TextManager::getTextOfSkillDescription(ESkillName name) const {
 
 const string TextManager::getTextOfSuit(ECardSuit suit) const {
 	switch (suit) {
-		case ECardSuit::HEART: return gbkToUtf8("红桃"); break; 
+		case ECardSuit::HEART: return gbkToUtf8("红桃"); break;
 		case ECardSuit::CLUB: return gbkToUtf8("梅花"); break;
 		case ECardSuit::DIAMOND: return gbkToUtf8("方块"); break;
 		case ECardSuit::SPADE: return gbkToUtf8("黑桃"); break;
@@ -275,7 +341,7 @@ const string TextManager::getTextOfColorName(ECardColor color) const {
 		case ECardColor::BLACK: return gbkToUtf8("黑色"); break;
 		default: throw "Can't find match!"; break;
 	}
-} 
+}
 
 const std::string TextManager::getTextOfNumber(int number) const {
 	switch (number) {

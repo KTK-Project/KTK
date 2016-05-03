@@ -62,6 +62,11 @@ vector<shared_ptr<Card>> CardPile::getCards(const function<bool(const shared_ptr
 	return v;
 }
 
+
+std::deque<std::shared_ptr<Card>> & CardPile::getCards() {
+	return m_cards;
+}
+
 void CardPile::removeCard(const shared_ptr<Card> & card) {
 	auto iterator = std::find(m_cards.cbegin(), m_cards.cend(), card);
 	if (iterator != m_cards.cend())
